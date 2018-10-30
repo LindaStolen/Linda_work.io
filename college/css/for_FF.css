@@ -1,0 +1,16 @@
+/* for FireFox */
+@-moz-document url-prefix() {
+
+    #header .navTop input::-moz-placeholder {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    opacity: 0.83;
+    letter-spacing: 2px;
+    }
+    #main .register table .result {
+        height: 110px;
+    }
+
+
+}
+/* for FireFox */

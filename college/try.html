@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toggle.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <style>
+        .container {
+            padding: 0;
+            margin: 0;
+            height: 1000px;
+            background-color: rgba(139, 139, 139, 0.322);
+            position: relative;
+            display: none;
+        }
+        .login {
+            float: right;
+            width:200px;
+        }
+        #jump-box {
+            width: 400px;
+            height: 600px;
+            background-color: #ff6e2f;
+            position: absolute;
+            top: 0;bottom: 0;left: 0;right: 0;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 3px 3px 6px #fff4eb;
+
+        }
+        .close {
+            font-size: 30px;
+            cursor: pointer;
+            /* display: inline-block; */
+            position: static;
+        }
+        .close i {
+            float: right;
+            cursor: pointer;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+        #jump-box .images{
+            width: 250px;
+            height: 80px;
+            margin: auto;
+            margin-top: 60px;
+        } 
+        img {
+            width: 100%;
+        }
+        .welcome {
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            padding: 10px 0 15px 0;
+            margin: 0 50px;
+            border-bottom: 1px dotted #fff;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+        .welcome span {
+            font-size: 10px;
+        }
+        .bighead {
+            width: 120px;
+            height: 120px;
+            margin: 15px auto 0;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .register {
+            margin: 30px auto 0;
+        }
+        .register .item {
+            border-bottom: 1px solid #fff;
+        }
+        #jump-box input {
+            width: 200px;
+            height: 35px;
+            margin: 5px 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        #jump-box td i {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            margin: 0 5px 0 5px ;
+        }
+        #jump-box ::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+        }
+        table .regist {
+            text-align: center;
+            padding-top: 25px;
+        }
+        table .btn {
+            text-align: center;
+        }
+        table .btn span {
+            display: inline-block;
+            line-height: 35px;
+            width: 100px;
+            margin: 30px 0 10px;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #632800;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        table .btn span:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #ff641c;
+        }
+        table .regist a {
+            color: #6A3906;
+        }
+        table .regist a:hover {
+            color: #ff9b31;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="login">login</button>
+    <div class="container full-width">
+        <div id="jump-box">
+            <div class="close"><i class="fas fa-times"></i></div>
+            <div class="images">
+                <img src="images/甄戰logo.png" alt="">
+            </div>
+            <div class="bighead">
+                    <img src="images/photo-1538859281880-95fd9cbcf83b.jpg" alt="">
+            </div>
+             <div class="welcome">歡<span>/</span>迎<span>/</span>登<span>/</span>入</div>
+             <table class="register">
+                 <tr>
+                     <td class="item"><i class="fas fa-user"></i><input type="text" class="user-name" placeholder="User name"></td>
+                 </tr>
+                <tr>
+                    <td class="item"><i class="fas fa-key"></i><input type="password" class="pw" placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td class="btn"><span>SING IN</span></td>
+                </tr>
+                <tr>
+                    <td class="regist"><a href="#">Sign up</a>&nbsp;|&nbsp;<a href="#">Forget Password?</a></td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</body>
+</html>

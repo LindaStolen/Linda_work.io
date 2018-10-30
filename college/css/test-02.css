@@ -1,0 +1,444 @@
+/* signin */
+.container {
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgba(139, 139, 139, 0.781);
+    position: absolute;
+    display: none;
+    z-index: 9999;
+}
+
+#jump-box {
+    width: 400px;
+    height: 600px;
+    background-color: #ff6e2f;
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px #fff4eb;
+
+}
+.close {
+    font-size: 30px;
+    cursor: pointer;
+    /* display: inline-block; */
+    position: static;
+}
+.close i {
+    float: right;
+    cursor: pointer;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.close i:hover {
+    color: #5f5f5f;
+}
+#jump-box .images{
+    width: 250px;
+    height: 80px;
+    margin: auto;
+    margin-top: 60px;
+} 
+img {
+    width: 100%;
+}
+.welcome {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0 15px 0;
+    margin: 0 50px;
+    border-bottom: 1px dotted #fff;
+    letter-spacing: 3px;
+    color: #fff;
+}
+.welcome span {
+    font-size: 10px;
+}
+.bighead {
+    width: 120px;
+    height: 120px;
+    margin: 15px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.account {
+    margin: 30px auto 0;
+}
+.account .item {
+    border-bottom: 1px solid #fff;
+}
+#jump-box input {
+    width: 200px;
+    height: 35px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+#jump-box td i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin: 0 5px 0 5px ;
+}
+#jump-box ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+table .help {
+    text-align: center;
+    padding-top: 25px;
+}
+table .btn {
+    text-align: center;
+}
+table .btn span {
+    display: inline-block;
+    line-height: 35px;
+    width: 100px;
+    margin: 30px 0 10px;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #632800;
+    background-color: #fff;
+    cursor: pointer;
+}
+table .btn span:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #ff641c;
+}
+table .help a {
+    color: #6A3906;
+}
+table .help a:hover {
+    color: #ff9b31;
+}
+/* header */
+#header .navTop {
+    background-color: #EA5514;
+    height: 70px;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+}
+#header .navTop .logo {
+    width: 220px;
+    height: 70px;
+    float: left;
+    background-image: url(../images/甄戰logo.png), linear-gradient(#EA5514,#EA5514);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header .navTop ul {
+    float: right;
+    height: 70px;
+}
+#header .navTop li {
+    float: left;
+    padding: 0 10px;
+    line-height: 70px;
+    color: #333;
+}
+#header .navTop .hello {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* #header .navTop input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.863);
+    letter-spacing: 2px;
+} */
+
+#header .navTop li .regist, #header .navTop li .login, #header .navTop .logout {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0 5px;
+}
+#header .hamburger, #header .navTop .hello {
+    display: none;
+}
+#header .nav-bar {
+    background-color: #ea5514;
+    opacity: .8;
+    text-align: center;
+    position: fixed;
+    top: 70px;
+    z-index: 999;
+}
+
+#header .nav-bar ul {
+    font-size: 18px;
+    display: inline-block;
+}
+#header .nav-bar ul li {
+    float: left;
+    padding: 0 15px;
+    line-height: 45px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+#header .nav-bar ul li a {
+    color: #fff;
+}
+#header .nav-bar ul li a:hover {
+    color: #333;
+}
+/* carousel */
+#header .slider {
+    height: 400px;
+    margin-top: 115px;
+    overflow: hidden;
+}
+#header img {
+    width: 100%;
+}
+#header .slider .photo {
+    float: left;
+    height: 400px;
+}
+.control-nav {
+    text-align: center;
+    position: relative;
+}
+
+.control-nav .prev i {
+    padding-right: 20px;
+    padding-top: 10px;
+    position: absolute;
+    top: 180px;
+    bottom: 0px;
+    left: 30px;
+}
+.control-nav .next i {
+    padding-left: 20px;
+    padding-top: 10px;
+    position: absolute;
+    top: 180px;
+    bottom: 0px;
+    right: 30px;
+}
+/* 內容內頁 */
+#main .goTop {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 70px; 
+    right: 30px;
+    background-color: #6A3906;
+    box-shadow: 1px 0.5px #b39676;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 500;
+    z-index: 999;
+}
+#main .goTop a {
+    color: #fff;
+}
+#main .goHome {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px; 
+    right: 32px;
+    z-index: 999;
+}
+#main .mainWrapper {
+    padding: 50px 0 70px 0;
+    text-align: center;
+    position: relative;
+}
+#main h1 {
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 35px;
+    font-weight: 400;
+    padding-bottom: 30px;
+    border-bottom: .3px solid #555;
+}
+#main .mainWrapper p {
+    padding: 15px;
+    font-size: 22.5px;
+    letter-spacing: 5px;
+    color: #555;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#main .mainWrapper i {
+    color: #555;
+}
+#main h1 span, #location .title span {
+    font-size: 8px;
+    color: #555;
+}
+#main .register h4 {
+    font-weight: 500;
+    font-size: 22.5px;
+    color: #6A3906;
+    text-align: left;
+    padding-bottom: 10px;
+}
+/* college */
+#main .mainWrapper dl {
+    float: left;
+    width: 850px;
+}
+#main .register .table-1 {
+    margin: 10px 0 70px;
+    width:100%;
+    border-left: 0.5px solid #C9BC9C;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+}
+#main .register .table-1 thead th {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 350;
+    line-height: 30px;
+    background-color: #C9BC9C;
+    color: #6A3906;
+    border-right: 1px solid #fff;
+    font-weight: 500;
+    padding: 8px 0;
+}
+#main .register table .school, #main .register table .department {
+    cursor: pointer;
+    color: #0004ff;
+    font-weight: 450;
+}
+#main .register table .school:hover, #main .register table .department:hover {
+    cursor: pointer;
+    color: #4f52ff;
+}
+#main .register .table-1 thead .last {
+    border-right: 0.5px solid #C9BC9C;
+}
+#main .register .table-1 tbody td {
+    font-weight: 400;
+    line-height: 30px;
+    padding: 10px 0;
+    border-right: 0.5px solid #C9BC9C;
+    border-bottom: 0.5px solid #C9BC9C;
+}
+/* #main .register .table-1 .level .one, #main .register .table-1 .level .sec{
+    border-bottom: .3px solid #C9BC9C;
+} */
+/* ad */
+#main .register .ad {
+    width: 300px;
+    height: 800px;
+    float: right;
+    margin: 16px 0 0px;
+}
+#main .register .ad img {
+    margin: 0 0 20px 0;
+    /* padding: 0 0 20px 0; */
+    border-radius: 20px;
+}
+
+/* 甄戰據點 */
+#location {
+    background-color: #ddd;
+    padding: 50px 0;
+}
+#location .title h2 {
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 35px;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+#location .info {
+    padding-top: 50px;
+}
+#location .info nav {
+    position: relative;
+    line-height: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#location .info nav a {
+    line-height: 50px;
+    width: 190px;
+    margin: 0 8px;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background-color: #C9BC9C;
+    text-align: center;
+}
+#location .info nav a:hover {
+    background-color: #A48B78;
+    color: #fff;
+}
+#location .info h3 {
+    padding-left: 10px;
+    margin-left: 5px;
+    border-left: 8px double #C9BC9C;
+    font-size: 25px;
+    letter-spacing: 5px;
+    color: #6A3906;
+}
+#location .info ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+#location .info ul li {
+    width: 30%;
+    padding-top: 25px;
+}
+#location .info li p, #location .info li a,#location .info li span {
+    font-size: 17.5px;
+    line-height: 27.5px;
+}
+#location .info li i {
+    padding-right: 5px;
+    color: #333;
+}
+/* #location .info li span {
+    color: #6A3906;
+} */
+/* 相關連結 */
+#relationLink {
+    padding: 50px 0 80px 0;
+}
+footer #relationLink nav {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1.5px solid #C9BC9C;
+}
+#relationLink nav div {
+    display: inline-block;
+    vertical-align: middle;
+}
+#relationLink nav .youth {
+    padding: 0 10px 0 15px;
+    margin-right: 20px;
+}
+#relationLink nav .realgood, #relationLink nav .tkb{
+    border-right: 1px solid #dcdcdc;
+}
+#relationLink p {
+    /* display: inline-block; */
+    line-height: 40px;
+    text-align: center;
+    color: #aaa;
+}
+#relationLink .server span {
+    margin: 0 10px;
+}

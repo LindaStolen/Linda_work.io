@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+* {
+    font-family: "Roboto", "Noto Sans TC";
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,img,table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+/* mobile */
+@media screen and (max-width:520px) {
+.col-s-12 {
+    width: calc(100% / 12 * 12);
+};
+.col-s-11 {
+    width: calc(100% / 12 * 11);
+};
+.col-s-10 {
+    width: calc(100% / 12 * 10);
+};
+.col-s-9 {
+    width: calc(100% / 12 * 9);
+};
+.col-s-8 {
+    width: calc(100% / 12 * 8);
+};
+.col-s-7 {
+    width: calc(100% / 12 * 7);
+};
+.col-s-6 {
+    width: calc(100% / 12 * 6);
+};
+.col-s-5 {
+    width: calc(100% / 12 * 5);
+};
+.col-s-4 {
+    width: calc(100% / 12 * 4);
+};
+.col-s-3 {
+    width: calc(100% / 12 * 3);
+};
+.col-s-2 {
+    width: calc(100% / 12 * 2);
+};
+.col-s-1 {
+    width: calc(100% / 12 * 1);
+};
+
+[class*="col-s"] {
+    float: left;
+    padding: 8x;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 400px;
+}
+#header .slider {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+}
+
+/* loptop */
+@media screen and (min-width:768px) {
+.col-m-12 {
+    width: calc(100% / 12 * 12);
+}
+.col-m-11 {
+    width: calc(100% / 12 * 11);
+}
+.col-m-10 {
+    width: calc(100% / 12 * 10);
+}
+.col-m-9 {
+    width: calc(100% / 12 * 9);
+}
+.col-m-8 {
+    width: calc(100% / 12 * 8);
+}
+.col-m-7 {
+    width: calc(100% / 12 * 7);
+}
+.col-m-6 {
+    width: calc(100% / 12 * 6);
+}
+.col-m-5 {
+    width: calc(100% / 12 * 5);
+}
+.col-m-4 {
+    width: calc(100% / 12 * 4);
+}
+.col-m-3 {
+    width: calc(100% / 12 * 3);
+}
+.col-m-2 {
+    width: calc(100% / 12 * 2);
+}
+.col-m-1 {
+    width: calc(100% / 12 * 1);
+}
+
+[class*="col-m"] {
+    float: left;
+    padding: 8px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 768px;
+}
+#header .slider {
+    height: 400px;
+    /* margin-top: 115px; */
+    overflow: hidden;
+}
+}
+/* grid for desktop */
+@media screen and (min-width:1000px) {
+.col-12 {
+    width: calc(100% / 12 * 12);
+}
+.col-11 {
+    width: calc(100% / 12 * 11);
+}
+.col-10 {
+    width: calc(100% / 12 * 10);
+}
+.col-9 {
+    width: calc(100% / 12 * 9);
+}
+.col-8 {
+    width: calc(100% / 12 * 8);
+}
+.col-7 {
+    width: calc(100% / 12 * 7);
+}
+.col-6 {
+    width: calc(100% / 12 * 6);
+}
+.col-5 {
+    width: calc(100% / 12 * 5);
+}
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+.col-3 {
+    width: calc(100% / 12 * 3);
+}
+.col-2 {
+    width: calc(100% / 12 * 2);
+}
+.col-1 {
+    width: calc(100% / 12 * 1);
+}
+
+[class*="col"] {
+    float: left;
+    padding: 8px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 1180px;
+    margin: auto;
+}
+#header .navTop ul {
+    padding-right: 30px;
+}
+#header .sub-nav {
+    height: 45px;
+}
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: #222222;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #777;
+}
+
+li {
+    list-style: none;
+}

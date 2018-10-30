@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="image/x-icon" rel="shortcut icon" href="https://www.reallygood.com.tw/images/favicon_tkb.ico" />
+    <title>落點分析</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/for_FF.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/goTop.js"></script>
+    <script src="js/toggle.js"></script>
+</head>
+<body>
+    <div class="container full-width">
+        <div id="jump-box">
+            <div class="close"><i class="fas fa-times"></i></div>
+            <div class="images">
+                <img src="images/甄戰logo.png" alt="">
+            </div>
+            <div class="bighead">
+                    <img src="images/photo-1538859281880-95fd9cbcf83b.jpg" alt="">
+            </div>
+             <div class="welcome">歡<span>/</span>迎<span>/</span>登<span>/</span>入</div>
+             <table class="account">
+                 <tr>
+                     <td class="item"><i class="fas fa-user"></i><input type="text" class="user-name" placeholder="User name" required/></td>
+                 </tr>
+                <tr>
+                    <td class="item"><i class="fas fa-key"></i><input type="password" class="pw" placeholder="password" required/></td>
+                </tr>
+                <tr>
+                    <td class="btn"><span>SING IN</span></td>
+                </tr>
+                <tr>
+                    <td class="help"><a href="#">Sign up</a>&nbsp;|&nbsp;<a href="#">Forget Password?</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="header" class="full-width">
+        <div class="navTop full-width">
+            <a><div class="logo">
+                <img src="images/甄戰logo.png" alt="">
+            </div></a>
+            <ul>
+                <!-- <li><input type="text" placeholder="落點分析"><i class="fas fa-lg fa-search"></i></li> -->
+                <li class="enter"><a  class="regist">註冊</a><span>|</span><a  class="login">登入</a></li>
+                <li class="hello"><span class="name">珍湛</span> , Hello!<a  class="logout">&nbsp;登出</a></li>
+                <li><div class="hamburger"><a><i class="fas fa-lg fa-bars"></i></a></div></li>
+            </ul>
+        </div>
+        <div class="nav-bar full-width">
+            <div class="sub-nav fixed-width clearfix">
+                <ul>
+                    <li><a href="https://www.reallygood.com.tw/common/senior_intro">學群介紹</a></li>
+                    <li><a href="https://www.reallygood.com.tw/newExam/index">大學個人申請</a></li>
+                    <li><a href="test_01.html">落點分析</a></li>
+                    <li><a href="https://www.daso.com.tw/query/index">交叉查榜</a></li>
+                    <!-- <li><a href="https://www.reallygood.com.tw/newExam/inside?str=267820714A59C4A21667994C11984E0C">升學官網</a></li> -->
+                    <li><a href="https://www.reallygood.com.tw/newExam/inside?str=DE35215AACC722C0732598A333643A4B">書面備審攻略</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slider clearfix full-width">
+            <div class="wrapper clearfix">
+                <div class="photo">
+                    <img src="images/photo-6.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-7.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-8.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-9.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-10.jpg" alt="">
+                </div>
+            </div>
+            <div class="control-nav">
+                <a  class="prev"><i class="fas fa-2x fa-angle-left"></i></a>
+                <a  class="next"><i class="fas fa-2x fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- 內頁內容 -->
+    <section id="main" class="page-inside-container full-width clearfix">
+        <div class="goTop"><a >TOP</a></div>
+        <div class="goHome">
+            <a ><img src="images/home.png" alt=""></a>
+        </div>
+        <div class="mainWrapper fixed-width clearfix">
+            <h1 class="title">落<span>/</span>點<span>/</span>分<span>/</span>析</h1>
+            <form id="addForm" method="POST" enctype="multipart/form-data">
+                <dl>
+                    <dt class="sTitle">Step1. 請輸入今年學測成績 (0-15)</dt>
+                </dl>
+                <dl class="step-1">
+                    <dt>
+                        <div>
+                            <ul>
+                                <li><div class="item">國文</div><div><input type="text" style="width:50px;" maxlength="2" id="chinese" name="chinese" value="" /></div></li>
+                                <li><div class="item">英文</div><div><input type="text" style="width:50px;" maxlength="2" id="english" name="english" value="" /></div></li>
+                                <li><div class="item">數學</div><div><input type="text" style="width:50px;" maxlength="2" id="math" name="math" value="" /></div></li>
+                                <li><div class="item">社會</div><div><input type="text" style="width:50px;" maxlength="2" id="society" name="society" value="" /></div></li>
+                                <li><div>自然</div><div><input type="text" style="width:50px;" maxlength="2" id="naturally" name="naturally" value="" /></div></li>
+                                <li>
+                                    <div>英文聽力</div>
+                                    <div>
+                                        <select id="english_hearing" name="english_hearing">
+                                        <option value="N">請選擇</option>
+                                        <option value="A">A級</option>
+                                        <option value="B">B級</option>
+                                        <option value="C">C級</option>
+                                        <option value="F">F級</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><div>APCS</div><div><input type="text" style="width:50px;" id="apcs_score" name="apcs_score" value="" /></div></li>
+                            </ul>
+                        </div>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt class="sTitle">Step2. 請選擇學群領域</dt>
+                </dl>
+                <dl class="step-2 col-12 col-m-12 col-s-12">
+                    <div class="check"><input type="checkbox" id="school_group" onchange="schoolGroup()">全選</div>
+                    <div class="check">
+                        <ul>
+                            <li><input type="checkbox" class="school_group" value="6">資訊學群</li>
+                            <li><input type="checkbox" class="school_group" value="5">生命科學學群</li>
+                            <li><input type="checkbox" class="school_group" value="18">藝術學群</li>
+                            <li><input type="checkbox" class="school_group" value="13">文史哲學群</li>
+                            <li><input type="checkbox" class="school_group" value="21">財經學群</li>
+                        </ul>                
+                    </div>
+                    <div class="check">
+                        <ul>
+                            <li><input type="checkbox" class="school_group" value="2">工程學群</li>
+                            <li><input type="checkbox" class="school_group" value="8">生物資源學群</li>
+                            <li><input type="checkbox" class="school_group" value="17">社會與心理學群</li>
+                            <li><input type="checkbox" class="school_group" value="16">教育學群</li>
+                            <li><input type="checkbox" class="school_group" value="22">遊憩與運動學群</li>
+                        </ul>                
+                    </div>
+                    <div class="check">
+                        <ul>
+                            <li><input type="checkbox" class="school_group" value="3">數理化學學群</li>
+                            <li><input type="checkbox" class="school_group" value="9">地球與環境學群</li>
+                            <li><input type="checkbox" class="school_group" value="19">大眾傳播學群</li>
+                            <li><input type="checkbox" class="school_group" value="15">法政學群</li>
+                        </ul>                
+                    </div>
+                    <div class="check">
+                        <ul>
+                            <li><input type="checkbox" class="school_group" value="4">醫藥衛生學群</li>
+                            <li><input type="checkbox" class="school_group" value="10">建築與設計學群</li>
+                            <li><input type="checkbox" class="school_group" value="14">外語學群</li>
+                            <li><input type="checkbox" class="school_group" value="20">管理學群</li>
+                        </ul>                
+                    </div>
+                </dl>
+                <dl>
+                    <dt class="sTitle">Step3. 請選擇地區/學校</dt>
+                </dl>
+                <dl>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <thead class="col-12 col-m-12 col-s-12">
+                            <tr>
+                                <th width="10%"></th>
+                                <th width="11%"></th>
+                                <th width="11%"></th>
+                                <th width="21%"></th>
+                                <th width="21%"></th>
+                                <th width="21%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="all" onchange="allSelect()" />全選</td>
+                                <td><input type="checkbox" id="area1" class="all" onchange="area('1')" value="02" />宜花東</td>
+                                <td><input type="checkbox" id="type1_1" class="all area1" onchange="typeSelect('1_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1036" />國立宜蘭大學</td>
+                                <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1014" />國立東華大學</td>
+                                <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1035" />國立臺東大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type1_2" class="all area1" onchange="typeSelect('1_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area1 type1_2 school_no" value="S1129" />佛光大學</td>
+                                <td><input type="checkbox" class="all area1 type1_2 school_no" value="S1124" />慈濟大學</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" id="area2" class="all" onchange="area('2')" value="01" />北北基</td>
+                                <td><input type="checkbox" id="type2_1" class="all area2" onchange="typeSelect('2_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1003" />國立臺灣大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1004" />國立臺灣師範大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1002" />國立政治大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1011" />國立陽明大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1020" />國立臺北藝術大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S5001" />國立臺北教育大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S5009" />臺北市立教育大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1021" />國立臺灣藝術大學</td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1028" />國立臺北大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1009" />國立臺灣海洋大學</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type2_2" class="all area2" onchange="typeSelect('2_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1104" />東吳大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1106" />淡江大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1125" />中國文化大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1122" />大同大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1103" />輔仁大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1114" />華梵大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1134" />銘傳大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1116" />世新大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1118" />實踐大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1121" />真理大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1123" />臺北醫學大學</td>
+                                <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1040" />馬偕醫學院</td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" id="area3" class="all" onchange="area('3')" value="03" />桃竹苗</td>
+                                <td><input type="checkbox" id="type3_1" class="all area3" onchange="typeSelect('3_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1001" />國立清華大學</td>
+                                <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1006" />國立交通大學</td>
+                                <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1007" />國立中央大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area3 type3_1 school_no" value="S3008" />國立聯合大學</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type3_2" class="all area3" onchange="typeSelect('3_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1105" />中原大學</td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1110" />長庚大學</td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1111" />元智大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1112" />中華大學</td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1126" />玄奘大學</td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S3107" />開南大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1117" />銘傳大學(桃園校區)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" id="area4" class="all" onchange="area('4')" value="04" />中彰投</td>
+                                <td><input type="checkbox" id="type4_1" class="all area4" onchange="typeSelect('4_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1005" />國立中興大學</td>
+                                <td><input type="checkbox" class="all area4 type4_1 school_no" value="S4002" />國立彰化師範大學</td>
+                                <td><input type="checkbox" class="all area4 type4_1 school_no" value="S5003" />國立臺中教育大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1013" />國立暨南國際大學</td>
+                                <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1024" />國立臺灣體育運動大學 	</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type4_2" class="all area4" onchange="typeSelect('4_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1102" />東海大學</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1108" />逢甲大學</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1109" />靜宜大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S3105" />中國醫藥大學</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1133" />中山醫學大學</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1113" />大葉大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1130" />亞洲大學</td>
+                                <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1131" />明道大學</td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" id="area5" class="all" onchange="area('5')" value="05" />雲嘉南</td>
+                                <td><input type="checkbox" id="type5_1" class="all area5" onchange="typeSelect('5_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1101" />國立成功大學</td>
+                                <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1010" />國立中正大學</td>
+                                <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1037" />國立臺南大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1018" />國立嘉義大學</td>
+                                <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1022" />國立臺南藝術大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type5_2" class="all area5" onchange="typeSelect('5_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area5 type5_2 school_no" value="S1132" />長榮大學</td>
+                                <td><input type="checkbox" class="all area5 type5_2 school_no" value="S1120" />南華大學</td>
+                                <td><input type="checkbox" class="all area5 type5_2 school_no" value="S3108" />台灣首府大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area5 type5_2 school_no" value="S3109" />康寧大學</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" id="area6" class="all" onchange="area('6')" value="06" />高屏金門</td>
+                                <td><input type="checkbox" id="type6_1" class="all area6" onchange="typeSelect('6_1')" value="0" />公立</td>
+                                <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1008" />國立中山大學</td>
+                                <td><input type="checkbox" class="all area6 type6_1 school_no" value="S4001" />國立高雄師範大學</td>
+                                <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1042" />國立屏東大學</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1019" />國立高雄大學</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox" id="type6_2" class="all area6" onchange="typeSelect('6_2')" value="1" />私立</td>
+                                <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1119" />高雄醫學大學</td>
+                                <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1115" />義守大學</td>
+                                <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1043" />實踐大學(高雄校區)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </dl>
+            </form>
+            <div class="line"></div>
+            <div class="col-12 col-m-12 col-s-12 search">
+                <a href="test_02.html" class="btn">開始查詢</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!-- 甄戰據點 -->
+        <div id="location" class="full-width">
+            <div class="title fixed-width clearfix">
+                <h2 class="">甄<span>/</span>戰<span>/</span>據<span>/</span>點</h2>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6145421646047!2d121.51033331523148!3d25.04715198396619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90d19d05333%3A0xb850cf6b061f4531!2z5Y-w5YyX55SE5oiw5a2457-S6aGn5ZWP5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1539245560615" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="info">
+                <div class="fixed-width clearfix">
+                        <nav class="selected col-12 col-m-12 col-s-12">
+                            <a  class="col-2 col-m-2 col-s-2">北區</a>
+                            <a  class="col-2 col-m-2 col-s-2">桃竹區</a>
+                            <a  class="col-2 col-m-2 col-s-2">中區</a>
+                            <a  class="col-2 col-m-2 col-s-2">嘉南區</a>
+                            <a  class="col-2 col-m-2 col-s-2">高屏區</a>
+                        </nav>
+                        <ul class="location-content col-12 col-m-12 col-s-12">
+                            <h3>台北甄戰</h3>
+                            <li class="col-4 col-m-4 col-s-4">
+                                <p><i class="fas fa-map-marker-alt"></i>台北市中正區忠孝西路一段102號3樓<br>
+                                    <i class="fas fa-phone-square"></i>TEL：(02)5580-2006</p>
+                            </li>
+                            <li class="col-4 col-m-4 col-s-4">
+                                <span><i class="fas fa-clock"></i>服務時間</span><br>
+                                <p>平日：10:00-21:00<br>
+                                假日：10:00-19:00</p>
+                            </li>
+                            <li class="col-4 col-m-4 col-s-4">
+                                <span><i class="fab fa-facebook-square"></i>粉絲團</span><br>
+                                <a href="https://www.facebook.com/realgood.tkb.com.tw/" target="_blank">甄戰學習顧問中心</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 相關連結 -->
+        <div id="relationLink" class="full-width">
+            <nav class="fixed-width clearfix">
+                <div class="realgood">
+                    <a href="http://www.realgood.tkb.com.tw/" class="">
+                        <img src="images/logo_realgood_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="tkb">
+                    <a href="http://www.tkb.com.tw/" class="">
+                        <img src="images/logo_tkb_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="youth">
+                    <a href="http://www.taso.org.tw/" class="">
+                        <img src="images/logo_youth_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="tkb_idol">
+                    <img src="images/tkb_idol.png" alt="">
+                </div>
+            </nav>
+            <div class="crossLine"></div>
+            <div class="server fixed-width clearfix">
+                <p>realgood@tkb.com.tw<span>|</span>(02)5580-2006<span>|</span>台北市中正區忠孝西路一段102號3樓<span>|</span>2018 © Copyright All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function schoolGroup() {
+		if($("#school_group").prop("checked")) {
+			$(".school_group").prop("checked", true);
+		} else {
+			$(".school_group").prop("checked", false);
+		}
+	}
+	
+	function allSelect() {
+		if($("#all").prop("checked")) {
+			$(".all").prop("checked", true);
+		} else {
+			$(".all").prop("checked", false);
+		}
+	}
+
+    </script>
+</body>
+</html>

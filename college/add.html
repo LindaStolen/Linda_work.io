@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        input :-webkit-input-placeholder {
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="javascript:;">
+        <input type="text" id="item">
+        <button class="btn" onclick="newItem()" id="add">add</button>
+        <button class="btn" onclick="deleteItem()">delete</button>
+        <div id="list">
+            
+        </div>
+    </form>
+<script>
+    
+    function newItem(){
+        let nItem = document.createElement("input");
+        nItem.setAttribute("type","text");
+        nItem.setAttribute("name","准考證號碼");
+        nItem.setAttribute("value","");
+        // let li = document.createElement("li");
+        // li.appendChild(item);
+
+        let list = document.getElementById("list");
+        list.appendChild(nItem);
+
+    }
+</script>
+
+</body>
+</html>

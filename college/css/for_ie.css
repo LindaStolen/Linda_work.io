@@ -1,0 +1,11 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #header .navTop input .search:-ms-placeholder {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.863);
+        letter-spacing: 2px;
+    }
+    #main .register table .result {
+        height: 110px;
+    }
+
+}

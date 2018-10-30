@@ -1,0 +1,43 @@
+@media screen and (max-width: 768px){
+    
+    #header .navTop ul {
+        float: right;
+        height: 70px;
+    }
+    #header .navTop li {
+        float: left;
+        padding: 0 5px;
+        line-height: 70px;
+        color: #333;
+    }
+    
+    #header .navTop li .regist, #header .navTop li .login {
+        font-weight: 400;
+        font-size: 15px;
+        padding: 0 5px;
+    }
+    #header .nav-bar {
+        background-color: rgb(172, 172, 172);
+        text-align: center;
+        position: fixed;
+        top: 70px;
+        z-index: 9999;
+        display: none;
+    }
+    #header .sub-nav {
+        float: center;
+    }
+    #header .nav-bar ul {
+        font-size: 18px;
+    }
+    #header .nav-bar ul li {
+        padding: 0 15px;
+        /* line-height: 45px; */
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    #header .hamburger {
+        display: inline-block;
+    }
+    
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="image/x-icon" rel="shortcut icon" href="https://www.reallygood.com.tw/images/favicon_tkb.ico" />
+    <title>甄戰會員註冊</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/for_FF.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/goTop.js"></script>
+    <script src="js/toggle.js"></script>
+</head>
+<body>
+    <div id="header" class="full-width">
+        <div class="navTop full-width">
+            <a href="#"><div class="logo">
+                <!-- <img src="images/甄戰logo.png" alt=""> -->
+            </div></a>
+            <ul>
+                <!-- <li><input type="text" placeholder="落點分析"><i class="fas fa-lg fa-search"></i></li> -->
+                <li class="enter"><a href="#" class="regist">註冊</a><span>|</span><a href="#" class="login" onclick="login()">登入</a></li>
+                <li class="hello"><span class="name">珍湛</span> , Hello!<a href="#" class="logout">&nbsp;登出</a></li>
+                <li><a href="#"><i class="fab fa-lg fa-facebook"></i></a></li>
+                <li><div class="hamburger"><i class="fas fa-lg fa-bars"></i></div></li>
+            </ul>
+        </div>
+        <div class="nav-bar full-width">
+            <div class="sub-nav fixed-width clearfix">
+                <ul>
+                    <li><a href="#">興趣職能測驗</a></li>
+                    <li><a href="#">大學個人申請</a></li>
+                    <li><a href="#">落點分析</a></li>
+                    <li><a href="#">交叉查榜</a></li>
+                    <li><a href="#">升學官網</a></li>
+                    <li><a href="#">書面備審攻略</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slider clearfix">
+            <div class="wrapper">
+                <div class="photo">
+                    <img src="images/photo-6.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-7.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-8.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-9.jpg" alt="">
+                </div>
+                <div class="photo">
+                    <img src="images/photo-10.jpg" alt="">
+                </div>
+            </div>
+            <div class="control-nav">
+                <a href="#" class="prev"><i class="fas fa-2x fa-angle-left"></i></a>
+                <a href="#" class="next"><i class="fas fa-2x fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- 會員註冊區 -->
+    <section id="main" class="page-inside-container full-width">
+        <div class="goTop"><a href="#">TOP</a></div>
+        <div class="goHome">
+            <a href="#"><img src="images/home.png" alt=""></a>
+        </div>
+            <div class="mainWrapper fixed-width clearfix">
+                <h1 class="title">會<span>/</span>員<span>/</span>註<span>/</span>冊</h1>
+                <p>歡迎您加入本網站會員，為確保您的權益，請填寫下方個人資料。</p>
+                <p class="notice"><span class="red">*</span> 字號為必填</span>
+                <form method="post" action="javascript:;">
+                    <table> 
+                        <thead>
+                            <th style="width:20%"></th>
+                            <th style="width:80%"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="item">姓名&nbsp;<span class="red">*</span></td>
+                                <td class="ans"><input type="text" placeholder="請輸入您的真實姓名"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">性別&nbsp;<span class="red">*</span></td>
+                                <td><input type="radio" name="gender" value="male">男性<input type="radio" name="gender" value="female">女性</td>
+                            </tr>
+                            <tr>
+                                <td class="item">身分證字號</td>
+                                <td class="ans"><input type="text" placeholder="請輸入您的身分字號"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">生日</td>
+                                <td class="ans"><input type="text" placeholder="yy/mm/dd"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">行動電話&nbsp;<span class="red">*</span></td>
+                                <td class="ans"><input type="tel" placeholder="0912-345-678"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">E-mail&nbsp;<span class="red">*</span></td>
+                                <td class="ans">
+                                <input type="email" id="userEmail" placeholder="請輸入有效電子信箱，此為登入用帳號">
+                                <p>此信箱為日後您登入及收取訂單資料時所用之信箱，經註冊後不可再改，謝謝！</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item">密碼&nbsp;<span class="red">*</span></td>
+                                <td class="ans"><input type="password" placeholder="請輸入您的密碼，須由6~12字元的英文與數字組成"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">密碼確認&nbsp;<span class="red">*</span></td>
+                                <td class="ans"><input type="password" placeholder="再次輸入您的密碼"></td>
+                            </tr>
+                            <tr>
+                                <td class="item"><span class="item-name">准考證號碼&nbsp;<span class="red">*</span></span></td>
+                                <td class="ans" id="list">
+                                    <input type="text" class="admission" placeholder="請輸入准考證號碼">
+                                    <button class="add_btn" id="add" onclick="add_del()">新增<i class="fas fa-plus-circle"></i></button>
+                                    <!-- <button class="add_btn" id="del" >移除<i class="fas fa-minus-circle"></i></button> -->
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td class="item">職業狀態&nbsp;<span class="red">*</span></td>
+                                <td>
+                                    <select name="career" id="career">
+                                        <option value="selected" style="color: #333;">請選擇</option>
+                                        <option value="employment">就業中</option>
+                                        <option value="unemployment">待業中</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item">畢業/就讀學校&nbsp;<span class="red">*</span></td>
+                                <td>
+                                    <select name="school" id="school">
+                                        <option value="selected" style="color: #333;">請選擇學校類別</option>
+                                        <option value="0">大學</option>
+                                        <option value="1">科技大學</option>
+                                        <option value="2">技術學院</option>
+                                        <option value="3">師範大學</option>
+                                        <option value="4">師範學院</option>
+                                        <option value="5">專科學校</option>
+                                        <option value="6">護專</option>
+                                        <option value="7">國防、政治、警察</option>
+                                        <option value="8">高中</option>
+                                        <option value="9">國中</option>
+                                        <option value="A">國小</option>
+                                        <option value="B">其他</option>
+                                    </select>
+                                    <input type="radio" name="">畢業
+                                    <input type="radio" name="">在校
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select name="area" id="area">
+                                        <option value="selected" style="color: #333;">請選擇地區</option>
+                                        <option value="0">大台北地區</option>
+                                        <option value="0">花東宜蘭</option>
+                                        <option value="0">桃竹苗區</option>
+                                        <option value="0">中彰投區</option>
+                                        <option value="0">雲嘉南地區</option>
+                                        <option value="0">高雄屏東</option>
+                                        <option value="0">金門澎湖</option>
+                                        <option value="0">其他</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select name="" id="name">
+                                        <option value="selected" style="color: #333;">學校名稱</option>
+                                        <option value="0">私立台北醫學大學</option>
+                                        <option value="0">私立輔仁大學</option>
+                                        <option value="0">私立東吳大學</option>
+                                        <option value="0">私立淡江大學</option>
+                                        <option value="0">私立華梵大學</option>
+                                        <option value="0">私立世新大學</option>
+                                        <option value="0">私立實踐大學</option>
+                                        <option value="0">私立真理大學</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select name="" id="department">
+                                        <option value="selected" style="color: #333;">請選擇科系</option>
+                                        <option value="0">保健藥學科</option>
+                                        <option value="0">保健營養(學)科</option>
+                                        <option value="0">牙體技術學系</option>
+                                        <option value="0">老人護理暨管理學系</option>
+                                        <option value="0">呼吸治療學系</option>
+                                        <option value="0">醫學檢驗生物技術學系</option>
+                                        <option value="0">醫務管理</option>
+                                        <option value="0">藥學系</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select name="" id="class">
+                                        <option style="color: #333;">請選擇班別</option>
+                                        <option value="0">1,A,甲</option>
+                                        <option value="0">2,B,乙</option>
+                                        <option value="0">3,C,丙</option>
+                                        <option value="0">4,D,丁</option>
+                                        <option value="0">5,E,戊</option>
+                                        <option value="0">6,F,己</option>
+                                        <option value="0">其他</option>
+                                        <option value="0">未填</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <select name="" id="yearclass">
+                                        <option style="color: #646464;">請選擇學年度</option>
+                                        <option value="0">97年度</option>
+                                        <option value="0">98年度</option>
+                                        <option value="0">99年度</option>
+                                        <option value="0">100年度</option>
+                                        <option value="0">101年度</option>
+                                        <option value="0">102年度</option>
+                                        <option value="0">103年度</option>
+                                        <option value="0">104年度</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item">訊息來源&nbsp;(複選)&nbsp;<span class="red">*</span></td>
+                                <td>
+                                    <input type="checkbox" name="web">網路
+                                    <select name="source" id="source_1" style="width:62%; margin-left:10px;">
+                                            <option style="color: #646464;">請選擇</option>
+                                            <option value="0">官網</option>
+                                            <option value="1">部落格</option>
+                                            <option value="2">臉書</option>
+                                    </select>
+                                </td>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="checkbox" name="text">文宣
+                                        <select name="source" id="source_2" style="width:62%; margin-left:10px;">
+                                                <option style="color: #646464;">請選擇</option>
+                                                <option value="0">校園</option>
+                                                <option value="1">考場</option>
+                                                <option value="2">派報</option>
+                                                <option value="2">報章雜誌</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="checkbox" name="web">門市
+                                        <input type="checkbox" name="oldies">舊生
+                                        <input type="checkbox" name="campus">活動
+                                        <input type="checkbox" name="friend">其他
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="checkbox" name="web">校園講座
+                                        <input type="checkbox" name="web">班內講座
+                                        <input type="checkbox" name="web">親友介紹
+                                    </td>
+                                </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="line"></div>
+                <div class="agree fixed-width">
+                    <input type="checkbox" name="" id="">同意接受TKB發送最新考試資訊、優惠電子報與簡訊<br>
+                    <input type="checkbox" name="" id="">已閱讀且同意<a href="#">會員權利說明</a>，並已瞭解<a href="#">個資法相關規範</a><br>
+                    <button type="reset">清除</button>
+                    <button type="submit">註冊</button>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+    <!-- 甄戰據點 -->
+    <div id="location" class="full-width">
+        <div class="title fixed-width clearfix">
+            <h2 class="">甄<span>/</span>戰<span>/</span>據<span>/</span>點</h2>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6145421646047!2d121.51033331523148!3d25.04715198396619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90d19d05333%3A0xb850cf6b061f4531!2z5Y-w5YyX55SE5oiw5a2457-S6aGn5ZWP5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1539245560615" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="info">
+            <div class="fixed-width clearfix">
+                    <nav class="selected col-12 col-m-12 col-s-12">
+                        <a href="#" class="col-2 col-m-2 col-s-2">北區</a>
+                        <a href="#" class="col-2 col-m-2 col-s-2">桃竹區</a>
+                        <a href="#" class="col-2 col-m-2 col-s-2">中區</a>
+                        <a href="#" class="col-2 col-m-2 col-s-2">嘉南區</a>
+                        <a href="#" class="col-2 col-m-2 col-s-2">高屏區</a>
+                    </nav>
+                    <ul class="location-content col-12 col-m-12 col-s-12">
+                        <h3>台北甄戰</h3>
+                        <li class="col-4 col-m-4 col-s-4">
+                            <p><i class="fas fa-map-marker-alt"></i>台北市中正區忠孝西路一段102號3樓<br>
+                                <i class="fas fa-phone-square"></i>TEL：(02)5580-2006</p>
+                        </li>
+                        <li class="col-4 col-m-4 col-s-4">
+                            <span><i class="fas fa-clock"></i>服務時間</span><br>
+                            <p>平日：10:00-21:00<br>
+                            假日：10:00-19:00</p>
+                        </li>
+                        <li class="col-4 col-m-4 col-s-4">
+                            <span><i class="fab fa-facebook-square"></i>粉絲團</span><br>
+                            <a href="https://www.facebook.com/realgood.tkb.com.tw/" target="_blank">甄戰學習顧問中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 相關連結 -->
+        <div id="relationLink" class="full-width">
+            <nav class="fixed-width clearfix">
+                <div class="realgood">
+                    <a href="http://www.realgood.tkb.com.tw/" class="">
+                        <img src="images/logo_realgood_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="tkb">
+                    <a href="http://www.tkb.com.tw/" class="">
+                        <img src="images/logo_tkb_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="youth">
+                    <a href="http://www.taso.org.tw/" class="">
+                        <img src="images/logo_youth_ft.png" alt="">
+                    </a>
+                </div>
+                <div class="tkb_idol">
+                    <img src="images/tkb_idol.png" alt="">
+                </div>
+            </nav>
+            <div class="crossLine"></div>
+            <div class="server fixed-width clearfix">
+                <p>realgood@tkb.com.tw<span>|</span>(02)5580-2006<span>|</span>台北市中正區忠孝西路一段102號3樓<span>|</span>2018 © Copyright All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

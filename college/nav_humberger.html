@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        @media screen and (min-width: 600px){
+            .nav-bar {
+                background-color: rgb(172, 172, 172);
+                height: 45px;
+                text-align: center;
+                position: fixed;
+                top: 70px;
+                z-index: 9999;
+            }
+            .sub-nav {
+                height: 45px;
+            }
+            .nav-bar ul {
+                font-size: 18px;
+                display: inline-block;
+            }
+            .nav-bar ul li {
+                float: left;
+                padding: 0 15px;
+                line-height: 45px;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+            .navTop ul {
+                float: right;
+                padding-right: 30px;
+                height: 70px;
+            }
+            .navTop li {
+                float: left;
+                padding: 0 10px;
+                line-height: 70px;
+                color: #333;
+            }
+            .navTop input {
+                width: 150px;
+                margin-right: 5px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid #222;
+            }
+            .navTop input::-webkit-input-placeholder {
+                font-size: 18px;
+                color: #555;
+                letter-spacing: 2px;
+            }
+            .navTop li .regist, .navTop li .login {
+                font-weight: 400;
+                font-size: 20px;
+                padding: 0 5px;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".hamburger").click(function(){
+                $(".nav-bar").slideToggle();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="navTop full-width">
+        <a href="#"><div class="logo col-s-12"></div></a>
+        <ul>
+            <li><input type="text" placeholder="落點分析"><i class="fas fa-lg fa-search"></i></li>
+            <li><a href="#" class="regist">註冊</a><span>|</span><a href="#" class="login">登入</a></li>
+            <li><a href="#"><i class="fab fa-lg fa-facebook"></i></a></li>
+            <li><div class="hamburger"><i class="fas fa-lg fa-bars"></i></div></li>
+        </ul>
+    </div>
+    <div class="nav-bar full-width">
+        <div class="sub-nav fixed-width clearfix">
+            <ul>
+                <li><a href="#">興趣職能測驗</a></li>
+                <li><a href="#">大學個人申請</a></li>
+                <li><a href="#">落點分析</a></li>
+                <li><a href="#">交叉查榜</a></li>
+                <li><a href="#">升學官網</a></li>
+                <li><a href="#">書面備審攻略</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
