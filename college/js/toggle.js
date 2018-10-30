@@ -2,6 +2,8 @@
 $(function(){
     $(".collapse").hide();
     $(".fa-angle-up").hide();
+    $(".toggle:eq(0)").next().slideToggle();
+    $(".toggle:eq(0)").find(".fa-angle-down").toggleClass("fa-angle-up");
     $(".toggle").click(function(){
         $(this).next().slideToggle();
         $(this).find(".fa-angle-down").toggleClass("fa-angle-up");

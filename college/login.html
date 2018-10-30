@@ -19,28 +19,53 @@
     <script src="js/toggle.js"></script>
 </head>
 <body>
+    <div class="container full-width">
+        <div id="jump-box">
+            <div class="close"><i class="fas fa-times"></i></div>
+            <div class="images">
+                <img src="images/甄戰logo.png" alt="">
+            </div>
+            <div class="bighead">
+                <img src="images/photo-1538859281880-95fd9cbcf83b.jpg" alt="">
+            </div>
+             <div class="welcome">歡<span>/</span>迎<span>/</span>登<span>/</span>入</div>
+             <table class="account">
+                <tr>
+                    <td class="item"><i class="fas fa-user"></i><input type="text" class="user-name" placeholder="User name" required/></td>
+                </tr>
+                <tr>
+                    <td class="item"><i class="fas fa-key"></i><input type="password" class="pw" placeholder="password" required/></td>
+                </tr>
+                <tr>
+                    <td class="btn"><span>SING IN</span></td>
+                </tr>
+                <tr>
+                    <td class="help"><a>Sign up</a>&nbsp;|&nbsp;<a>Forget Password?</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div id="header" class="full-width">
         <div class="navTop full-width">
-            <a href="#"><div class="logo">
+            <a><div class="logo">
                 <!-- <img src="images/甄戰logo.png" alt=""> -->
             </div></a>
             <ul>
                 <!-- <li><input type="text" placeholder="落點分析"><i class="fas fa-lg fa-search"></i></li> -->
-                <li class="enter"><a href="#" class="regist">註冊</a><span>|</span><a href="#" class="login" onclick="login()">登入</a></li>
-                <li class="hello"><span class="name">珍湛</span> , Hello!<a href="#" class="logout">&nbsp;登出</a></li>
-                <li><a href="#"><i class="fab fa-lg fa-facebook"></i></a></li>
+                <li class="enter"><a class="regist">註冊</a><span>|</span><a class="login">登入</a></li>
+                <li class="hello"><span class="name">珍湛</span> , Hello!<a class="logout">&nbsp;登出</a></li>
                 <li><div class="hamburger"><i class="fas fa-lg fa-bars"></i></div></li>
             </ul>
         </div>
         <div class="nav-bar full-width">
             <div class="sub-nav fixed-width clearfix">
                 <ul>
-                    <li><a href="#">興趣職能測驗</a></li>
-                    <li><a href="#">大學個人申請</a></li>
-                    <li><a href="#">落點分析</a></li>
-                    <li><a href="#">交叉查榜</a></li>
-                    <li><a href="#">升學官網</a></li>
-                    <li><a href="#">書面備審攻略</a></li>
+                    <li><a>興趣職能測驗</a></li>
+                    <li><a>大學個人申請</a></li>
+                    <li><a>落點分析</a></li>
+                    <li><a>交叉查榜</a></li>
+                    <li><a>升學官網</a></li>
+                    <li><a>書面備審攻略</a></li>
                 </ul>
             </div>
         </div>
@@ -63,16 +88,16 @@
                 </div>
             </div>
             <div class="control-nav">
-                <a href="#" class="prev"><i class="fas fa-2x fa-angle-left"></i></a>
-                <a href="#" class="next"><i class="fas fa-2x fa-angle-right"></i></a>
+                <a class="prev"><i class="fas fa-2x fa-angle-left"></i></a>
+                <a class="next"><i class="fas fa-2x fa-angle-right"></i></a>
             </div>
         </div>
     </div>
     <!-- 會員註冊區 -->
     <section id="main" class="page-inside-container full-width">
-        <div class="goTop"><a href="#">TOP</a></div>
+        <div class="goTop"><a>TOP</a></div>
         <div class="goHome">
-            <a href="#"><img src="images/home.png" alt=""></a>
+            <a><img src="images/home.png" alt=""></a>
         </div>
             <div class="mainWrapper fixed-width clearfix">
                 <h1 class="title">會<span>/</span>員<span>/</span>註<span>/</span>冊</h1>
@@ -289,7 +314,7 @@
                 <div class="line"></div>
                 <div class="agree fixed-width">
                     <input type="checkbox" name="" id="">同意接受TKB發送最新考試資訊、優惠電子報與簡訊<br>
-                    <input type="checkbox" name="" id="">已閱讀且同意<a href="#">會員權利說明</a>，並已瞭解<a href="#">個資法相關規範</a><br>
+                    <input type="checkbox" name="" id="">已閱讀且同意<a>會員權利說明</a>，並已瞭解<a>個資法相關規範</a><br>
                     <button type="reset">清除</button>
                     <button type="submit">註冊</button>
                 </div>
@@ -306,11 +331,11 @@
         <div class="info">
             <div class="fixed-width clearfix">
                     <nav class="selected col-12 col-m-12 col-s-12">
-                        <a href="#" class="col-2 col-m-2 col-s-2">北區</a>
-                        <a href="#" class="col-2 col-m-2 col-s-2">桃竹區</a>
-                        <a href="#" class="col-2 col-m-2 col-s-2">中區</a>
-                        <a href="#" class="col-2 col-m-2 col-s-2">嘉南區</a>
-                        <a href="#" class="col-2 col-m-2 col-s-2">高屏區</a>
+                        <a class="col-2 col-m-2 col-s-2">北區</a>
+                        <a class="col-2 col-m-2 col-s-2">桃竹區</a>
+                        <a class="col-2 col-m-2 col-s-2">中區</a>
+                        <a class="col-2 col-m-2 col-s-2">嘉南區</a>
+                        <a class="col-2 col-m-2 col-s-2">高屏區</a>
                     </nav>
                     <ul class="location-content col-12 col-m-12 col-s-12">
                         <h3>台北甄戰</h3>

@@ -1,6 +1,6 @@
 $(function(){
     let currentPosition = 0;
-    let photoWidth = $(window).innerWidth();
+    let photoWidth = $(window).outerWidth();
     let photoNums = $(".photo").length;
     let timeout = 5000;
     let speed = 1500;
@@ -9,7 +9,7 @@ $(function(){
     
     $(window).resize(function(){
         let photo = $('.photo');
-        photoWidth = $(window).innerWidth();
+        photoWidth = $(window).outerWidth();
         $('.photo').attr('style', `width:${photoWidth}px`);
         $(".wrapper").attr('style',`width:${photoNums*photoWidth}px`);
         console.log(photoWidth);            

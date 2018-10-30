@@ -46,11 +46,12 @@
     </div>
     <div id="header" class="full-width">
         <div class="navTop full-width">
-            <a><div class="logo">
+            <a>
+                <div class="logo">
                 <img src="images/甄戰logo.png" alt="">
-            </div></a>
+                </div>
+            </a>
             <ul>
-                <!-- <li><input type="text" placeholder="落點分析"><i class="fas fa-lg fa-search"></i></li> -->
                 <li class="enter"><a  class="regist">註冊</a><span>|</span><a  class="login">登入</a></li>
                 <li class="hello"><span class="name">珍湛</span> , Hello!<a  class="logout">&nbsp;登出</a></li>
                 <li><div class="hamburger"><a><i class="fas fa-lg fa-bars"></i></a></div></li>
@@ -106,13 +107,13 @@
                 </dl>
                 <dl class="step-1">
                     <dt>
-                        <div>
+                        <!-- <div> -->
                             <ul>
-                                <li><div class="item">國文</div><div><input type="text" style="width:50px;" maxlength="2" id="chinese" name="chinese" value="" /></div></li>
-                                <li><div class="item">英文</div><div><input type="text" style="width:50px;" maxlength="2" id="english" name="english" value="" /></div></li>
-                                <li><div class="item">數學</div><div><input type="text" style="width:50px;" maxlength="2" id="math" name="math" value="" /></div></li>
-                                <li><div class="item">社會</div><div><input type="text" style="width:50px;" maxlength="2" id="society" name="society" value="" /></div></li>
-                                <li><div>自然</div><div><input type="text" style="width:50px;" maxlength="2" id="naturally" name="naturally" value="" /></div></li>
+                                <li><div class="item">國文</div><div><input type="text" maxlength="2" id="chinese" name="chinese" value="" /></div></li>
+                                <li><div class="item">英文</div><div><input type="text" maxlength="2" id="english" name="english" value="" /></div></li>
+                                <li><div class="item">數學</div><div><input type="text" maxlength="2" id="math" name="math" value="" /></div></li>
+                                <li><div class="item">社會</div><div><input type="text" maxlength="2" id="society" name="society" value="" /></div></li>
+                                <li><div>自然</div><div><input type="text" maxlength="2" id="naturally" name="naturally" value="" /></div></li>
                                 <li>
                                     <div>英文聽力</div>
                                     <div>
@@ -125,16 +126,16 @@
                                         </select>
                                     </div>
                                 </li>
-                                <li><div>APCS</div><div><input type="text" style="width:50px;" id="apcs_score" name="apcs_score" value="" /></div></li>
+                                <li><div>APCS</div><div><input type="text" id="apcs_score" name="apcs_score" value="" /></div></li>
                             </ul>
-                        </div>
+                        <!-- </div> -->
                     </dt>
                 </dl>
                 <dl>
                     <dt class="sTitle">Step2. 請選擇學群領域</dt>
                 </dl>
                 <dl class="step-2 col-12 col-m-12 col-s-12">
-                    <div class="check"><input type="checkbox" id="school_group" onchange="schoolGroup()">全選</div>
+                    <div class="check-all"><input type="checkbox" id="school_group" onchange="schoolGroup()">全選</div>
                     <div class="check">
                         <ul>
                             <li><input type="checkbox" class="school_group" value="6">資訊學群</li>
@@ -187,7 +188,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" id="all" onchange="allSelect()" />全選</td>
+                                <td class="check-all"><input type="checkbox" id="all" onchange="allSelect()" />全選</td>
                                 <td><input type="checkbox" id="area1" class="all" onchange="area('1')" value="02" />宜花東</td>
                                 <td><input type="checkbox" id="type1_1" class="all area1" onchange="typeSelect('1_1')" value="0" />公立</td>
                                 <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1036" />國立宜蘭大學</td>
