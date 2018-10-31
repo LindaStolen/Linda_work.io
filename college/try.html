@@ -5,244 +5,307 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/toggle.js"></script>
+    <!-- <script src="js/toggle.js"></script> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,img,table {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        @media screen and (max-width:520px) {
+        .container {
+            width: 480px;
+            margin: auto;
+            font-size: 20px;
+        }
+        .container dl li {
+            list-style: none;
+            line-height: 30px;
+        }
+        .container .area, .container .type, .container .college {
+            width: 100%;
+        }
+        .container .area {
+            margin-top: 15px;
+        }
+        
+        .container .college span {
+            display: inline-block;
+            width: 220px;
+        }
+        }
+        @media screen and (min-width:1000px) {
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        .container .check-all, .container ul {
+            float: left;
+        }
+        .container ul {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container dl li {
+            list-style: none;
+            line-height: 30px;
+        }
+        .container .check-all {
+            width: 10%;
+            height: 800px;
+        }
+        .container .area {
+            width: 10%;
+        }
+        .container .type {
+            width: 10%;
+        }
+        .container .college {
+            width: 80%;
+        }
+        .null {
+            display: inline-block;
+            content: "";
+            width: 95px;
+        }
+        .null-1 {
+            display: inline-block;
+            content: "";
+            width: 190px;
+        }
+        .container .college span{
+            width: 200px;
+            display: inline-block;
+        }
+    }
+    </style>
 </head>
 <body>
-    <div class="container full-width">
+    <div class="container">
         <dl>
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <thead class="col-12 col-m-12 col-s-12">
-                    <tr>
-                        <th width="10%"></th>
-                        <th width="11%"></th>
-                        <th width="11%"></th>
-                        <th width="21%"></th>
-                        <th width="21%"></th>
-                        <th width="21%"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="check-all"><input type="checkbox" id="all" onchange="allSelect()" />全選</td>
-                        <td><input type="checkbox" id="area1" class="all" onchange="area('1')" value="02" />宜花東</td>
-                        <td><input type="checkbox" id="type1_1" class="all area1" onchange="typeSelect('1_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1036" />國立宜蘭大學</td>
-                        <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1014" />國立東華大學</td>
-                        <td><input type="checkbox" class="all area1 type1_1 school_no" value="S1035" />國立臺東大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type1_2" class="all area1" onchange="typeSelect('1_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area1 type1_2 school_no" value="S1129" />佛光大學</td>
-                        <td><input type="checkbox" class="all area1 type1_2 school_no" value="S1124" />慈濟大學</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="checkbox" id="area2" class="all" onchange="area('2')" value="01" />北北基</td>
-                        <td><input type="checkbox" id="type2_1" class="all area2" onchange="typeSelect('2_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1003" />國立臺灣大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1004" />國立臺灣師範大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1002" />國立政治大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1011" />國立陽明大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1020" />國立臺北藝術大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S5001" />國立臺北教育大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S5009" />臺北市立教育大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1021" />國立臺灣藝術大學</td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1028" />國立臺北大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_1 school_no" value="S1009" />國立臺灣海洋大學</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type2_2" class="all area2" onchange="typeSelect('2_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1104" />東吳大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1106" />淡江大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1125" />中國文化大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1122" />大同大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1103" />輔仁大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1114" />華梵大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1134" />銘傳大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1116" />世新大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1118" />實踐大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1121" />真理大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1123" />臺北醫學大學</td>
-                        <td><input type="checkbox" class="all area2 type2_2 school_no" value="S1040" />馬偕醫學院</td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td><input type="checkbox" id="area3" class="all" onchange="area('3')" value="03" />桃竹苗</td>
-                        <td><input type="checkbox" id="type3_1" class="all area3" onchange="typeSelect('3_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1001" />國立清華大學</td>
-                        <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1006" />國立交通大學</td>
-                        <td><input type="checkbox" class="all area3 type3_1 school_no" value="S1007" />國立中央大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area3 type3_1 school_no" value="S3008" />國立聯合大學</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type3_2" class="all area3" onchange="typeSelect('3_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1105" />中原大學</td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1110" />長庚大學</td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1111" />元智大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1112" />中華大學</td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1126" />玄奘大學</td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S3107" />開南大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area3 type3_2 school_no" value="S1117" />銘傳大學(桃園校區)</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td><input type="checkbox" id="area4" class="all" onchange="area('4')" value="04" />中彰投</td>
-                        <td><input type="checkbox" id="type4_1" class="all area4" onchange="typeSelect('4_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1005" />國立中興大學</td>
-                        <td><input type="checkbox" class="all area4 type4_1 school_no" value="S4002" />國立彰化師範大學</td>
-                        <td><input type="checkbox" class="all area4 type4_1 school_no" value="S5003" />國立臺中教育大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1013" />國立暨南國際大學</td>
-                        <td><input type="checkbox" class="all area4 type4_1 school_no" value="S1024" />國立臺灣體育運動大學 	</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type4_2" class="all area4" onchange="typeSelect('4_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1102" />東海大學</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1108" />逢甲大學</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1109" />靜宜大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S3105" />中國醫藥大學</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1133" />中山醫學大學</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1113" />大葉大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1130" />亞洲大學</td>
-                        <td><input type="checkbox" class="all area4 type4_2 school_no" value="S1131" />明道大學</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td><input type="checkbox" id="area5" class="all" onchange="area('5')" value="05" />雲嘉南</td>
-                        <td><input type="checkbox" id="type5_1" class="all area5" onchange="typeSelect('5_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1101" />國立成功大學</td>
-                        <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1010" />國立中正大學</td>
-                        <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1037" />國立臺南大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1018" />國立嘉義大學</td>
-                        <td><input type="checkbox" class="all area5 type5_1 school_no" value="S1022" />國立臺南藝術大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type5_2" class="all area5" onchange="typeSelect('5_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area5 type5_2 school_no" value="S1132" />長榮大學</td>
-                        <td><input type="checkbox" class="all area5 type5_2 school_no" value="S1120" />南華大學</td>
-                        <td><input type="checkbox" class="all area5 type5_2 school_no" value="S3108" />台灣首府大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area5 type5_2 school_no" value="S3109" />康寧大學</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td><input type="checkbox" id="area6" class="all" onchange="area('6')" value="06" />高屏金門</td>
-                        <td><input type="checkbox" id="type6_1" class="all area6" onchange="typeSelect('6_1')" value="0" />公立</td>
-                        <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1008" />國立中山大學</td>
-                        <td><input type="checkbox" class="all area6 type6_1 school_no" value="S4001" />國立高雄師範大學</td>
-                        <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1042" />國立屏東大學</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" class="all area6 type6_1 school_no" value="S1019" />國立高雄大學</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox" id="type6_2" class="all area6" onchange="typeSelect('6_2')" value="1" />私立</td>
-                        <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1119" />高雄醫學大學</td>
-                        <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1115" />義守大學</td>
-                        <td><input type="checkbox" class="all area6 type6_2 school_no" value="S1043" />實踐大學(高雄校區)</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="check-all"><input type="checkbox" name="" id="">全選</div>
+            <ul>
+                <li class="area"><input type="checkbox" id="area1" class="all" onchange="area('1')" value="02" />宜花東</li>
+                <li class="type"><input type="checkbox" id="type1_1" class="all area1" onchange="typeSelect('1_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area1 type1_1 school_no" value="S1036" />國立宜蘭大學</span>
+                    <span><input type="checkbox" class="all area1 type1_1 school_no" value="S1014" />國立東華大學</span>
+                    <span><input type="checkbox" class="all area1 type1_1 school_no" value="S1035" />國立臺東大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type1_2" class="all area1" onchange="typeSelect('1_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area1 type1_2 school_no" value="S1129" />佛光大學</span>
+                    <span><input type="checkbox" class="all area1 type1_2 school_no" value="S1124" />慈濟大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li class="area"><input type="checkbox" id="area2" class="all" onchange="area('2')" value="01" />北北基</li>
+                <li class="type"><input type="checkbox" id="type2_1" class="all area2" onchange="typeSelect('2_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1003" />國立臺灣大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1004" />國立臺灣師範大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1002" />國立政治大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1011" />國立陽明大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1020" />國立臺北藝術大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S5001" />國立臺北教育大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S5009" />臺北市立教育大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1021" />國立臺灣藝術大學</span>
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1028" />國立臺北大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1009" />國立臺灣海洋大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type2_2" class="all area2" onchange="typeSelect('2_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1104" />東吳大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1106" />淡江大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1125" />中國文化大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1122" />大同大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1103" />輔仁大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1114" />華梵大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1134" />銘傳大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1116" />世新大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1118" />實踐大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1121" />真理大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1123" />臺北醫學大學</span>
+                    <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1040" />馬偕醫學院</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <li class="area"><input type="checkbox" id="area3" class="all" onchange="area('3')" value="03" />桃竹苗</li>
+                <li class="type"><input type="checkbox" id="type3_1" class="all area3" onchange="typeSelect('3_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1001" />國立清華大學</span>
+                    <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1006" />國立交通大學</span>
+                    <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1007" />國立中央大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area3 type3_1 school_no" value="S3008" />國立聯合大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type3_2" class="all area3" onchange="typeSelect('3_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1105" />中原大學</span>
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1110" />長庚大學</span>
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1111" />元智大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1112" />中華大學</span>
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1126" />玄奘大學</span>
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S3107" />開南大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1117" />銘傳大學(桃園校區)</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <li class="area"><input type="checkbox" id="area4" class="all" onchange="area('4')" value="04" />中彰投</li>
+                <li class="type"><input type="checkbox" id="type4_1" class="all area4" onchange="typeSelect('4_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1005" />國立中興大學</span>
+                    <span><input type="checkbox" class="all area4 type4_1 school_no" value="S4002" />國立彰化師範大學</span>
+                    <span><input type="checkbox" class="all area4 type4_1 school_no" value="S5003" />國立臺中教育大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1013" />國立暨南國際大學</span>
+                    <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1024" />國立臺灣體育運動大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type4_2" class="all area4" onchange="typeSelect('4_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1102" />東海大學</span>
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1108" />逢甲大學</span>
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1109" />靜宜大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S3105" />中國醫藥大學</span>
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1133" />中山醫學大學</span>
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1113" />大葉大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1130" />亞洲大學</span>
+                    <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1131" />明道大學</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <li class="area"><input type="checkbox" id="area5" class="all" onchange="area('5')" value="05" />雲嘉南</li>
+                <li class="type"><input type="checkbox" id="type5_1" class="all area5" onchange="typeSelect('5_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1101" />國立成功大學</span>
+                    <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1010" />國立中正大學</span>
+                    <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1037" />國立臺南大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1018" />國立嘉義大學</span>
+                    <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1022" />國立臺南藝術大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type5_2" class="all area5" onchange="typeSelect('5_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area5 type5_2 school_no" value="S1132" />長榮大學</span>
+                    <span><input type="checkbox" class="all area5 type5_2 school_no" value="S1120" />南華大學</span>
+                    <span><input type="checkbox" class="all area5 type5_2 school_no" value="S3108" />台灣首府大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area5 type5_2 school_no" value="S3109" />康寧大學</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <li class="area"><input type="checkbox" id="area6" class="all" onchange="area('6')" value="06" />高屏金門</li>
+                <li class="type"><input type="checkbox" id="type6_1" class="all area6" onchange="typeSelect('6_1')" value="0" />公立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1008" />國立中山大學</span>
+                    <span><input type="checkbox" class="all area6 type6_1 school_no" value="S4001" />國立高雄師範大學</span>
+                    <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1042" />國立屏東大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null-1"></span></li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1019" />國立高雄大學</span>
+                </li>
+            </ul>
+            <ul>
+                <li><span class="null"></span></li>
+                <li class="type"><input type="checkbox" id="type6_2" class="all area6" onchange="typeSelect('6_2')" value="1" />私立</li>
+                <li class="college">
+                    <span><input type="checkbox" class="all area6 type6_2 school_no" value="S1119" />高雄醫學大學</span>
+                    <span><input type="checkbox" class="all area6 type6_2 school_no" value="S1115" />義守大學</span>
+                    <span><input type="checkbox" class="all area6 type6_2 school_no" value="S1043" />實踐大學(高雄校區)</span>
+                </li>
+            </ul>
         </dl>
     </div>
 </body>
