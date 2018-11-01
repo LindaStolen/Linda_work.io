@@ -1,0 +1,211 @@
+@media screen and (max-width:520px) {
+    /* signin */
+#jump-box {
+    background-color: #ff8551;
+    width: 250px;
+    height: 380px;
+}
+.close i {
+    font-size: 18px;
+    padding-right: 12px;
+    padding-top: 10px;
+}
+.bighead {
+    width: 80px;
+    height: 80px;
+    margin: 15px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.welcome {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 0 8px;
+    margin: 0 35px;
+}
+.welcome span {
+    font-size: 8px;
+}
+.account {
+    margin: 0 auto ;
+}
+.account .item {
+    border-bottom: 0.5px solid #fff;
+}
+#jump-box .account {
+    width: 55%;
+}
+#jump-box input {
+    height: 20px;
+    width: 70%;
+}
+#jump-box ::-webkit-input-placeholder, #jump-box td i {
+    font-size: 13px;
+}
+.account .btn span {
+    line-height: 18px;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 15px auto 0;
+    padding: 3px 10px;
+}
+.account .help {
+    font-size: 10px;
+}
+table .help {
+    padding-top: 5px;
+}
+/* header */
+#header .navTop {
+    height: 60px;
+}
+#header .navTop .logo {
+    width: 170px;
+    margin-top: 8px;
+}
+#header .navTop ul {
+    height: 60px;
+}
+#header .navTop li, #header .navTop li .regist, #header .navTop li .login, #header .navTop li .hamburger {
+    line-height: 60px;
+    padding: 0 5px;
+}
+#header .navTop li .enter, #header .navTop li .hello {
+    font-size: 18px;
+}
+
+#header .navTop li .login {
+    padding-left: 6px;
+}
+/* slider */
+#header .slider {
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+    overflow: hidden;
+}
+#header img {
+    width: 100%;
+}
+/* main content */
+#main .mainWrapper {
+    padding: 50px 20px;
+}
+#main h1, #location .title h2 {
+    font-size: 30px;
+    font-weight: 450;
+    padding-bottom: 20px;
+}
+#main .mainWrapper input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+}
+#main .step-2 .check-all, #main .step-3 .check-all  {
+    width: 100%;
+}
+
+#main .step-2 .check {
+    width: 50%;
+}
+#main .step-1 ul, #main .step-2, #main .step-3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#main .step-1 ul li {
+    margin: 0 3px;
+}
+#main .mainWrapper li input[type="text"] {
+    width: 70px;
+    height: 30px;
+}
+#main .mainWrapper li select {
+    width: 70px;
+    height: 28px;
+}
+#step-3 dl li {
+    list-style: none;
+    line-height: 30px;
+    font-size: 10px;
+}
+#step-3 dd {
+    margin: 0px;
+}
+#step-3 .check-all {
+    color: #722400;
+}
+#step-3 .area, #step-3 .type {
+    width: 100%;
+}
+#step-3 .area {
+    margin-top: 15px;
+}
+#step-3 .college {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* float: left; */
+}
+#step-3 li .null, #step-3 li .null-1 {
+    display: none;
+}
+#step-3 .college span {
+    display: inline-block;
+    width: 170px;
+}
+#main .search .btn {
+    width: 100px;
+    font-size: 18px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+}
+/* location */
+#location {
+    background-color: #eee;
+    padding: 30px 0;
+}
+#location .info {
+    padding-top: 30px;
+}
+#location .info nav {
+    padding: 0 15px;
+}
+#location .selected a {
+    font-size: 13px;
+    padding: 5px 8px;
+}
+#location .info ul h3 {
+    margin: 0 15px;
+}
+#location .info ul li {
+    padding: 20px 0 0 15px;
+}
+/* 相關聯結 */
+footer #relationLink nav {
+    width: 90%;
+    margin: 0 auto ;
+    padding-bottom: 10px;
+    border-bottom: .5px solid #C9BC9C;
+    margin-bottom: 10px;
+}
+#relationLink nav div {
+    width: 82%;
+    margin: 10px auto;
+}
+#relationLink nav .youth {
+    width: 65%;
+    margin: 15px auto;
+}
+#relationLink nav .tkb_idol {
+    width: 40%;
+    margin-top: 20px;
+}
+#relationLink .sever p {
+    line-height: 20px;
+    font-size: 15px;
+}
+#relationLink .server .line {
+    display: none;
+}
+}
