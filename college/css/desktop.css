@@ -49,6 +49,9 @@ table .help {
     padding-top: 20px;
 }
 /* header */
+#header {
+    position: relative;
+}
 #header .navTop .logo {
     width: 250px;
     height: 70px;
@@ -57,19 +60,48 @@ table .help {
     margin-top: 115px;
 }
 #header .navTop ul {
-    padding-right: 30px;
+    padding-right: 20px;
     height: 70px;
 }
 #header .navTop li {
     line-height: 70px;
     float: left;
-    padding: 0 10px;
+    /* padding: 0 5px; */
     color: #333;
 }
-#header .navTop li .regist, #header .navTop li .login, #header .navTop .logout {
+#header .navTop li .regist, #header .navTop li .login, #header .navTop .logout, #header .navTop .membercenter {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22.5px;
     padding: 0 5px;
+}
+
+#header #memberCenter {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: 1.5px solid #ff6e2f;
+    color: #333;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: 10px;
+    top: 70px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px#703715;
+    position: fixed;
+    z-index: 998;
+    display: none;   
+}
+#header #memberCenter li {
+    border-bottom: .3px solid #a3a3a3; 
+    line-height: 30px;
+    margin: 0 10px;
+}
+#header #memberCenter .logout {
+    /* text-align: right; */
+    border-bottom: none;
 }
 #header .navTop .hello {
     color: #fff;
@@ -111,49 +143,33 @@ table .help {
 #main .mainWrapper li input[type="text"],#main .mainWrapper li select {
     width: 70px;
 }
-#step-3 .check-all, #step-3 ul {
+#step-3 .check-all, #step-3 ul, #step-3 ul li {
     float: left;
 }
+#step-3 .check-all {
+    height: 1200px;
+    width: 20%;
+    margin-top: 10px;
+}
 #step-3 ul {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
+    width: 80%;
 }
-#step-3 dd {
-    margin: 10px 0;
-}
-#step-3 dl li {
-    list-style: none;
+#step-3 li {
     line-height: 30px;
 }
-#step-3 .check-all {
-    width: 10%;
-    height: 800px;
-}
-#step-3 .area {
-    width: 10%;
-}
-#step-3 .type {
-    width: 10%;
-}
-#step-3 .null {
+#step-3 .college span {
     display: inline-block;
-    content: "";
-    width: 105px;
-}
-.null-1 {
-    display: inline-block;
-    content: "";
-    width: 210px;
-}
-#step-3 .college {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-}
-#step-3 .college span{
     width: 200px;
-    display: block;
+}
+#step-3 .area{
+    width: 100%;
+    margin-top: 10px;
+}
+#step-3 .type{
+    width: 30%;
+}
+#step-3 .college{
+    width: 70%;
 }
 #main .search .btn {
     width: 150px;

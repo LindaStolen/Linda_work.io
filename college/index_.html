@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/for_FF.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -55,8 +55,18 @@
             </a>
             <ul>
                 <li class="enter"><a  class="regist">註冊</a><span>|</span><a  class="login">登入</a></li>
-                <li class="hello"><span class="name">珍湛</span> , Hello!<a  class="logout">&nbsp;登出</a></li>
+                <li class="hello"><span class="name">珍湛</span> , Hello!<!--<a  class="logout">&nbsp;登出</a>--></li>
+                <li><div class="membercenter"><a><i class="fas fa-user-circle"></i></a></div></li>
                 <li><div class="hamburger"><a><i class="fas fa-lg fa-bars"></i></a></div></li>
+            </ul>
+        </div>
+        <div id="memberCenter">
+            <ul>
+                <li class="level">會員級別<span>&nbsp;|&nbsp;</span>一般</li>
+                <li class=""><a>修改會員資料</a></li>
+                <li class=""><a>修改會員資料</a></li>
+                <li class=""><a>修改會員資料</a></li>
+                <li class="logout"><a>設定</a>&nbsp;|&nbsp;<a>登出</a></li>
             </ul>
         </div>
         <div class="nav-bar full-width">
@@ -204,27 +214,12 @@
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1003" />國立臺灣大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1004" />國立臺灣師範大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1002" />國立政治大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1011" />國立陽明大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1020" />國立臺北藝術大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S5001" />國立臺北教育大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S5009" />臺北市立教育大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1021" />國立臺灣藝術大學</span>
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1028" />國立臺北大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_1 school_no" value="S1009" />國立臺灣海洋大學</span>
                             </li>
                         </ul>
@@ -235,27 +230,12 @@
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1104" />東吳大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1106" />淡江大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1125" />中國文化大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1122" />大同大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1103" />輔仁大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1114" />華梵大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1134" />銘傳大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1116" />世新大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1118" />實踐大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1121" />真理大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1123" />臺北醫學大學</span>
                                 <span><input type="checkbox" class="all area2 type2_2 school_no" value="S1040" />馬偕醫學院</span>
@@ -269,11 +249,6 @@
                                 <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1001" />國立清華大學</span>
                                 <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1006" />國立交通大學</span>
                                 <span><input type="checkbox" class="all area3 type3_1 school_no" value="S1007" />國立中央大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area3 type3_1 school_no" value="S3008" />國立聯合大學</span>
                             </li>
                         </ul>
@@ -284,19 +259,9 @@
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1105" />中原大學</span>
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1110" />長庚大學</span>
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1111" />元智大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1112" />中華大學</span>
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1126" />玄奘大學</span>
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S3107" />開南大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area3 type3_2 school_no" value="S1117" />銘傳大學(桃園校區)</span>
                             </li>
                         </ul>
@@ -308,12 +273,6 @@
                                 <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1005" />國立中興大學</span>
                                 <span><input type="checkbox" class="all area4 type4_1 school_no" value="S4002" />國立彰化師範大學</span>
                                 <span><input type="checkbox" class="all area4 type4_1 school_no" value="S5003" />國立臺中教育大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
-                                <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1013" />國立暨南國際大學</span>
                                 <span><input type="checkbox" class="all area4 type4_1 school_no" value="S1024" />國立臺灣體育運動大學</span>
                                 <span class="null"></span>                            </li>
                         </ul>
@@ -324,19 +283,9 @@
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1102" />東海大學</span>
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1108" />逢甲大學</span>
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1109" />靜宜大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S3105" />中國醫藥大學</span>
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1133" />中山醫學大學</span>
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1113" />大葉大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1130" />亞洲大學</span>
                                 <span><input type="checkbox" class="all area4 type4_2 school_no" value="S1131" />明道大學</span>
                                 <span class="null"></span>                            </li>
@@ -349,11 +298,6 @@
                                 <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1101" />國立成功大學</span>
                                 <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1010" />國立中正大學</span>
                                 <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1037" />國立臺南大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1018" />國立嘉義大學</span>
                                 <span><input type="checkbox" class="all area5 type5_1 school_no" value="S1022" />國立臺南藝術大學</span>
                                 <span class="null"></span>                            </li>
@@ -365,11 +309,6 @@
                                 <span><input type="checkbox" class="all area5 type5_2 school_no" value="S1132" />長榮大學</span>
                                 <span><input type="checkbox" class="all area5 type5_2 school_no" value="S1120" />南華大學</span>
                                 <span><input type="checkbox" class="all area5 type5_2 school_no" value="S3108" />台灣首府大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area5 type5_2 school_no" value="S3109" />康寧大學</span>
                             </li>
                         </ul>
@@ -381,11 +320,6 @@
                                 <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1008" />國立中山大學</span>
                                 <span><input type="checkbox" class="all area6 type6_1 school_no" value="S4001" />國立高雄師範大學</span>
                                 <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1042" />國立屏東大學</span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li><span class="null-1"></span></li>
-                            <li class="college">
                                 <span><input type="checkbox" class="all area6 type6_1 school_no" value="S1019" />國立高雄大學</span>
                             </li>
                         </ul>

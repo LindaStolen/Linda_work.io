@@ -31,4 +31,8 @@ $('#header .photo').attr('style', `width:${photoWidth}px`);
         move();
     }
     setInterval(cycle,timeout);
+
+    $(".membercenter").click(function(){
+        $("#memberCenter").slideToggle({top:'70px'});
+    })
 }) 

@@ -117,7 +117,7 @@ table .help a:hover {
     text-align: center;
     position: fixed;
     top: 70px;
-    z-index: 999;
+    z-index: 997;
 }
 #header .nav-bar ul {
     font-size: 18px;
