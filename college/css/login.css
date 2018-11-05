@@ -127,50 +127,23 @@ table .help a:hover {
     position: fixed;
 }
 #header .navTop .logo {
-    width: 220px;
-    height: 70px;
+    padding: 0 10px;
     float: left;
     background-image:  linear-gradient(#EA5514,#EA5514);
     background-repeat: no-repeat;
     background-position: center;
 }
-#header .navTop ul {
-    float: right;
-    height: 70px;
-}
-#header .navTop li {
-    float: left;
-    padding: 0 10px;
-    line-height: 70px;
-    color: #333;
-}
-#header .navTop .hello {
-    color: #fff;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
 
-/* #header .navTop input::-webkit-input-placeholder {
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 2px;
-} */
-#header .navTop li .regist, #header .navTop li .login, #header .navTop .logout {
-    font-weight: 400;
-    font-size: 20px;
-    padding: 0 5px;
-}
 #header .hamburger, #header .navTop .hello {
     display: none;
 }
 #header .nav-bar {
     background-color: #ea5414;
     opacity: 0.8;
-    /* height: 45px; */
     text-align: center;
     position: fixed;
     top: 70px;
-    z-index: 999;
+    z-index: 997;
 }
 #header .nav-bar ul {
     font-size: 18px;
