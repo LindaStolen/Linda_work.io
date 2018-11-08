@@ -4,49 +4,61 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
+    height: 70px;
     position: relative;
+    box-shadow: 0 1px 4px #746353b7;
 }
 #container .top .logo {
     width: 180px;
-    padding: 10px 0;
+    padding: 8px 0;
     margin-left: 15px;
-    display: inline-block;
+    float: left;
 }
 #container .top .title {
-    font-size: 18px;
-    text-align: center;    
+    font-size: 25px;
+    font-weight: 450;
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    padding-left: 8px;
+    letter-spacing: 1px;    
 }
 #container .top ul {
-    float: right;
+    /* float: right; */
+    display: inline-block;
     padding-right: 10px;
     position: absolute;
-    bottom: 20px;
+    bottom: 5px;
     right: 10px;
-    /* line-height: 100px; */
 }
 #container .top ul li {
-    float: left;
     margin: 0 10px;
-    font-size: 20px;
-    /* line-height: 80px; */
+    font-size: 18px;
+    text-align: right;
 }
+#container .top ul .date {
+    font-size: 20px;
+    font-weight: 400;
+    color: #3f2806;
+    /* background-color: #ffffff; */
+}
+/* #container .top ul li a {
+    margin-right: 8px;
+} */
 #container .top ul li i {
-    padding-right: 5px;
+    padding: 0 5px;
 }
 /* left_nav */
 #container .nav_side {
-    width: 200px;
-    display: inline-block;
     padding-top: 50px;
-    position: fixed;
 }
 #container .nav_side ul {
     padding: 0 0 10px 0;
     margin-bottom: 10px;
 }
 #container .nav_side ul li {
-    height: 60px;
-    padding: 5px 0;
+    height: 35px;
+    width: 100%;
 }
 #container .nav_side ul li::before {
     content:"";
@@ -61,7 +73,8 @@
 #container .nav_side ul li a {
     padding-left: 60px;
     font-size: 18px;
-    display: inline-block;    
+    display: inline-block; 
+    vertical-align: middle;   
 }
 #container .nav_side h2 {
     font-size: 20px;
@@ -75,4 +88,17 @@
 #container .nav_side h2 i {
     padding-right: 5px;
     line-height: 30px;
+}
+/* content */
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+#mainContent ul li {
+    float: left;
+    margin: 0 10px;
 }

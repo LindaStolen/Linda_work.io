@@ -11,26 +11,27 @@
 </head>
 <body>
     <div id="container">
-        <div class="top">
-            <!-- <img src="images/top_bgc.jpg" alt=""> -->
+    <!-- top nav -->
+        <div class="top full-width">
             <div class="logo">
-                <img src="images/logo (1).png" alt="">
-                <div class="title">預約座位系統</div>
+                <a><img src="images/logo (1).png" alt=""></a>
             </div>
-            <div class="date">2018年11月6日</div>
+            <h1 class="title">預約座位系統</h1>
             <ul>
-                <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li>
-                <li class="manager"><a href="#"><i class="fas fa-user"></i>管理者</a></li>
+                <li class="date">2018年11月6日</li>
+                <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
+                <li class="manager"><a href="#"><i class="far fa-list-alt"></i>回目錄</a><a href="#"><i class="fas fa-user"></i>管理者</a></li>
                 <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
             </ul>
         </div>
-        <div class="nav_side">
+    <!-- side nav -->
+        <div class="nav_side col-2">
             <!-- <div class="logo"></div> -->
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
                 <li><a href="#">預約座位</a></li>
                 <li><a href="#">修改/刪除座位</a></li>
-                <li><a href="#">查詢/刪除學員<br>違規紀錄</a></li>
+                <li><a href="#">查詢/刪除學員違規紀錄</a></li>
             </ul>
             <h2><i class="fas fa-search"></i>查詢</h2>
             <ul class="search">
@@ -51,7 +52,25 @@
                 <li><a href="#">取消停課場次</a></li>
                 <li><a href="#"><i class="fas fa-cog"></i>權限設定</a></li>
             </ul>
-        </div>        
+        </div>
+    <!-- content -->
+        <div id="mainContent" class="col-10">
+            <h2 class="sub-title">座位使用狀況&nbsp;//</h2>
+            <ul>
+                <li class="location">
+                    <span>上課地點:</span>
+                    <div>台北數位學堂</div>
+                </li>
+                <li class="date">
+                    <span>上課日期:</span>
+                    <div>2018-11-07</div>
+                </li>
+                <li class="time">
+                    <span>上課時段:</span>
+                    <div>08:30-11:50</div>
+                </li>
+            </ul>
+    </div>
     </div>
 </body>
 </html>
