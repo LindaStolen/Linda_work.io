@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/css/all.min.css">
-    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sign-in.js"></script>
+    <title>學生到班狀況</title>
 </head>
 <body>
     <div id="container">
@@ -27,50 +29,194 @@
     <!-- side nav -->
         <div class="nav_side col-2">
             <!-- <div class="logo"></div> -->
+            <h2><i class="fas fa-home"></i>本館現況</h2>
+            <ul class="main">
+                <li><a href="#">學生到班狀況</a></li>
+                <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
+                <li><a href="#">預約到班統計</a></li>
+            </ul>
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
-                <li><a href="#">預約座位</a></li>
-                <li><a href="#">修改/刪除座位</a></li>
-                <li><a href="#">查詢/刪除學員違規紀錄</a></li>
-            </ul>
-            <h2><i class="fas fa-search"></i>查詢</h2>
-            <ul class="search">
-                <li><a href="#">預約記錄</a></li>
-                <li><a href="#">異動歷史記錄</a></li>
-                <li><a href="#">學習時數記錄</a></li>
-                <li><a href="#">統計資料</a></li>
+                <li><a href="#">新增預約</a></li>
+                <li><a href="#">修改/刪除預約</a></li>
             </ul>
             <h2><i class="fas fa-chair"></i>座位管理</h2>
             <ul class="seat_m">
-                <li><a href="#">修改座位狀態</a></li>
-                <li><a href="#">座位順序</a></li>
-                <li><a href="#">新增當機紀錄</a></li>
+                <li><a href="#">現狀列表</a></li>
+                <li><a href="#">一週預約狀況</a></li>
+                <li><a href="#">狀態異動</a></li>
             </ul>
-            <h2>場次管理</h2>
+            <h2><i class="fas fa-clock"></i>場次管理</h2>
             <ul class="place_m">
-                <li><a href="#">新增停課場次</a></li>
-                <li><a href="#">取消停課場次</a></li>
-                <li><a href="#"><i class="fas fa-cog"></i>權限設定</a></li>
+                <li><a href="#">場次查詢</a></li>
+                <li><a href="#">狀態異動</a></li>
             </ul>
+            <h2><i class="fas fa-book-reader"></i>學生管理</h2>
+            <ul class="student_m">
+                <li><a href="#">預約記錄</a></li>
+                <li><a href="#">學習時數查詢</a></li>
+            </ul>
+            <div class="permission"><i class="fas fa-cog"></i>權限管理</div>
         </div>
     <!-- content -->
         <div id="mainContent" class="col-10">
-            <h2 class="sub-title">座位使用狀況&nbsp;//</h2>
+            <h2 class="sub-title">本館現況 \ 學生到班狀況</h2>
             <ul>
                 <li class="location">
-                    <span>上課地點:</span>
-                    <div>台北數位學堂</div>
+                    <!-- <span>上課地點:</span> -->
+                    <div><i class="fas fa-map-marker-alt"></i>台北數位學堂</div>
                 </li>
                 <li class="date">
-                    <span>上課日期:</span>
-                    <div>2018-11-07</div>
+                    <!-- <span>上課日期:</span> -->
+                    <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
                 </li>
                 <li class="time">
-                    <span>上課時段:</span>
-                    <div>08:30-11:50</div>
+                    <!-- <span>上課時段:</span> -->
+                    <div><i class="far fa-clock"></i>08:30-11:50</div>
+                </li>
+                <li class="material">
+                    <div><a><i class="fas fa-book"></i>教材到班查詢</a></div>
                 </li>
             </ul>
-    </div>
+            <form action="">
+                <table id="table_1" class="clearfix">
+                    <thead>
+                        <tr>
+                            <th style="width:10%">座編</th>
+                            <th style="width:10%">學號</th>
+                            <th style="width:10%">姓名</th>
+                            <th style="width:10%">手機</th>
+                            <th style="width:20%">課程名稱<br>到期日</th>
+                            <th style="width:10%">授課老師</th>
+                            <th style="width:10%">到班狀況</th>
+                            <th style="width:10%">補課</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A01</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A02</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A03</td>
+                            <td>TKB1234567</td>
+                            <td>花啦啦</td>
+                            <td>0912345678</td>
+                            <td>線性代數<br>2019/02/01</td>
+                            <td>黃子嘉</td>
+                            <td class="late">未到班</td>
+                            <td><i class="fas fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A04</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="late">未到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A05</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A06</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="fas fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A07</td>
+                            <td>TKB1234567</td>
+                            <td>王小明</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A08</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A08</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="fas fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A09</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="fas fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A10</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                        <tr>
+                            <td>A11</td>
+                            <td>TKB1234567</td>
+                            <td>蛙拉拉</td>
+                            <td>0912345678</td>
+                            <td>資料結構<br>2019/02/01</td>
+                            <td>洪逸</td>
+                            <td class="signIn">已到班</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </div>
 </body>
 </html>
