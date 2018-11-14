@@ -1,33 +1,37 @@
 /* content */
+h1.title {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    line-height: 70px;
+    background-image: url(../images/blank_bgi-1.png);
+    box-shadow: 0px 0.8px 2px #5e93aa;
+}
+h1.title::before {
+    width: 100px;
+    height: 70px;
+    content:"";
+    display: block;
+    position: absolute;
+    left:600px;
+    top: 35px;
+    border-top: 1.5px dotted #fff;
+}
+h1.title::after {
+    width: 100px;
+    height: 70px;
+    content:"";
+    display: block;
+    position: absolute;
+    right:600px;
+    top: 35px;
+    border-top: 1.5px dotted #fff;
+}
 #content {
     padding: 50px 50px 50px 80px;
-}
-#content .title {
-    text-align: center;
-    letter-spacing: 1px;
-    font-weight: 450;
-    color: #026c7a;
-    position: relative;
-}
-#content .title::before {
-    width: 100px;
-    height: 60px;
-    content:"";
-    display: block;
-    position: absolute;
-    left:250px;
-    top: 23px;
-    border-top: 1.5px solid #026c7a;
-}
-#content .title::after {
-    width: 100px;
-    height: 60px;
-    content:"";
-    display: block;
-    position: absolute;
-    right:250px;
-    top: 23px;
-    border-top: 1.5px solid #026c7a;
 }
 #content .sub-title {
     margin:30px 0 0;
@@ -36,6 +40,7 @@
     letter-spacing: 0.5px;
     font-size: 20px;
     font-weight: 400;
+    color: #444;
 }
 #content ul {
     margin: 0 20px 50px 0;

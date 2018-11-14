@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forall.css">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <script src="js/jquery.min.js"></script>
+    <title>教材到班查詢</title>
+</head>
+<body>
+    <h1 class="title full-width">教材到班狀況</h1>
+    <div id="content" class="fixed-width">
+        <header>
+            <h2 class="sub-title">本館現況 \ 學生到班狀況 \ 教材到班狀況</h2>
+            <div class="clearfix">
+                <ul>
+                    <li class="location">
+                        <div><i class="fas fa-map-marker-alt"></i>台北數位學堂</div>
+                    </li>
+                    <li class="date">
+                        <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
+                    </li>
+                    <li class="time">
+                        <div><i class="far fa-clock"></i>08:30-11:50</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wrap clearfix">
+                <span class="quick-search">快速查詢</span>
+                <form action="">
+                    <table class="search">
+                        <thead>
+                            <th style="width:15%;"></th>
+                            <th style="width:20%;"></th>
+                            <th style="width:15%;"></th>
+                            <th style="width:20%;"></th>
+                            <th style="width:15%;"></th>
+                            <th style="width:20%;"></th>
+                            <!-- <th style="width:30%;"></th> -->
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="item">學員編號</td>
+                                <td><input type="text" maxlength="10"></td>
+                                <td class="item">學員姓名</td>
+                                <td><input type="text"></td>
+                                <td class="item">學員身分證</td>
+                                <td><input type="text" maxlength="10"></td>
+                            </tr>                
+                        </tbody>
+                    </table>
+                    <div class="ctrl_btn">
+                        <a href="#" class="correct">確定</a> <a href="#" class="reset">清除</a>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="crossLine"></div> -->
+        </header>
+        <main>
+            <form action="">
+                <table>
+                    <thead>
+                        <th style="width:5%;">座編</th>
+                        <th style="width:13%;">學號姓名</th>
+                        <th style="width:12%;">課程名稱</th>
+                        <th style="width:20%;">教材內容與備註</th>
+                        <th style="width:8%;">報到狀況</th>
+                        <th style="width:8%;">教材狀態</th>
+                        <th style="width:8%;">申請狀態</th>
+                        <th style="width:8%;">申請日期</th>
+                        <th style="width:8%;">已領取</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A01</td>
+                            <td>TW0101008740<br>小毛</td>
+                            <td>劉逸-計算機概論<br>(S1303cc0000061)</td>
+                            <td>講義1(18百官)</td>
+                            <td>已報到</td>
+                            <td>已到班</td>
+                            <td>一般</td>
+                            <td>2018/11/13</td>
+                            <td><input type="checkbox" name="receive_material_item" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>A02</td>
+                            <td>TW0101008740<br>小毛</td>
+                            <td>劉逸-計算機概論<br>(S1303cc0000061)</td>
+                            <td>鼎茂書:MN0301<hr><span>訂價500元;0103版</span></td>
+                            <td>已報到</td>
+                            <td>已到班</td>
+                            <td>一般</td>
+                            <td>2018/11/13</td>
+                            <td><input type="checkbox" name="receive_material_item" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>A03</td>
+                            <td>TW0101008740<br>小毛</td>
+                            <td>劉逸-計算機概論<br>(S1303cc0000061)</td>
+                            <td>講義1(18百官)</td>
+                            <td>已報到</td>
+                            <td>已到班</td>
+                            <td>一般</td>
+                            <td>2018/11/13</td>
+                            <td><input type="checkbox" name="receive_material_item" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>A04</td>
+                            <td>TW0101008740<br>小毛</td>
+                            <td>劉逸-計算機概論<br>(S1303cc0000061)</td>
+                            <td>講義1(18百官)</td>
+                            <td>已報到</td>
+                            <td>已到班</td>
+                            <td>一般</td>
+                            <td>2018/11/13</td>
+                            <td><input type="checkbox" name="receive_material_item" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>A05</td>
+                            <td>TW0101008740<br>小毛</td>
+                            <td>劉逸-計算機概論<br>(S1303cc0000061)</td>
+                            <td>講義1(18百官)</td>
+                            <td>已報到</td>
+                            <td>已到班</td>
+                            <td>一般</td>
+                            <td>2018/11/13</td>
+                            <td><input type="checkbox" name="receive_material_item" id=""></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

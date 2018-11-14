@@ -68,3 +68,8 @@
     text-align: center;
     padding-top: 30px;
 }
+#mainContent .crossLine {
+    height: 30px;
+    margin: 50px 300px 0;
+    border-bottom: 1px dashed #c08c6d;
+}

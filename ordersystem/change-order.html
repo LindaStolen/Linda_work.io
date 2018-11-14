@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Start Page</title>
-</head>
-<body>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/forall.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/order_m.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
-    <title>學生到班狀況</title>
+    <title>修改/刪除預約</title>
 </head>
 <body>
-    <div id="container" class="clearfix">
-    <!-- top nav -->
+    <div id="container">
+        <!-- top nav -->
         <div class="top full-width">
             <div class="logo">
                 <a><img src="images/logo (1).png" alt=""></a>
@@ -68,8 +65,37 @@
             <div class="permission"><i class="fas fa-cog"></i>權限管理</div>
         </div>
         <div id="mainContent" class="col-10">
-            <div class="start clearfix">
-                <p>START</p>
+            <h2 class="sub-title">預約管理 \ 修改刪除預約</h2>
+            <div class="data">
+                <p>請輸入預約學生的學號</p>
+                <input type="text" maxlength="10">
+                <div class="btn">
+                    <a class="btn_correct">確定</a><a class="btn_cancle">取消</a>
+                </div>
+            </div>
+            <!-- 輸入學號後帶出學生基本資料 -->
+            <div class="student_info">
+                <div class="title">預約學生資料</div>
+                <form action="">
+                    <table>
+                        <thead>
+                            <th style="width:20%;"></th>
+                            <th style="width:30%;"></th>
+                            <th style="width:20%;"></th>
+                            <th style="width:30%;"></th>
+                        </thead>
+                        <tr>
+                            <td class="item">學員編號</td>
+                            <td class="">TW001234565</td>
+                            <td class="item">學員姓名</td>
+                            <td class="">蛙拉拉</td>
+                        </tr>
+                        <tr>
+                            <td class="item">預約上課日期</td>
+                            <td>2018/11/14</td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </div>

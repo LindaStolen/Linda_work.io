@@ -1,0 +1,132 @@
+/* content */
+h1.title {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    line-height: 70px;
+    background-image: url(../images/blank_bgi-1.png);
+    box-shadow: 0px 0.8px 2px #5e93aa;
+}
+h1.title::before {
+    width: 100px;
+    height: 70px;
+    content:"";
+    display: block;
+    position: absolute;
+    left:650px;
+    top: 35px;
+    border-top: 1.5px dotted #fff;
+}
+h1.title::after {
+    width: 100px;
+    height: 70px;
+    content:"";
+    display: block;
+    position: absolute;
+    right:650px;
+    top: 35px;
+    border-top: 1.5px dotted #fff;
+}
+#content {
+    padding: 50px 50px 50px 80px;
+}
+#content .sub-title {
+    margin:30px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+}
+#content ul {
+    margin: 0 20px 30px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#content ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+#content ul li i {
+    margin-right: 5px;
+}
+/* 快速查詢 */
+#content .wrap {
+    border: 1px solid #accedd;
+    margin: 0 100px;
+    padding: 15px;
+    position: relative;
+}
+#content .quick-search {
+    text-align: center;
+    font-size: 18.5px;
+    letter-spacing: 0.8px;
+    padding: 0 15px;
+    position: absolute;
+    top: -0.8em;
+    left: 5%;
+    background-color: #fff;
+    color: #00277c;
+    display: inline-block;  
+}
+#content .search {
+    margin: 20px auto 0;
+    width: 95%;
+}
+#content .search td {
+    height: 25px;
+    letter-spacing: 0.8px;
+    background-color: #ececec;
+    /* border-bottom: 1px solid #bbb; */
+}
+#content .search tr .item {
+    background-color: #c7e8fc;
+    text-align: center;
+}
+#content .search tr input {
+    border: none;
+    height: 25px;
+    background-color: #ececec;
+}
+#content .ctrl_btn {
+    text-align: center;
+    padding-top: 15px;
+}
+#content .ctrl_btn a {
+    padding: 3px 10px;
+    margin: 0 5px;
+    background-color: rgba(116, 204, 192, 0.5);
+    color: #000;
+}
+#content .ctrl_btn a:hover {
+    background-color: rgba(66, 116, 109, 0.5);
+    color: #fff;
+}
+#content header .crossLine {
+    margin: 20px 150px 0 150px;
+    height: 10px;
+    border-bottom: 1px dotted #bbb;
+}
+/* 詳細資料 */
+#content main table {
+    margin: 50px 0;
+}
+#content main table th {
+    border: 1px solid #aaa;
+    background-color: #bad7e9;
+    height: 60px;
+    font-weight: 450;
+}
+#content main table tr td {
+    text-align: center;
+    height: 80px;
+    border: 1px solid #bbb;
+}
+#content table tr:nth-child(even) {
+    background-color: #e0f1ffc9;
+}
