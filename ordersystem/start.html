@@ -8,6 +8,7 @@
 </head>
 <body>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <script src="js/jquery.min.js"></script>
@@ -15,7 +16,7 @@
     <title>學生到班狀況</title>
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="clearfix">
     <!-- top nav -->
         <div class="top full-width">
             <div class="logo">
@@ -25,15 +26,15 @@
             <ul>
                 <li class="date">2018年11月6日</li>
                 <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
-                <li class="manager"><a href="#"><i class="far fa-list-alt"></i>回目錄</a><a href="#"><i class="fas fa-user"></i>管理者</a></li>
+                <li class="manager"><a href="#" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
                 <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
             </ul>
-            <div class="user">
-                <ul>
-                    <li><a>資料設定</a></li>
-                    <li><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
-                </ul>
-            </div>
+        </div>
+        <div class="user clearfix">
+            <ul>
+                <li><a>資料設定</a></li>
+                <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
+            </ul>
         </div>
     <!-- side nav -->
         <div class="nav_side col-2">
@@ -46,13 +47,12 @@
             </ul>
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
-                <li><a href="#">新增預約</a></li>
+                <li><a href="order_m.html">新增預約</a></li>
                 <li><a href="#">修改/刪除預約</a></li>
             </ul>
             <h2><i class="fas fa-chair"></i>座位管理</h2>
             <ul class="seat_m">
                 <li><a href="#">現狀列表</a></li>
-                <li><a href="#">一週預約狀況</a></li>
                 <li><a href="#">狀態異動</a></li>
             </ul>
             <h2><i class="fas fa-clock"></i>場次管理</h2>

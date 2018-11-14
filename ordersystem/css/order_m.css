@@ -1,0 +1,70 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent .data {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+#mainContent .data p {
+    display: inline-block;
+    padding-right: 5px;
+}
+#mainContent .data input {
+    line-height: 20px;
+}
+#mainContent .btn a, #mainContent .condition .ctr_b a {
+    display: inline-block;
+    margin: 8px 5px 0;
+    padding: 0 12px;
+    background-color: #ffc880;
+    border: 0.5px solid #ffb85c;
+    border-radius: 30px;
+}
+#mainContent .btn a:hover, #mainContent .condition .ctr_b a:hover {
+    background-color: #ad835c;
+    color: #fff;
+}
+#mainContent .student_info table, #mainContent .condition table {
+    margin: auto;
+    width: 50%;
+    font-size: 17px;
+}
+#mainContent .title {
+    text-align: center;
+    margin: 50px auto 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #723300;
+}
+#mainContent .student_info table td, #mainContent .condition table td {
+    padding-left: 8px;
+    line-height: 40px;
+    border: 0.8px solid #c08c6d;
+    background-color: #ffe3d7;
+}
+#mainContent .student_info table .item, #mainContent .condition table .item {
+    height: 35px;
+    text-align: center;
+    background-color: #ffe8dd;
+}
+#mainContent .condition table input, #mainContent .condition table select {
+    height: 25px;
+    width: 60%;
+    border: none;
+    font-size: 17px;
+}
+#mainContent .condition .ctr_b {
+    text-align: center;
+    padding-top: 30px;
+}

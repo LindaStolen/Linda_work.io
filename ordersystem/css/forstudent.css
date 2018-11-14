@@ -60,14 +60,15 @@
     font-weight: 450;
     letter-spacing: 1.5px;
     color: #472000;
-    background-color: #ffede9;
+    background-color: #dfeeff;
     border: 0.8px solid #777;
 }
 #content table td {
     text-align: center;
-    height: 60px;
+    height: 65px;
+    font-size: 18px;
     border: 0.8px solid #777;
 }
 #content table tr:nth-child(even) {
-    background-color: #b5dbff8e;
+    background-color: #c5e5ffa2;
 }
