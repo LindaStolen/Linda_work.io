@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/seat.css">
+    <link rel="stylesheet" href="css/forall.css">
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sign-in.js"></script>
+    <title>座位現況列表</title>
+</head>
+<body>
+    <div id="container">
+    <!-- top nav -->
+        <div class="top full-width">
+            <div class="logo">
+                <a><img src="images/logo (1).png" alt=""></a>
+            </div>
+            <h1 class="title">預約座位系統</h1>
+            <ul>
+                <li class="date">2018年11月6日</li>
+                <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
+                <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
+                <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
+            </ul>
+        </div>
+        <div class="user clearfix">
+            <ul>
+                <li><a>資料設定</a></li>
+                <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
+            </ul>
+        </div>
+    <!-- side nav -->
+        <div class="nav_side col-2">
+            <!-- <div class="logo"></div> -->
+            <h2><i class="fas fa-home"></i>本館現況</h2>
+            <ul class="main">
+                <li><a href="index.html">學生到班狀況</a></li>
+                <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
+                <li><a href="#">預約到班統計</a></li>
+            </ul>
+            <h2><i class="far fa-calendar-check"></i>預約管理</h2>
+            <ul class="order_m">
+                <li><a href="order_m.html">新增預約</a></li>
+                <li><a href="change-order.html">修改/刪除預約</a></li>
+            </ul>
+            <h2><i class="fas fa-chair"></i>座位管理</h2>
+            <ul class="seat_m">
+                <li><a href="seat.html">現狀列表</a></li>
+                <li><a href="change-seat-status.html">狀態異動</a></li>
+            </ul>
+            <h2><i class="fas fa-clock"></i>場次管理</h2>
+            <ul class="place_m">
+                <li><a href="#">場次查詢</a></li>
+                <li><a href="#">狀態異動</a></li>
+            </ul>
+            <h2><i class="fas fa-book-reader"></i>學生管理</h2>
+            <ul class="student_m">
+                <li><a href="#">預約記錄</a></li>
+                <li><a href="#">學習時數查詢</a></li>
+            </ul>
+            <div class="permission"><i class="fas fa-cog"></i>權限管理</div>
+        </div>
+    <!-- 座位現況列表 -->
+        <div id="mainContent" class="col-10">
+            <h2 class="sub-title">座位管理 \ 座位現況列表</h2>
+            <div class="clearfix">
+                <ul class="location">
+                    <li class="place">
+                        <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂 -->
+                            <select name="" id="tkb">
+                                <option value="">總公司</option>
+                                <option value="">新竹數位學堂</option>
+                                <option value="">台南數位學堂</option>
+                                <option value="">中壢數位學堂</option>
+                                <option value="">高雄數位學堂</option>
+                                <option value="">台北數位學堂</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="date">
+                        <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
+                    </li>
+                    <li class="time">
+                        <div><i class="far fa-clock"></i>08:30-11:50</div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="place-data">
+                <li class="total-s">
+                    <span class="item">總座位數：</span>50
+                </li>
+                <li class="normal">
+                    <span class="item">學堂座位：</span>35&nbsp; <font style="color:red;">(70%)</font>
+                </li>
+                <li class="makeup">
+                    <span class="item">補課座位：</span>15&nbsp; <font style="color:red;">(30%)</font>
+                </li>
+            </ul>
+            <!-- <nav class="block">第一區&nbsp;<span style="color:red;">■</span>|第二區&nbsp;<span style="color:yellow;">■</span>|第三區&nbsp;<span style="color:green;">■</span>|第四區&nbsp;<span style="color:blue;">■</span>|第五區&nbsp;<span style="color:#000;">■</span>|未分區&nbsp;<span style="color:#555;">■</span></nav> -->
+            <form action="">
+                <table class="seat-status">
+                    <thead>
+                        <th style="width:15%;">區域</th>
+                        <th style="width:15%;">座位編號</th>
+                        <th style="width:15%;">補課</th>
+                        <th style="width:15%;">使用狀態</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="one">第一區</td>
+                            <td>A01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="one">第一區</td>
+                            <td>A02</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="close">封閉</td>
+                        </tr>
+                        <tr>
+                            <td class="one">第一區</td>
+                            <td>A03</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="two">第二區</td>
+                            <td>A01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="two">第二區</td>
+                            <td>A02</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="two">第二區</td>
+                            <td>A03</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="two">第二區</td>
+                            <td>A04</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="stay">保留</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="close">封閉</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B02</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B03</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B04</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B05</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="three">第三區</td>
+                            <td>B06</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="normal">正常</td>
+                        </tr>
+                        <tr>
+                            <td class="four">第四區</td>
+                            <td>C01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="four">第四區</td>
+                            <td>C02</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="stay">保留</td>
+                        </tr>
+                        <tr>
+                            <td class="four">第四區</td>
+                            <td>C03</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="stay">保留</td>
+                        </tr>
+                        <tr>
+                            <td class="four">第四區</td>
+                            <td>C01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="stay">保留</td>
+                        </tr>
+                        <tr>
+                            <td class="five">第五區</td>
+                            <td>D01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="stay">保留</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                        <tr>
+                            <td class="none">不分區</td>
+                            <td>E01</td>
+                            <td><i class="far fa-lightbulb"></i></td>
+                            <td class="nouse">故障</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

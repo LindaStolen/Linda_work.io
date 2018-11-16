@@ -1,0 +1,96 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent .location {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent .location li, #mainContent .place-data li {
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent .location li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 22px;
+    width: 130px;
+    font-size: 16px;
+}
+#mainContent .place-data {
+    text-align: center;
+    font-size: 16px;
+}
+/* #mainContent .block {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 0 440px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#mainContent .block span {
+    margin-right: 3px;
+} */
+/* 現狀表格 */
+#mainContent .seat-status {
+    margin: 50px auto 0;
+    width: 60%;
+}
+#mainContent .seat-status thead th {
+    line-height: 35px;
+    letter-spacing: 1px;
+    font-weight: 420;
+    border: 0.8px solid #aa9e68;
+    font-size: 18px;
+    background-color: #f3e6ba7a;
+}
+#mainContent .seat-status tr td {
+    text-align: center;
+    line-height: 30px;
+    border: 0.8px solid #aa9e68;
+}
+#mainContent table tr:nth-child(even) {
+    background-color: #f0e7d6d8;
+}
+#mainContent .seat-status tr .one  {
+    background-color: #ffd7d7;
+} 
+#mainContent .seat-status tr .two {
+    background-color: #ffdac2;
+}
+#mainContent .seat-status tr .three {
+    background-color: #ffecac;
+}
+#mainContent .seat-status tr .four {
+    background-color: #d1e9b3;
+}
+#mainContent .seat-status tr .five {
+    background-color: #ace4df;
+}
+#mainContent .seat-status tr .none {
+    background-color: #cfcfcf;
+}
+#mainContent .seat-status tr .normal {
+    color: #000dc7;
+}
+#mainContent .seat-status tr .close {
+    color: #6e3200;
+}
+#mainContent .seat-status tr .stay {
+    color: #00810b;
+}
+#mainContent .seat-status tr .nouse {
+    color: #c40000;
+}

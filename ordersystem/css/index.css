@@ -54,15 +54,15 @@
     font-weight: normal;
     letter-spacing: 1px;
     color: #472000;
-    background-color: #fff7f5;
-    border: 0.8px solid #777;
+    background-color: #ffe6e0;
+    border: 0.8px solid #9e8f85;
 }
 #mainContent table td {
     text-align: center;
     height: 60px;
-    border: 0.8px solid #777;
+    border: 0.8px solid #9e8f85;
 }
 #mainContent table tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #fdefe3;
 }
 
