@@ -1,0 +1,114 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent ul {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent ul li {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent ul li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+#mainContent #table_1 {
+    margin: auto;
+    width: 65%;
+    line-height: 35px;
+}
+#mainContent .border {
+    border: 0.8px dashed #ff5511;
+    border-radius: 25px;
+    position: relative;
+    padding: 25px;
+    margin: auto;
+    width: 60%;
+}
+#mainContent .border .little-t {
+    position: absolute;
+    display: inline-block;
+    top: -0.8em;
+    left: 15%;
+    background-color: #fff;
+    padding: 0 15px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+#mainContent #table_1 td {
+    padding-left: 15px;
+}
+#mainContent #table_1 .item {
+    background-color: #ffccaa;
+    border-bottom: 1px solid #ffefe6;
+    width: 20%;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 0;
+}
+#mainContent #table_1 input {
+    font-size: 16px;
+    height: 25px;
+    border: 0.8px solid #d3d3d3;
+}
+#mainContent #table_1 select {
+    height: 25px;
+    width: 40%;
+    font-size: 16px;
+    border: 0.8px solid #d3d3d3;
+    /* margin-top: 8px; */
+}
+#mainContent .border .ctr_btn {
+    text-align: center;
+    margin-top: 5px;
+}
+#mainContent .border .ctr_btn a {
+    margin: 0 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #ffccaa;
+    border: 0.6px solid #ffbe88;
+    border-radius: 25px;
+}
+#mainContent .border .ctr_btn a:hover {
+    background-color: #d86100;
+    color: #fff;
+}
+/* 場次狀態列表 */
+#mainContent #table_2 {
+    margin: 50px auto 0;
+    width: 55%;
+    text-align: center;
+    line-height: 35px;
+}
+#mainContent #table_2 th {
+    background-color: #ffccaa;  
+    border: 1px solid #ffffff;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 420;
+}
+#mainContent #table_2 tr:nth-child(even) {
+    background-color: #ffe3cc;
+}
+#mainContent #table_2 tr {
+    border: 0.8px solid #fff;
+}

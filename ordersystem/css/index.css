@@ -45,6 +45,12 @@
 #mainContent ul li i {
     margin-right: 5px;
 }
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
 #mainContent table {
     width: 80%;
     margin: auto;

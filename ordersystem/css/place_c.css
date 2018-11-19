@@ -1,0 +1,91 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent ul {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent ul li {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent ul li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+#mainContent #table_1 {
+    margin: auto;
+    width: 45%;
+    background-color: #ffe1cd;
+    line-height: 35px;
+}
+#mainContent #table_1 .item {
+    width: 20%;
+    text-align: center;
+    letter-spacing: 1px;
+    /* background-color: #ffdbca; */
+    padding: 0;
+}
+#mainContent #table_1 td {
+    padding-left: 10px;
+    border: 0.8px solid #cc5d2a;
+}
+#mainContent #table_1 select, #mainContent #table_1 input {
+    border: none;
+    height: 22px;
+    width: 35%;
+    font-size: 16.5px;
+}
+#mainContent .ctr_btn {
+    text-align: center;
+    margin-top: 25px;
+}
+#mainContent .ctr_btn a {
+    margin: 0 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #ffd0b1;
+    border: 0.6px solid #cc5d2a;
+    /* border-radius: 25px; */
+}
+#mainContent .ctr_btn a:hover {
+    background-color: #d86100;
+    color: #fff;
+}
+/* 結果列表顯示 */
+#mainContent #table_2 {
+    margin: 50px auto 0;
+    width: 55%;
+    text-align: center;
+    line-height: 35px;
+}
+#mainContent #table_2 th {
+    background-color: #ffccaa;  
+    border: 1px solid #ffffff;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 420;
+}
+#mainContent #table_2 tr:nth-child(even) {
+    background-color: #ffe3cc;
+}
+#mainContent #table_2 tr {
+    border: 0.8px solid #fff;
+}
