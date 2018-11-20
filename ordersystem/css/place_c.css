@@ -75,6 +75,7 @@
     width: 55%;
     text-align: center;
     line-height: 35px;
+    /* display: none; */
 }
 #mainContent #table_2 th {
     background-color: #ffccaa;  

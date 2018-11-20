@@ -1,0 +1,1 @@
+window.open('視窗連結','修改預約資料',config='height=500px;weight=500px;')

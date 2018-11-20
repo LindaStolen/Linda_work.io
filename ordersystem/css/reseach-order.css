@@ -1,0 +1,139 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent ul {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent ul li {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent ul li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+/* input */
+#mainContent p {
+    text-align: center;
+    font-size: 17.5px;
+}
+#mainContent .btn {
+    text-align: center;
+    padding: 0 0 30px;
+    margin: 0 250px;
+    border-bottom: 0.8px dotted #ccc;
+}
+#mainContent .btn button {
+    padding: 1.5px 10px;
+    margin: 10px 5px 0;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #97c068;
+    border: 0.5px solid #597538;
+}
+#mainContent .btn button:hover {
+    background-color: #46704f;
+    color: #fff;
+}
+/* 結果資料 */
+#mainContent #table_1 {
+    margin: 50px auto 50px;
+    width: 60%;
+    text-align: center;
+    font-size: 16.5px;
+    letter-spacing: 1px;
+    line-height: 35px;
+}
+#table_1 .item {
+    width: 20%;
+    background-color: #c7e7a2;
+}
+#table_1 td {
+    width: 20%;
+    border: 0.5px solid #597538;
+}
+#table_1 .null {
+    border: none;
+}
+#table_1 .null a {
+    background-color: #ffe0cd;
+    padding: 5px 15px;
+    margin-left: 20px;
+    letter-spacing: 0.8px;
+    border: 0.8px solid #597538;
+    border-radius: 25px;
+}
+#mainContent .ctr_btn {
+    padding: 30px;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+}
+#mainContent .ctr_btn a, #mainContent .ctr_btn .condition {
+    display: inline-block;
+    vertical-align: middle;
+}
+#mainContent .ctr_btn .condition li {
+    float: left;
+    margin: 0 5px;
+}
+#mainContent .ctr_btn .condition select, #mainContent .ctr_btn input {
+    height: 30px;
+    font-size: 15px;
+    margin: 0 5px;
+}
+/* #mainContent .ctr_btn a {
+    background-color: #ffe0cd;
+    padding: 0 10px;
+    margin-left: 20px;
+    letter-spacing: 0.8px;
+    border: 0.8px solid #597538;
+    border-radius: 25px;
+    line-height: 30px;
+    position: absolute;
+    right: 25px;
+} */
+#mainContent .ctr_btn .condition button {
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #97c068;
+    border: 0.5px solid #597538;
+}
+#mainContent .ctr_btn .condition button:hover {
+    background-color: #cfdaa7;
+}
+#mainContent #table_2 {
+    margin: 10px auto;
+    width: 60%;
+}
+#mainContent #table_2 th {
+    line-height: 35px;
+    border: 0.8px solid #46704f;
+    background-color: #b0df7c;
+    font-weight: 420;
+}
+#mainContent #table_2 tr {
+    line-height: 35px;
+    text-align: center;
+}
+#mainContent #table_2 td {
+    border: 0.8px solid #46704f;
+}
