@@ -82,11 +82,10 @@
 }
 #mainContent .border .ctr_btn a {
     margin: 0 5px;
-    padding: 5px 15px;
+    padding: 3px 10px;
     font-size: 16px;
     background-color: #ffccaa;
     border: 0.6px solid #ffbe88;
-    border-radius: 25px;
 }
 #mainContent .border .ctr_btn a:hover {
     background-color: #d86100;

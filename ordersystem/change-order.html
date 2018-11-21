@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/css/all.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
+    <script src="js/new-window.js"></script>
     <title>修改/刪除預約</title>
 </head>
 <body>
@@ -67,7 +68,7 @@
         <div id="mainContent" class="col-10">
             <h2 class="sub-title">預約管理 \ 修改刪除預約</h2>
             <div class="data">
-                <p>請輸入預約學生的學號</p>
+                <p>請輸入預約學員編號</p>
                 <input type="text" maxlength="10">
                 <div class="btn">
                     <a class="btn_correct">確定</a><a class="btn_cancle">取消</a>
@@ -75,14 +76,14 @@
             </div>
             <!-- 輸入學號後帶出學生基本資料 -->
             <div class="student_info">
-                <div class="title">預約學生</div>
+                <div class="title">預約學員</div>
                 <form action="">
                     <table>
                         <thead>
-                            <th style="width:20%;"></th>
-                            <th style="width:30%;"></th>
-                            <th style="width:20%;"></th>
-                            <th style="width:30%;"></th>
+                            <th style="width:22%;"></th>
+                            <th style="width:28%;"></th>
+                            <th style="width:22%;"></th>
+                            <th style="width:28%;"></th>
                         </thead>
                         <tr>
                             <td class="item">學員編號</td>
@@ -94,16 +95,16 @@
                 </form>
             </div>
             <div class="week-order">
-                <div class="title">一週預約</div>
+                <div class="title">一週預約紀錄</div>
                 <form action="">
                     <table>
                         <thead>
-                            <th style="width:14%" class="day">日期</th>
-                            <th style="width:18%" class="place">地點</th>
-                            <th style="width:18%" class="time">時段</th>
-                            <th style="width:18%" class="class">課程名稱</th>
+                            <th style="width:15%" class="day">日期</th>
+                            <th style="width:20%" class="place">地點</th>
+                            <th style="width:17%" class="time">時段</th>
+                            <th style="width:20%" class="class">課程名稱</th>
                             <th style="width:8%" class="makeup">補課</th>
-                            <th style="width:16%" class="delete">修改/刪除</th>
+                            <th style="width:17%" class="delete">修改/刪除</th>
                         </thead>
                         <tbody>
                             <tr>
@@ -112,7 +113,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                             <tr>
                                 <td>2018-11-15</td>
@@ -120,7 +121,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                             <tr>
                                 <td>2018-11-15</td>
@@ -128,7 +129,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change"  onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                             <tr>
                                 <td>2018-11-15</td>
@@ -136,7 +137,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                             <tr>
                                 <td>2018-11-15</td>
@@ -144,7 +145,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                             <tr>
                                 <td>2018-11-15</td>
@@ -152,7 +153,7 @@
                                 <td>8:00-11:50</td>
                                 <td>作業研究</td>
                                 <td><i class="far fa-lightbulb"></i></td>
-                                <td class="ctr_b"><a class="change" onclick="window.open()">修改</a><a class="delete">刪除</a></td>
+                                <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
                             </tr>
                         </tbody>
                     </table>

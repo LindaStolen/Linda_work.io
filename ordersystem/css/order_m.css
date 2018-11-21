@@ -29,7 +29,7 @@
     padding: 0 12px;
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 #mainContent .btn a:hover, #mainContent .condition .ctr_b a:hover {
     background-color: #ad835c;
@@ -50,13 +50,14 @@
 #mainContent .student_info table td, #mainContent .condition table td {
     padding-left: 8px;
     line-height: 40px;
+    width: 20%;
     border: 0.8px solid #c08c6d;
-    background-color: #ffe3d7;
+    background-color: #fce2d7;
 }
 #mainContent .student_info table .item, #mainContent .condition table .item {
     height: 35px;
     text-align: center;
-    background-color: #ffe8dd;
+    background-color: #ffd8c6;
 }
 #mainContent .condition table input, #mainContent .condition table select {
     height: 25px;

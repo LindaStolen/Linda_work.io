@@ -32,13 +32,13 @@
     /* border-radius: 30px; */
 }
 #mainContent .btn a:hover {
-    background-color: #ad835c;
+    background-color: #744926;
     color: #fff;
 }
 #mainContent .student_info table, #mainContent .week-order table {
     margin: auto;
-    width: 60%;
-    font-size: 17px;
+    width: 50%;
+    font-size: 16.5px;
 }
 #mainContent .title {
     text-align: center;
@@ -48,7 +48,7 @@
     letter-spacing: 1px;
     color: #723300;
 }
-#mainContent .title:before {
+/* #mainContent .title:before {
     content:"";
     width: 15%;
     height: 20px;
@@ -65,9 +65,9 @@
     top: 15px;
     right: 350px;
     border-top: 1px dashed #723300;
-}
+} */
 #mainContent .student_info table td, #mainContent .week-order table td {
-    line-height: 40px;
+    line-height: 35px;
     border: 0.8px solid #c08c6d;
     text-align: center;
 }

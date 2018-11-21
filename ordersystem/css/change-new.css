@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+* {
+    font-family: "Roboto", "Noto Sans TC";
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,img,table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 450;
+}
+a:hover {
+    color: #bbb;
+}
+/* 內容 */
+#container {
+    padding: 60px 30px;
+    height: 550px;
+}
+#container .border {
+    border: 1.2px dotted #572006;
+    border-radius:25px;
+    position: relative;
+    background-color:#fff;
+}
+#container h1 {
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    padding: 0 10px;
+    font-size: 35px;
+    font-weight: 450;
+    color: #641c00;
+    background-color: #fff;
+    letter-spacing: 1.5px;
+}
+#container #table_1 {
+    width: 70%;
+    margin: 35px auto 15px;
+    height: 35px;
+    text-align: center;
+}
+#container #table_1 td {
+    border: 0.8px solid #555;
+    text-align:center;
+    width: 15%;
+}
+#container #table_1 .item {
+    background-color: #87d8d8;
+}
+#container #table_1 td {
+    background-color: #c2f1ff;
+}
+#table_2 {
+    width: 70%;
+    margin: 0 auto 20px;
+}
+#table_2 td {
+    border: 0.8px solid #555;
+    line-height: 35px;
+}
+#table_2 .item {
+    text-align: center;
+    background-color: #87d8d8;
+    padding: 0;
+    /* width: 10%; */
+}
+#table_2 td {
+    padding-left: 8px;
+}
+#table_2 select, #table_2 input {
+    height: 28px;
+    width: 65%;
+    font-size: 16px;
+    margin-top: 3px;
+    border: 1px solid #ddd;
+}
+#container .ctr-btn {
+    text-align: center;
+    padding: 15px 0;
+}
+#container .ctr-btn a {
+    margin: 0 8px;
+    padding: 3px 10px;
+    background-color: #ffb78e;
+}
+#container .ctr-btn a:hover {
+    background-color: #77481b;
+    color: #fff;
+}
