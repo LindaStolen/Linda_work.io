@@ -4,126 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>test_</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/css/all.min.css">
-</head>
-<style>
-    /* #conatiner {
-        display: grid;
-        grid-gap: 10px;
-    } */
-    .top {
-        height: 70px;
-        background-color: #ffd6d6;
-        box-shadow: 0 2px 8px #ddd;
-        position: relative;
-    }
-    .top .logo {
-        /* background-color: #aecaec; */
-        width: 180px;
-        height: 70px;
-        padding: 10px 0;
-        float: left;
-    }
-    .top p {
-        display: inline-block;
-        /* float: left; */
-        position: absolute;
-        bottom: 0;
-        font-family: "微軟正黑體";
-        font-weight: 700;
-        margin-left: 10px;
-        font-size: 30px;
-        letter-spacing: 1px;
-    }
-    .top ul {
-        /* float: right; */
-        display: inline-block;
-        font-size: 20px;
-        margin-right: 10px;
-        margin-top: 15px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-    .top li .user{
-        padding: 0 3px 0 0;
-    }
-    .top li .logout{
-        padding: 0 0 0 3px;
-    }
-    /* 側邊選單 */
-    nav ul {
-        margin: 10px 10px 0 75px;
-    }
-    nav li {
-        line-height: 25px;
-    }
-    nav h2 {
-        margin: 10px 10px 0 75px;
-    }
-    #mainContent h2 {
-        margin: 70px 50px 0 0;
-        border-bottom: 5px double #aaa;
-    }
-</style>
+    <script src="js/jquery.min.js"></script>
 
+    <style>
+        #container {
+            width: 650px;
+            margin: auto;
+        }
+        #container .btn {
+            background-color: #ffdfaf;
+            padding: 3px 10px;
+        }
+        #table_1 {
+            margin: 25px 0;
+            width: 80%;
+            display: none;
+        }
+        #table_1 th {
+            border: 0.8px solid #555;
+            padding: 3px;
+        }
+        #table_1 td {
+            border: 0.8px solid #555;
+            text-align: center;
+            line-height: 35px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                alert('出現吧!');
+                $("#table_1").show();
+                return false;
+            })
+        })
+    </script>
+</head>
 <body>
     <div id="container">
-        <div class="top full-width">
-            <div class="logo">
-                <img src="images/logo (1).png" alt="">
-            </div>
-            <p>預約座位系統</p>
-            <ul>
-                <li class="date">2018/11/8</li>
-                <li class="in-out"><a class="user" href="#">user</a>|<a class="logout" href="#">logout</a></li>
-            </ul>
-        </div>
-        <nav class="side col-2">
-            <h2 class="head">order</h2>
-            <ul>
-                <li>order</li>
-                <li>delete</li>
-                <li>search</li>
-            </ul>
-            <h2>order</h2>
-            <ul>
-                <li>order</li>
-                <li>delete</li>
-                <li>search</li>
-            </ul>
-            <h2>order</h2>
-            <ul>
-                <li>order</li>
-                <li>delete</li>
-                <li>search</li>
-            </ul>
-            <h2>order</h2>
-            <ul>
-                <li>order</li>
-                <li>delete</li>
-                <li>search</li>
-            </ul>
-        </nav>
-        <div id="mainContent" class="col-10">
-            <h2 class="sub-title">seat status //</h2>
-            <ul>
-                <li class="location">
-                    <span>上課地點:</span>
-                    <div>台北數位學堂</div>
-                </li>
-                <li class="date">
-                    <span>上課日期:</span>
-                    <div>2018-11-07</div>
-                </li>
-                <li class="time">
-                    <span>上課時段:</span>
-                    <div>08:30-11:50</div>
-                </li>
-            </ul>
-        </div>
+        <h1>叫你變不見啊</h1>
+        <a href="" class="btn">消失吧！</a>
+        <form action="">
+            <table id="table_1">
+                <thead>
+                    <th>monday</th>
+                    <th>tuesday</th>
+                    <th>wednsday</th>
+                    <th>thursday</th>
+                    <th>friday</th>
+                    <th>saturday</th>
+                    <th>sunday</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>蘋果</td>
+                        <td>白葡萄</td>
+                        <td>山竹</td>
+                        <td>桃子</td>
+                        <td>奇異果</td>
+                        <td>香蕉</td>
+                        <td>柿子</td>
+                    </tr>
+                    <tr>
+                        <td>徒手訓練</td>
+                        <td>有氧訓練</td>
+                        <td>重量訓練</td>
+                        <td>徒手訓練</td>
+                        <td>重量訓量</td>
+                        <td>慢跑一小</td>
+                        <td>有氧訓練</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
 </body>
 </html>

@@ -29,54 +29,74 @@
     padding: 0 12px;
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
-    /* border-radius: 30px; */
 }
 #mainContent .btn a:hover {
     background-color: #744926;
     color: #fff;
 }
-#mainContent .student_info table, #mainContent .week-order table {
+/* 結果資料 */
+#mainContent .student_info {
+    display: none;
+    margin: 70px auto;
+}
+#mainContent .student-data {
+    width: 50%;
+    margin: 10px auto 20px;
+    padding: 25px 0;
+    position: relative;
+    border: 1.5px solid #ccc;
+    border-bottom: 5px double #ccc;
+}
+#mainContent .student-data .title {
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    padding: 0 15px;
+    top: -20px;
+    left: 5%;
+    letter-spacing: 1px;
+    font-size: 22.5px;
+    font-weight: 450;
+    color: #723300;
+}
+#mainContent .student-data ul {
+    display: flex;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-size: 16.5px;
+    line-height: 35px;
+}
+#mainContent .student-data ul .item {
+    padding-right: 20px;
+    border-right: 1px solid #bbb;
+}
+#mainContent .student_info .week-order {
+    margin: 50px 0;
+}
+#mainContent .student_info .week-order .title {
+    text-align: center;
+    margin: 0 auto 25px;
+    font-size: 20px;
+    font-weight: 420;
+    letter-spacing: 1.5px;
+    color: #723300;
+}
+#mainContent .week-order table {
     margin: auto;
     width: 50%;
     font-size: 16.5px;
 }
-#mainContent .title {
-    text-align: center;
-    margin: 50px auto 15px;
-    position: relative;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #723300;
-}
-/* #mainContent .title:before {
-    content:"";
-    width: 15%;
-    height: 20px;
-    position: absolute;
-    top: 15px;
-    left: 350px;
-    border-top: 1px dashed #723300;
-}
-#mainContent .title::after {
-    content:"";
-    width: 15%;
-    height: 20px;
-    position: absolute;
-    top: 15px;
-    right: 350px;
-    border-top: 1px dashed #723300;
-} */
-#mainContent .student_info table td, #mainContent .week-order table td {
+/*#mainContent .student_info table td,*/ #mainContent .week-order table td {
     line-height: 35px;
     border: 0.8px solid #c08c6d;
     text-align: center;
 }
-#mainContent .student_info table .item {
+/* #mainContent .student_info table .item {
     height: 35px;
     text-align: center;
     font-weight: 450;
     background-color: #ffcab9;
-}
+} */
 #mainContent .week-order table thead th {
     border: 0.8px solid #c08c6d;
     background-color: #ffcab9;
