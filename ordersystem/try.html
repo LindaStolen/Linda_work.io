@@ -40,6 +40,7 @@
                 $("#table_1").show();
                 return false;
             })
+
         })
     </script>
 </head>
@@ -80,6 +81,7 @@
                 </tbody>
             </table>
         </form>
+        <p>Start Date <input type="text" id="datepicker-1" min="<?=date('Y-m-d')>" value="<?=date('Y-m-d')>" max="<?=date('Y-m-d', strtotime("+7 day", time()))>" value="<?=date('Y-m-d')>" >></p>
     </div>
 </body>
 </html>
