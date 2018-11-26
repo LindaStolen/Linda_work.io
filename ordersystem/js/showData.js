@@ -22,6 +22,12 @@ $(document).ready(function(){
         $('.student_info').show();
         $('.data').hide();
     })
+    // 學生預約記錄
+    $('.btn_correct').click(function(){
+        $('dd').show();
+        $('.data').show();
+        $('.search').hide();
+    })
 })
 // function showdata(){
 //     alert('setting is done!');

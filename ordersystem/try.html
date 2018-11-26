@@ -8,80 +8,54 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <script src="js/jquery.min.js"></script>
-
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <link rel="stylesheet" href="/css/daterangepicker.css" />
     <style>
-        #container {
-            width: 650px;
-            margin: auto;
+        .container{
+          width: 350px;
+          margin: auto;
         }
-        #container .btn {
-            background-color: #ffdfaf;
-            padding: 3px 10px;
-        }
-        #table_1 {
-            margin: 25px 0;
-            width: 80%;
-            display: none;
-        }
-        #table_1 th {
-            border: 0.8px solid #555;
-            padding: 3px;
-        }
-        #table_1 td {
-            border: 0.8px solid #555;
-            text-align: center;
-            line-height: 35px;
+        .dateranger{
+          width:200px;
         }
     </style>
     <script>
         $(document).ready(function(){
-            $('.btn').click(function(){
-                alert('出現吧!');
-                $("#table_1").show();
-                return false;
-            })
+            // $('.btn').click(function(){
+            //     alert('出現吧!');
+            //     $("#table_1").show();
+            //     return false;
+            // })
+            let start = moment().subtract(30,'days');
+            let end = moment();
+            function cb(start, end) {
+                $('input[name="dates"]').html(start.format('yyyy-mm-dd') + ' - ' + end.format('yyyy-mm-dd'));
+            };
+           $('input[name="dates"]').daterangepicker({
+                startDate: start,
+                // endDate: end,
+                // minDate: {moment().subtract(30, 'days')},
+                // maxDate: {moment().subtract(-30, 'days'), moment()},                
+                locale: {
+                    format:"YYYY-MM-DD",
+                    },
+                ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 30 Days': [moment().subtract(30, 'days'), moment()],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+                'Last month to Next month': [moment().subtract(30, 'days'), moment().subtract(-30, 'days')]
+                }
+            }, cb);
+            cb(start, end);
 
         })
     </script>
 </head>
 <body>
-    <div id="container">
-        <h1>叫你變不見啊</h1>
-        <a href="" class="btn">消失吧！</a>
-        <form action="">
-            <table id="table_1">
-                <thead>
-                    <th>monday</th>
-                    <th>tuesday</th>
-                    <th>wednsday</th>
-                    <th>thursday</th>
-                    <th>friday</th>
-                    <th>saturday</th>
-                    <th>sunday</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>蘋果</td>
-                        <td>白葡萄</td>
-                        <td>山竹</td>
-                        <td>桃子</td>
-                        <td>奇異果</td>
-                        <td>香蕉</td>
-                        <td>柿子</td>
-                    </tr>
-                    <tr>
-                        <td>徒手訓練</td>
-                        <td>有氧訓練</td>
-                        <td>重量訓練</td>
-                        <td>徒手訓練</td>
-                        <td>重量訓量</td>
-                        <td>慢跑一小</td>
-                        <td>有氧訓練</td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-        <p>Start Date <input type="text" id="datepicker-1" min="<?=date('Y-m-d')>" value="<?=date('Y-m-d')>" max="<?=date('Y-m-d', strtotime("+7 day", time()))>" value="<?=date('Y-m-d')>" >></p>
+    <div class="container">
+        <input type="text" name="dates" class="dateranger"/>
     </div>
 </body>
 </html>

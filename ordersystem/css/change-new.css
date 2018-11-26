@@ -89,6 +89,9 @@ a:hover {
     margin-top: 3px;
     border: 1px solid #ddd;
 }
+#table_2 input[name="date"] {
+    padding: 0 0 0 5px;
+}
 #container .ctr-btn {
     text-align: center;
     padding: 15px 0;

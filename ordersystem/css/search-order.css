@@ -37,9 +37,8 @@
 }
 #mainContent .btn {
     text-align: center;
-    padding: 0 0 30px;
+    padding: 20px 0;
     margin: 0 250px;
-    border-bottom: 0.8px dotted #ccc;
 }
 #mainContent .btn button {
     padding: 1.5px 10px;
@@ -54,32 +53,55 @@
     color: #fff;
 }
 /* 結果資料 */
-#mainContent #table_1 {
-    margin: 50px auto 50px;
-    width: 60%;
-    text-align: center;
-    font-size: 16.5px;
+#mainContent dd {
+    display: none;
+}
+#mainContent .data {
+    width: 50%;
+    padding: 25px;
+    margin: 50px auto;
+    position: relative;
+    border: 1.5px solid #ccc;
+    border-bottom: 5px double #ccc;
+}
+#mainContent .data .title {
+    position: absolute;
+    top: -22px;
+    left: 5%;
+    font-size: 22.5px;
     letter-spacing: 1px;
+    color: #723300;
+    background-color: #fff;
+    padding: 0 15px;
+}
+#mainContent .data #flex {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0 0 20px;
+    width: 100%;
+}
+#mainContent .data li {
+    display: inline-block;
     line-height: 35px;
+    letter-spacing: 1px;
+    font-size: 16.5px;
 }
-#table_1 .item {
-    width: 20%;
-    background-color: #c7e7a2;
+#mainContent .data .item {
+    padding: 0 25px 0 0;
+    border-right: 0.5px solid #bbb;
 }
-#table_1 td {
-    width: 20%;
-    border: 0.5px solid #597538;
+#mainContent .data .record {
+    text-align: center;
 }
-#table_1 .null {
-    border: none;
-}
-#table_1 .null a {
+#mainContent .data a {
     background-color: #ffe0cd;
-    padding: 5px 15px;
-    margin-left: 20px;
+    display: inline-block;
+    padding: 3px 12px;
     letter-spacing: 0.8px;
     border: 0.8px solid #597538;
     border-radius: 25px;
+    font-size: 15.5px;
 }
 #mainContent .ctr_btn {
     padding: 30px;
@@ -99,6 +121,9 @@
     height: 30px;
     font-size: 15px;
     margin: 0 5px;
+}
+#mainContent .ctr_btn .condition input[name="date"] {
+    padding: 0 0 0 3px;
 }
 /* #mainContent .ctr_btn a {
     background-color: #ffe0cd;
@@ -120,6 +145,7 @@
 #mainContent .ctr_btn .condition button:hover {
     background-color: #cfdaa7;
 }
+
 #mainContent #table_2 {
     margin: 10px auto;
     width: 60%;
@@ -136,4 +162,20 @@
 }
 #mainContent #table_2 td {
     border: 0.8px solid #46704f;
+}
+#mainContent .page-num {
+    text-align: center;
+    padding: 20px 0;
+}
+#mainContent .page-num a {
+    padding: 0 10px;
+}
+#mainContent .page-num input {
+    width: 50px;
+}
+#mainContent .page-num .fa-angle-left {
+    padding-right: 5px;
+}
+#mainContent .page-num .fa-angle-right {
+    padding-left: 5px;
 }

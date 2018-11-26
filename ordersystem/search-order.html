@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="css/search-order.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="/css/daterangepicker.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
+    <script src="js/showData.js"></script>
+    <script src="js/dateranger.js"></script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <title>查詢預約紀錄</title>
 </head>
 <body>
@@ -70,7 +75,6 @@
         <div class="clearfix">
         <ul>
             <li class="location">
-                <!-- <span>上課地點:</span> -->
                 <div><i class="fas fa-map-marker-alt"></i>台北數位學堂<!-- (ip位置) -->
                     <!-- 總公司權限
                     <select name="" id="tkb">
@@ -84,24 +88,22 @@
                 </div>
             </li>
             <li class="date">
-                <!-- <span>上課日期:</span> -->
                 <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
             </li>
             <li class="time">
-                <!-- <span>上課時段:</span> -->
                 <div><i class="far fa-clock"></i>08:30-11:50</div>
             </li>
         </ul>
         </div>
-        <p>請輸入學員編號或身分證字號
-            <input type="text" maxlength="10">
-            <!-- <input type="text" maxlength="10" placeholder="身分證字號"> -->
-        </p>
-        <div class="btn">
-            <button class="btn_correct">確定</button><button class="btn_cancle">取消</button>
+        <div class="search">
+            <p>請輸入學員編號或身分證字號
+                <input type="text" maxlength="10">
+            </p>
+            <div class="btn">
+                <button class="btn_correct">確定</button><button class="btn_cancle">取消</button>
+            </div>
         </div>
-
-        <form action="">
+        <!-- <form action="">
             <table id="table_1" class="student_data">
                 <tr>
                     <td class="item">學員編號</td>
@@ -111,18 +113,29 @@
                     <td class="null"><a href="" target="_blank">預約更改紀錄</a></td>
                 </tr>
             </table>
-        </form>
+        </form> -->
+        <dd>
+            <div class="data clearfix">
+                <p class="title">學員資料</p>
+                <ul id="flex">
+                    <li class="item">學員編號</li>
+                    <li class="">TW001234567</li>
+                    <li class="item">學員姓名</li>
+                    <li class="">蛙拉拉</li>
+                </ul>
+                <div class="record"><a href="" target="_blank">預約更改紀錄</a></div>
+            </div>
             <div class="ctr_btn clearfix">
                 <div class="condition">
                     <li>
-                        <select name="" id="">
+                        <select name="method" id="">
                             <option value="">依上課日期</option>
                             <option value="">依課程名稱</option>
                         </select>排序
                     </li>
                     <li>
                         日期區間:
-                        <input type="date" name="date-start" id="">&nbsp;~&nbsp;<input type="date" name="date-end" id=""><button>查詢</button>
+                        <input type="text" name="date" id=""><button>查詢</button>
                     </li>
                 </div>
                 <!-- <a href="" target="_blank">預約更改紀錄</a> -->
@@ -197,9 +210,9 @@
                 </table>
             </form>
             <div class="page-num">
-                
+                <a href="" class="pre"><i class="fas fa-angle-left"></i>上一頁</a><input type="text" class="pageNum"><a href="" class="next">下一頁<i class="fas fa-angle-right"></i></a>
             </div>
-        
+        </dd>        
     </div>
     </div>
 </body>
