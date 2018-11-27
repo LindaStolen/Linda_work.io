@@ -1,0 +1,65 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent .location {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent .location li, #mainContent .place-data li {
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent .location li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 22px;
+    width: 130px;
+    font-size: 16px;
+}
+#mainContent .place-data {
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+/* 現狀表格 */
+#mainContent #seat-info {
+    margin: 20px auto 30px;
+    width: 60%;
+}
+#mainContent #seat-info th, #mainContent #seat-info td {
+    line-height: 35px;
+    border: 0.8px solid #aa9e68;
+}
+#mainContent #seat-info th {
+    background-color: #fee7d6;
+    font-weight: 420;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#mainContent #seat-info input[type="text"] {
+    width: 30%;
+    text-align: center;
+    border: 0.8px solid #edd;
+}
+#mainContent .choose {
+    padding: 30px 260px 0;
+    /* position: relative; */
+}
+#mainContent .choose select {
+    float: right;
+    height: 25px;
+    letter-spacing: 0.8px;
+    font-size: 16.5px;
+}

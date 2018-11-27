@@ -23,30 +23,45 @@
 #mainContent .location li i {
     margin-right: 5px;
 }
-#mainContent .location select {
-    height: 22px;
-    width: 130px;
+#mainContent .location select, #mainContent .location input {
+    height: 23px;
+    width: 140px;
     font-size: 16px;
+    vertical-align: middle;
 }
-#mainContent .place-data {
-    text-align: center;
-    font-size: 16px;
-}
-/* #mainContent .block {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 16px;
-    padding: 0 440px;
-    display: flex;
-    justify-content: space-evenly;
-}
-#mainContent .block span {
-    margin-right: 3px;
-} */
 /* 現狀表格 */
-#mainContent .seat-status {
-    margin: 50px auto 0;
+#mainContent .place-data {
+    margin: 0;
+}
+#mainContent #seat-info, #mainContent .seat-status {
+    margin: 20px auto 30px;
     width: 60%;
+}
+#mainContent #seat-info th, #mainContent #seat-info td {
+    line-height: 35px;
+    border: 0.8px solid #aa9e68;
+    text-align: center;
+}
+#mainContent #seat-info th {
+    background-color: #fee7d6;
+    font-weight: 420;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+#mainContent #seat-info input[type="text"] {
+    width: 30%;
+    text-align: center;
+    border: 0.8px solid #edd;
+}
+#mainContent .choose {
+    padding: 30px 265px 0;
+    /* position: relative; */
+}
+#mainContent .choose select {
+    float: right;
+    height: 25px;
+    letter-spacing: 0.8px;
+    font-size: 16.5px;
 }
 #mainContent .seat-status thead th {
     line-height: 35px;
@@ -61,7 +76,18 @@
     line-height: 30px;
     border: 0.8px solid #aa9e68;
 }
-#mainContent table tr:nth-child(even) {
+#mainContent .seat-status .fa-edit {
+    cursor: pointer;
+}
+#mainContent .seat-status .edit ul{
+    float: left;
+    /* width: 50%; */
+    text-align: left;
+}
+#mainContent .seat-status .eidt .new-edit li input, #mainContent .seat-status .eidt .new-edit li select {
+    width: 80%;
+}
+#mainContent .seat-status tr:nth-child(even) {
     background-color: #f0e7d6d8;
 }
 #mainContent .seat-status tr .one  {
