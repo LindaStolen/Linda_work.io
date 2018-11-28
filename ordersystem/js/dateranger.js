@@ -21,4 +21,12 @@ $(document).ready(function(){
     }, cb);
     cb(start, end);
 
+    $(function() {
+        $( "input #datepicker" ).datepicker({ minDate: 0, maxDate: "+7D" });
+      } );
+
 })
+// 新增預約
+    $( function() {
+        $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+7D" });
+    } );

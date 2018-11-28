@@ -60,6 +60,7 @@
 #mainContent .choose select {
     float: right;
     height: 25px;
+    margin: 0 5px;
     letter-spacing: 0.8px;
     font-size: 16.5px;
 }
@@ -83,9 +84,15 @@
     float: left;
     /* width: 50%; */
     text-align: left;
+    padding-left: 15px;
 }
-#mainContent .seat-status .eidt .new-edit li input, #mainContent .seat-status .eidt .new-edit li select {
-    width: 80%;
+#mainContent .seat-status .edit ul .title {
+    font-weight: 420;
+    font-size: 18px;
+}
+#mainContent .seat-status .edit .new-edit li input, #mainContent .seat-status .edit .new-edit li select {
+    width: 70%;
+    height: 22.5px;
 }
 #mainContent .seat-status tr:nth-child(even) {
     background-color: #f0e7d6d8;
