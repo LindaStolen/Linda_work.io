@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/change-new.css">
-    <link rel="stylesheet" href="/css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/dateranger.js"></script>
-    <script src="js/daterangepicker-master/moment.min.js"></script>
-    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <title>修改預約</title>
 </head>
 <body>
-    <div id="container">
+    <div id="light-box">
         <div class="border">
             <h1>修改預約</h1>
             <form action="">
@@ -36,7 +35,7 @@
                         <tr>
                             <td class="item">上課地點</td>
                             <td>
-                                <select name="place" id="">
+                                <select name="place" id="" required>
                                     <option value="">台北數位學堂</option>
                                     <option value="">新竹數位學堂</option>
                                     <option value="">台中數位學堂</option>
@@ -48,13 +47,14 @@
                         <tr>
                             <td class="item">上課日期</td>
                             <td>
-                                <input type="text" name="date" id="">
+                                <input type="text" name="" id="datepicker" placeholder="請選擇上課日期" required>
                             </td>
                         </tr>
                         <tr>
                             <td class="item">上課時段</td>
                             <td>
                                 <select name="time" id="">
+                                    <option value="">請選擇上課時段</option>
                                     <option value="">08:30-11:50</option>
                                     <option value="">12:00-15:20</option>
                                     <option value="">15:30-18:50</option>
@@ -65,7 +65,8 @@
                         <tr>
                             <td class="item">座位選擇</td>
                             <td>
-                                <select name="seat" id="">
+                                <select name="seat" id="" required>
+                                    <option value="">請選擇座位編號</option>
                                     <option value="">A01</option>
                                     <option value="">A02</option>
                                     <option value="">B01</option>
@@ -78,7 +79,7 @@
                         <tr>
                             <td class="item">課程名稱</td>
                             <td>
-                                <select name="class" id="">
+                                <select name="class" id="" required>
                                     <option value="">Please Choose A Class You Want to Watch</option>
                                     <option value=""></option>
                                     <option value=""></option>
@@ -94,5 +95,17 @@
             <div class="ctr-btn"><a href="" class="submit">確定</a><a href="" class="del">取消</a></div>
         </div>
     </div>
+    
+    <script>
+        $('.submit').click(function(){
+            alert("修改完成");
+            window.close();
+        })
+        $('.del').click(function(){
+            $("input").val("").empty();
+            $("select").empty();
+            // return false;
+        })
+    </script>
 </body>
 </html>

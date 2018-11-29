@@ -27,17 +27,21 @@ a:hover {
     color: #bbb;
 }
 /* 內容 */
-#container {
-    padding: 60px 30px;
-    height: 550px;
+#light-box {
+    background-color: #8b8b8b7e;
+    width: 100%;
+    height: 500px;
+    z-index: 9999;
+    float: left;
 }
-#container .border {
+#light-box .border {
     border: 1.2px dotted #572006;
     border-radius:25px;
     position: relative;
     background-color:#fff;
+    /* display: none; */
 }
-#container h1 {
+#light-box h1 {
     position: absolute;
     top: -30px;
     left: 10%;
@@ -48,21 +52,21 @@ a:hover {
     background-color: #fff;
     letter-spacing: 1.5px;
 }
-#container #table_1 {
+#light-box #table_1 {
     width: 70%;
     margin: 35px auto 15px;
     height: 35px;
     text-align: center;
 }
-#container #table_1 td {
+#light-box #table_1 td {
     border: 0.8px solid #555;
     text-align:center;
     width: 15%;
 }
-#container #table_1 .item {
+#light-box #table_1 .item {
     background-color: #87d8d8;
 }
-#container #table_1 td {
+#light-box #table_1 td {
     background-color: #c2f1ff;
 }
 #table_2 {
@@ -89,19 +93,20 @@ a:hover {
     margin-top: 3px;
     border: 1px solid #ddd;
 }
-#table_2 input[name="date"] {
+#table_2 input[id="datepicker"] {
     padding: 0 0 0 5px;
+    color: #000;
 }
-#container .ctr-btn {
+#light-box .ctr-btn {
     text-align: center;
     padding: 15px 0;
 }
-#container .ctr-btn a {
+#light-box .ctr-btn a {
     margin: 0 8px;
     padding: 3px 10px;
     background-color: #ffb78e;
 }
-#container .ctr-btn a:hover {
+#light-box .ctr-btn a:hover {
     background-color: #77481b;
     color: #fff;
 }

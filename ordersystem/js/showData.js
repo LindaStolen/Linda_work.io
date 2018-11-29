@@ -13,14 +13,18 @@ $(document).ready(function(){
         return false;
     })
     $('.reset').click(function(){
-        $("input").val(date).empty();
+        $("input").val("").empty();
         $("select").empty();
     })
 
     // 修改刪除預約
-    $('.btn_correct').click(function(){
+    $('.correct').click(function(){
         $('.student_info').show();
-        $('.data').hide();
+        // return false;
+    })
+    $('.cancle').click(function(){
+        $('input').val("").empty();
+        console.log(123456789);
     })
     // 學生預約記錄
     $('.btn_correct').click(function(){
@@ -28,6 +32,7 @@ $(document).ready(function(){
         $('.data').show();
         $('.search').hide();
     })
+    
 })
 // function showdata(){
 //     alert('setting is done!');

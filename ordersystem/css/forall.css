@@ -10,7 +10,7 @@
     height: 70px;
     position: fixed;
     box-shadow: 0 1px 4px #746353b7;
-    z-index: 9999;
+    z-index: 9998;
 }
 #container .top .logo {
     width: 180px;
