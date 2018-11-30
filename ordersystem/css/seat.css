@@ -80,6 +80,11 @@
 #mainContent .seat-status .fa-edit {
     cursor: pointer;
 }
+#mainContent .seat-status .edit-hide {
+    /* opacity: 0; */
+    height: 200px;
+    transition:  height 5s;
+}
 #mainContent .seat-status .edit ul{
     float: left;
     /* width: 50%; */

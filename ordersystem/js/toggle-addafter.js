@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let status = false;
     let list = `<tr class="edit">
-    <td colspan="1" style="width:15%;">
+    <td colspan="1">
         <ul class="last-edit">
             <li class="title">最後更新狀態</li>
             <li>經手人:嚕啦啦</li>
@@ -10,7 +10,7 @@ $(document).ready(function(){
             <li>狀態:故障</li>
         </ul>
     </td>
-    <td colspan="2" style="width:30%;">
+    <td colspan="2">
         <ul class="new-edit">
             <li class="title">本次更新狀態</li>
             <li>經手人:吧哪哪</li>
@@ -33,8 +33,10 @@ $(document).ready(function(){
         
         if (status == false){
             tr.after(list);
+            $("tr.edit").addClass("edit-hide");
             status = true;
-            // return false;
+            console.log($("tr.edit").height());
+            return false;
         } else if (status == true){
             $("tr.edit").remove();
             status = false;
