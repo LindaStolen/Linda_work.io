@@ -1,0 +1,150 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent .location {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+}
+#mainContent .location li, #mainContent .place-data li {
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent .location li i {
+    margin-right: 5px;
+}
+#mainContent .location select, #mainContent .location input {
+    height: 23px;
+    width: 140px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* 顯示資料 */
+#mainContent .search {
+    text-align: center;
+    font-size: 18px;
+}
+#mainContent .search p {
+    display: inline-block;
+}
+#mainContent .search input {
+    line-height: 20px;
+}
+#mainContent .search .control-bar a {
+    padding: 0 12px ;
+    margin: 8px 5px 0;
+    line-height: 25px;
+    display: inline-block;
+    background-color: #ffc880;
+    border: 0.8px solid #ffb75a;
+}
+#mainContent .student_info {
+    text-align: center;
+    margin: 70px auto;
+}
+#mainContent .student_info .border {
+    border: 1.5px solid #ccc;
+    border-bottom: 5px double #ccc;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    padding: 25px 0;
+}
+#mainContent .student_info .title {
+    position: absolute;
+    top: -20px;
+    left: 5%;
+    padding: 0 15px;
+    font-size: 22.5px;
+    font-weight: 420;
+    background-color: #fff;
+    letter-spacing: 1px;
+    color: #723300;
+}
+#mainContent .student_info ul {
+    display: flex;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-size: 17px;
+    line-height: 35px;
+}
+#mainContent .student_info ul .item {
+    padding-right: 20px;
+    border-right: 1px solid #bbb;
+}
+/* table */
+#mainContent .data {
+    padding: 0 10%;
+    position: relative;
+}
+#mainContent table {
+    /* margin: 10px auto 0; */
+    width: 100%;
+}
+#mainContent table th {
+    font-weight: 420;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #fff1e1;
+}
+#mainContent table td, #mainContent table th {
+    border: 0.8px solid #c08c6d;
+    text-align: center;
+}
+#mainContent table td, #mainContent table tr {
+    line-height: 30px;
+}
+#mainContent .data h3 {
+    font-size: 22px; 
+    font-weight: 420;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+#mainContent .data h3 i {
+    margin: 0 5px;
+}
+#mainContent .sort {
+    display: inline-block;
+    line-height: 30px;
+    position: absolute;
+    right: 10%;
+}
+#mainContent .data .lineCross {
+    padding:  5px;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+#mainContent .used {
+    position: relative;
+}
+#mainContent .col-6 h3 {
+    font-size: 22px;
+    font-weight: 420;
+    margin-top: 30px;
+}
+#mainContent .col-6 .condition {
+    line-height: 30px;
+    text-align: right;
+    margin-bottom: 5px;
+    /* vertical-align: middle; */
+}
+#mainContent .col-6 .condition select, #mainContent .col-6 .condition input {
+    height: 20px;
+    font-size: 16px;
+}
+#mainContent .col-6 .condition span {
+    display: inline-block;
+    margin: 5px;
+}

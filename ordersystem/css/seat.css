@@ -80,23 +80,24 @@
 #mainContent .seat-status .fa-edit {
     cursor: pointer;
 }
-#mainContent .seat-status .edit-hide {
-    /* opacity: 0; */
-    height: 200px;
-    transition:  height 5s;
-}
 #mainContent .seat-status .edit ul{
     float: left;
-    /* width: 50%; */
+    width: 100%;
     text-align: left;
     padding-left: 15px;
+}
+#mainContent .edit .new-edit ul {
+    /* margin: auto; */
+    display: inline-block;
+    text-align: left;
 }
 #mainContent .seat-status .edit ul .title {
     font-weight: 420;
     font-size: 18px;
+    text-decoration-line: underline;
 }
 #mainContent .seat-status .edit .new-edit li input, #mainContent .seat-status .edit .new-edit li select {
-    width: 70%;
+    width:60%;
     height: 22.5px;
 }
 #mainContent .seat-status tr:nth-child(even) {

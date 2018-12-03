@@ -5,6 +5,18 @@ $(document).ready(function(){
             minDate: 0, 
             maxDate: '+7D', 
             dateFormat: "yy-mm-dd",
+            currentText: 'now',
+        });
+        $( ".datepicker" ).datepicker({ 
+            minDate: 0, 
+            maxDate: '+7D', 
+            dateFormat: "yy-mm-dd",
+            currentText: "Now",
+        });
+        $(".edit#datepicker").datepicker({ 
+            minDate: 0, 
+            maxDate: '+7D', 
+            dateFormat: "yy-mm-dd",
             currentText: "Now",
         });
     } );

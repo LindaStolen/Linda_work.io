@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/seat.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/toggle-addafter.js"></script>
+    <script src="js/dateranger.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <title>座位現況列表</title>
 </head>
 <body>
@@ -61,7 +64,7 @@
             <h2><i class="fas fa-book-reader"></i>學生管理</h2>
             <ul class="student_m">
                 <li><a href="search-order.html">預約記錄</a></li>
-                <li><a href="#">學習時數查詢</a></li>
+                <li><a href="time-used.html">學習時數查詢</a></li>
             </ul>
             <div class="permission"><i class="fas fa-cog"></i>權限管理</div>
         </div>
@@ -84,7 +87,7 @@
                     </li>
                     <li class="date">
                         <div><i class="far fa-calendar-alt"></i>
-                            <input type="date" value="2018-11-07">                            
+                            <input type="text" id="datepicker" value="2018-11-07">                            
                         </div>
                     </li>
                     <li class="time">
