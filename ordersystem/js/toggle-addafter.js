@@ -16,7 +16,7 @@ $(document).ready(function(){
         <ul class="new-edit">
             <li class="title">本次更新狀態</li>
             <li>經手人:吧哪哪</li>
-            <li>日期: <input type="text" name="" class="datepicker"></li>
+            <li>日期: <input type="text" name="" id=""></li>
             <li>原因: <input type="text"></li>
             <li>狀態: 
                 <select name="" id="status">

@@ -12,8 +12,11 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/toggle-addafter.js"></script>
-    <script src="js/dateranger.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/datepicker/jquery-ui.min.js"></script>
+    <script src="js/datepicker/single-date.js"></script>
+    <!-- <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/daterangepicker-master/dateranger.js"></script> -->
     <title>時數使用餘額</title>
 </head>
 <body>
@@ -87,7 +90,7 @@
                         </li>
                         <li class="date">
                             <div><i class="far fa-calendar-alt"></i>
-                                <input type="text" id="datepicker" value="2018-11-07">                            
+                                <input type="text" id="date" value="2018-11-07">                            
                             </div>
                         </li>
                         <li class="time">
@@ -215,7 +218,7 @@
                             <option value="">2222222</option>
                             <option value="">33333333</option>
                         </select>
-                        <span>日期區間</span><input type="text" name="" class="datepicker">
+                        <span>日期區間</span><input type="text" name="" id="used">
                     </div>
                     <form action="">
                         <table>
