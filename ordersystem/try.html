@@ -26,16 +26,58 @@
         }
         .container table {
             width: 80%;
-            margin-top: 30px;
+            margin: 10px auto 0;
+        }
+        .container .tab {
+            clear: left;
+            width: 100%;
+            margin: 10px 0;
+            
+        }
+        .container ul {
+            height: 32px;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        .container li {
+            float: left;
+            /* height: 31px; */
+            line-height: 31px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: -1px;
+            border: 1px solid #000;
+            border-left: none;
+            background-color: #eee;
+        }
+        .container li a {
+            display: block;
+            padding: 0 20px;
+        }
+        .container li a:hover {
+            background-color: #ccc;
+        }
+        .container li .active a {
+            background-color: #fff;
+        }
+        dd {
+            margin: 0;
+            padding: 0;
+        }
+        .container .tab-container {
+            border: 1px solid #888;
+            clear: left;
+            border-top: none;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            background-color: #aaa;
         }
         .container table tr {
-            border: 1px solid #000;
+            border: 0.8px solid #222;
         }
         .container table td{
-            margin-top: 30px;
-            width: 30%;
-            border: 1px solid #000;
-            /* text-align: center; */
+            border: 0.8px solid #222;
         }
 
     </style>
@@ -65,13 +107,38 @@
             //     $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+7D" });
             // } );
         })
+    
+        // tab
+        $(function(){
+            // 預設顯示第一個 Tab
+            var _showTab = 0;
+            var $defaultLi = $('ul li').eq(_showTab).addClass('active');
+            $($defaultLi.find('a').attr('href')).siblings().hide();
+        
+            // 當 li 頁籤被點擊時...
+            // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+            $('ul li').click(function() {
+                // 找出 li 中的超連結 href(#id)
+                var $this = $(this),
+                    _clickTab = $this.find('a').attr('href');
+                // 把目前點擊到的 li 頁籤加上 .active
+                // 並把兄弟元素中有 .active 的都移除 class
+                $this.addClass('active').siblings('.active').removeClass('active');
+                // 淡入相對應的內容並隱藏兄弟元素
+                $(_clickTab).stop(false, true).fadeIn().siblings().hide();
+        
+                return false;
+            }).find('a').focus(function(){
+                this.blur();
+            });
+        });
     </script>
 </head>
 <body>
     <div class="container">
         <input type="text" name="dates" id="datepicker"/>
     
-        <table id="table-1">
+        <!-- <table id="table-1">
             <thead>
                 <th></th>
                 <th></th>
@@ -83,7 +150,106 @@
                 <td colspan="2">123456789</td>
                 <td><i class="far fa-edit" onclick="add()"></i></td>
             </tr>
-        </table>
+        </table> -->
+<!-- 頁籤測試 -->
+        <div class="tab">
+            <ul>
+                <li><a href="#tab1" class="tab-content">使用時數記錄</a></li>
+                <li><a href="#tab2" class="tab-content">時數異動記錄</a></li>
+            </ul>
+            <dd class="tab-container">
+                <div id="tab1" class="tabcontent">
+                    <div class="condition">
+                        <span>科目</span>
+                        <select>
+                            <option value="">1111111</option>
+                            <option value="">2222222</option>
+                            <option value="">33333333</option>
+                        </select>
+                        <span>日期區間</span><input type="text" name="" id="used">
+                    </div>
+                    <form action="">
+                        <table>
+                            <thead>
+                                <th>日期</th>
+                                <th>課程</th>
+                                <th>原時數</th>
+                                <th>已使用時數</th>
+                                <th>餘額</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018-12-03</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-12-03</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-12-03</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div id="tab2" class="tabcontent">
+                    <div class="condition">
+                        <span>科目</span>
+                        <select>
+                            <option value="">1111111</option>
+                            <option value="">2222222</option>
+                            <option value="">33333333</option>
+                        </select>
+                        <span>日期區間</span><input type="text" name="" id="used">
+                    </div>
+                    <form action="">
+                        <table>
+                            <thead>
+                                <th>日期</th>
+                                <th>課程</th>
+                                <th>原時數</th>
+                                <th>已使用時數</th>
+                                <th>餘額</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018-12-06</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-12-06</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-12-06</td>
+                                    <td>計組與計結</td>
+                                    <td>768</td>
+                                    <td>-200</td>
+                                    <td>568</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </dd>
+        </div>
     </div>
     <script>
         function add(){

@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/time-used.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/toggle-addafter.js"></script>
-    <script src="js/datepicker/jquery-ui.min.js"></script>
-    <script src="js/datepicker/single-date.js"></script>
-    <!-- <script src="js/daterangepicker-master/moment.min.js"></script>
+    <!-- <script src="js/datepicker/jquery-ui.min.js"></script>
+    <script src="js/datepicker/single-date.js"></script> -->
+    <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
-    <script src="js/daterangepicker-master/dateranger.js"></script> -->
+    <script src="js/daterangepicker-master/dateranger.js"></script>
     <title>時數使用餘額</title>
 </head>
 <body>
@@ -90,7 +90,7 @@
                         </li>
                         <li class="date">
                             <div><i class="far fa-calendar-alt"></i>
-                                <input type="text" id="date" value="2018-11-07">                            
+                                <input type="text" id="datepicker" value="2018-11-07">                            
                             </div>
                         </li>
                         <li class="time">
@@ -209,121 +209,145 @@
                     </table>
                 </form>
                 <div class="lineCross"></div>
-                <div class="used col-6">
-                    <h3><i class="far fa-bookmark"></i>時數使用記錄</h3>
-                    <div class="condition">
-                        <span>科目</span>
-                        <select>
-                            <option value="">1111111</option>
-                            <option value="">2222222</option>
-                            <option value="">33333333</option>
-                        </select>
-                        <span>日期區間</span><input type="text" name="" id="used">
-                    </div>
-                    <form action="">
-                        <table>
-                            <thead>
-                                <th>日期</th>
-                                <th>課程</th>
-                                <th>原時數</th>
-                                <th>已使用時數</th>
-                                <th>餘額</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
+                <!-- tab links -->
+                <div class="tabs">
+                    <ul>
+                        <li><a href="#used" class="tab-content">使用時數記錄</a></li>
+                        <li><a href="#change" class="tab-content">時數異動記錄</a></li>
+                    </ul>
                 </div>
-                <div class="change col-6">
-                    <h3><i class="far fa-bookmark"></i>時數異動紀錄</h3>
-                    <div class="condition">
-                        <select>科目
-                            <option value="">1111111</option>
-                            <option value="">2222222</option>
-                            <option value="">33333333</option>
-                        </select>
-                        <span>日期區間</span><input type="text" name="" class="datepicker">
+                <dd class="tab-container">
+                    <div id="used" class="content">
+                        <div class="condition">
+                            <span>科目</span>
+                            <select>
+                                <option value="">1111111</option>
+                                <option value="">2222222</option>
+                                <option value="">33333333</option>
+                            </select>
+                            <span>日期區間</span><input type="text" name="" id="used">
+                        </div>
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <th>日期</th>
+                                    <th>課程</th>
+                                    <th>原時數</th>
+                                    <th>已使用時數</th>
+                                    <th>餘額</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
                     </div>
-                    <form action="">
-                        <table>
-                            <thead>
-                                <th>日期</th>
-                                <th>課程</th>
-                                <th>原時數</th>
-                                <th>已使用時數</th>
-                                <th>餘額</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                                <tr>
-                                    <td>2018-12-03</td>
-                                    <td>計組與計結</td>
-                                    <td>768</td>
-                                    <td>-200</td>
-                                    <td>568</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
+                    <div id="change" class="content">
+                        <div class="condition">
+                            <select>科目
+                                <option value="">1111111</option>
+                                <option value="">2222222</option>
+                                <option value="">33333333</option>
+                            </select>
+                            <span>日期區間</span><input type="text" name="" class="datepicker">
+                        </div>
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <th>日期</th>
+                                    <th>課程</th>
+                                    <th>原時數</th>
+                                    <th>已使用時數</th>
+                                    <th>餘額</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018-12-03</td>
+                                        <td>計組與計結</td>
+                                        <td>768</td>
+                                        <td>-200</td>
+                                        <td>568</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </dd>
 
             </dl>
-            </div>
+        </div>
     </div>
+    <script>
+        $(function(){
+            let showTab = 0;
+            let defaultLi = $('ul li').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
+            $('ul li').click(function(){
+                let $this = $(this);
+                let _clickTab = $this.find('a').attr('href');
+                $this.addClass('active').siblings('.active').removeClass('active');
+                $(clickTab).stop(false,true).fadeIn().siblings().hide();
+
+                return false;
+            }).find('a').focus(function(){
+                this.blur();
+            });
+        });
+    </script>
 </body>
 </html>

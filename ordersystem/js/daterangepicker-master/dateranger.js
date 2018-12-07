@@ -1,4 +1,4 @@
-$('.daterangepicker').ready(function(){
+$(document).ready(function(){
     let start = moment();
     console.log($('.daterangepicker'));
     console.log(document.readyState);
@@ -7,7 +7,8 @@ $('.daterangepicker').ready(function(){
 
        
     // }
-    $('.daterangepicker').on('click','.ranges',function(e){
+    console.log($('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright'));
+    $('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright').on('click','.ranges',function(e){
         console.log(22222222);
         console.log(e);
         console.log($(this));

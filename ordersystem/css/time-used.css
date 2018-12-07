@@ -126,7 +126,59 @@
     margin-top: 30px;
     border-bottom: 1px solid #ccc;
 }
-#mainContent .used {
+
+.data .tabs {
+    clear: left;
+    width: 100%;
+    margin: 10px 0;
+    
+}
+.data ul {
+    height: 32px;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.data li {
+    float: left;
+    /* height: 31px; */
+    line-height: 31px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #000;
+    border-left: none;
+    background-color: #eee;
+}
+.data li a {
+    display: block;
+    padding: 0 20px;
+}
+.data li a:hover {
+    background-color: #ccc;
+}
+.data li .active a {
+    background-color: #fff;
+}
+dd {
+    margin: 0;
+    padding: 0;
+}
+.data .tab-container {
+    border: 1px solid #888;
+    clear: left;
+    border-top: none;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    background-color: #aaa;
+}
+.data table tr {
+    border: 0.8px solid #222;
+}
+.data table td{
+    border: 0.8px solid #222;
+}
+/* #mainContent .used {
     position: relative;
 }
 #mainContent .col-6 h3 {
@@ -139,7 +191,7 @@
     text-align: right;
     margin-bottom: 5px;
     /* vertical-align: middle; */
-}
+/* }
 #mainContent .col-6 .condition select, #mainContent .col-6 .condition input {
     height: 20px;
     font-size: 16px;
@@ -147,4 +199,4 @@
 #mainContent .col-6 .condition span {
     display: inline-block;
     margin: 5px;
-}
+}  */
