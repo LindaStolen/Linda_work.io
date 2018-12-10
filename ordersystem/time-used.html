@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/time-used.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
@@ -126,11 +127,11 @@
                 <dl class="data">
                 <form action="">
                     <h3><i class="far fa-bookmark"></i>學習時數總表</h3>
-                    <div class="sort">
+                    <dd class="sort">
                         <span>排列方式</span>
-                        <input type="radio" name="" id="date">上課日期
-                        <input type="radio" name="" id="class">科目
-                    </div>
+                        <input type="radio" name="sort" id="date" checked="checked" onclick="radioShow();">上課日期
+                        <input type="radio" name="sort" id="class"onclick="radioShow();">科目
+                    </dd>
                     <table>
                         <thead>
                             <th>科目</th>
@@ -221,11 +222,16 @@
                         <div class="condition">
                             <span>科目</span>
                             <select>
-                                <option value="">1111111</option>
-                                <option value="">2222222</option>
-                                <option value="">33333333</option>
+                                <option value=""></option>
+                                <option value="">計組與計結</option>
+                                <option value="">多益解題班</option>
+                                <option value="">離散數學</option>
+                                <option value="">資料結構</option>
+                                <option value="">作業系統</option>
+                                <option value="">線性代數</option>
                             </select>
                             <span>日期區間</span><input type="text" name="" id="used">
+                            <button>確定</button>
                         </div>
                         <form action="">
                             <table>
@@ -264,64 +270,84 @@
                     </div>
                     <div id="change" class="content">
                         <div class="condition">
-                            <select>科目
-                                <option value="">1111111</option>
-                                <option value="">2222222</option>
-                                <option value="">33333333</option>
+                            <span>科目</span>
+                            <select>
+                                    <option value=""></option>
+                                    <option value="">計組與計結</option>
+                                    <option value="">多益解題班</option>
+                                    <option value="">離散數學</option>
+                                    <option value="">資料結構</option>
+                                    <option value="">作業系統</option>
+                                    <option value="">線性代數</option>
                             </select>
                             <span>日期區間</span><input type="text" name="" class="datepicker">
+                            <button>確定</button>
                         </div>
                         <form action="">
                             <table>
                                 <thead>
                                     <th>日期</th>
                                     <th>課程</th>
-                                    <th>原時數</th>
-                                    <th>已使用時數</th>
+                                    <th>異動原因</th>
+                                    <th>增加異動(mins)</th>
+                                    <th>減少異動(mins)</th>
                                     <th>餘額</th>
+                                    <th>經手人</th>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                     <tr>
                                         <td>2018-12-03</td>
                                         <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>吃飯</td>
+                                        <td>+100</td>
+                                        <td></td>
+                                        <td>868</td>
+                                        <td>嚕啦啦</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -335,19 +361,34 @@
     <script>
         $(function(){
             let showTab = 0;
-            let defaultLi = $('ul li').eq(showTab).addClass('active');
+            let defaultLi = $('.tabs ul li').eq(showTab).addClass('active');
             $(defaultLi.find('a').attr('href')).siblings().hide();
+
             $('ul li').click(function(){
-                let $this = $(this);
-                let _clickTab = $this.find('a').attr('href');
+                let $this = $(this),
+                _clickTab = $this.find('a').attr('href');
                 $this.addClass('active').siblings('.active').removeClass('active');
-                $(clickTab).stop(false,true).fadeIn().siblings().hide();
+                $(_clickTab).stop(false,true).fadeIn().siblings().hide();
 
                 return false;
             }).find('a').focus(function(){
                 this.blur();
             });
         });
+        // radio切換
+        $(document).ready(function(){
+        $('input[type="radio"]').click(function(){
+            if($(this).attr("value")=="bOne"){
+                $(".box").hide();
+                $(".bS01").show();
+            }
+            if($(this).attr("value")=="bTwo"){
+                $(".box").hide();
+                $(".bS02").show();
+            }
+
+        });
+    });
     </script>
 </body>
 </html>

@@ -123,54 +123,72 @@
 }
 #mainContent .data .lineCross {
     padding:  5px;
-    margin-top: 30px;
+    margin: 30px 0;
     border-bottom: 1px solid #ccc;
 }
 
 .data .tabs {
     clear: left;
     width: 100%;
-    margin: 10px 0;
-    
+    margin: 10px 0 0px;    
 }
 .data ul {
     height: 32px;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
+    border-bottom: 1px solid #c08c6d;
+    border-left: 1px solid #c08c6d;
 }
 .data li {
     float: left;
-    /* height: 31px; */
+    height: 31px;
     line-height: 31px;
     overflow: hidden;
     position: relative;
     margin-bottom: -1px;
-    border: 1px solid #000;
+    border: 1px solid #c08c6d;
     border-left: none;
-    background-color: #eee;
+    border-bottom: #c08c6d;
+    background-color: #fde9dd;
 }
 .data li a {
     display: block;
     padding: 0 20px;
 }
 .data li a:hover {
-    background-color: #ccc;
+    background-color: #967967;
+    color: #fff;
 }
-.data li .active a {
-    background-color: #fff;
+.data ul .active a {
+    background-color: #967967;
+    color: #fff;
 }
 dd {
     margin: 0;
     padding: 0;
 }
+.data .condition {
+    line-height: 35px;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+.condition span {
+    margin: 0 5px 0 10px;
+    vertical-align: middle;
+}
+.condition select {
+    height: 21px;
+    width: 15%;
+}
+.condition option {
+    font-size: 15px;
+    line-height: 18px;
+}
 .data .tab-container {
-    border: 1px solid #888;
+    border: 1px solid #c08c6d;
     clear: left;
     border-top: none;
     padding: 15px;
-    text-align: center;
     width: 100%;
-    background-color: #aaa;
+    /* background-color: #aaa; */
 }
 .data table tr {
     border: 0.8px solid #222;

@@ -79,41 +79,21 @@
         .container table td{
             border: 0.8px solid #222;
         }
+        .block {
+            display: block;
+        }
 
     </style>
-    <script>
-        $(document).ready(function(){
-            let start = moment().subtract(30,'days');
-            let end = moment();
-            function cb(start, end) {
-                $('input[name="dates"]').html(start.format('yyyy-mm-dd') + ' - ' + end.format('yyyy-mm-dd'));
-            };
-           $('input[name="dates"]').daterangepicker({
-                startDate: start,                
-                locale: {
-                    format:"YYYY-MM-DD",
-                    },
-                ranges: {
-                'Today': [moment(), moment()],
-                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 30 Days': [moment().subtract(30, 'days'), moment()],
-                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
-                'Last month to Next month': [moment().subtract(30, 'days'), moment().subtract(-30, 'days')]
-                }
-            }, cb);
-            cb(start, end);
+    <script>        
+        
 
-            // $( function() {
-            //     $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+7D" });
-            // } );
-        })
-    
+
         // tab
         $(function(){
             // 預設顯示第一個 Tab
-            var _showTab = 0;
-            var $defaultLi = $('ul li').eq(_showTab).addClass('active');
-            $($defaultLi.find('a').attr('href')).siblings().hide();
+            var showTab = 0;
+            var defaultLi = $('ul li').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
         
             // 當 li 頁籤被點擊時...
             // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
@@ -250,8 +230,21 @@
                 </div>
             </dd>
         </div>
-    </div>
     <script>
+
+        // function radioShow(){
+        //     let myradio = document.getElementsByName("choose");
+        //     let div = document.getElementById("panel").getElementsByClassName("content");
+        //     console.log ("div");
+        //     for(i=0;i<div.length;i  ){
+        //         if(myradio[i].checked){
+        //             div[i].style.display="block";
+        //         } else{
+        //             div[i].style.display="none";
+        //             }
+        //         }
+        // };
+
         function add(){
             let changeList = $('#table-1').insertRow(100);
             let lastEdit = changeList.insertCell(0);
