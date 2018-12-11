@@ -121,6 +121,12 @@
     position: absolute;
     right: 10%;
 }
+#used-time{
+    display: block;
+}
+#change-time{
+    display: none;
+}
 #mainContent .data .lineCross {
     padding:  5px;
     margin: 30px 0;

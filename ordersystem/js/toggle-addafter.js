@@ -45,18 +45,4 @@ $(document).ready(function(){
             console.log("close");
         }
     });
-    
-    // console.log($(".fa-edit"));
-    // function e(this){
-    //     console.log($(this))
-    //     let p = $(this).parent.parent
-    //     let list = '<tr class="edit"></tr>'
-    //     $(p).append(list)
-    //     console.log(p)
-    // }
-    // $(".fa-edit").click(function(){
-    //     $(this).next().toggle();
-    // })
-    // console.log($(".fa-edit"));
-
 })

@@ -116,7 +116,7 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" name="dates" id="datepicker"/>
+        <input type="text" name="dates" id="datepicker"/> <br>
     
         <!-- <table id="table-1">
             <thead>
@@ -132,13 +132,14 @@
             </tr>
         </table> -->
 <!-- 頁籤測試 -->
-        <div class="tab">
-            <ul>
-                <li><a href="#tab1" class="tab-content">使用時數記錄</a></li>
+        <input type="radio" name="choose" value="uesd" checked="checked">使用時數記錄
+        <input type="radio" name="choose" value="change">一動時數記錄
+            <!-- <ul>
                 <li><a href="#tab2" class="tab-content">時數異動記錄</a></li>
-            </ul>
-            <dd class="tab-container">
-                <div id="tab1" class="tabcontent">
+                <li><a href="#tab2" class="tab-content">時數異動記錄</a></li>
+            </ul> -->
+            <!-- <dd class="tab-container"> -->
+                <div id="tab1" class="tabcontent box" style="display:block;">
                     <div class="condition">
                         <span>科目</span>
                         <select>
@@ -183,7 +184,7 @@
                         </table>
                     </form>
                 </div>
-                <div id="tab2" class="tabcontent">
+                <div id="tab2" class="tabcontent" style="display:none;">
                     <div class="condition">
                         <span>科目</span>
                         <select>
@@ -231,19 +232,19 @@
             </dd>
         </div>
     <script>
+        $(document).ready(function(){
+            $('input[type="radio"]').click(function(){
+                if($(this).attr("value")=="uesd"){
+                    $("#tab2").hide();
+                    $("#tab1").show();
+                }
+                if($(this).attr("value")=="change"){
+                    $("#tab1").hide();
+                    $("#tab2").show();
+                }
 
-        // function radioShow(){
-        //     let myradio = document.getElementsByName("choose");
-        //     let div = document.getElementById("panel").getElementsByClassName("content");
-        //     console.log ("div");
-        //     for(i=0;i<div.length;i  ){
-        //         if(myradio[i].checked){
-        //             div[i].style.display="block";
-        //         } else{
-        //             div[i].style.display="none";
-        //             }
-        //         }
-        // };
+            });
+        });
 
         function add(){
             let changeList = $('#table-1').insertRow(100);

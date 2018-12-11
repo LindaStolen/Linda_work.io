@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/place_m.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
-    <link rel="stylesheet" href="/css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/permission.css">
+
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
-    <script src="js/showData.js"></script>
-    <script src="js/dateranger.js"></script>
-    <script src="js/daterangepicker-master/moment.min.js"></script>
-    <script src="js/daterangepicker-master/daterangepicker.js"></script>
-    <title>場次管理</title>
+    <script src="js/perm-add.js"></script>
+    <title>權限設定</title>
 </head>
 <body>
     <div id="container">
-    <!-- top nav -->
+        <!-- top nav -->
         <div class="top full-width">
             <div class="logo">
                 <a><img src="images/logo (1).png" alt=""></a>
@@ -45,7 +42,7 @@
             <ul class="main">
                 <li><a href="index.html">學生到班狀況</a></li>
                 <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
-                <li><a href="#">預約到班統計</a></li>
+                <li><a href="reseach-order.html">預約到班統計</a></li>
             </ul>
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
@@ -67,17 +64,15 @@
                 <li><a href="search-order.html">預約記錄</a></li>
                 <li><a href="time-used.html">學習時數查詢</a></li>
             </ul>
-            <div class="permission"><a href=""><i class="fas fa-cog"></i>權限管理</a></div>
+            <div class="permission"><a href="permission.html"><i class="fas fa-cog"></i>權限管理</a></div>
         </div>
     <!-- content -->
         <div id="mainContent" class="col-10">
-            <h2 class="sub-title">場次管理 \ 場次查詢</h2>
+            <h2 class="sub-title">權限設定</h2>
             <div class="clearfix">
-                <ul>
-                    <li class="location">
-                        <!-- <span>上課地點:</span> -->
-                        <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂(ip位置) -->
-                            <!-- 總公司權限 -->
+                <ul class="location">
+                    <li class="place">
+                        <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂 -->
                             <select name="" id="tkb">
                                 <option value="">總公司</option>
                                 <option value="">新竹數位學堂</option>
@@ -89,71 +84,81 @@
                         </div>
                     </li>
                     <li class="date">
-                        <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
+                        <div><i class="far fa-calendar-alt"></i>
+                            <input type="text" id="datepicker" value="2018-11-07">                            
+                        </div>
                     </li>
                     <li class="time">
-                        <div><i class="far fa-clock"></i>08:30-11:50</div>
+                        <div><i class="far fa-clock"></i>
+                            <select name="" id="">
+                                <option value="">08:30-11:50</option>
+                                <option value="">08:30-11:50</option>
+                                <option value="">08:30-11:50</option>
+                                <option value="">08:30-11:50</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
             <form action="">
-                <div class="border">
-                    <p class="little-t">查詢條件</p>
-                    <table id="table_1">
-                        <tr>
-                            <td class="item">日期</td>
-                            <td>
-                                <input type="text" name="date" id="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="item">時段</td>
-                            <td>
-                                <select name="time" id="">
-                                    <option value="">請選擇時段</option>
-                                    <option value="">08:30-11:50</option>
-                                    <option value="">12:00-15:20</option>
-                                    <option value="">15:30-18:50</option>
-                                    <option value="">19:00-22:20</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="ctr_btn">
-                        <a href="#" class="submit">確定</a><a href="#">清除</a>
-                    </div>
-                </div>
-                <table id="table_2">
+            <div class="condition">
+                <input type="radio" name="location" id="">總公司
+                <input type="radio" name="location" id="">各館別 <br>
+                <select name="department" id="">
+                    <option value="0">部門選擇</option>
+                    <option value="1">人事部</option>
+                    <option value="2">資訊部</option>
+                    <option value="3">產品專案部</option>
+                    <option value="4"></option>
+                </select>
+                <select name="office" id="">
+                    <option value="0">職位選擇</option>
+                    <option value="1">人事部</option>
+                    <option value="2">資訊部</option>
+                    <option value="3">產品專案部</option>
+                    <option value="4"></option>
+                </select>
+                <select name="pavilion" id="" style="display:none;">
+                    <option value="0">館別選擇</option>
+                    <option value="1">台北龍們</option>
+                    <option value="2">台北數位學堂</option>
+                    <option value="3">台北洋碩</option>
+                    <option value="4"></option>
+                </select>
+                <span>員工編號</span> <input type="text" name="num">
+                <button>CHECK</button> 
+            </div>
+            </form>
+            <form action="">
+                <table class="all-member">
                     <thead>
-                        <th style="width:25%;">日期</th>
-                        <th style="width:25%;">時段</th>
-                        <th style="width:25%;">狀態</th>
-                        <th style="width:25%;">備註</th>
+                        <th>部門</th>
+                        <th>職位</th>
+                        <th>員工編號</th>
+                        <th>姓名</th>
+                        <th>設定</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">08:30-11:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
+                            <td>資訊部</td>
+                            <td>一般職員</td>
+                            <td>TKB000ABCD</td>
+                            <td>李博文</td>
+                            <td><i class="fas fa-pencil-alt"></i></td>
                         </tr>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">12:00-15:20</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
+                            <td>資訊部</td>
+                            <td>一般職員</td>
+                            <td>TKB000ABCD</td>
+                            <td>李博文</td>
+                            <td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
                         </tr>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">15:30-18:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
-                        </tr>
-                        <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">19:00-22:20</td>
-                            <td class="p_status" style="color:red; font-weight: 480;">停場</td>
-                            <td class="p_else">感恩節回家吃烤雞!</td>
+                            <td>資訊部</td>
+                            <td>一般職員</td>
+                            <td>TKB000ABCD</td>
+                            <td>李博文</td>
+                            <td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
                         </tr>
                     </tbody>
                 </table>

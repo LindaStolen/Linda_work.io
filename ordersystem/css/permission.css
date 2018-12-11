@@ -1,0 +1,68 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mainContent ul {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+    vertical-align: middle;
+}
+#mainContent ul li {
+    /* float: left; */
+    display: inline-block;
+    margin: 0 10px;
+}
+#mainContent ul li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+#mainContent .location #datepicker {
+    /* height: 23px; */
+    font-size: 16px;
+}
+/* 選擇條件 */
+#mainContent .condition {
+    width: 50%;
+    margin: 0 auto 50px;
+    vertical-align: middle;
+    /* text-align: center; */
+}
+#mainContent .condition input[type=radio] {
+    margin-bottom: 10px;
+}
+#mainContent .condition select, #mainContent .condition input[type=text] {
+    height: 25px;
+    width: 20%;
+    margin-right: 8px;
+    font-size: 16px;
+}
+#mainContent .all-member {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    border: 1px solid #555;
+}
+#mainContent td, #mainContent th {
+    border: 1px solid #555;
+}
+#mainContent .all-member i {
+    cursor: pointer;
+}
+#mainContent .all-member i:hover {
+    color: #8d7261;
+}
