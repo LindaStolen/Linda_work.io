@@ -231,6 +231,45 @@
                 </div>
             </dd>
         </div>
+
+        <!-- table -->
+        <form action="">
+            <table>
+                <thead>
+                    <th style="width: 33%;"></th>
+                    <th style="width: 33%;"></th>
+                    <th style="width: 33%;"></th>
+                    <!-- <th style="width: 12%;">故障</th>
+                    <th style="width: 12%;">封閉</th> -->
+                </thead>
+                <tr>
+                    <td class="item">學員編號</td>
+                    <td colspan="2">TKB000ABCD</td>
+                </tr>
+                <tr>
+                    <td class="item">學員姓名</td>
+                    <td colspan="2">馬來貘</td>
+                </tr>
+                <tr>
+                    <td class="item">違規次數</td>
+                    <td colspan="2">365次</td>
+                </tr>
+                <tr>
+                    <td class="item">違規狀態</td>
+                    <td colspan="2">正常使用</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="item">近三次違規記錄</td>
+                    <td colspan="2">第一次: 2018-11-01<!--<button class="del">刪除</button>--></td>
+                </tr>
+                <tr>
+                    <td colspan="2">第二次: 2018-11-02<!--<button class="del">刪除</button>--></td>>
+                </tr>
+                <tr>
+                    <td colspan="2"> 第三次: <span class="record">2018-11-03</span><button class="del">刪除</button></td>>
+                </tr>
+            </table>
+        </form>
     <script>
         $(document).ready(function(){
             $('input[type="radio"]').click(function(){

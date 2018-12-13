@@ -12,6 +12,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/perm-add.js"></script>
+    <script src="js/radiotoggle.js"></script>
     <title>權限設定</title>
 </head>
 <body>
@@ -52,7 +53,6 @@
             <h2><i class="fas fa-chair"></i>座位管理</h2>
             <ul class="seat_m">
                 <li><a href="seat.html">現狀列表</a></li>
-                <li><a href="change-seat-status.html">狀態異動</a></li>
             </ul>
             <h2><i class="fas fa-clock"></i>場次管理</h2>
             <ul class="place_m">
@@ -63,6 +63,7 @@
             <ul class="student_m">
                 <li><a href="search-order.html">預約記錄</a></li>
                 <li><a href="time-used.html">學習時數查詢</a></li>
+                <li><a href="violation.html">違規紀錄</a></li>
             </ul>
             <div class="permission"><a href="permission.html"><i class="fas fa-cog"></i>權限管理</a></div>
         </div>
@@ -102,24 +103,26 @@
             </div>
             <form action="">
             <div class="condition">
-                <input type="radio" name="location" id="">總公司
-                <input type="radio" name="location" id="">各館別 <br>
-                <select name="department" id="">
+                <input type="radio" name="location" id="" value="tkb" checked="checked">總公司
+                <input type="radio" name="location" id="" value="pal">各館別 <br>
+                <select name="department" id="" class="tkb" required>
                     <option value="0">部門選擇</option>
                     <option value="1">人事部</option>
                     <option value="2">資訊部</option>
                     <option value="3">產品專案部</option>
                     <option value="4"></option>
                 </select>
-                <select name="office" id="">
+                <select name="office" id="" class="tkb" required>
                     <option value="0">職位選擇</option>
-                    <option value="1">人事部</option>
-                    <option value="2">資訊部</option>
-                    <option value="3">產品專案部</option>
-                    <option value="4"></option>
+                    <option value="1">董事長</option>
+                    <option value="2">總經理</option>
+                    <option value="3">經理</option>
+                    <option value="4">主任</option>
+                    <option value="4">一般職員</option>
                 </select>
-                <select name="pavilion" id="" style="display:none;">
+                <select name="pavilion" id="" style="display:none;" class="pal" required>
                     <option value="0">館別選擇</option>
+                    <option value="0"></option>
                     <option value="1">台北龍們</option>
                     <option value="2">台北數位學堂</option>
                     <option value="3">台北洋碩</option>
@@ -143,22 +146,22 @@
                             <td>資訊部</td>
                             <td>一般職員</td>
                             <td>TKB000ABCD</td>
-                            <td>李博文</td>
+                            <td>李博瑀</td>
                             <td><i class="fas fa-pencil-alt"></i></td>
                         </tr>
                         <tr>
                             <td>資訊部</td>
                             <td>一般職員</td>
                             <td>TKB000ABCD</td>
-                            <td>李博文</td>
-                            <td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                            <td>潘博羽</td>
+                            <td><i class="fas fa-pencil-alt"></i></td>
                         </tr>
                         <tr>
                             <td>資訊部</td>
                             <td>一般職員</td>
                             <td>TKB000ABCD</td>
-                            <td>李博文</td>
-                            <td><a href="#"><i class="fas fa-pencil-alt"></i></a></td>
+                            <td>林博語</td>
+                            <td><i class="fas fa-pencil-alt"></i></td>
                         </tr>
                     </tbody>
                 </table>

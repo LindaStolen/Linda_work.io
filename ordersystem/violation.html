@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/change-seat-status.css">
+    <link rel="stylesheet" href="css/violation.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
-    <title>座位狀態異動</title>
+    <script src="js/showData.js"></script>
+    <title>違規紀錄</title>
 </head>
 <body>
     <div id="container">
@@ -50,7 +51,6 @@
             <h2><i class="fas fa-chair"></i>座位管理</h2>
             <ul class="seat_m">
                 <li><a href="seat.html">現狀列表</a></li>
-                <li><a href="change-seat-status.html">狀態異動</a></li>
             </ul>
             <h2><i class="fas fa-clock"></i>場次管理</h2>
             <ul class="place_m">
@@ -61,12 +61,13 @@
             <ul class="student_m">
                 <li><a href="search-order.html">預約記錄</a></li>
                 <li><a href="time-used.html">學習時數查詢</a></li>
+                <li><a href="violation.html">違規紀錄</a></li>
             </ul>
-            <div class="permission"><a href=""><i class="fas fa-cog"></i>權限管理</a></div>
+            <div class="permission"><a href="permission.html"><i class="fas fa-cog"></i>權限管理</a></div>
         </div>
-    <!-- 座位現況列表 -->
+    <!-- content -->
         <div id="mainContent" class="col-10">
-            <h2 class="sub-title">座位管理 \ 狀態異動</h2>
+            <h2 class="sub-title">學生管理 \ 違規紀錄</h2>
             <div class="clearfix">
                 <ul class="location">
                     <li class="place">
@@ -90,77 +91,61 @@
                     </li>
                 </ul>
             </div>
-            <dd class="place-data">
+            <dl>
+                <p>請輸入學員編號或身分證</p>
+                <input type="text" maxlength="10" required>
+                <div class="control-bar">
+                    <a class="correct" href="#">確定</a><a class="cancel" href="#">取消</a>
+                </div>
+            </dl>
+            <dd>
                 <form action="">
-                    <table id="seat-info">
+                    <table>
                         <thead>
-                            <th style="width: 12%;">總座位數</th>
-                            <th style="width: 12%;">可預約</th>
-                            <th style="width: 12%;">保留</th>
-                            <th style="width: 12%;">故障</th>
-                            <th style="width: 12%;">封閉</th>
+                            <th style="width: 33%;"></th>
+                            <th style="width: 33%;"></th>
+                            <th style="width: 33%;"></th>
                         </thead>
-                        <tr>
-                            <td>95</td>
-                            <td>82</td>
-                            <td>8</td>
-                            <td>2</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">第一波開放預約比例</td>
-                            <td colspan="2"><input type="text" value="70%"></td>
-                            <td rowspan="2" class="btn"><button>設定</button></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">第二波開放預約比例</td>
-                            <td colspan="2"><input type="text" value="30%"></td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td class="item">學員編號</td>
+                                <td colspan="2">TKB000ABCD</td>
+                            </tr>
+                            <tr>
+                                <td class="item">學員姓名</td>
+                                <td colspan="2">馬來貘</td>
+                            </tr>
+                            <tr>
+                                <td class="item">違規次數</td>
+                                <td colspan="2">365次</td>
+                            </tr>
+                            <tr>
+                                <td class="item">違規狀態</td>
+                                <td colspan="2">正常使用</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class="item">近三次違規紀錄</td>
+                                <td colspan="2">第一次: 2018-11-01</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">第二次: 2018-11-02</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> 第三次: <span class="record">2018-11-03</span><button class="del">刪除</button></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </form>
             </dd>
-            <form action="">
-                <table id="adjust">
-                    <thead>
-                        <th style="width: 40%;"></th>
-                        <th style="width: 50%;"></th>
-                    </thead>
-                    <tr>
-                        <td class="item">日期</td>
-                        <td>
-                            <input type="date" name="" id="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="item">時段</td>
-                        <td>
-                            <select>
-                                <option value="">08:00-11:50</option>
-                                <option value="">08:00-11:50</option>
-                                <option value="">08:00-11:50</option>
-                                <option value="">08:00-11:50</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="item">區域</td>
-                        <td>
-                            <select>
-                                <option value="">第一區</option>
-                                <option value="">第二區</option>
-                                <option value="">第三區</option>
-                                <option value="">第四區</option>
-                                <option value="">第五區</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="item">座位編號</td>
-                        <td><input type="text"></td>
-                    </tr>
-                </table>
-            </form>
+            
         </div>
     </div>
+    <script>
+        $(".del").click(function(){
+            alert('確定刪除此次違規紀錄 ?');
+            $(".del").siblings("span").empty();
+            return false;
+        })
+    </script>
 </body>
 </html>

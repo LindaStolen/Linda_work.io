@@ -58,8 +58,8 @@
     margin-top: 70px;
 }
 #container .nav_side ul {
-    padding: 0 0 10px 0;
-    margin-bottom: 10px;
+    /* padding: 0 0 10px 0; */
+    margin-bottom: 20px;
 }
 #container .nav_side ul li {
     height: 35px;

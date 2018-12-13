@@ -32,10 +32,10 @@ $(document).ready(function(){
         $('.data').show();
         $('.search').hide();
     })
+    // 違規紀錄
+    $("dd").hide();
+    $('.correct').click(function(){
+        $('dd').show();
+    })
     
 })
-// function showdata(){
-//     alert('setting is done!');
-//     $("#table_2").show();
-//     return false;
-// }
