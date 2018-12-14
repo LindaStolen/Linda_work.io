@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -38,11 +39,12 @@
     background-color: #ad835c;
     color: #fff;
 }
-#mainContent .student_info table, #mainContent .condition table {
+.condition table,.student_info .result  {
     margin: auto;
-    width: 50%;
+    min-width: 600px;
     font-size: 17px;
 }
+
 #mainContent .title {
     text-align: center;
     padding: 0 15px;
@@ -60,7 +62,7 @@
     display: none;
 }
 #mainContent .data {
-    width: 50%;
+    width: 500px;
     padding: 25px;
     margin: 25px auto;
     position: relative;
@@ -99,9 +101,9 @@
     text-align: center;
     background-color: #ffd8c6;
 }
-#maineContent .student_info table .data {
+/* #mainContent .student_info table .data {
     border-bottom: 1.5px solid #a76a47;
-}
+} */
 #mainContent .condition table input, #mainContent .condition table select {
     height: 25px;
     width: 60%;
@@ -109,6 +111,7 @@
     font-size: 17px;
 }
 #mainContent .condition .search_s {
+    display: inline-block;
     margin: 0 10px ;
     padding: 3px 10px;
     border-radius: 15px;

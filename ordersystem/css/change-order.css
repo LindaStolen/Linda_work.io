@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -40,7 +41,7 @@
     margin: 70px auto;
 }
 #mainContent .student-data {
-    width: 50%;
+    max-width: 600px;
     margin: 10px auto 20px;
     padding: 25px 0;
     position: relative;
@@ -83,10 +84,10 @@
 }
 #mainContent .week-order table {
     margin: auto;
-    width: 50%;
+    min-width: 400px;
     font-size: 16.5px;
 }
-/*#mainContent .student_info table td,*/ #mainContent .week-order table td {
+#mainContent .week-order table td {
     line-height: 35px;
     border: 0.8px solid #c08c6d;
     text-align: center;
@@ -127,7 +128,7 @@
     display: none;
 }
 #light-box .border {
-    width: 33%;
+    max-width: 600px;
     height: 350px;
     border: 1.2px dotted #572006;
     border-radius:25px;
@@ -156,7 +157,7 @@
     color: #ddd;
 }
 #light-box #table_1 {
-    width: 70%;
+    max-width: 420px;
     margin: 35px auto 15px;
     height: 35px;
     text-align: center;
@@ -173,7 +174,7 @@
     background-color: #c2f1ff;
 }
 #table_2 {
-    width: 70%;
+    max-width: 420px;
     margin: 0 auto 20px;
 }
 #table_2 td {
@@ -191,7 +192,7 @@
 }
 #table_2 select, #table_2 input {
     height: 28px;
-    width: 65%;
+    min-width: 180px;
     font-size: 16px;
     margin-top: 3px;
     border: 1px solid #ddd;

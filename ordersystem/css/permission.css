@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -15,7 +16,7 @@
     padding-top: 30px;
     font-size: 18px;
     float: right;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 .location li {
     display: inline-block;
@@ -36,7 +37,7 @@
 }
 /* 選擇條件 */
 #mainContent .condition {
-    width: 50%;
+    width: 650px;
     margin: 0 auto 50px;
     vertical-align: middle;
     /* text-align: center; */
@@ -46,15 +47,16 @@
 }
 #mainContent .condition select, #mainContent .condition input[type=text] {
     height: 25px;
-    width: 20%;
+    width: 150px;
     margin-right: 10px;
     font-size: 16px;
     border: none;
+    background-color: #ffffff00;
     border-bottom: 1px solid #ccc;
 }
 #mainContent .all-member {
     margin: auto;
-    width: 60%;
+    min-width: 700px;
     text-align: center;
     border: 1px solid #e7daa1;
 }

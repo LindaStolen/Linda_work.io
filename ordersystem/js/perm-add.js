@@ -42,7 +42,7 @@ $(document).ready(function(){
                 </li>
             </ul>
         </td>
-        <td><button>送出</button><button class="cancel">取消</button></td>
+        <td><button>送出</button><br><button class="cancel">取消</button></td>
     </tr>`
     // $(".edit").hide();
     $(".fa-pencil-alt").click(function(){

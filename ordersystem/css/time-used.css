@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -57,7 +58,7 @@
     border: 1.5px solid #ccc;
     border-bottom: 5px double #ccc;
     position: relative;
-    width: 60%;
+    width: 550px;
     margin: auto;
     padding: 25px 0;
 }
@@ -89,8 +90,9 @@
     position: relative;
 }
 #mainContent table {
-    /* margin: 10px auto 0; */
+    margin: 10px auto 0;
     width: 100%;
+    min-width: 600px;
 }
 #mainContent table th {
     font-weight: 420;
@@ -121,11 +123,16 @@
     position: absolute;
     right: 10%;
 }
+.tab-container {
+    min-width: 680px;
+}
 #used-time{
     display: block;
+    min-width: 680px;
 }
 #change-time{
     display: none;
+    min-width: 550px;
 }
 #mainContent .data .lineCross {
     padding:  5px;
@@ -135,7 +142,7 @@
 
 .data .tabs {
     clear: left;
-    width: 100%;
+    min-width: 680px;
     margin: 10px 0 0px;    
 }
 .data ul {

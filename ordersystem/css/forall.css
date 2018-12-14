@@ -1,5 +1,8 @@
 /* top */
-#contianer {
+#container {
+    display: grid;
+    padding: 0 0 0 30px;
+    grid-template-columns: 20% 80%;
     position: relative;
 }
 #container .top {
@@ -54,12 +57,13 @@
 }
 /* left_nav */
 #container .nav_side {
+    min-width: 250px;
     padding-top: 50px;
     margin-top: 70px;
 }
 #container .nav_side ul {
-    /* padding: 0 0 10px 0; */
-    margin-bottom: 20px;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
 }
 #container .nav_side ul li {
     height: 35px;

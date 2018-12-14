@@ -35,7 +35,7 @@
             </ul>
         </div>
         <!-- side nav -->
-        <div class="nav_side col-2">
+        <div class="nav_side">
             <!-- <div class="logo"></div> -->
             <h2><i class="fas fa-home"></i>本館現況</h2>
             <ul class="main">
@@ -61,11 +61,11 @@
             <ul class="student_m">
                 <li><a href="search-order.html">預約記錄</a></li>
                 <li><a href="time-used.html">學習時數查詢</a></li>
-                <li><a href="#">違規紀錄</a></li>
+                <li><a href="violation.html">違規紀錄</a></li>
             </ul>
-            <div class="permission"><a href=""><i class="fas fa-cog"></i>權限管理</a></div>
+            <div class="permission"><a href="permission.html"><i class="fas fa-cog"></i>權限管理</a></div>
         </div>
-        <div id="mainContent" class="col-10">
+        <div id="mainContent">
             <h2 class="sub-title">預約管理 \ 新增預約</h2>
             <div class="student-num">
                 <p>請輸入預約學員編號/身分證字號</p>
@@ -235,57 +235,57 @@
                     </div>
                 </form>
             </div>
-        <div class="crossLine"></div>
-        <div class="student_info claerfix">
-            <div class="data clearfix">
-                <p class="title">學員資料</p>
-                <ul>
-                    <li class="item">學員編號</li>
-                    <li class="">TW001234567</li>
-                    <li class="item">學員姓名</li>
-                    <li class="">蛙拉拉</li>
-                </ul>
+        <!-- <div class="crossLine"></div> -->
+            <div class="student_info clearfix">
+                <div class="data clearfix">
+                    <p class="title">學員資料</p>
+                    <ul>
+                        <li class="item">學員編號</li>
+                        <li class="">TW001234567</li>
+                        <li class="item">學員姓名</li>
+                        <li class="">蛙拉拉</li>
+                    </ul>
+                </div>
+                <!-- <div class="title">預約學員資料</div> -->
+                <form action="">
+                    <table class="result">
+                        <thead>
+                            <th style="width:40%;"></th>
+                            <th style="width:60%;"></th>
+                            <!-- <th style="width:15%;"></th>
+                            <th style="width:20%;"></th> -->
+                        </thead>
+                        <tbody>
+                            <!-- <tr class="data">
+                                <td class="item">學員編號</td>
+                                <td class="">TW001234567</td>
+                                <td class="item">學員姓名</td>
+                                <td class="">蛙拉拉</td>
+                            </tr> -->
+                            <tr>
+                                <td class="item">上課地點</td>
+                                <td>台北數位學堂</td>
+                            </tr>
+                            <tr>
+                                <td class="item">上課日期</td>
+                                <td>2018/11/22</td>
+                            </tr>
+                            <tr>
+                                <td class="item">上課名稱</td>
+                                <td>行政學</td>
+                            </tr>
+                            <tr>
+                                <td class="item">上課座位</td>
+                                <td>A22</td>
+                            </tr>
+                            <tr>
+                                <td class="item">上課時段</td>
+                                <td>13:00-15:50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
             </div>
-            <!-- <div class="title">預約學員資料</div> -->
-            <form action="">
-                <table>
-                    <thead>
-                        <th style="width:40%;"></th>
-                        <th style="width:60%;"></th>
-                        <!-- <th style="width:15%;"></th>
-                        <th style="width:20%;"></th> -->
-                    </thead>
-                    <tbody>
-                        <!-- <tr class="data">
-                            <td class="item">學員編號</td>
-                            <td class="">TW001234567</td>
-                            <td class="item">學員姓名</td>
-                            <td class="">蛙拉拉</td>
-                        </tr> -->
-                        <tr>
-                            <td class="item">上課地點</td>
-                            <td>台北數位學堂</td>
-                        </tr>
-                        <tr>
-                            <td class="item">上課日期</td>
-                            <td>2018/11/22</td>
-                        </tr>
-                        <tr>
-                            <td class="item">上課名稱</td>
-                            <td>行政學</td>
-                        </tr>
-                        <tr>
-                            <td class="item">上課座位</td>
-                            <td>A22</td>
-                        </tr>
-                        <tr>
-                            <td class="item">上課時段</td>
-                            <td>13:00-15:50</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-        </div>
         </div>
     </div>
 

@@ -1,8 +1,8 @@
-
 /* content */
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 /* start page */
 #mainContent .start {
@@ -52,8 +52,8 @@
     margin-top: 3px;
 }
 #mainContent table {
-    width: 80%;
     margin: auto;
+    min-width: 600px;
 }
 #mainContent table th {
     font-size: 18px;

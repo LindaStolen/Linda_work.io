@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -57,7 +58,8 @@ dd {
 }
 dd table {
     margin: 50px auto 30px;
-    width: 50%;
+    min-width: 50%;
+    max-width: 80%;
     font-size: 16px;
 }
 dd table .item {

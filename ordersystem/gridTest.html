@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css ">
+    <link rel="stylesheet" href="css/css/all.min.css ">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-gap: 10px; */
+            background-color: #ddd;
+            padding: 50px 30px 20px;
+            grid-template-columns: 20% 80%;
+        }
+        .top {
+            background-color: #fdb8b8;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            z-index: 9998;
+        }
+        nav {
+            background-color: #ffed4f;
+            height: 600px;
+            padding-top: 50px;
+        }
+        nav h2 {
+            margin: 0 20px 0 60px;
+            border-bottom: 1px solid #000;
+            font-size: 22.5px;
+            font-weight: 420;
+        }
+        nav ul {
+            margin-bottom: 20px;
+            /* padding-left: 60px; */
+        }
+        nav ul li {
+            height: 35px;
+            font-size: 20px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+        nav a {
+            padding-left: 60px;
+        }
+        section {
+            background-color: #001aff;
+            height: 600px;
+        }
+        section h2 {
+            padding: 0 0 10px 0;
+            margin: 50px 10px 15px 30px;
+            border-bottom: 1px solid #fff;
+            color: #eee;
+            font-weight: 400;
+        }
+        section .location {
+            float: right;
+            display: flex;
+            /* justify-content: space-evenly; */
+            padding: 0 20px 0 0;
+        }
+        .location li {
+            margin: 0 10px;
+        }
+        .table_1 table, .table_2 table {
+            /* max-width: 800px; */
+            /* width: 800px; */
+            min-width: 500px;
+            margin: auto;
+        }
+        .container table td {
+            /* border-collapse: collapse; */
+            border: 1px solid#ddd;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <nav class="side">
+            <h2><i class="fas fa-home"></i>本館現況</h2>
+            <ul class="main">
+                <li><a href="index.html">學生到班狀況</a></li>
+                <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
+                <li><a href="#">預約到班統計</a></li>
+            </ul>
+            <h2><i class="far fa-calendar-check"></i>預約管理</h2>
+            <ul class="order_m">
+                <li><a href="order_m.html">新增預約</a></li>
+                <li><a href="change-order.html">修改/刪除預約</a></li>
+            </ul>
+            <h2><i class="fas fa-chair"></i>座位管理</h2>
+            <ul class="seat_m">
+                <li><a href="seat.html">現狀列表</a></li>
+            </ul>
+        </nav>
+        <section class="main">
+            <h2 class="sub-title">學生管理 \ 違規紀錄</h2>
+            <div class="clearfix">
+                <ul class="location">
+                    <li class="place">
+                        <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂(ip位置) -->
+                            <!-- 總公司權限 -->
+                            <select name="" id="tkb">
+                                <option value="">總公司</option>
+                                <option value="">新竹數位學堂</option>
+                                <option value="">台南數位學堂</option>
+                                <option value="">中壢數位學堂</option>
+                                <option value="">高雄數位學堂</option>
+                                <option value="">台北數位學堂</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="date">
+                        <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
+                    </li>
+                    <li class="time">
+                        <div><i class="far fa-clock"></i>08:30-11:50</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="table_1">
+                <form action="">
+                    <table>
+                        <thead>
+                            <th>12</th>
+                            <th>12</th>
+                            <th>12</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="table_2">
+                <form action="">
+                    <table>
+                        <thead>
+                            <th>34</th>
+                            <th>34</th>
+                            <th>34</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>34</td>
+                                <td>34</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>34</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>34</td>
+                                <td>34</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

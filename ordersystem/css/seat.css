@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -35,7 +36,8 @@
 }
 #mainContent #seat-info, #mainContent .seat-status {
     margin: 20px auto 30px;
-    width: 60%;
+    width: 750px;
+    min-width: 600px;
 }
 #mainContent #seat-info th, #mainContent #seat-info td {
     line-height: 35px;
@@ -54,11 +56,10 @@
     border: 0.8px solid #edd;
 }
 #mainContent .choose {
-    padding: 30px 265px 0;
-    /* position: relative; */
+    text-align: center;
 }
 #mainContent .choose select {
-    float: right;
+    /* float: right; */
     height: 25px;
     margin: 0 5px;
     letter-spacing: 0.8px;
@@ -80,6 +81,9 @@
 #mainContent .seat-status .fa-edit {
     cursor: pointer;
 }
+#mainContent .edit {
+    width: 600px;
+}
 #mainContent .seat-status .edit ul{
     float: left;
     width: 100%;
@@ -97,7 +101,7 @@
     text-decoration-line: underline;
 }
 #mainContent .seat-status .edit .new-edit li input, #mainContent .seat-status .edit .new-edit li select {
-    width:60%;
+    /* width:60%; */
     height: 22.5px;
 }
 #mainContent .seat-status tr:nth-child(even) {

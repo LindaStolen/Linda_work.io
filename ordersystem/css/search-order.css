@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -57,7 +58,7 @@
     display: none;
 }
 #mainContent .data {
-    width: 50%;
+    width: 500px;
     padding: 25px;
     margin: 50px auto;
     position: relative;
@@ -125,17 +126,6 @@
 #mainContent .ctr_btn .condition input[name="date"] {
     padding: 0 0 0 3px;
 }
-/* #mainContent .ctr_btn a {
-    background-color: #ffe0cd;
-    padding: 0 10px;
-    margin-left: 20px;
-    letter-spacing: 0.8px;
-    border: 0.8px solid #597538;
-    border-radius: 25px;
-    line-height: 30px;
-    position: absolute;
-    right: 25px;
-} */
 #mainContent .ctr_btn .condition button {
     margin-left: 10px;
     font-size: 16px;
@@ -148,7 +138,7 @@
 
 #mainContent #table_2 {
     margin: 10px auto;
-    width: 60%;
+    min-width: 600px;
 }
 #mainContent #table_2 th {
     line-height: 35px;

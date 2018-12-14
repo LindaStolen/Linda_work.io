@@ -1,6 +1,7 @@
 #mainContent {
     margin-top: 70px;
     padding: 50px 50px 50px 80px;
+    min-width: 700px;
 }
 #mainContent .sub-title {
     margin:30px 50px 0 0;
@@ -32,12 +33,12 @@
 }
 #mainContent #table_1 {
     margin: auto;
-    width: 45%;
+    min-width: 500px;
     background-color: #ffe1cd;
     line-height: 35px;
 }
 #mainContent #table_1 .item {
-    width: 20%;
+    width: 150px;
     text-align: center;
     letter-spacing: 1px;
     /* background-color: #ffdbca; */
@@ -50,7 +51,7 @@
 #mainContent #table_1 select, #mainContent #table_1 input {
     border: none;
     height: 22px;
-    width: 35%;
+    width: 150px;
     font-size: 16.5px;
 }
 #mainContent .ctr_btn {
@@ -71,7 +72,7 @@
 /* 結果列表顯示 */
 #mainContent #table_2 {
     margin: 50px auto 0;
-    width: 55%;
+    min-width: 500px;
     text-align: center;
     line-height: 35px;
     display: none;
