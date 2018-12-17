@@ -4,22 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>圖表</title>
-    <link rel="stylesheet" href="css/c3.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/c3-charts/c3.min.js"></script>
-    <script src="js/c3-charts/d3-5.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/highcharts/charts.js"></script>
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBarColors);
+
+        function drawBarColors() {
+            var data = google.visualization.arrayToDataTable([
+                ['City', '2010 Population', '2000 Population'],
+                ['New York City, NY', 8175000, 8008000],
+                ['Los Angeles, CA', 3792000, 3694000],
+                ['Chicago, IL', 2695000, 2896000],
+                ['Houston, TX', 2099000, 1953000],
+                ['Philadelphia, PA', 1526000, 1517000]
+                ]);
+
+            var options = {
+                title: '預約實到統計',
+                chartArea: {width: '150px'},
+                colors: ['#b0120a', '#ffab91'],
+                hAxis: {
+                title: 'Total Population',
+                minValue: 0
+                },
+                vAxis: {
+                title: 'City'
+                }
+            };
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script> -->
+    <title>圖表</title>
+
     <style>
-        .calc {
-            min-width: 40%;
-            max-width: 80%;
+        #chart_div {
+            width: 800px;
             height: 400px;
             margin: auto;
         }
     </style>
 </head>
 <body>
-    <div class="clac"></div>
+        <div id="chart_div"></div>
+    <!-- <script>
+        function f(){
+            $('#calc').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Fruit Consumption'
+                },
+                xAxis: {
+                    categories: ['Apples', 'Bananas', 'Oranges']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Fruit eaten'
+                    }
+                },
+                series: [{
+                    name: 'Jane',
+                    data: [1, 0, 4]
+                }, {
+                    name: 'John',
+                    data: [5, 7, 3]
+                }],
+            });
+        };
+    </script> -->
 </body>
 </html>

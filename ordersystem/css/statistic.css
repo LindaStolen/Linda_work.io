@@ -1,0 +1,73 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+    min-width: 700px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.location {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+    /* vertical-align: middle; */
+}
+.location li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.location li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+#mainContent .location #datepicker {
+    /* height: 23px; */
+    font-size: 16px;
+}
+
+/* 查詢條件 */
+/* .condition {
+    text-align: center;
+} */
+table {
+    width: 550px;
+    margin: auto;
+    margin-top: 50px;
+}
+table .item {
+    background-color: #ffe9df;
+    text-align: center;
+    width: 180px;
+}
+table td {
+    border: 1px solid #856d51;
+}
+table select, table input {
+    margin-left: 8px;
+    width: 250px;
+    height: 22.5px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    background-color: #ffffff00;
+}
+table .btn {
+    border: none;
+    text-align: center;
+    padding-top: 15px;
+}
+/* chart */
+canvas {
+    width: 700px;
+    height: 500px;
+}
