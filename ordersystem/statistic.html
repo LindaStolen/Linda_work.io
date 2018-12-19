@@ -12,6 +12,7 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
+    <script src="js/tabs-effect.js"></script>
     <title>預約實到統計</title>
 </head>
 <body>
@@ -63,7 +64,11 @@
                 <li><a href="time-used.html">學習時數查詢</a></li>
                 <li><a href="violation.html">違規記錄</a></li>
             </ul>
-            <div class="permission"><a href=""><i class="fas fa-cog"></i>權限管理</a></div>
+            <h2><i class="fas fa-cog"></i>權限管理</h2>
+            <ul class="permission">
+                <li><a href="permission.html">群組管理</a></li>
+                <li><a href="personal.html">個人權限設定</a></li>
+            </ul>
         </div>
     <!-- content -->
         <div id="mainContent">
@@ -92,12 +97,13 @@
                 </ul>
             </div>
             <div class="condition">
+                <!-- TKB user -->
                 <form action="">
-                    <table>
+                    <table class="tkb">
                         <tr>
                             <td class="item">上課地點</td>
                             <td>
-                                <select name="location" id=""> <!-- TKB user -->
+                                <select name="location" id="">
                                     <option value=""></option>
                                     <option value="">台北數位學堂</option>
                                     <option value="">新竹數位學堂</option>
@@ -105,13 +111,58 @@
                                     <option value="">台南數位學堂</option>
                                     <option value="">高雄數位學堂</option>
                                 </select>
-                                <!-- <span>台北數位學堂</span> 各館用-->
                             </td>
                         </tr>
                         <tr>
                             <td class="item">查詢範圍</td>
-                            <td><input type="text" name="daterangerpicker"></td>
+                            <td>
+                                <select name="range" id="">
+                                    <option value=""></option>
+                                    <option value="">本日</option>
+                                    <option value="">近一週</option>
+                                    <option value="">近一個月</option>
+                                    <option value="">本季</option>
+                                    <option value="">本年度</option>
+                                </select>
+                            </td>
                         </tr>
+                        <!-- <tr>
+                            <td class="item">顯示型態</td>
+                            <td>
+                                <input type="radio" name="type" id="" value="now" class="r">預約實到
+                                <input type="radio" name="type" id="" value="pass" class="p">同期
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td class="btn" colspan="2">
+                                <button>查詢</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- for 館別 -->
+                <form action="">
+                    <table class="pavilion">
+                        <tr>
+                            <td class="item">查詢範圍</td>
+                            <td>
+                                <select name="range" id="">
+                                    <option value=""></option>
+                                    <option value="">本日</option>
+                                    <option value="">近一週</option>
+                                    <option value="">近一個月</option>
+                                    <option value="">本季</option>
+                                    <option value="">本年度</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td class="item">顯示型態</td>
+                            <td>
+                                <input type="radio" name="type" id="">預約實到
+                                <input type="radio" name="type" id="">同期
+                            </td>
+                        </tr> -->
                         <tr>
                             <td class="btn" colspan="2">
                                 <button>查詢</button>
@@ -120,10 +171,131 @@
                     </table>
                 </form>
             </div>
-            <canvas id="chart"></canvas>
+            <div class="tab-list">
+                <ul>
+                    <li><a href="#now">預約實到</a></li>
+                    <li><a href="#pass">同期比較</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="now">
+                    <form action="">
+                        <div class="name"><span>近一週</span>預約實到比較表</div>
+                        <table class="today">
+                            <thead>
+                                <th></th>
+                                <th>12/19</th>
+                                <th>12/20</th>
+                                <th>12/21</th>
+                                <th>12/22</th>
+                                <th>12/23</th>
+                                <th>12/24</th>
+                                <th>12/25</th>
+                            </thead>
+                            <tr>
+                                <td class="course">第一場</td>
+                                <td>75</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第二場</td>
+                                <td>75</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第三場</td>
+                                <td>75</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第四場</td>
+                                <td>75</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                                <td>73</td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="pass">
+                    <form action="" class="clearfix">
+                        <div class="name">同期比較表</div>
+                        <table class="today">
+                            <thead>
+                                <th></th>
+                                <th>預約</th>
+                                <th>實到</th>
+                            </thead>
+                            <tr>
+                                <td class="course">第一場</td>
+                                <td>75</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第二場</td>
+                                <td>75</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第三場</td>
+                                <td>75</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第四場</td>
+                                <td>75</td>
+                                <td>73</td>
+                            </tr>
+                            </table>
+                        <table class="pass">
+                            <thead>
+                                <th></th>
+                                <th>預約</th>
+                                <th>實到</th>
+                            </thead>
+                            <tr>
+                                <td class="course">第一場</td>
+                                <td>50</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第二場</td>
+                                <td>43</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第三場</td>
+                                <td>51</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td class="course">第四場</td>
+                                <td>80</td>
+                                <td>80</td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
         </div>        
     </div>
-    <script src="js/chartJS.js"></script>
-    <script src="js/highcharts/charts.js"></script>
 </body>
 </html>

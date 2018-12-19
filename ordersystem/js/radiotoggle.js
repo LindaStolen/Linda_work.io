@@ -24,3 +24,16 @@ $(document).ready(function(){
         }
     });
 });
+// (統計)
+$(document).ready(function(){
+    $('button').click(function(){
+        if($('input[type="radio"]').attr("value")=="now"){
+            $("#pass").hide();
+            $("#now").show();
+        }
+        if($('input[type="radio"]').attr("value")=="pass"){
+            $("#now").hide();
+            $("#pass").show();
+        }
+    });
+});

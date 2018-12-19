@@ -94,7 +94,7 @@
     margin: 0 15px 10px 60px;
     border-bottom: 0.6px dotted #333;
 }
-#container .nav_side .permission a {
+/* #container .nav_side .permission a {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -105,7 +105,7 @@
 }
 #container .nav_side .permission:hover {
     color: #7e3900;
-}
+} */
 
 #container .nav_side h2 i, #container .nav_side .permission i {
     padding-right: 5px;

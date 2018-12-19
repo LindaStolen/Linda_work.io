@@ -1,0 +1,96 @@
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+    min-width: 700px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 0 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.location {
+    margin: 0 50px 50px 0;
+    padding-top: 30px;
+    font-size: 18px;
+    float: right;
+    /* vertical-align: middle; */
+}
+.location li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.location li i {
+    margin-right: 5px;
+}
+#mainContent .location select {
+    height: 25px;
+    width: 130px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+#mainContent .location #datepicker {
+    /* height: 23px; */
+    font-size: 16px;
+}
+/* 選擇條件 */
+#mainContent .condition {
+    width: 650px;
+    margin: 0 auto 50px;
+    vertical-align: middle;
+    /* text-align: center; */
+}
+#mainContent .condition input[type=radio] {
+    margin-bottom: 15px;
+}
+#mainContent .condition select, #mainContent .condition input[type=text] {
+    height: 25px;
+    width: 150px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffffff00;
+    border-bottom: 1px solid #ccc;
+}
+#mainContent .all-member {
+    margin: auto;
+    min-width: 700px;
+    text-align: center;
+    border: 1px solid #e7daa1;
+}
+.all-member th {
+    font-weight: 430;
+    background-color: #ffe8dd;
+}
+#mainContent td, #mainContent th {
+    /* border: 1px solid #aa9e68; */
+    line-height: 30px;
+    font-size: 17px;
+}
+.all-member tr:nth-child(even) {
+    background-color: #fff0e4d8;
+}
+#mainContent .all-member i {
+    cursor: pointer;
+}
+#mainContent .all-member i:hover {
+    color: #8d7261;
+}
+.edit .cot{
+    padding: 10px 0;
+    border-right: 1px solid #ffedd8;
+}
+.edit p {
+    padding: 5px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #66451b;
+}
+#mainContent .edit ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 5px;
+    vertical-align: top;
+}

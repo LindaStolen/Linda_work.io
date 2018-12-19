@@ -40,7 +40,7 @@
 /* .condition {
     text-align: center;
 } */
-table {
+.condition table {
     width: 550px;
     margin: auto;
     margin-top: 50px;
@@ -53,10 +53,11 @@ table .item {
 table td {
     border: 1px solid #856d51;
 }
-table select, table input {
+table select {
     margin-left: 8px;
     width: 250px;
     height: 22.5px;
+    font-size: 16px;
     border: none;
     border-bottom: 1px solid #bbb;
     background-color: #ffffff00;
@@ -66,8 +67,75 @@ table .btn {
     text-align: center;
     padding-top: 15px;
 }
-/* chart */
-canvas {
-    width: 700px;
-    height: 500px;
+.tkb {
+    display: none;
 }
+/* .pavilion {
+    display: none;
+} */
+.tab-list {
+    clear: left;
+    min-width: 650px;
+    margin: 50px 130px 0 0;    
+}
+.tab-list ul {
+    height: 32px;
+    border-bottom: 1px solid #c08c6d;
+    border-left: 1px solid #c08c6d;
+}
+.tab-list li {
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -1px;
+    border: 1px solid #c08c6d;
+    border-left: none;
+    border-bottom: #c08c6d;
+    background-color: #fde9dd;
+}
+.tab-list li a {
+    display: block;
+    padding: 0 20px;
+}
+.tab-list li a:hover {
+    background-color: #967967;
+    color: #fff;
+}
+.tab-list ul .active a {
+    background-color: #967967;
+    color: #fff;
+}
+/* tab表格 */
+.tab-content table {
+    text-align: center;
+    min-width: 550px;
+    margin: 30px auto;
+}
+.tab-content .name {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.tab-content table td {
+    line-height: 28px;
+}
+.tab-content th {
+    border: 0.8px solid #856d51;
+    background-color: #fde9dd;
+    font-weight: 430;
+    letter-spacing: 1px;
+}
+.tab-content #pass table {
+    width: 45%;
+    float: left;
+    margin: 30px 2% 0;
+}
+table .course {
+    width: 25%;
+ }
+.tab-content #pass {
+    display: none;
+ }

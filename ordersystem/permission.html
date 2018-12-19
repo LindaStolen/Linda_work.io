@@ -13,7 +13,7 @@
     <script src="js/sign-in.js"></script>
     <script src="js/perm-add.js"></script>
     <script src="js/radiotoggle.js"></script>
-    <title>權限設定</title>
+    <title>群組管理</title>
 </head>
 <body>
     <div id="container">
@@ -65,11 +65,15 @@
                 <li><a href="time-used.html">學習時數查詢</a></li>
                 <li><a href="violation.html">違規紀錄</a></li>
             </ul>
-            <div class="permission"><a href="permission.html"><i class="fas fa-cog"></i>權限管理</a></div>
+            <h2><i class="fas fa-cog"></i>權限管理</h2>
+            <ul class="permission">
+                <li><a href="permission.html">群組管理</a></li>
+                <li><a href="personal.html">人員權限設定</a></li>
+            </ul>
         </div>
     <!-- content -->
         <div id="mainContent">
-            <h2 class="sub-title">權限設定</h2>
+            <h2 class="sub-title">權限管理 \ 群組管理</h2>
             <div class="clearfix">
                 <ul class="location">
                     <li class="place">
@@ -86,7 +90,7 @@
                     </li>
                     <li class="date">
                         <div><i class="far fa-calendar-alt"></i>
-                            <input type="text" id="datepicker" value="2018-11-07">                            
+                            <input type="text" id="datepicker" value="2018-11-07">
                         </div>
                     </li>
                     <li class="time">
@@ -101,71 +105,62 @@
                     </li>
                 </ul>
             </div>
-            <form action="">
-            <div class="condition">
-                <input type="radio" name="location" id="" value="tkb" checked="checked">總公司
-                <input type="radio" name="location" id="" value="pal">各館別 <br>
-                <select name="department" id="" class="tkb" required>
-                    <option value="0">部門選擇</option>
-                    <option value="1">人事部</option>
-                    <option value="2">資訊部</option>
-                    <option value="3">產品專案部</option>
-                    <option value="4"></option>
-                </select>
-                <select name="office" id="" class="tkb" required>
-                    <option value="0">職位選擇</option>
-                    <option value="1">董事長</option>
-                    <option value="2">總經理</option>
-                    <option value="3">經理</option>
-                    <option value="4">主任</option>
-                    <option value="4">一般職員</option>
-                </select>
-                <select name="pavilion" id="" style="display:none;" class="pal" required>
-                    <option value="0">館別選擇</option>
-                    <option value="0"></option>
-                    <option value="1">台北龍們</option>
-                    <option value="2">台北數位學堂</option>
-                    <option value="3">台北洋碩</option>
-                    <option value="4"></option>
-                </select>
-                <span>員工編號</span> <input type="text" name="num">
-                <button>CHECK</button> 
+            <div class="add-g">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td class="item">新增群組</td>
+                            <td><input type="text" placeholder="群組名稱"></td>
+                        </tr>
+                        <tr>
+                            <td class="item">權限選擇</td>
+                            <td>
+                                <ul> <!-- about order -->
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 新增預約
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 修改/刪除預約
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 查詢學生預約記錄
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 查詢學生時數餘額
+                                    </li>
+                                </ul>
+                                <ul> <!-- about seat -->
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 查詢座位現狀
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 修改座位狀態
+                                    </li>
+                                </ul>
+                                <ul> <!-- about place -->
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 查詢場次現狀
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 停場設置
+                                    </li>
+                                </ul>
+                                <ul> <!-- about permission -->
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 群組管理
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id=""> 人員權限設定
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="item" colspan="2"><button>建立</button></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
-            </form>
-            <form action="">
-                <table class="all-member">
-                    <thead>
-                        <th>部門</th>
-                        <th>職位</th>
-                        <th>員工編號</th>
-                        <th>姓名</th>
-                        <th>設定</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>資訊部</td>
-                            <td>一般職員</td>
-                            <td>TKB000ABCD</td>
-                            <td>李博瑀</td>
-                            <td><i class="fas fa-pencil-alt"></i></td>
-                        </tr>
-                        <tr>
-                            <td>資訊部</td>
-                            <td>一般職員</td>
-                            <td>TKB000ABCD</td>
-                            <td>潘博羽</td>
-                            <td><i class="fas fa-pencil-alt"></i></td>
-                        </tr>
-                        <tr>
-                            <td>資訊部</td>
-                            <td>一般職員</td>
-                            <td>TKB000ABCD</td>
-                            <td>林博語</td>
-                            <td><i class="fas fa-pencil-alt"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
         </div>
     </div>
 </body>
