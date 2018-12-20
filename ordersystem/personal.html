@@ -107,15 +107,22 @@
             </div>
             <form action="">
             <div class="condition">
-                <input type="radio" name="location" id="" value="tkb" checked="checked">總公司
-                <input type="radio" name="location" id="" value="pal">各館別 <br>
+                <!-- <input type="radio" name="location" id="" value="tkb" checked="checked">總公司
+                <input type="radio" name="location" id="" value="pal">各館別 <br> -->
                 <select name="department" id="" class="tkb" required>
-                    <option value="0">部門選擇</option>
-                    <option value="1">人事部</option>
-                    <option value="2">資訊部</option>
-                    <option value="3">產品專案部</option>
-                    <option value="4"></option>
+                    <option value="0">地點選擇</option>
+                    <option value="1">總公司</option>
+                    <option value="2">台北數位學堂</option>
+                    <option value="3">新竹數位學堂</option>
+                    <option value="4">林口數位學堂</option>
                 </select>
+                <!--<select name="department" id="" class="tkb" required>區行政 
+                    <option value="0">地點選擇</option>
+                    <option value="1">台北數位學堂</option>
+                    <option value="2">新竹數位學堂</option>
+                    <option value="3">林口數位學堂</option>
+                    <option value="4">桃園數位學堂</option>
+                </select>-->
                 <select name="office" id="" class="tkb" required>
                     <option value="0">職位選擇</option>
                     <option value="1">董事長</option>
@@ -123,14 +130,6 @@
                     <option value="3">經理</option>
                     <option value="4">主任</option>
                     <option value="4">一般職員</option>
-                </select>
-                <select name="pavilion" id="" style="display:none;" class="pal" required>
-                    <option value="0">館別選擇</option>
-                    <option value="0"></option>
-                    <option value="1">台北龍們</option>
-                    <option value="2">台北數位學堂</option>
-                    <option value="3">台北洋碩</option>
-                    <option value="4"></option>
                 </select>
                 <span>員工編號</span> <input type="text" name="num">
                 <button>CHECK</button> 

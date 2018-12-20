@@ -110,7 +110,7 @@
                     <table>
                         <tr>
                             <td class="item">新增群組</td>
-                            <td><input type="text" placeholder="群組名稱"></td>
+                            <td><input type="text" id="groupName" placeholder="群組名稱" value="test"></td>
                         </tr>
                         <tr>
                             <td class="item">權限選擇</td>
@@ -160,8 +160,17 @@
                         </tr>
                     </table>
                 </form>
+                <table id="group">
+                    <tr>
+                        <td>群組名稱</td>
+                        <td>權限項目</td>
+                        <td>編輯</td>
+                    </tr>
+                </table>
             </div>
+
         </div>
     </div>
+    <script src="js/table_add.js"></script>
 </body>
 </html>

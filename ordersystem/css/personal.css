@@ -81,16 +81,22 @@
 .edit .cot{
     padding: 10px 0;
     border-right: 1px solid #ffedd8;
+    vertical-align: middle;
 }
 .edit p {
-    padding: 5px;
+    display: inline-block;
+    /* padding: 5px; */
     font-size: 17px;
     letter-spacing: 1px;
     color: #66451b;
 }
-#mainContent .edit ul {
+#mainContent .edit td select{
+    width: 150px;
+    height: 20px;
     display: inline-block;
-    text-align: left;
+    font-size: 16px;
+}
+.edit button {
     margin: 0 5px;
-    vertical-align: top;
+    text-align: center;
 }

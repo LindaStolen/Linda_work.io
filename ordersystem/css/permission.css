@@ -41,13 +41,25 @@
 } */
 .add-g table {
     margin: auto;
+    min-width: 550px;
 }
 .add-g table .item {
     text-align: center;
+}
+.add-g td {
+    border: 0.8px solid #bbb;
 }
 .add-g ul {
     display: inline-block;
     text-align: left;
     margin: 0 5px;
     vertical-align: top;
+}
+.add-g #group {
+    min-width: 580px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+.add-g #group tr {
+    height: 30px;
 }
