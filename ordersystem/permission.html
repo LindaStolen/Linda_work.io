@@ -106,54 +106,57 @@
                 </ul>
             </div>
             <div class="add-g">
-                <form action="">
+                <form action="" autocomplete="off">
                     <table>
                         <tr>
                             <td class="item">新增群組</td>
-                            <td><input type="text" id="groupName" placeholder="群組名稱" value="test"></td>
+                            <td colspan="2"><input type="text" id="groupName" placeholder="群組名稱"></td>
                         </tr>
                         <tr>
                             <td class="item">權限選擇</td>
                             <td>
                                 <ul> <!-- about order -->
                                     <li>
-                                        <input type="checkbox" name="" id=""> 新增預約
+                                        <input type="checkbox" name="" id="" value="新增預約"> 新增預約
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 修改/刪除預約
+                                        <input type="checkbox" name="" id="" value="修改/刪除預約"> 修改/刪除預約
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 查詢學生預約記錄
+                                        <input type="checkbox" name="" id="" value="查詢學生預約記錄"> 查詢學生預約記錄
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 查詢學生時數餘額
+                                        <input type="checkbox" name="" id="" value="查詢學生時數餘額"> 查詢學生時數餘額
                                     </li>
                                 </ul>
                                 <ul> <!-- about seat -->
                                     <li>
-                                        <input type="checkbox" name="" id=""> 查詢座位現狀
+                                        <input type="checkbox" name="" id="" value="查詢座位現狀"> 查詢座位現狀
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 修改座位狀態
+                                        <input type="checkbox" name="" id="" value="修改座位狀態"> 修改座位狀態
                                     </li>
                                 </ul>
                                 <ul> <!-- about place -->
                                     <li>
-                                        <input type="checkbox" name="" id=""> 查詢場次現狀
+                                        <input type="checkbox" name="" id="" value="查詢場次現狀"> 查詢場次現狀
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 停場設置
+                                        <input type="checkbox" name="" id="" value="停場設置"> 停場設置
                                     </li>
                                 </ul>
                                 <ul> <!-- about permission -->
                                     <li>
-                                        <input type="checkbox" name="" id=""> 群組管理
+                                        <input type="checkbox" name="" id="" value="群組管理"> 群組管理
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id=""> 人員權限設定
+                                        <input type="checkbox" name="" id="" value="人員權限設定"> 人員權限設定
                                     </li>
                                 </ul>
                             </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><div class="show"></div></td>
                         </tr>
                         <tr>
                             <td class="item" colspan="2"><button>建立</button></td>
@@ -162,9 +165,9 @@
                 </form>
                 <table id="group">
                     <tr>
-                        <td>群組名稱</td>
-                        <td>權限項目</td>
-                        <td>編輯</td>
+                        <td style="width:30%;">群組名稱</td>
+                        <td style="width:50%;">權限項目</td>
+                        <td style="width:20%;">編輯</td>
                     </tr>
                 </table>
             </div>
@@ -172,5 +175,15 @@
         </div>
     </div>
     <script src="js/table_add.js"></script>
+    <script>
+        
+    </script>
+    <!-- <script src="js/chosen.jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.multify').chosen();
+        });
+    </script>
+    <script src="js/chosen.js"></script> -->
 </body>
 </html>

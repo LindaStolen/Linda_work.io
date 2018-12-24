@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.min.js"></script>
+    <title>checked</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" name="check" value="1">1 
+        <input type="checkbox" name="check" value="2">2
+        <input type="checkbox" name="check" value="3">3
+        <input type="checkbox" name="check" value="4">4
+        <input type="checkbox" name="check" value="5">5
+    </div>
+    <div class="save"></div>
+    <button class="cancel">取消</button>
+
+    <script>
+        let checked = '';
+        $("input[type=checkbox]").change(function(){
+            // console.log($("input:checked").val());
+            let p = $(this).prop('checked');
+            // $("input:checked").prop("checked","true");
+            // if($(this).prop('checked') == true){
+                checked = $(p).val();
+                console.log(checked);
+                let str = $(".save").html();
+                str += checked;
+                $(".save").text(str);
+            // }else if($(this).prop('checked') == false){
+            //     $(".save").remove($(this).val());
+            // }
+        });
+        $(".cancel").click(function(){
+            $("input[type=checkbox]").removeAttr('checked');
+            $(".save").empty();
+            console.log($(this).prop('checked'));
+        });
+        // let str = $(".save").html();
+
+        // $("input[type=checkbox]").change(function(){
+        //     console.log($("input:checked").val());
+        //     $("input[type=checkbox]").prop("check","checked");
+        // });
+        // $(document).ready(function p(){
+            $('input:checkbox:checked[name="check"]').map(function(){ 
+                str += checked;
+                $('.save').append(str);
+                return $(this).val(); }).get();
+        // });
+        // console.log(p);
+    </script>
+</body>
+</html>
