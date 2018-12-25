@@ -9,36 +9,39 @@
 </head>
 <body>
     <div>
-        <input type="checkbox" name="check" value="1">1 
-        <input type="checkbox" name="check" value="2">2
-        <input type="checkbox" name="check" value="3">3
-        <input type="checkbox" name="check" value="4">4
-        <input type="checkbox" name="check" value="5">5
+        <input type="checkbox" name="check" value="新竹">1 
+        <input type="checkbox" name="check" value="台北">2
+        <input type="checkbox" name="check" value="台南">3
+        <input type="checkbox" name="check" value="台中">4
+        <input type="checkbox" name="check" value="高雄">5
     </div>
     <div class="save"></div>
     <button class="cancel">取消</button>
 
     <script>
         let checked = '';
-        $("input[type=checkbox]").change(function(){
-            // console.log($("input:checked").val());
-            let p = $(this).prop('checked');
-            // $("input:checked").prop("checked","true");
-            // if($(this).prop('checked') == true){
-                checked = $(p).val();
+        $("input[type='checkbox']").change(function(){
+            let p = $(this).attr('checked',true);
+            if($(this).prop('checked')){
+                checked = $(this).val();
                 console.log(checked);
                 let str = $(".save").html();
-                str += checked;
+                str +=  $(this).val() + " / ";
                 $(".save").text(str);
-            // }else if($(this).prop('checked') == false){
-            //     $(".save").remove($(this).val());
-            // }
+            }else {
+                $(this).removeAttr('checked');
+                $(".save").remove($(this).val());
+            }
         });
         $(".cancel").click(function(){
-            $("input[type=checkbox]").removeAttr('checked');
+            $("input[type='checkbox']").prop('checked',false);
+            $("input[type='checkbox']").removeAttr('checked');
             $(".save").empty();
-            console.log($(this).prop('checked'));
+            // console.log($("input:checked"));
         });
+            // $("input[type=checkbox]:checked").removeProp("checked");
+            
+        // });
         // let str = $(".save").html();
 
         // $("input[type=checkbox]").change(function(){

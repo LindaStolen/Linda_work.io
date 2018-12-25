@@ -1,36 +1,35 @@
 let table = $('table#group');
 let item = $("#groupName");
 let gName = $(item).val();
-let check = $("input:checked");
-$("input[type=checkbox]").change(function(){
-    let value = $("input:checked").val();
-    let str = $(".show").text();
-    console.log(str);
-    
-    if (check){
-        $(this).prop("check","checked");
-        str += value;
-        $(".show").text(str + " , ");
+let checked = '';
+$("input[type='checkbox']").change(function(){
+    let p = $(this).attr('checked',true);
+    if($(this).prop('checked')){
+        checked = $(this).val();
+        console.log(checked);
+        let str = $(".show").html();
+        str +=  $(this).val() + " / ";
+        $(".show").text(str);
     }else {
-        $(".show").slice();
+        $(this).removeAttr('checked');
+        $(".show").remove($(this).val());
     }
-    // str += value;
-    // $(".show").text(str + " , ");
+});
+$(".cancel").click(function(){
+    $("input[type='checkbox']").prop('checked',false);
+    $("input[type='checkbox']").removeAttr('checked');
+    $(".show").empty();
+    // console.log($("input:checked"));
 });
 
 
 
-$('button').click(function(str){
-    // let pItem = $(".show").val();
+$('submit').click(function(){
+    let pItem = $(".show").val();
     // let pItem = $('input[type=checkbox]').val();
     let str_ = `<tr><td class="g-name">${gName}</td><td class="p-item">${pItem}</td><td class="edit"><button class="revise">編輯</button><br><button class="no">刪除</button></td></tr>`
     table.append(str_);
     item.val("");
 
-    
-    // console.log(pItem);
-
     return false;
 });
-// console.log($('button'));
-
