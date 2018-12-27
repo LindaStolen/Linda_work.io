@@ -9,6 +9,79 @@
 </head>
 <body>
     <div>
+        <input type="checkbox" name="check" value="1"><span>台北</span>
+        <input type="checkbox" name="check" value="2"><span>新竹</span>
+        <input type="checkbox" name="check" value="3"><span>台中</span>
+        <input type="checkbox" name="check" value="4"><span>台南</span>
+        <input type="checkbox" name="check" value="5"><span>高雄</span>
+    </div>
+    <div class="save"></div>
+    <button class="cancel">取消</button>
+
+    <script>
+        let p;  //所選的checkbox
+        let str = '';  //所選的值
+        let arr = new Array();  //陣列 存放目前所選的值 (以便日後判斷使用者要取消的是哪個選項 要刪除的是哪個值)
+        let new_str = '';  //存入取消某選項後的新字串
+        // let sep = ",";
+
+        $("input[type='checkbox']").change(function(){
+            if($(this).prop('checked')){  //選取
+                p = $(this).attr('checked',true);
+                str += $(this).next().text() + ",";
+                $(".save").text(str);
+            }else {  //取消選取
+                new_str = '';
+                p.removeAttr("checked");
+                str = str.substring(0, str.length-1);
+                arr = str.split(",");  //用空字串 切割字串
+                // arr.substring(0, arr.length-1);
+                console.log(arr);
+                for(var i = 0; i< arr.length; i++){
+                    if($(this).next().text() == arr[i]){
+                        console.log("使用者選擇的值: "+arr[i]);
+                        arr[i] = '';  //取消值
+                    }
+                    new_str += arr[i]+",";  //將陣列的值重新串起來成字串
+
+                    if(i==0){ //不能直接清空 因為不是所有選項都要取消 所以值不是所有都要清空
+                        str = arr[i];
+                    }else{
+                        str += arr[i];
+                    }
+                }
+                $(".save").text(new_str);
+            }
+        });
+        $(".cancel").click(function(){
+            $("input[type='checkbox']").prop('checked',false);
+            $("input[type='checkbox']").removeAttr("checked");
+            str = '';
+            new_str = '';
+            $(".save").empty();
+        });
+                    // $("input[type=checkbox]:checked").removeProp("checked");
+        
+                // });
+                // let str = $(".save").html();
+        
+                // $("input[type=checkbox]").change(function(){
+                //     console.log($("input:checked").val());
+                //     $("input[type=checkbox]").prop("check","checked");
+                // });
+                // $(document).ready(function p(){
+                    $('input:checkbox:checked[name="check"]').map(function(){
+                        str += checked;
+                        $('.save').append(str);
+                        return $(this).val(); }).get();
+                // });
+                // console.log(p);
+            </script>
+        <!-- Code injected by live-server -->
+        
+
+
+    <!-- <div>
         <input type="checkbox" name="check" value="新竹">1 
         <input type="checkbox" name="check" value="台北">2
         <input type="checkbox" name="check" value="台南">3
@@ -55,6 +128,6 @@
                 return $(this).val(); }).get();
         // });
         // console.log(p);
-    </script>
+    </script> -->
 </body>
 </html>
