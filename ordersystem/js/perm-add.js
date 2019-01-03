@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    // document.write('<script type="text/javascript" src="dateranger.js"></script>');
-    
     let status = false;
     let list = 
     `<tr class="edit">

@@ -8,13 +8,14 @@
     <title>checked</title>
 </head>
 <body>
-    <div>
-        <input type="checkbox" name="check" value="1"><span>台北</span>
-        <input type="checkbox" name="check" value="2"><span>新竹</span>
-        <input type="checkbox" name="check" value="3"><span>台中</span>
-        <input type="checkbox" name="check" value="4"><span>台南</span>
-        <input type="checkbox" name="check" value="5"><span>高雄</span>
-    </div>
+    <form action="">
+        <input type="checkbox" name="All" value="0"><span>All</span>
+        <input type="checkbox" name="check" value="台北"><span>台北</span>
+        <input type="checkbox" name="check" value="新竹"><span>新竹</span>
+        <input type="checkbox" name="check" value="台中"><span>台中</span>
+        <input type="checkbox" name="check" value="台南"><span>台南</span>
+        <input type="checkbox" name="check" value="高雄"><span>高雄</span>
+    </form>
     <div class="save"></div>
     <button class="cancel">取消</button>
 
@@ -22,42 +23,57 @@
         let p;  //所選的checkbox
         let str = '';  //所選的值
         let arr = new Array();  //陣列 存放目前所選的值 (以便日後判斷使用者要取消的是哪個選項 要刪除的是哪個值)
-        let new_str = '';  //存入取消某選項後的新字串
+        let temp = [];  //存入取消某選項後的新字串
         // let sep = ",";
 
-        $("input[type='checkbox']").change(function(){
+        $("input[name='All']").click(function(){
+            if($(this).prop('checked')){
+                p = $("input[name='check']").attr('checked',true);
+                console.log(p);
+                $("input[name='check']").each(function(i,j){
+                    temp.push(j.value);
+                    let str = temp .join(',');
+                    console.log(str);
+                    $('.save').text(str);
+                });
+            }else {
+                $("input[name='check']").removeAttr('checked');
+                $("input[name='check']").removeProp('checked');
+                temp = [];
+                str = '';
+                $(".save").empty();
+                console.log($(".save").text());
+            };
+            
+        });
+        $("input[name='check']").change(function(){
             if($(this).prop('checked')){  //選取
                 p = $(this).attr('checked',true);
-                str += $(this).next().text() + ",";
+                str += $(this).val() + ",";
                 $(".save").text(str);
             }else {  //取消選取
-                new_str = '';
+                temp = '';
                 p.removeAttr("checked");
                 str = str.substring(0, str.length-1);
                 arr = str.split(",");  //用空字串 切割字串
-                // arr.substring(0, arr.length-1);
-                console.log(arr);
                 for(var i = 0; i< arr.length; i++){
-                    if($(this).next().text() == arr[i]){
+                    if($(this).val() == arr[i]){
                         console.log("使用者選擇的值: "+arr[i]);
                         arr[i] = '';  //取消值
                     }
-                    new_str += arr[i]+",";  //將陣列的值重新串起來成字串
-
-                    if(i==0){ //不能直接清空 因為不是所有選項都要取消 所以值不是所有都要清空
-                        str = arr[i];
-                    }else{
-                        str += arr[i];
+                    if(arr[i] != ''){
+                        temp += arr[i]+",";  //將陣列的值重新串起來成字串
                     }
                 }
-                $(".save").text(new_str);
+                str = temp;
+                $(".save").text(str);
             }
         });
         $(".cancel").click(function(){
             $("input[type='checkbox']").prop('checked',false);
             $("input[type='checkbox']").removeAttr("checked");
             str = '';
-            new_str = '';
+            temp = '';
             $(".save").empty();
         });
                     // $("input[type=checkbox]:checked").removeProp("checked");

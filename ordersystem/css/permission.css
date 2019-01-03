@@ -41,7 +41,7 @@
 } */
 .add-g table {
     margin: auto;
-    width: 700px;
+    width: 760px;
 }
 .add-g table .item {
     text-align: center;
@@ -51,9 +51,9 @@
     border: 0.8px solid #bbb;
     line-height: 30px;
 }
-.add-g #show {
+/* .add-g #show {
     min-height: 100px;
-}
+} */
 .add-g .edit {
     padding: 0;
 }
@@ -76,9 +76,12 @@
 } */
 .add-g #group {
     min-width: 580px;
-    margin: 20px auto 0;
+    margin: 50px auto 0;
     text-align: center;
 }
 .add-g #group tr {
     height: 30px;
+}
+.add-g #group .p-item {
+    text-align: left; 
 }

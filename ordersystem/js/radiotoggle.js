@@ -11,19 +11,7 @@ $(document).ready(function(){
         }
     });
 });
-// (權限)
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
-        if($(this).attr("value")=="tkb"){
-            $(".pal").hide();
-            $(".tkb").show();
-        }
-        if($(this).attr("value")=="pal"){
-            $(".tkb").hide();
-            $(".pal").show();
-        }
-    });
-});
+
 // (統計)
 $(document).ready(function(){
     $('button').click(function(){

@@ -12,30 +12,29 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/perm-add.js"></script>
-    <script src="js/radiotoggle.js"></script>
     <title>群組管理</title>
 </head>
-<body>
+<body>    
+    <!-- top nav -->
+    <div class="top full-width">
+        <div class="logo">
+            <a><img src="images/logo (1).png" alt=""></a>
+        </div>
+        <h1 class="title">預約座位系統</h1>
+        <ul>
+            <li class="date">2018年11月6日</li>
+            <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
+            <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
+            <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
+        </ul>
+    </div>
+    <div class="user clearfix">
+        <ul>
+            <li><a>資料設定</a></li>
+            <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
+        </ul>
+    </div>
     <div id="container">
-        <!-- top nav -->
-        <div class="top full-width">
-            <div class="logo">
-                <a><img src="images/logo (1).png" alt=""></a>
-            </div>
-            <h1 class="title">預約座位系統</h1>
-            <ul>
-                <li class="date">2018年11月6日</li>
-                <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
-                <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
-                <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
-            </ul>
-        </div>
-        <div class="user clearfix">
-            <ul>
-                <li><a>資料設定</a></li>
-                <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
-            </ul>
-        </div>
     <!-- side nav -->
         <div class="nav_side">
             <!-- <div class="logo"></div> -->
@@ -115,53 +114,59 @@
                         <tr>
                             <td class="item">權限選擇</td>
                             <td>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="selectAll" id="" value="全選"> 全選
+                                    </li>
+                                </ul>
                                 <ul> <!-- about order -->
                                     <li>
-                                        <input type="checkbox" name="" id="" value="1"> 新增預約
+                                        <input type="checkbox" name="check" id="" value="新增預約"> 新增預約
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="2"> 修改/刪除預約
+                                        <input type="checkbox" name="check" id="" value="修改/刪除預約"> 修改/刪除預約
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="3"> 查詢學生預約記錄
+                                        <input type="checkbox" name="check" id="" value="查詢學生預約記錄"> 查詢學生預約記錄
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="4"> 查詢學生時數餘額
+                                        <input type="checkbox" name="check" id="" value="查詢學生時數餘額"> 查詢學生時數餘額
                                     </li>
                                 </ul>
                                 <ul> <!-- about seat -->
                                     <li>
-                                        <input type="checkbox" name="" id="" value="5"> 查詢座位現狀
+                                        <input type="checkbox" name="check" id="" value="查詢座位現狀"> 查詢座位現狀
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="6"> 修改座位狀態
+                                        <input type="checkbox" name="check" id="" value="修改座位狀態"> 修改座位狀態
                                     </li>
                                 </ul>
                                 <ul> <!-- about place -->
                                     <li>
-                                        <input type="checkbox" name="" id="" value="7"> 查詢場次現狀
+                                        <input type="checkbox" name="check" id="" value="查詢場次現狀"> 查詢場次現狀
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="8"> 停場設置
+                                        <input type="checkbox" name="check" id="" value="停場設置"> 停場設置
                                     </li>
                                 </ul>
                                 <ul> <!-- about permission -->
                                     <li>
-                                        <input type="checkbox" name="" id="" value="9"> 群組管理
+                                        <input type="checkbox" name="check" id="" value="群組管理"> 群組管理
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="" id="" value="10"> 人員權限設定
+                                        <input type="checkbox" name="check" id="" value="人員權限設定"> 人員權限設定
                                     </li>
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td colspan="3"><div class="show"></div></td>
-                        </tr>
+                        </tr> -->
                         <tr>
-                            <td class="item" colspan="2"><button class="submit">建立</button><button class="">取消</button></td>
+                            <td class="item" colspan="2"><button class="submit">建立</button><button class="cancel">取消</button></td>
                         </tr>
                     </table>
+                    <div class="show"></div>
                 </form>
                 <table id="group">
                     <tr>
@@ -176,14 +181,11 @@
     </div>
     <script src="js/table_add.js"></script>
     <script>
+        $(document).ready(function(){
+            
+        });
         
     </script>
-    <!-- <script src="js/chosen.jquery.min.js"></script>
-    <script>
-        $(function(){
-            $('.multify').chosen();
-        });
-    </script>
-    <script src="js/chosen.js"></script> -->
+    
 </body>
 </html>

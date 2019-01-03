@@ -5,7 +5,7 @@
     grid-template-columns: 20% 80%;
     position: relative;
 }
-#container .top {
+.top {
     background-image: url(../images/top_bgc-02.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,13 +15,13 @@
     box-shadow: 0 1px 4px #746353b7;
     z-index: 9998;
 }
-#container .top .logo {
+.top .logo {
     width: 180px;
     padding: 8px 0;
     margin-left: 15px;
     float: left;
 }
-#container .top .title {
+.top .title {
     font-size: 25px;
     font-weight: 450;
     display: inline-block;
@@ -30,7 +30,7 @@
     padding-left: 8px;
     letter-spacing: 1px;    
 }
-#container .top ul {
+.top ul {
     /* float: right; */
     display: inline-block;
     padding-right: 10px;
@@ -38,21 +38,21 @@
     bottom: 5px;
     right: 10px;
 }
-#container .top ul li {
+.top ul li {
     margin: 0 10px;
     font-size: 18px;
     text-align: right;
 }
-#container .top ul .date {
+.top ul .date {
     font-size: 20px;
     font-weight: 400;
     color: #3f2806;
     /* background-color: #ffffff; */
 }
-#container .top ul li #catelog {
+.top ul li #catelog {
     margin-right: 8px;
 }
-#container .top ul li i {
+.top ul li i {
     padding: 0 5px;
 }
 /* left_nav */
@@ -112,7 +112,7 @@
     line-height: 30px;
 }
 /* 管理者中心 */
-#container .user {
+.user {
     width: 100px;
     padding: 5px 10px;
     letter-spacing: 1px;
@@ -125,18 +125,18 @@
     z-index: 999;
     display: none;
 }
-#container .user ul li {
+.user ul li {
     text-align: right;
     line-height: 25px;
     border-bottom: 0.3px solid #a56b3c;
 }
-#container .user ul a {
+.user ul a {
     color: #503015;
 }
-#container .user ul a:hover {
+.user ul a:hover {
     color: #926328;
 }
-#container .user ul .logout {
+.user ul .logout {
     border-bottom: none;
     
 }
