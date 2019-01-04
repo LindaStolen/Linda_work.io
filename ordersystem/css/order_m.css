@@ -39,7 +39,7 @@
     background-color: #ad835c;
     color: #fff;
 }
-.condition table,.student_info .result  {
+.condition table, .student_info .result  {
     margin: auto;
     min-width: 600px;
     font-size: 17px;
@@ -62,7 +62,7 @@
     display: none;
 }
 #mainContent .data {
-    width: 500px;
+    max-width: 600px;
     padding: 25px;
     margin: 25px auto;
     position: relative;

@@ -79,7 +79,7 @@ h1.title::after {
     width: 95%;
 }
 #content .search td {
-    height: 25px;
+    height: 32px;
     letter-spacing: 0.8px;
     background-color: #ececec;
     /* border-bottom: 1px solid #bbb; */
@@ -90,8 +90,10 @@ h1.title::after {
 }
 #content .search tr input {
     border: none;
+    width: 150px;
     height: 25px;
     background-color: #ececec;
+    border-bottom: 1px solid #ccc;
 }
 #content .ctrl_btn {
     text-align: center;

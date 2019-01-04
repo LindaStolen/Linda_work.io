@@ -6,7 +6,7 @@
 #mainContent .sub-title {
     margin:30px 50px 0 0;
     border-bottom: 1px dashed #9c9c9c;
-    padding-left: 5px;
+    padding-left: 5px; 
     letter-spacing: 0.5px;
     font-size: 20px;
     font-weight: 400;
@@ -58,7 +58,7 @@
     display: none;
 }
 #mainContent .data {
-    width: 500px;
+    width: 700px;
     padding: 25px;
     margin: 50px auto;
     position: relative;
@@ -113,6 +113,19 @@
 #mainContent .ctr_btn a, #mainContent .ctr_btn .condition {
     display: inline-block;
     vertical-align: middle;
+}
+.ctr_btn .record {
+    background-color: #ffe0cd;
+    display: inline-block;
+    padding: 3px 12px;
+    letter-spacing: 0.8px;
+    border: 0.8px solid #597538;
+    border-radius: 25px;
+    font-size: 15.5px;
+}
+.ctr_btn .record:hover {
+    color: #fff;
+    background-color: #386e49;
 }
 #mainContent .ctr_btn .condition li {
     float: left;

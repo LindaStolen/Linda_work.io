@@ -43,7 +43,7 @@ h1.title::after {
     color: #444;
 }
 #content ul {
-    margin: 0 20px 50px 0;
+    margin: 0 0 50px 0;
     padding-top: 30px;
     font-size: 18px;
     float: right;
@@ -60,18 +60,18 @@ h1.title::after {
     margin: auto;
 }
 #content table th {
-    height: 80px;
-    font-size: 20px;
-    font-weight: 450;
-    letter-spacing: 1.5px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 420;
+    letter-spacing: 1px;
     color: #472000;
     background-color: #dfeeff;
     border: 0.8px solid #777;
 }
 #content table td {
     text-align: center;
-    height: 65px;
-    font-size: 18px;
+    height: 52px;
+    font-size: 16.5px;
     border: 0.8px solid #777;
 }
 #content table tr:nth-child(even) {

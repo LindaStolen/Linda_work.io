@@ -68,7 +68,7 @@ $('.submit').click(function(){
     $("input[type='checkbox']").removeAttr('checked');
     let pItem = ($(".show").html());
     let gName = $(item).val(); 
-    let str_ = `<tr><td class="g-name">${gName}</td><td class="p-item">${pItem}</td><td><button class="revise">編輯</button><br><button class="no">刪除</button></td></tr>`
+    let str_ = `<tr><td class="g-name">${gName}</td><td class="p-item">${pItem}</td><td><button class="revise">修改</button><br><button class="no">刪除</button></td></tr>`
     table.append(str_);
     $(item).val("");
     str = '';
@@ -77,19 +77,7 @@ $('.submit').click(function(){
 
     
     $(".revise").click(function(){
-        let tr = $(this).parent().parent();
-        
-        if (status == false){
-            tr.after(list);
-            $("tr.edit").addClass("edit-hide");
-            status = true;
-            console.log("success");
-            return false;
-        } else if (status == true){
-            $("tr.edit").remove();
-            status = false;
-            console.log("close");
-        }
+        $("#light-box").show();
     });
     $(".no").click(function(){
         $(".no").parent().parent().remove();

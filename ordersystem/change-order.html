@@ -101,7 +101,7 @@
                     </tbody>
                 </table>
             </form>
-            <div class="ctr-btn"><a href="" class="light-submit">確定</a><a href="" class="light-del">取消</a></div>
+            <div class="ctr-btn"><a class="light-submit">確定</a><a class="light-del">取消</a></div>
         </div>
     </div>
     <!-- top nav -->
@@ -198,7 +198,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>A002</td>
-                                    <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
                                     <td>2018-11-15</td>
@@ -206,7 +206,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>A003</td>
-                                    <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
                                     <td>2018-11-15</td>
@@ -214,7 +214,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>A004</td>
-                                    <td class="ctr_b"><a class="change"  onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change" >修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
                                     <td>2018-11-15</td>
@@ -222,7 +222,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>B004</td>
-                                    <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
                                     <td>2018-11-15</td>
@@ -230,7 +230,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>B001</td>
-                                    <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
                                     <td>2018-11-15</td>
@@ -238,7 +238,7 @@
                                     <td>8:00-11:50</td>
                                     <td>作業研究</td>
                                     <td>B002</td>
-                                    <td class="ctr_b"><a class="change" onclick="javascript:openNew()">修改</a><a class="delete">刪除</a></td>
+                                    <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -250,22 +250,28 @@
     <script>
         $('.change').click(function(){
             $("#light-box").show();
+            let item = $(this).parent().parent();
+            console.log(item);
+            $('.light-submit').unbind("click").click(function(){
+                alert("修改完成");
+                $('#light-box').hide();
+                $('.student_info').show();
+                // console.log(item);
+                item.css("backgroundColor","yellow");
+                return false;
+            })
         })
-        $(".close").click(function(){
+        
+        $(".close").click(function(){ //lightbox close
             $("#light-box").hide();
         })
-        //light-box 
-        $('.light-submit').click(function(){
-            alert("修改完成");
-            $('#light-box').hide();
-        })
-        $('.light-del').click(function(){
-            $("input").val("").empty();
-            $("select").empty();
+        
+        $('.light-del').click(function(){ //lightbox cancel
+            $("#light-box").hide();
+            $('.student_info').show();
             // return false;
         })
-        // let tr = $(this).parent().parent();
-        $(".delete").click(function(){
+        $(".delete").click(function(){ //delete tr
             $(this).parent().parent().remove();
         })
     </script>

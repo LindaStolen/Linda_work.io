@@ -45,7 +45,7 @@
             <ul class="main">
                 <li><a href="index.html">學生到班狀況</a></li>
                 <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
-                <li><a href="reseach-order.html">預約到班統計</a></li>
+                <li><a href="statistic.html.html">預約到班統計</a></li>
             </ul>
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
@@ -116,22 +116,20 @@
                     <li class="item">學員姓名</li>
                     <li class="">蛙拉拉</li>
                 </ul>
-                <div class="record"><a href="" target="_blank">預約更改記錄</a></div>
+                <!-- <div class="record"><a href="" target="_blank">預約更改記錄</a></div> -->
             </div>
             <div class="ctr_btn clearfix">
                 <div class="condition">
                     <li>
-                        <select name="method" id="">
-                            <option value="">依上課日期</option>
-                            <option value="">依課程名稱</option>
-                        </select>排序
+                        <input type="radio" name="sequence" id=""><span>上課日期</span>
+                        <input type="radio" name="sequence" id=""><span>課程名稱</span>
                     </li>
                     <li>
                         日期區間:
                         <input type="text" name="date" id=""><button>查詢</button>
                     </li>
                 </div>
-                <!-- <a href="" target="_blank">預約更改紀錄</a> -->
+                <a href="" target="_blank" class="record">預約更改紀錄</a>
             </div>
             <form action="">
                 <table id="table_2" class="order-h">

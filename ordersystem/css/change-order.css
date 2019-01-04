@@ -84,8 +84,8 @@
 }
 #mainContent .week-order table {
     margin: auto;
-    min-width: 400px;
-    font-size: 16.5px;
+    min-width: 700px;
+    font-size: 16px;
 }
 #mainContent .week-order table td {
     line-height: 35px;
@@ -102,10 +102,16 @@
     border: 0.8px solid #c08c6d;
     background-color: #ffcab9;
     line-height: 35px;
-    font-weight: 450;
+    font-weight: 420;
 }
+/* .af {
+    background-color: #ffc934;
+} */
 #mainContent .week-order tr:nth-child(odd) {
     background-color: #ffe3d7;
+}
+.af {
+    background-color: #ffd35c;
 }
 #mainContent .week-order table .ctr_b a {
     margin: 0 5px;
@@ -146,7 +152,7 @@
     font-size: 35px;
     font-weight: 450;
     color: #641c00;
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 45% ,#fff 70%);
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0) 45% ,#fff 70%);
     letter-spacing: 1.5px;
 }
 #light-box .border .close .fa-times-circle {
@@ -157,11 +163,10 @@
 #light-box .border .close .fa-times-circle:hover {
     color: #ddd;
 }
-#light-box #table_1 {
+#light-box #table_1, #table_2 {
     max-width: 420px;
-    margin: 35px auto 15px;
+    margin: 45px auto 15px;
     height: 35px;
-    text-align: center;
 }
 #light-box #table_1 td {
     border: 0.8px solid #555;
@@ -175,8 +180,7 @@
     background-color: #c2f1ff;
 }
 #table_2 {
-    max-width: 420px;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
 }
 #table_2 td {
     border: 0.8px solid #555;
@@ -193,7 +197,7 @@
 }
 #table_2 select, #table_2 input {
     height: 28px;
-    min-width: 180px;
+    min-width: 200px;
     font-size: 16px;
     margin-top: 3px;
     border: 1px solid #ddd;
@@ -204,7 +208,7 @@
 }
 #light-box .ctr-btn {
     text-align: center;
-    padding: 15px 0;
+    line-height: 30px;
 }
 #light-box .ctr-btn a {
     margin: 0 8px;
@@ -212,6 +216,6 @@
     background-color: #ffb78e;
 }
 #light-box .ctr-btn a:hover {
-    background-color: #77481b;
+    background-color: #ff7322;
     color: #fff;
 }

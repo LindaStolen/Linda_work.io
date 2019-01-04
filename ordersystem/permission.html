@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <link rel="stylesheet" href="css/permission.css">
+    <link rel="stylesheet" href="css/chosen_2019.min.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
-    <script src="js/perm-add.js"></script>
     <title>群組管理</title>
 </head>
 <body>    
@@ -33,6 +33,47 @@
             <li><a>資料設定</a></li>
             <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
         </ul>
+    </div>
+    <!-- edit lightBox -->
+    <div id="light-box">
+        <div class="border">
+            <h1>編輯群組</h1>
+            <i class="fas fa-times-circle close"></i>
+            <!-- <div class="close"><i class="fas fa-times-circle"></i></div> -->
+            <form action="">
+                <table id=table_1>
+                    <tr>
+                        <td class="item">群組名稱</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="item">權限項目</td>
+                        <td class="chosen-box">
+                            <select name="" id="" class="multify" multiple>
+                                <!-- <option value="" >請選擇權限</option> -->
+                                <option value="新增預約">新增預約</option>
+                                <option value="修改/刪除預約">修改/刪除預約</option>
+                                <option value="查詢學生預約記錄">查詢學生預約記錄</option>
+                                <option value="查詢學生時數餘額">查詢學生時數餘額</option>
+                                <option value="查詢座位現狀">查詢座位現狀</option>
+                                <option value="修改座位狀態">修改座位狀態</option>
+                                <option value="查詢場次現狀">查詢場次現狀</option>
+                                <option value="停場設置">停場設置</option>
+                                <option value="群組管理">群組管理</option>
+                                <option value="人員權限設定">人員權限設定</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">備註</td>
+                        <td>
+                            <textarea name="" id="" cols="35" rows="8"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class="ctr-btn"><a href="" class="light-submit">確定</a><a href="" class="light-del">取消</a></div>
+        </div>
     </div>
     <div id="container">
     <!-- side nav -->
@@ -67,7 +108,7 @@
             <h2><i class="fas fa-cog"></i>權限管理</h2>
             <ul class="permission">
                 <li><a href="permission.html">群組管理</a></li>
-                <li><a href="personal.html">人員權限設定</a></li>
+                <li><a href="personal.html">個人權限設定</a></li>
             </ul>
         </div>
     <!-- content -->
@@ -172,7 +213,7 @@
                     <tr>
                         <td style="width:30%;">群組名稱</td>
                         <td style="width:50%;">權限項目</td>
-                        <td style="width:20%;">編輯</td>
+                        <td style="width:20%;"></td>
                     </tr>
                 </table>
             </div>
@@ -180,12 +221,19 @@
         </div>
     </div>
     <script src="js/table_add.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            
+        $(function(){
+            $('.multify').chosen();
         });
-        
+        // $(".revise").click(function(){
+        //     $("#light-box").show();
+        // })
+        $(".close").click(function(){
+            $("#light-box").hide();
+        })
     </script>
+    <script src="js/chosen.js"></script>
     
 </body>
 </html>
