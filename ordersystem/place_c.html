@@ -107,13 +107,13 @@
                     <tr>
                         <td class="item">停課時段</td>
                         <td>
-                            <select name="time" id="">
+                            <select name="time" id="time">
                                 <option value="">請選擇時段</option>
-                                <option value="">整天</option>
-                                <option value="">08:30-11:50</option>
-                                <option value="">12:00-15:20</option>
-                                <option value="">15:30-18:50</option>
-                                <option value="">19:00-22:20</option>
+                                <option value="0">整天</option>
+                                <option value="1">08:30-11:50</option>
+                                <option value="2">12:00-15:20</option>
+                                <option value="3">15:30-18:50</option>
+                                <option value="4">19:00-22:20</option>
                             </select>
                         </td>
                     </tr>
@@ -151,25 +151,25 @@
                     <tbody>
                         <tr>
                             <td class="p_date">2018/11/25</td>
-                            <td class="p_time">08:30-11:50</td>
+                            <td class="p_time" value="1">08:30-11:50</td>
                             <td class="p_status">正常</td>
                             <td class="p_else"></td>
                         </tr>
                         <tr>
                             <td class="p_date">2018/11/25</td>
-                            <td class="p_time">12:00-15:20</td>
+                            <td class="p_time" value="2">12:00-15:20</td>
                             <td class="p_status">正常</td>
                             <td class="p_else"></td>
                         </tr>
                         <tr>
                             <td class="p_date">2018/11/25</td>
-                            <td class="p_time">15:30-18:50</td>
+                            <td class="p_time" value="3">15:30-18:50</td>
                             <td class="p_status">正常</td>
                             <td class="p_else"></td>
                         </tr>
                         <tr>
                             <td class="p_date">2018/11/25</td>
-                            <td class="p_time">19:00-22:20</td>
+                            <td class="p_time" value="4">19:00-22:20</td>
                             <td class="p_status" style="color:red; font-weight: 480;">停場</td>
                             <td class="p_else">感恩節回家吃烤雞!</td>
                         </tr>
@@ -178,8 +178,34 @@
             </form>
         </div>
     </div>
-    <!-- <script language="JavaScript">
-        window.alert('已設定完成');       
-    </script> -->
+    <script language="JavaScript">
+        // window.alert('已設定完成'); 
+        $(document).ready(function(){
+            $("#time").change(function(){
+                $("option:selected",this).each(function(){
+                    $('#time option:selected').prop('selected');
+                    console.log($(this).text());
+                    console.log($(this).prop('selected'));
+                    let sel = $("#time option:selected").val();
+                    $(".submit").click(function(){
+                        switch(sel) {
+                            case "1":
+                            $(".p_time").val("1").addClass("ch");
+                            console.log($(".p_time").val(1));
+                            break;
+                            
+                        };
+                    });
+                });
+            
+        });
+            // $('#time').get(0).selectedIndex;
+            // let t2t = $("#table_2 .p_time");
+            // console.log(t2t);
+            
+            // $(":selected").("");
+        });
+        
+    </script>
 </body>
 </html>

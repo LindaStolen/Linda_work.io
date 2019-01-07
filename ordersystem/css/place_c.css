@@ -75,7 +75,7 @@
     min-width: 500px;
     text-align: center;
     line-height: 35px;
-    display: none;
+    /* display: none; */
 }
 #mainContent #table_2 th {
     background-color: #ffccaa;  
@@ -89,4 +89,8 @@
 }
 #mainContent #table_2 tr {
     border: 0.8px solid #fff;
+}
+.ch {
+    color: #ff1616;
+    background-color: #aaa;
 }
