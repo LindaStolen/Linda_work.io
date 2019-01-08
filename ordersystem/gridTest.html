@@ -85,6 +85,25 @@
             background-color: #fff;
             margin: 20px auto;
         }
+        #test {
+            text-align: center;
+        }
+        #test select {
+            width: 160px;
+            height: 25px;
+        }
+        .b1, .b2 {
+            display: inline-block;
+            margin-top: 30px;
+            width: 100px;
+            height: 20px;
+            background-color: #eee;
+        }
+        #output {
+            margin: 15px auto;
+            min-width: 300px;
+            background-color: #fd4;
+        }
         /* .mulitfy {
             width: 350px;
         } */
@@ -138,7 +157,30 @@
                     </li>
                 </ul>
             </div>
-            <div class="table_1">
+            <div id="test">
+                <form action="">
+                    <select name="" id="test_">
+                        <option value="">default</option>
+                        <option value="1">deep sleep</option>
+                        <option value="2">sleep</option>
+                    </select>
+                    <select name="" id="test1">
+                        <option value="">default-1</option>
+                        <option value="1">apple</option>
+                        <option value="2">coffee</option>
+                    </select>
+                    <input type="submit">
+                </form>
+                <div>
+                    <table id="output">
+                        <tr>
+                            <td>test</td>
+                            <td>test1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- <div class="table_1">
                 <form action="">
                     <table>
                         <thead>
@@ -193,7 +235,7 @@
                         </tbody>
                     </table>
                 </form>
-            </div>
+            </div> -->
             <div class="chosen-box">
                 <select class="multify" name="" id="" multiple>
                     <option value="蛋塔">蛋塔</option>
@@ -205,8 +247,24 @@
         <script src="js/chosen.jquery.min.js"></script>
         <script>
             $(function(){
+                $("form").submit(function(){
+                    //表單傳送測試
+                    let t = $("#test_ option:selected").text();
+                    let t1 = $("#test1 option:selected").text();
+                    let p = `
+                        <tr>
+                            <td>${t}</td>    
+                            <td>${t1}</td>    
+                        </tr>
+                    `;
+                    $("#output").append(p);
+                    return false;
+                });
                 $('.multify').chosen();
             });
+
+            
+             
         </script>
         <script src="js/chosen.js"></script>
     </div>

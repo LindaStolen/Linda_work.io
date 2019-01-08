@@ -96,7 +96,7 @@
                     </li>
                 </ul>
             </div>
-            <form action="">
+            <form action="" method="POST">
                 <table id="table_1">
                     <tr>
                         <td class="item">停課日期</td>
@@ -105,10 +105,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="item">停課時段</td>
+                        <td class="item">停課場次</td>
                         <td>
                             <select name="time" id="time">
-                                <option value="">請選擇時段</option>
+                                <option value="">請選擇場次</option>
                                 <option value="0">整天</option>
                                 <option value="1">08:30-11:50</option>
                                 <option value="2">12:00-15:20</option>
@@ -118,9 +118,19 @@
                         </td>
                     </tr>
                     <tr>
+                        <td class="item">場次狀態</td>
+                        <td>
+                            <select name="" id="status">
+                                <option value="">請選擇狀態</option>
+                                <option value="1">正常</option>
+                                <option value="2">停場</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="item">停課原因</td>
                         <td>
-                            <select name="reason" id="">
+                            <select name="reason" id="reason">
                                 <option value="">請選擇停課原因</option>
                                 <option value="9">場地租借(新營學堂)</option>
                                 <option value="8">施工、整修</option>
@@ -131,13 +141,13 @@
                                 <option value="3">大樓停水/停電</option>
                                 <option value="2">中華電信系統維護</option>
                                 <option value="1">電腦機制維護</option>
-                                <option value="10">TKB公告停場</option>
+                                <option value="0">TKB公告停場</option>
                             </select>
                         </td>
                     </tr>
                 </table>
                 <div class="ctr_btn">
-                    <a href="" class="submit">送出</a><a href="" class="cancel">清除</a>
+                    <input type="submit" class="submit"> <button class="cancel">清除</button>
                 </div>
             </form>
             <form method="post" action="javascript:;">
@@ -146,66 +156,63 @@
                         <th style="width:25%;">日期</th>
                         <th style="width:25%;">時段</th>
                         <th style="width:25%;">狀態</th>
-                        <th style="width:25%;">備註</th>
+                        <th style="width:25%;">原因</th>
                     </thead>
-                    <tbody>
+                    <!-- <tbody>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time" value="1">08:30-11:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
+                            <td class="p_date1">2018/11/25</td>
+                            <td class="p_time1">08:30-11:50</td>
+                            <td class="p_status1"></td>
+                            <td class="p_else1"></td>
                         </tr>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time" value="2">12:00-15:20</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
+                            <td class="p_date2">2018/11/25</td>
+                            <td class="p_time2">12:00-15:20</td>
+                            <td class="p_status2"></td>
+                            <td class="p_else2"></td>
                         </tr>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time" value="3">15:30-18:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
+                            <td class="p_date3">2018/11/25</td>
+                            <td class="p_time3">15:30-18:50</td>
+                            <td class="p_status3"></td>
+                            <td class="p_else3"></td>
                         </tr>
                         <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time" value="4">19:00-22:20</td>
-                            <td class="p_status" style="color:red; font-weight: 480;">停場</td>
-                            <td class="p_else">感恩節回家吃烤雞!</td>
+                            <td class="p_date4">2018/11/25</td>
+                            <td class="p_time4">19:00-22:20</td>
+                            <td class="p_status4"></td>
+                            <td class="p_else4"></td>
                         </tr>
-                    </tbody>
+                    </tbody> -->
                 </table>
+                <p>** 場次狀態異動的異動表格 ** <br>
+                        目前以空表格插入調整後的場次狀態，正式應該是以當天全場次顯示，調整過的以紅字標示。</p>
             </form>
         </div>
+    
     </div>
-    <script language="JavaScript">
-        // window.alert('已設定完成'); 
-        $(document).ready(function(){
-            $("#time").change(function(){
-                $("option:selected",this).each(function(){
-                    $('#time option:selected').prop('selected');
-                    console.log($(this).text());
-                    console.log($(this).prop('selected'));
-                    let sel = $("#time option:selected").val();
-                    $(".submit").click(function(){
-                        switch(sel) {
-                            case "1":
-                            $(".p_time").val("1").addClass("ch");
-                            console.log($(".p_time").val(1));
-                            break;
-                            
-                        };
-                    });
-                });
-            
-        });
-            // $('#time').get(0).selectedIndex;
-            // let t2t = $("#table_2 .p_time");
-            // console.log(t2t);
-            
-            // $(":selected").("");
-        });
-        
+    <script>
+        $(function(){
+            // $("#table_2").hide();
+            $("form").submit(function(){
+                $("#table_2").show();
+                let t = $("#time option:selected").text();
+                let s = $("#status option:selected").text();
+                let r = $("#reason option:selected").text();
+
+                let c = 
+                    `
+                    <tr>
+                        <td>2018-11-27</td>    
+                        <td>${t}</td>    
+                        <td>${s}</td>    
+                        <td>${r}</td>    
+                    </tr>
+                    `;
+                $("#table_2").append(c);
+                return false;
+            });
+        });        
     </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
 }
 #mainContent #table_1 {
     margin: auto;
-    min-width: 500px;
+    min-width: 580px;
     background-color: #ffe1cd;
     line-height: 35px;
 }
@@ -48,7 +48,13 @@
     padding-left: 10px;
     border: 0.8px solid #cc5d2a;
 }
-#mainContent #table_1 select, #mainContent #table_1 input {
+#mainContent #table_1 select {
+    border: none;
+    height: 22px;
+    width: 200px;
+    font-size: 16.5px;
+}
+#mainContent #table_1 input {
     border: none;
     height: 22px;
     width: 150px;
@@ -57,15 +63,31 @@
 #mainContent .ctr_btn {
     text-align: center;
     margin-top: 25px;
+    vertical-align: middle;
 }
-#mainContent .ctr_btn a {
+.ctr_btn .submit {
+    background: none;
+    outline: none;
+    border: 0px;
+
     margin: 0 5px;
-    padding: 3px 10px;
+    padding: 0px 10px;
+    line-height: 27px;
     font-size: 16px;
     background-color: #ffd0b1;
     border: 0.6px solid #cc5d2a;
+    color: #333;
 }
-#mainContent .ctr_btn a:hover {
+#mainContent .ctr_btn button {
+    margin: 0 5px;
+    padding: 0 10px;
+    line-height: 27px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffd0b1;
+    border: 0.6px solid #cc5d2a;
+}
+#mainContent .ctr_btn button:hover, #mainContent .ctr_btn .submit:hover {
     background-color: #d86100;
     color: #fff;
 }
@@ -75,7 +97,7 @@
     min-width: 500px;
     text-align: center;
     line-height: 35px;
-    /* display: none; */
+    display: none;
 }
 #mainContent #table_2 th {
     background-color: #ffccaa;  
@@ -92,5 +114,11 @@
 }
 .ch {
     color: #ff1616;
-    background-color: #aaa;
+    font-weight: 420;
+    /* background-color: #aaa; */
+}
+p {
+    margin: 350px auto 0;
+    width: 300px;
+    text-align: center;
 }
