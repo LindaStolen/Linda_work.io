@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <link rel="stylesheet" href="/css/daterangepicker.css" />
+
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
     <script src="js/dateranger.js"></script>
+    <script src="js/radiotoggle.js"></script>
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <title>查詢預約紀錄</title>
@@ -25,7 +27,7 @@
         </div>
         <h1 class="title">預約座位系統</h1>
         <ul>
-            <li class="date">2018年11月6日</li>
+            <li id="date"></li>
             <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
             <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
@@ -33,7 +35,7 @@
     </div>
     <div class="user clearfix">
         <ul>
-            <li><a>資料設定</a></li>
+            <li><a>資料設定</a></li> 
             <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
         </ul>
     </div>
@@ -121,15 +123,15 @@
             <div class="ctr_btn clearfix">
                 <div class="condition">
                     <li>
-                        <input type="radio" name="sequence" id=""><span>上課日期</span>
-                        <input type="radio" name="sequence" id=""><span>課程名稱</span>
+                        <input type="radio" name="sequence" id="" value="d" checked="checked"><span>上課日期</span>
+                        <input type="radio" name="sequence" id="" value="n"><span>課程名稱</span>
                     </li>
                     <li>
                         日期區間:
-                        <input type="text" name="date" id=""><button>查詢</button>
+                        <input type="text" name="date" id="" ><button>查詢</button>
                     </li>
                 </div>
-                <a href="" target="_blank" class="record">預約更改紀錄</a>
+                <a href="#" target="_blank" class="record">預約更改紀錄</a>
             </div>
             <form action="">
                 <table id="table_2" class="order-h">
@@ -199,9 +201,33 @@
                         </tr>
                     </tbody>
                 </table>
+                <table id="table_" class="order-h">
+                    <thead>
+                        <th style="width:8%;">項次</th>
+                        <th style="width:15%;">上課日期</th>
+                        <th style="width:15%;">上課地點</th>
+                        <th style="width:12%;">上課時段</th>
+                        <th style="width:15%;">課程名稱</th>
+                        <th style="width:8%;">座位編號</th>
+                        <th style="width:10%;">備註</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num">02</td>
+                            <td class="day">2019/01/20</td>
+                            <td class="place">台北數位學堂</td>
+                            <td class="time">15:20-18:30</td>
+                            <td class="class">行政學</td>
+                            <td class="seat-num">A01</td>
+                            <td class="else"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </form>
         </dd>        
     </div>
     </div>
+    
+    <script src="js/whatDayisToday.js"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@
         </div>
         <h1 class="title">預約座位系統</h1>
         <ul>
-            <li class="date">2018年11月6日</li>
+            <li id="date"></li>
             <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
             <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
@@ -147,7 +147,7 @@
                     </tr>
                 </table>
                 <div class="ctr_btn">
-                    <input type="submit" class="submit"> <button class="cancel">清除</button>
+                    <!--<input type="submit" class="submit">--> <button type="submit">送出</button> <button class="cancel">清除</button>
                 </div>
             </form>
             <form method="post" action="javascript:;">
@@ -191,26 +191,34 @@
         </div>
     
     </div>
+    <script src="js/whatDayisToday.js"></script>
     <script>
         $(function(){
-            // $("#table_2").hide();
+            $("#table_2").hide();
             $("form").submit(function(){
-                $("#table_2").show();
-                let t = $("#time option:selected").text();
-                let s = $("#status option:selected").text();
-                let r = $("#reason option:selected").text();
-
-                let c = 
-                    `
-                    <tr>
-                        <td>2018-11-27</td>    
-                        <td>${t}</td>    
-                        <td>${s}</td>    
-                        <td>${r}</td>    
-                    </tr>
-                    `;
-                $("#table_2").append(c);
-                return false;
+                let v = $("#time option:selected").val();
+                let v1 = $("#status option:selected").val();
+                let v2 = $("#reason option:selected").val();
+                if(v == ""||v1 == ""||v2 == ""){ //第一個空值
+                    alert("叫~~ 你~~ 選~~~");
+                    return false;
+                }else { //都有值
+                    $("#table_2").show();
+                    let t = $("#time option:selected").text();
+                    let s = $("#status option:selected").text();
+                    let r = $("#reason option:selected").text();
+                    let c = //字串樣板
+                        `
+                        <tr>
+                            <td>2018-11-27</td>    
+                            <td>${t}</td>    
+                            <td>${s}</td>    
+                            <td>${r}</td>    
+                        </tr>
+                        `;
+                    $("#table_2").append(c);
+                    return false;
+                }
             });
         });        
     </script>

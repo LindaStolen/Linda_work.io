@@ -25,3 +25,17 @@ $(document).ready(function(){
         }
     });
 });
+
+//查詢預約
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        if($(this).attr("value")=="d"){
+            $("#table_").hide();
+            $("#table_2").show();
+        }
+        if($(this).attr("value")=="n"){
+            $("#table_2").hide();
+            $("#table_").show();
+        }
+    });
+});

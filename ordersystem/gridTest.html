@@ -24,6 +24,13 @@
             position: fixed;
             z-index: 9998;
         }
+        #date {
+            width: 300px;
+            margin: 15px auto;
+            font-size: 25px;
+            letter-spacing: 1px;
+            font-weight: 450;
+        }
         nav {
             background-color: #ffed4f;
             height: 600px;
@@ -49,7 +56,7 @@
             padding-left: 60px;
         }
         section {
-            background-color: #001aff;
+            background-color: #95d8ff;
             height: 600px;
         }
         section h2 {
@@ -113,7 +120,9 @@
     </style>
 </head>
 <body>
-    <div class="top"></div>
+    <div class="top">
+        <div id="date"></div>
+    </div>
     <div class="container">
         <nav class="side">
             <h2><i class="fas fa-home"></i>本館現況</h2>
@@ -160,12 +169,12 @@
             <div id="test">
                 <form action="">
                     <select name="" id="test_">
-                        <option value="">default</option>
+                        <option value="default">default</option>
                         <option value="1">deep sleep</option>
                         <option value="2">sleep</option>
                     </select>
                     <select name="" id="test1">
-                        <option value="">default-1</option>
+                        <option value="default-1">default-1</option>
                         <option value="1">apple</option>
                         <option value="2">coffee</option>
                     </select>
@@ -248,18 +257,44 @@
         <script>
             $(function(){
                 $("form").submit(function(){
-                    //表單傳送測試
-                    let t = $("#test_ option:selected").text();
-                    let t1 = $("#test1 option:selected").text();
-                    let p = `
-                        <tr>
-                            <td>${t}</td>    
-                            <td>${t1}</td>    
-                        </tr>
-                    `;
-                    $("#output").append(p);
-                    return false;
+                   
+                    if (v == "default"){
+                        alert("叫你選");
+                        return false;
+                    }else if (v1 == "default-1"){
+                        alert("叫你選");
+                        return false;
+                    }else {
+                        //表單傳送測試
+                        let t = $("#test_ option:selected").text();
+                        let t1 = $("#test1 option:selected").text();
+                        let p = `
+                            <tr>
+                                <td>${t}</td>    
+                                <td>${t1}</td>    
+                            </tr>
+                        `;
+                        $("#output").append(p);
+                        return false;
+                    }
                 });
+
+                //取得當天日期 
+                var today = new Date(); 
+                var year = today.getFullYear().toString(); 
+                var month = (today.getMonth()+1).toString(); 
+                var day = today.getDate().toString(); 
+                var currentDateTime = new Array(year, month, day); 
+                var today_str = ''; 
+                    
+                for(var i = 0; i < 3; i++){ 
+                    if(currentDateTime[i].length == 1){ 
+                    currentDateTime[i] = "0" + currentDateTime[i]; 
+                    } 
+                } 
+                today_str = currentDateTime[0]+"年"+currentDateTime[1]+"月"+currentDateTime[2]+"日";
+                $("#date").text(today_str);
+                
                 $('.multify').chosen();
             });
 
