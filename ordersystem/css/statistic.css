@@ -16,7 +16,7 @@
     padding-top: 30px;
     font-size: 18px;
     float: right;
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
 .location li {
     display: inline-block;
@@ -37,9 +37,6 @@
 }
 
 /* 查詢條件 */
-/* .condition {
-    text-align: center;
-} */
 .condition table {
     width: 550px;
     margin: auto;
@@ -62,6 +59,7 @@ table select {
     border-bottom: 1px solid #bbb;
     background-color: #ffffff00;
 }
+/* 條件按鈕 */
 table .btn {
     border: none;
     text-align: center;
@@ -76,42 +74,45 @@ table .btn {
 .tab-list {
     clear: left;
     min-width: 650px;
-    margin: 50px 130px 0 0;    
+    margin: 50px 30px 0 0;    
 }
-.tab-list ul {
+#mainContent .tab-list ul {
     height: 32px;
     border-bottom: 1px solid #c08c6d;
     border-left: 1px solid #c08c6d;
+    float: none;
+    margin: 0;
+    padding: 0;
 }
-.tab-list li {
+#mainContent .tab-list li {
     float: left;
     height: 31px;
     line-height: 31px;
     overflow: hidden;
     position: relative;
-    margin-bottom: -1px;
+    margin: 0 0 -1px 0px;
     border: 1px solid #c08c6d;
     border-left: none;
     border-bottom: #c08c6d;
     background-color: #fde9dd;
 }
-.tab-list li a {
+#mainContent .tab-list li a {
     display: block;
     padding: 0 20px;
 }
-.tab-list li a:hover {
+#mainContent .tab-list li a:hover {
     background-color: #967967;
     color: #fff;
 }
-.tab-list ul .active a {
+#mainContent .tab-list ul .active a {
     background-color: #967967;
     color: #fff;
 }
 /* tab表格 */
 .tab-content table {
     text-align: center;
-    min-width: 550px;
-    margin: 30px auto;
+    min-width: 450px;
+    /* margin: 30px auto; */
 }
 .tab-content .name {
     text-align: center;
@@ -128,14 +129,34 @@ table .btn {
     font-weight: 430;
     letter-spacing: 1px;
 }
-.tab-content #pass table {
-    width: 45%;
-    float: left;
-    margin: 30px 2% 0;
-}
+
 table .course {
     width: 25%;
- }
+}
+#now .today {
+    margin: 30px auto;
+}
 .tab-content #pass {
     display: none;
  }
+ @media screen and (min-width:768px){
+    .tab-content {
+        text-align: center;
+    }
+    .tab-content #pass .today, .tab-content #pass .pass {
+        width: 50%;
+        margin: 30px auto 0;
+        /* display: inline-table; */
+    }
+ }
+ @media screen and (min-width:1000px){
+    .tab-content {
+        text-align: center;
+    }
+    .tab-content #pass .today, .tab-content #pass .pass {
+        min-width: 45%;
+        max-width: 500px;
+        display: inline-table;
+        margin: 30px 2%;
+    }
+}

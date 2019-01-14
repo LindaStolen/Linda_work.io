@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +56,7 @@
             <h2><i class="fas fa-clock"></i>場次管理</h2>
             <ul class="place_m">
                 <li><a href="place_m.html">場次查詢</a></li>
-                <li><a href="place_c.html">狀態異動</a></li>
+                <li><a href="place_c.html">停場設定</a></li>
             </ul>
             <h2><i class="fas fa-book-reader"></i>學生管理</h2>
             <ul class="student_m">
@@ -171,7 +171,7 @@
                     </table>
                 </form>
             </div>
-            <div class="tab-list">
+            <div class="tab-list clearfix">
                 <ul>
                     <li><a href="#now">預約實到</a></li>
                     <li><a href="#pass">同期比較</a></li>
@@ -238,60 +238,64 @@
                 <div id="pass">
                     <form action="" class="clearfix">
                         <div class="name">同期比較表</div>
-                        <table class="today">
-                            <thead>
-                                <th></th>
-                                <th>預約</th>
-                                <th>實到</th>
-                            </thead>
-                            <tr>
-                                <td class="course">第一場</td>
-                                <td>75</td>
-                                <td>73</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第二場</td>
-                                <td>75</td>
-                                <td>73</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第三場</td>
-                                <td>75</td>
-                                <td>73</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第四場</td>
-                                <td>75</td>
-                                <td>73</td>
-                            </tr>
+                        <!-- <div class="today clearfix"> -->
+                            <table class="today">
+                                <thead>
+                                    <th></th>
+                                    <th>預約</th>
+                                    <th>實到</th>
+                                </thead>
+                                <tr>
+                                    <td class="course">第一場</td>
+                                    <td>75</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第二場</td>
+                                    <td>75</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第三場</td>
+                                    <td>75</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第四場</td>
+                                    <td>75</td>
+                                    <td>73</td>
+                                </tr>
                             </table>
-                        <table class="pass">
-                            <thead>
-                                <th></th>
-                                <th>預約</th>
-                                <th>實到</th>
-                            </thead>
-                            <tr>
-                                <td class="course">第一場</td>
-                                <td>50</td>
-                                <td>50</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第二場</td>
-                                <td>43</td>
-                                <td>42</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第三場</td>
-                                <td>51</td>
-                                <td>48</td>
-                            </tr>
-                            <tr>
-                                <td class="course">第四場</td>
-                                <td>80</td>
-                                <td>80</td>
-                            </tr>
-                        </table>
+                        <!-- </div>
+                        <div class="pass clearfix"> -->
+                            <table class="pass">
+                                <thead>
+                                    <th></th>
+                                    <th>預約</th>
+                                    <th>實到</th>
+                                </thead>
+                                <tr>
+                                    <td class="course">第一場</td>
+                                    <td>50</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第二場</td>
+                                    <td>43</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第三場</td>
+                                    <td>51</td>
+                                    <td>48</td>
+                                </tr>
+                                <tr>
+                                    <td class="course">第四場</td>
+                                    <td>80</td>
+                                    <td>80</td>
+                                </tr>
+                            </table>
+                        <!-- </div> -->
                     </form>
                 </div>
             </div>

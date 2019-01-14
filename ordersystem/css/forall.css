@@ -1,8 +1,8 @@
 /* top */
 #container {
     display: grid;
-    padding: 0 0 0 30px;
     grid-template-columns: 20% 80%;
+    padding: 0 0 0 30px;
     position: relative;
 }
 .top {
@@ -57,7 +57,7 @@
 }
 /* left_nav */
 #container .nav_side {
-    min-width: 250px;
+    min-width: 220px;
     padding-top: 50px;
     margin-top: 70px;
 }
@@ -111,6 +111,7 @@
     padding-right: 5px;
     line-height: 30px;
 }
+
 /* 管理者中心 */
 .user {
     width: 100px;

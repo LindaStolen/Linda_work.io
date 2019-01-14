@@ -11,20 +11,20 @@
     font-size: 20px;
     font-weight: 400;
 }
-#mainContent .location {
+.location {
     margin: 0 50px 50px 0;
     padding-top: 30px;
     font-size: 18px;
     float: right;
 }
-#mainContent .location li, #mainContent .place-data li {
+.location li, #mainContent .place-data li {
     display: inline-block;
     margin: 0 10px;
 }
-#mainContent .location li i {
+.location li i {
     margin-right: 5px;
 }
-#mainContent .location select, #mainContent .location input {
+.location select, #mainContent .location input {
     height: 23px;
     width: 140px;
     font-size: 16px;
@@ -42,10 +42,11 @@
 #mainContent .search input {
     line-height: 20px;
 }
-#mainContent .search .control-bar a {
+#mainContent .search .control-bar button {
     padding: 0 12px ;
-    margin: 8px 5px 0;
+    margin: 15px 5px 0;
     line-height: 25px;
+    font-size: 16px;
     display: inline-block;
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
@@ -56,11 +57,11 @@
 }
 #mainContent .student_info .border {
     border: 1.5px solid #ccc;
-    border-bottom: 5px double #ccc;
+    /* border-bottom: 5px double #ccc; */
     position: relative;
-    width: 550px;
+    width: 600px;
     margin: auto;
-    padding: 25px 0;
+    padding: 25px;
 }
 #mainContent .student_info .title {
     position: absolute;
@@ -80,9 +81,12 @@
     font-size: 17px;
     line-height: 35px;
 }
+#mainContent .student_info ul li {
+    border-bottom: 1px solid #ccc;
+}
 #mainContent .student_info ul .item {
-    padding-right: 20px;
-    border-right: 1px solid #bbb;
+    font-weight: 430;
+    border-bottom: none;
 }
 /* table */
 #mainContent .data {
@@ -201,6 +205,7 @@ dd {
     border-top: none;
     padding: 15px;
     width: 100%;
+    margin-bottom: 30px;
     /* background-color: #aaa; */
 }
 .data table tr {
@@ -208,6 +213,17 @@ dd {
 }
 .data table td{
     border: 0.8px solid #222;
+}
+
+dl .backto {
+    background-color: #d7ffb7;
+    border: 1px solid #a0cc6d;
+    line-height: 25px;
+    display: inline-block;
+    width: 80px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
 }
 /* #mainContent .used {
     position: relative;

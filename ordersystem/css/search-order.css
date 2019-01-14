@@ -11,21 +11,21 @@
     font-size: 20px;
     font-weight: 400;
 }
-#mainContent ul {
+.location {
     margin: 0 50px 50px 0;
     padding-top: 30px;
     font-size: 18px;
     float: right;
 }
-#mainContent ul li {
+.location li {
     /* float: left; */
     display: inline-block;
     margin: 0 10px;
 }
-#mainContent ul li i {
+.location li i {
     margin-right: 5px;
 }
-#mainContent .location select {
+.location select {
     height: 25px;
     width: 130px;
     font-size: 16px;
@@ -58,12 +58,11 @@
     display: none;
 }
 #mainContent .data {
-    width: 700px;
+    width: 600px;
     padding: 25px;
     margin: 50px auto;
     position: relative;
     border: 1.5px solid #ccc;
-    /* border-bottom: 5px double #ccc; */
 }
 #mainContent .data .title {
     position: absolute;
@@ -77,42 +76,34 @@
 }
 #mainContent .data #flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: auto;
-    padding-top: 0;
-    width: 100%;
 }
 #mainContent .data li {
     display: inline-block;
     line-height: 35px;
     letter-spacing: 1px;
-    font-size: 16.5px;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
 }
 #mainContent .data .item {
-    padding: 0 25px 0 0;
-    border-right: 0.5px solid #bbb;
+    font-weight: 430;
+    border-bottom: none;
 }
-#mainContent .data .record {
+/* #mainContent .data .record {
     text-align: center;
-}
-#mainContent .data a {
-    background-color: #ffe0cd;
-    display: inline-block;
-    padding: 3px 12px;
-    letter-spacing: 0.8px;
-    border: 0.8px solid #597538;
-    border-radius: 25px;
-    font-size: 15.5px;
-}
+} */
+
+/* 表格顯示方式 */
 #mainContent .ctr_btn {
     padding: 30px;
+    max-width: 1000px;
+    margin: auto;
     font-size: 17px;
     position: relative;
-    text-align: center;
 }
-#mainContent .ctr_btn a, #mainContent .ctr_btn .condition {
+/*#mainContent .ctr_btn a, */#mainContent .ctr_btn .condition {
     display: inline-block;
-    vertical-align: middle;
 }
 .ctr_btn .condition span, .ctr_btn .condition input[type="radio"]{
     vertical-align: middle;
@@ -120,7 +111,9 @@
 }
 .ctr_btn .record {
     background-color: #ffe0cd;
-    display: inline-block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
     padding: 3px 12px;
     letter-spacing: 0.8px;
     border: 0.8px solid #597538;
@@ -132,7 +125,7 @@
     background-color: #386e49;
 }
 #mainContent .ctr_btn .condition li {
-    float: left;
+    /* float: left; */
     margin: 0 5px;
 }
 #mainContent .ctr_btn input {
@@ -153,7 +146,7 @@
     background-color: #cfdaa7;
 }
 #mainContent #table_ {
-    display: none;
+    display: none;  
 }
 #mainContent #table_2, #mainContent #table_ {
     margin: 10px auto;

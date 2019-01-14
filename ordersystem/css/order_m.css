@@ -11,6 +11,8 @@
     font-size: 20px;
     font-weight: 400;
 }
+
+/* 預約條件 */
 #mainContent .student-num {
     margin-top: 50px;
     padding-bottom: 15px;
@@ -35,7 +37,7 @@
     border: 0.8px solid #ffb75a;
     /* border-radius: 30px; */
 }
-/*#mainContent .btn a:hover,*/ #mainContent .condition .ctr_b a:hover {
+#mainContent .condition .ctr_b a:hover {
     background-color: #ad835c;
     color: #fff;
 }
@@ -53,7 +55,7 @@
     letter-spacing: 1px;
     color: #723300;
     position: absolute;
-    top: -22px;
+    top: -20px;
     left: 5%;
     background-color: #fff;
 }
@@ -66,9 +68,8 @@
     padding: 25px;
     margin: 25px auto;
     position: relative;
-    /* display: inline-block; */
+    text-align: center;
     border: 1.5px solid #ccc;
-    border-bottom: 5px double #ccc;
 }
 #mainContent .data ul {
     display: flex;
@@ -78,11 +79,12 @@
     float: left;
     line-height: 35px;
     letter-spacing: 1px;
-    font-size: 16.5px;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
 }
 #mainContent .data ul .item {
-    padding: 0 20px 0 0;
-    border-right: 0.5px solid #bbb;
+    font-weight: 430;
+    border-bottom: none;
 }
 #mainContent .condition table td, #mainContent .student_info table td {
     padding-left: 8px;
@@ -101,9 +103,6 @@
     text-align: center;
     background-color: #ffd8c6;
 }
-/* #mainContent .student_info table .data {
-    border-bottom: 1.5px solid #a76a47;
-} */
 #mainContent .condition table input, #mainContent .condition table select {
     height: 25px;
     width: 60%;

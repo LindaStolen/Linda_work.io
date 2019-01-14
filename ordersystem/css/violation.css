@@ -41,20 +41,23 @@ dl p {
 dl input {
     height: 23px;
 }
-dl .control-bar a {
+dl .control-bar button {
     display: inline-block;
-    margin: 10px 5px 0;
+    margin: 15px 5px 0;
     padding: 0 12px;
+    font-size: 16px;
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
 }
-dl .control-bar a:hover {
+dl .control-bar button:hover {
     background-color: #ad835c;
     color: #fff;
 }
 /* 現狀表格 */
 dd {
     margin: 0;
+    display: none;
+    text-align: center;
 }
 dd table {
     margin: 50px auto 30px;
@@ -62,16 +65,17 @@ dd table {
     max-width: 80%;
     font-size: 16px;
 }
+dd table td {
+    border: 1px solid #ffb75a;
+    padding-left: 8px;
+    line-height: 35px;
+    text-align: left;
+}
 dd table .item {
     line-height: 35px;
     text-align: center;
     background-color: #ffded1;
     letter-spacing: 1px;
-}
-dd table td {
-    border: 1px solid #ffb75a;
-    padding-left: 8px;
-    line-height: 35px;
 }
 dd table button {
     border: 1px solid #ebbe95;
@@ -80,4 +84,12 @@ dd table button {
     line-height: 20px;
     margin: 6px 2px 5px;
     cursor: pointer;
+}
+dd a {
+    background-color: #d7ffb7;
+    border: 1px solid #a0cc6d;
+    line-height: 25px;
+    display: inline-block;
+    width: 80px;
+    border-radius: 25px;
 }

@@ -71,10 +71,10 @@
         </div>
     <!-- content -->
         <div id="mainContent">
-            <h2 class="sub-title">場次管理 \ 場次異動</h2>
+            <h2 class="sub-title">場次管理 \ 停場設定</h2>
             <div class="clearfix">
-                <ul>
-                    <li class="location">
+                <ul class="location">
+                    <li>
                         <!-- <span>上課地點:</span> -->
                         <div><i class="fas fa-map-marker-alt"></i> 台北數位學堂<!--(ip位置) -->
                             <!-- 總公司權限
@@ -102,6 +102,20 @@
                         <td class="item">停課日期</td>
                         <td>
                             <input type="date" name="date" id="">&nbsp;~&nbsp;<input type="date" name="date" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">停場地點</td>
+                        <td>
+                            <select name="place" id="place">
+                                <option value="">請選擇地點</option>
+                                <option value="0">全台</option>
+                                <option value="1">台北數位學堂</option>
+                                <option value="2">新竹數位學堂</option>
+                                <option value="3">台中數位學堂</option>
+                                <option value="4">台南數位學堂</option>
+                                <option value="5">高雄數位學堂</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -153,10 +167,11 @@
             <form method="post" action="javascript:;">
                 <table id="table_2">
                     <thead>
-                        <th style="width:25%;">日期</th>
-                        <th style="width:25%;">時段</th>
-                        <th style="width:25%;">狀態</th>
-                        <th style="width:25%;">原因</th>
+                        <th style="width:20%;">日期</th>
+                        <th style="width:20%;">地點</th>
+                        <th style="width:20%;">時段</th>
+                        <th style="width:20%;">狀態</th>
+                        <th style="width:20%;">原因</th>
                     </thead>
                     <!-- <tbody>
                         <tr>
@@ -199,7 +214,8 @@
                 let v = $("#time option:selected").val();
                 let v1 = $("#status option:selected").val();
                 let v2 = $("#reason option:selected").val();
-                if(v == ""||v1 == ""||v2 == ""){ //第一個空值
+                let v3 = $("#place option:selected").val();
+                if(v == ""||v1 == ""||v2 == ""||v3 == ""){ //第一個空值
                     alert("叫~~ 你~~ 選~~~");
                     return false;
                 }else { //都有值
@@ -207,10 +223,12 @@
                     let t = $("#time option:selected").text();
                     let s = $("#status option:selected").text();
                     let r = $("#reason option:selected").text();
+                    let p = $("#place option:selected").text();
                     let c = //字串樣板
                         `
                         <tr>
                             <td>2018-11-27</td>    
+                            <td>${p}</td>    
                             <td>${t}</td>    
                             <td>${s}</td>    
                             <td>${r}</td>    

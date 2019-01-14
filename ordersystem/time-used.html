@@ -61,7 +61,7 @@
                 <h2><i class="fas fa-clock"></i>場次管理</h2>
                 <ul class="place_m">
                     <li><a href="place_m.html">場次查詢</a></li>
-                    <li><a href="place_c.html">狀態異動</a></li>
+                    <li><a href="place_c.html">停場設定</a></li>
                 </ul>
                 <h2><i class="fas fa-book-reader"></i>學生管理</h2>
                 <ul class="student_m">
@@ -110,203 +110,155 @@
                     </ul>
                 </div>
                 <dl class="search">
-                    <p>請輸入學員編號或身分證</p>
-                    <input type="text" maxlength="10">
-                    <div class="control-bar">
-                        <a class="correct" href="#">確定</a><a class="cancel" href="#">取消</a>
-                    </div>
+                    <form action="">
+                        <p>請輸入學員編號或身分證字號</p>
+                        <input type="text" maxlength="10">
+                        <div class="control-bar">
+                            <button class="correct">確定</button><button class="cancel" type="reset">取消</button>
+                        </div>
+                    </form>
                 </dl>
                 <div class="student_info">
                     <div class="border clearfix">
                     <p class="title">學員資料</p>
                     <ul>
-                        <li class="item">學員編號</li>
+                        <li class="item">學員編號/身分證字號 :</li>
                         <li class="">TW001234567</li>
-                        <li class="item">學員姓名</li>
+                        <li class="item">學員姓名 :</li>
                         <li class="">蛙拉拉</li>
                     </ul>
                     </div>
                 </div>
                 <dl class="data">
-                <form action="">
-                    <h3><i class="far fa-bookmark"></i>學習時數總表</h3>
-                    <dd class="sort">
-                        <span>排列方式</span>
-                        <input type="radio" name="sort" value="date" checked="checked">上課日期
-                        <input type="radio" name="sort" value="class">科目
-                    </dd>
-                    <div id="used-time">
-                        <table>
-                            <thead>
-                                <th>科目</th>
-                                <th>到期日</th>
-                                <th>學習時數(分鐘)</th>
-                                <th>以使用時數(分鐘)</th>
-                                <th>剩餘時數(分鐘)</th>
-                                <th>上課狀態</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-12-01</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="change-time">
-                        <table>
-                            <thead>
-                                <th>科目</th>
-                                <th>到期日</th>
-                                <th>學習時數(分鐘)</th>
-                                <th>以使用時數(分鐘)</th>
-                                <th>剩餘時數(分鐘)</th>
-                                <th>上課狀態</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-02-18</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                                <tr>
-                                    <td>多益解題班</td>
-                                    <td>2019-02-21</td>
-                                    <td>13500</td>
-                                    <td>1500</td>
-                                    <td>12000</td>
-                                    <td>本班</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
-                <div class="lineCross"></div>
-                <!-- tab links -->
-                <div class="tabs">
-                    <ul>
-                        <li><a href="#used" class="tab-content">使用時數記錄</a></li>
-                        <li><a href="#change" class="tab-content">時數異動記錄</a></li>
-                    </ul>
-                </div>
-                <dd class="tab-container">
-                    <div id="used" class="content">
-                        <div class="condition">
-                            <span>科目</span>
-                            <select>
-                                <option value=""></option>
-                                <option value="">計組與計結</option>
-                                <option value="">多益解題班</option>
-                                <option value="">離散數學</option>
-                                <option value="">資料結構</option>
-                                <option value="">作業系統</option>
-                                <option value="">線性代數</option>
-                            </select>
-                            <span>日期區間</span><input type="text" name="" id="used">
-                            <button>確定</button>
-                        </div>
-                        <form action="">
+                    <form action="">
+                        <h3><i class="far fa-bookmark"></i>學習時數總表</h3>
+                        <dd class="sort">
+                            <span>排列方式</span>
+                            <input type="radio" name="sort" value="date" checked="checked">上課日期
+                            <input type="radio" name="sort" value="class">科目
+                        </dd>
+                        <div id="used-time">
                             <table>
                                 <thead>
-                                    <th>日期</th>
-                                    <th>課程</th>
-                                    <th>原時數</th>
-                                    <th>已使用時數</th>
-                                    <th>餘額</th>
+                                    <th>科目</th>
+                                    <th>到期日</th>
+                                    <th>學習時數(分鐘)</th>
+                                    <th>以使用時數(分鐘)</th>
+                                    <th>剩餘時數(分鐘)</th>
+                                    <th>上課狀態</th>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
                                     </tr>
                                     <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
                                     </tr>
                                     <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>768</td>
-                                        <td>-200</td>
-                                        <td>568</td>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-01</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </form>
+                        </div>
+                        <div id="change-time">
+                            <table>
+                                <thead>
+                                    <th>科目</th>
+                                    <th>到期日</th>
+                                    <th>學習時數(分鐘)</th>
+                                    <th>以使用時數(分鐘)</th>
+                                    <th>剩餘時數(分鐘)</th>
+                                    <th>上課狀態</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-02-18</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-02-21</td>
+                                        <td>13500</td>
+                                        <td>1500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <div class="lineCross"></div>
+                    <!-- tab links -->
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#used" class="tab-content">使用時數記錄</a></li>
+                            <li><a href="#change" class="tab-content">時數異動記錄</a></li>
+                        </ul>
                     </div>
-                    <div id="change" class="content">
-                        <div class="condition">
-                            <span>科目</span>
-                            <select>
+                    <dd class="tab-container">
+                        <div id="used" class="content">
+                            <div class="condition">
+                                <span>科目</span>
+                                <select>
                                     <option value=""></option>
                                     <option value="">計組與計結</option>
                                     <option value="">多益解題班</option>
@@ -314,83 +266,133 @@
                                     <option value="">資料結構</option>
                                     <option value="">作業系統</option>
                                     <option value="">線性代數</option>
-                            </select>
-                            <span>日期區間</span><input type="text" name="" class="datepicker">
-                            <button>確定</button>
+                                </select>
+                                <span>日期區間</span><input type="text" name="" id="used">
+                                <button>確定</button>
+                            </div>
+                            <form action="">
+                                <table>
+                                    <thead>
+                                        <th>日期</th>
+                                        <th>課程</th>
+                                        <th>原時數</th>
+                                        <th>已使用時數</th>
+                                        <th>餘額</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>768</td>
+                                            <td>-200</td>
+                                            <td>568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>768</td>
+                                            <td>-200</td>
+                                            <td>568</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>768</td>
+                                            <td>-200</td>
+                                            <td>568</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
-                        <form action="">
-                            <table>
-                                <thead>
-                                    <th>日期</th>
-                                    <th>課程</th>
-                                    <th>異動原因</th>
-                                    <th>增加異動(mins)</th>
-                                    <th>減少異動(mins)</th>
-                                    <th>餘額</th>
-                                    <th>經手人</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018-12-03</td>
-                                        <td>計組與計結</td>
-                                        <td>吃飯</td>
-                                        <td>+100</td>
-                                        <td></td>
-                                        <td>868</td>
-                                        <td>嚕啦啦</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div>
-                </dd>
-
-            </dl>
+                        <div id="change" class="content">
+                            <div class="condition">
+                                <span>科目</span>
+                                <select>
+                                        <option value=""></option>
+                                        <option value="">計組與計結</option>
+                                        <option value="">多益解題班</option>
+                                        <option value="">離散數學</option>
+                                        <option value="">資料結構</option>
+                                        <option value="">作業系統</option>
+                                        <option value="">線性代數</option>
+                                </select>
+                                <span>日期區間</span><input type="text" name="" class="datepicker">
+                                <button>確定</button>
+                            </div>
+                            <form action="">
+                                <table>
+                                    <thead>
+                                        <th>日期</th>
+                                        <th>課程</th>
+                                        <th>異動原因</th>
+                                        <th>增加異動(mins)</th>
+                                        <th>減少異動(mins)</th>
+                                        <th>餘額</th>
+                                        <th>經手人</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-12-03</td>
+                                            <td>計組與計結</td>
+                                            <td>吃飯</td>
+                                            <td>+100</td>
+                                            <td></td>
+                                            <td>868</td>
+                                            <td>嚕啦啦</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </dd>
+                    <a href="time-used.html" class="backto">回上一層</a>
+                </dl>
         </div>
     </div>
     <script src="js/whatDayisToday.js"></script>

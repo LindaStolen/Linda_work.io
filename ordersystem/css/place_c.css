@@ -11,21 +11,21 @@
     font-size: 20px;
     font-weight: 400;
 }
-#mainContent ul {
+.location {
     margin: 0 50px 50px 0;
     padding-top: 30px;
     font-size: 18px;
     float: right;
 }
-#mainContent ul li {
+.location li {
     /* float: left; */
     display: inline-block;
     margin: 0 10px;
 }
-#mainContent ul li i {
+.location li i {
     margin-right: 5px;
 }
-#mainContent .location select {
+.location select {
     height: 25px;
     width: 130px;
     font-size: 16px;
@@ -94,7 +94,7 @@
 /* 結果列表顯示 */
 #mainContent #table_2 {
     margin: 50px auto 0;
-    min-width: 500px;
+    min-width: 550px;
     text-align: center;
     line-height: 35px;
     display: none;
@@ -112,11 +112,10 @@
 #mainContent #table_2 tr {
     border: 0.8px solid #fff;
 }
-.ch {
+/* .ch {
     color: #ff1616;
     font-weight: 420;
-    /* background-color: #aaa; */
-}
+} */
 p {
     margin: 350px auto 0;
     width: 300px;

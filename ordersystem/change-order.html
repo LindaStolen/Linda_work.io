@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- 修改燈箱 -->
-    <div id="light-box">
+    <div id="light-box" class="full-width">
         <div class="border">
             <h1>修改預約</h1>
             <div class="close"><i class="fas fa-times-circle"></i></div>
@@ -30,7 +30,7 @@
                         <td class="item">學員編號</td>
                         <td>TW123456789</td>
                         <td class="item">學員姓名</td>
-                        <td>哇哈哈</td>
+                        <td>蛙拉拉</td>
                     </tr>
                 </table>
             </form>
@@ -112,9 +112,7 @@
         <h1 class="title">預約座位系統</h1>
         <ul>
             <li id="date"></li>
-            <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
-            <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
         </ul>
     </div>
     <div class="user clearfix">
@@ -145,7 +143,7 @@
             <h2><i class="fas fa-clock"></i>場次管理</h2>
             <ul class="place_m">
                 <li><a href="place_m.html">場次查詢</a></li>
-                <li><a href="place_c.html">狀態異動</a></li>
+                <li><a href="place_c.html">停場設定</a></li>
             </ul>
             <h2><i class="fas fa-book-reader"></i>學生管理</h2>
             <ul class="student_m">
@@ -163,19 +161,19 @@
             <h2 class="sub-title">預約管理 \ 修改刪除預約</h2>
             <div class="data">
                 <p>請輸入預約學員編號或身分證</p>
-                <input type="text" maxlength="10">
+                <input type="text" maxlength="10" required>
                 <div class="control-bar">
-                    <a class="correct" href="#">確定</a><a class="cancle" href="#">取消</a>
+                    <button class="correct" href="#">確定</button><button class="cancle" href="#">取消</button>
                 </div>
             </div>
             <!-- 輸入學號後帶出學生基本資料 -->
             <div class="student_info">
                 <div class="student-data clearfix">
                     <p class="title">學員資料</p>
-                    <ul>
-                        <li class="item">學員編號</li>
+                    <ul class="ul">
+                        <li class="item">學員編號/身分證字號 :</li>
                         <li class="">TW001234567</li>
-                        <li class="item">學員姓名</li>
+                        <li class="item">學員姓名 :</li>
                         <li class="">蛙拉拉</li>
                     </ul>
                 </div>

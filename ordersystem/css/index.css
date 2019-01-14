@@ -31,26 +31,28 @@
     font-size: 20px;
     font-weight: 400;
 }
-#mainContent ul {
+.location {
     margin: 0 50px 50px 0;
     padding-top: 30px;
     font-size: 18px;
     float: right;
 }
-#mainContent ul li {
+.location li {
     /* float: left; */
     display: inline-block;
     margin: 0 10px;
 }
-#mainContent ul li i {
+.location li i {
     margin-right: 5px;
 }
-#mainContent .location select {
+.location select {
     height: 25px;
     width: 130px;
     font-size: 16px;
     margin-top: 3px;
 }
+
+/* 學生資料表格 */
 #mainContent table {
     margin: auto;
     min-width: 600px;

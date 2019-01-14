@@ -1,8 +1,8 @@
 $(document).ready(function(){
     // document.write('<script type="text/javascript" src="dateranger.js"></script>');
     
-    let status = false;
-    let list = `<tr class="edit">
+    var status = false;
+    var list = `<tr class="edit">
     <td colspan="1">
         <ul class="last-edit">
             <li class="title">最後更新狀態</li>
@@ -31,7 +31,7 @@ $(document).ready(function(){
     <td><button>確定</button></td></tr>`
     // $(".edit").hide();
     $(".fa-edit").click(function(){
-        let tr = $(this).parent().parent();
+        var tr = $(this).parent().parent();
         
         if (status == false){
             tr.after(list);

@@ -16,7 +16,7 @@
     padding-top: 30px;
     font-size: 18px;
     float: right;
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
 .location li {
     display: inline-block;
@@ -39,8 +39,8 @@
 /* .add-g {
     text-align: center;
 } */
-.add-g table {
-    margin: auto;
+#mainContent .add-g table {
+    margin: 20px auto;
     width: 760px;
 }
 .add-g table .item {
@@ -54,11 +54,18 @@
 .add-g .edit {
     padding: 0;
 }
-.add-g ul {
+#mainContent .add-g ul {
     display: inline-block;
     text-align: left;
     margin: 0 5px;
+    padding: 0;
     vertical-align: top;
+    float: none;
+    font-size: 16px;
+}
+#mainContent .add-g ul li {
+    display: block;
+    margin: 0;
 }
 .add-g input {
     margin-left: 5px;

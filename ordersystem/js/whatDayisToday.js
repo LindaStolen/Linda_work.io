@@ -5,8 +5,8 @@ var month = (today.getMonth()+1).toString();
 // console.log(month);
 var day = today.getDate().toString(); 
 // console.log(day);
-let chDay = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
-let date = today.getDay();
+var chDay = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+var date = today.getDay();
 // console.log(chDay[date]);
 
 // var currentDateTime = new Array(year, month, day); 

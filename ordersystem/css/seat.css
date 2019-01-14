@@ -30,6 +30,7 @@
     font-size: 16px;
     vertical-align: middle;
 }
+
 /* 現狀表格 */
 #mainContent .place-data {
     margin: 0;
@@ -82,60 +83,61 @@
 #mainContent .seat-status .fa-edit {
     cursor: pointer;
 }
-#mainContent .edit {
+/* 修改格 */
+.edit {
     width: 600px;
 }
-#mainContent .seat-status .edit ul{
+.seat-status .edit ul{
     float: left;
     width: 100%;
     text-align: left;
     padding-left: 15px;
 }
-#mainContent .edit .new-edit ul {
-    /* margin: auto; */
+.edit .new-edit ul {
+    margin: auto;
     display: inline-block;
     text-align: left;
 }
-#mainContent .seat-status .edit ul .title {
+.seat-status .edit ul .title {
     font-weight: 420;
     font-size: 18px;
     text-decoration-line: underline;
 }
-#mainContent .seat-status .edit .new-edit li input, #mainContent .seat-status .edit .new-edit li select {
+.seat-status .edit .new-edit li input, .seat-status .edit .new-edit li select {
     /* width:60%; */
     height: 22.5px;
 }
-#mainContent .seat-status tr:nth-child(even) {
+.seat-status tr:nth-child(even) {
     background-color: #f0e7d6d8;
 }
-#mainContent .seat-status tr .one  {
+.seat-status tr .one  {
     background-color: #ffd7d7;
 } 
-#mainContent .seat-status tr .two {
+.seat-status tr .two {
     background-color: #ffdac2;
 }
-#mainContent .seat-status tr .three {
+.seat-status tr .three {
     background-color: #ffecac;
 }
-#mainContent .seat-status tr .four {
+.seat-status tr .four {
     background-color: #d1e9b3;
 }
-#mainContent .seat-status tr .five {
+.seat-status tr .five {
     background-color: #ace4df;
 }
-#mainContent .seat-status tr .none {
+.seat-status tr .none {
     background-color: #cfcfcf;
 }
-#mainContent .seat-status tr .normal {
+.seat-status tr .normal {
     color: #000dc7;
 }
-#mainContent .seat-status tr .close {
+.seat-status tr .close {
     color: #6e3200;
 }
-#mainContent .seat-status tr .stay {
+.seat-status tr .stay {
     color: #00810b;
 }
-#mainContent .seat-status tr .nouse {
+.seat-status tr .nouse {
     color: #c40000;
 }
 
