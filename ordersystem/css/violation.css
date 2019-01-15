@@ -31,15 +31,16 @@
 }
 dl {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
 }
 dl p {
     display: inline-block;
     padding-right: 5px;
+    vertical-align: middle;
 }
 dl input {
-    height: 23px;
+    line-height: 20px;
 }
 dl .control-bar button {
     display: inline-block;
@@ -53,7 +54,7 @@ dl .control-bar button:hover {
     background-color: #ad835c;
     color: #fff;
 }
-/* 現狀表格 */
+/* 違規記錄 */
 dd {
     margin: 0;
     display: none;

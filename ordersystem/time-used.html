@@ -14,6 +14,7 @@
     <script src="js/toggle-addafter.js"></script>
     <script src="js/radiotoggle.js"></script>
     <script src="js/tabs-effect.js"></script>
+    <script src="js/showData.js"></script>
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/daterangepicker-master/dateranger.js"></script>
@@ -112,24 +113,25 @@
                 <dl class="search">
                     <form action="">
                         <p>請輸入學員編號或身分證字號</p>
-                        <input type="text" maxlength="10">
+                        <input type="text" maxlength="10" required>
                         <div class="control-bar">
                             <button class="correct">確定</button><button class="cancel" type="reset">取消</button>
                         </div>
                     </form>
                 </dl>
-                <div class="student_info">
-                    <div class="border clearfix">
-                    <p class="title">學員資料</p>
-                    <ul>
-                        <li class="item">學員編號/身分證字號 :</li>
-                        <li class="">TW001234567</li>
-                        <li class="item">學員姓名 :</li>
-                        <li class="">蛙拉拉</li>
-                    </ul>
-                    </div>
-                </div>
+                
                 <dl class="data">
+                    <div id="student_info">
+                            <div class="border clearfix">
+                            <p class="title">學員資料</p>
+                            <ul>
+                                <li class="item">學員編號/身分證字號 :</li>
+                                <li class="">TW001234567</li>
+                                <li class="item">學員姓名 :</li>
+                                <li class="">蛙拉拉</li>
+                            </ul>
+                            </div>
+                        </div>
                     <form action="">
                         <h3><i class="far fa-bookmark"></i>學習時數總表</h3>
                         <dd class="sort">
@@ -257,18 +259,20 @@
                     <dd class="tab-container">
                         <div id="used" class="content">
                             <div class="condition">
-                                <span>科目</span>
-                                <select>
-                                    <option value=""></option>
-                                    <option value="">計組與計結</option>
-                                    <option value="">多益解題班</option>
-                                    <option value="">離散數學</option>
-                                    <option value="">資料結構</option>
-                                    <option value="">作業系統</option>
-                                    <option value="">線性代數</option>
-                                </select>
-                                <span>日期區間</span><input type="text" name="" id="used">
-                                <button>確定</button>
+                                <form action="">
+                                    <span>科目</span>
+                                    <select>
+                                        <option value=""></option>
+                                        <option value="">計組與計結</option>
+                                        <option value="">多益解題班</option>
+                                        <option value="">離散數學</option>
+                                        <option value="">資料結構</option>
+                                        <option value="">作業系統</option>
+                                        <option value="">線性代數</option>
+                                    </select>
+                                    <span>日期區間</span><input type="text" name="" id="used">
+                                    <button type="submit">確定</button>
+                                </form>
                             </div>
                             <form action="">
                                 <table>
@@ -391,7 +395,9 @@
                             </form>
                         </div>
                     </dd>
-                    <a href="time-used.html" class="backto">回上一層</a>
+                    <div class="back">
+                        <a href="time-used.html" id="backto">回上一層</a>
+                    </div>
                 </dl>
         </div>
     </div>

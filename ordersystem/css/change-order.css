@@ -33,18 +33,18 @@
     margin-top: 3px;
 }
 /* 修改輸入 */
-#mainContent .data {
+#mainContent .condition {
     margin-top: 50px;
     padding-bottom: 30px;
     font-size: 18px;
     text-align: center;
 }
-#mainContent .data p {
+#mainContent .condition p {
     display: inline-block;
     padding-right: 5px;
     vertical-align: middle;
 }
-#mainContent .data input {
+#mainContent .condition input {
     line-height: 20px;
 }
 #mainContent .control-bar button {
@@ -192,7 +192,7 @@
     color: #ddd;
 }
 #light-box #table_1, #table_2 {
-    max-width: 420px;
+    max-width: 450px;
     margin: 45px auto 15px;
     height: 35px;
 }
@@ -238,12 +238,15 @@
     text-align: center;
     line-height: 30px;
 }
-#light-box .ctr-btn a {
+#light-box .ctr-btn button {
     margin: 0 8px;
-    padding: 3px 10px;
+    padding: 0 10px;
+    line-height: 25px;
     background-color: #ffb78e;
+    border: 0.8px solid #8a6747;
+    font-size: 15px;
 }
-#light-box .ctr-btn a:hover {
-    background-color: #ff7322;
+#light-box .ctr-btn button:hover {
+    background-color: #d87943;
     color: #fff;
 }

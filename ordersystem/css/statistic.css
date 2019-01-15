@@ -50,7 +50,7 @@ table .item {
 table td {
     border: 1px solid #856d51;
 }
-table select {
+table input[name="range"] {
     margin-left: 8px;
     width: 250px;
     height: 22.5px;
@@ -71,12 +71,12 @@ table .btn {
 /* .pavilion {
     display: none;
 } */
-.tab-list {
+.tabs {
     clear: left;
     min-width: 650px;
     margin: 50px 30px 0 0;    
 }
-#mainContent .tab-list ul {
+#mainContent .tabs ul {
     height: 32px;
     border-bottom: 1px solid #c08c6d;
     border-left: 1px solid #c08c6d;
@@ -84,7 +84,7 @@ table .btn {
     margin: 0;
     padding: 0;
 }
-#mainContent .tab-list li {
+#mainContent .tabs li {
     float: left;
     height: 31px;
     line-height: 31px;
@@ -96,15 +96,15 @@ table .btn {
     border-bottom: #c08c6d;
     background-color: #fde9dd;
 }
-#mainContent .tab-list li a {
+#mainContent .tabs li a {
     display: block;
     padding: 0 20px;
 }
-#mainContent .tab-list li a:hover {
+#mainContent .tabs li a:hover {
     background-color: #967967;
     color: #fff;
 }
-#mainContent .tab-list ul .active a {
+#mainContent .tabs ul .active a {
     background-color: #967967;
     color: #fff;
 }

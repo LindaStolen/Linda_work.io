@@ -119,13 +119,13 @@
         this.parentEl = (options.parentEl && $(options.parentEl).length) ? $(options.parentEl) : $(this.parentEl);
         this.container = $(options.template).appendTo(this.parentEl);
         // 修改開始<Linda/2018-12-05>
-        console.log($('.daterangepicker')); 
+        // console.log($('.daterangepicker')); 
 
-        $('.daterangepicker').on('click','li',function(e){
-            // console.log(22222222);
-            console.log(e);
-            console.log($(this));
-        });
+        // $('.daterangepicker').on('click','li',function(e){
+        //     // console.log(22222222);
+        //     console.log(e);
+        //     console.log($(this));
+        // });
         // 修改結束<Linda/2018-12-05>
         //
         // handle all the possible options overriding defaults

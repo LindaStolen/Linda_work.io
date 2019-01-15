@@ -27,7 +27,7 @@
             <form action="">
                 <table id="table_1">
                     <tr>
-                        <td class="item">學員編號</td>
+                        <td class="item">學員編號/<br>身分證字號</td>
                         <td>TW123456789</td>
                         <td class="item">學員姓名</td>
                         <td>蛙拉拉</td>
@@ -100,8 +100,8 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="ctr-btn"><button type="submit" class="light-submit">確定</button><button type="reset">取消</button></div>
             </form>
-            <div class="ctr-btn"><a class="light-submit">確定</a><a class="light-del">取消</a></div>
         </div>
     </div>
     <!-- top nav -->
@@ -159,12 +159,14 @@
         </div>
         <div id="mainContent">
             <h2 class="sub-title">預約管理 \ 修改刪除預約</h2>
-            <div class="data">
-                <p>請輸入預約學員編號或身分證</p>
-                <input type="text" maxlength="10" required>
-                <div class="control-bar">
-                    <button class="correct" href="#">確定</button><button class="cancle" href="#">取消</button>
-                </div>
+            <div class="condition">
+                <form action="">
+                    <p>請輸入預約學員編號或身分證</p>
+                    <input type="text" maxlength="10" required>
+                    <div class="control-bar">
+                        <button class="correct">確定</button><button class="cancle" type="reset">取消</button>
+                    </div>
+                </form>
             </div>
             <!-- 輸入學號後帶出學生基本資料 -->
             <div class="student_info">

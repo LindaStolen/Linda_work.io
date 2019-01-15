@@ -71,23 +71,18 @@
         </div>
         <div id="mainContent">
             <h2 class="sub-title">預約管理 \ 新增預約</h2>
-            <div class="student-num">
-                <p>請輸入預約學員編號/身分證字號</p>
-                <input type="text" maxlength="10" required>
-            </div>
-            <!--  -->
-            <div class="condition">
-                <!-- <div class="title">預約上課條件</div> -->
-                <form action="">
+            <form action="">
+                <div class="student-num">
+                    <p>請輸入預約學員編號/身分證字號</p>
+                    <input type="text" maxlength="10" required>
+                </div>
+                <!--  -->
+                <div class="condition">
                     <table>
                         <thead>
                             <th style="width:40%"></th>
                             <th style="width:60%"></th>
                         </thead>
-                        <!-- <tr>
-                            <td>學生編號</td>
-                            <td>TW004100389</td>
-                        </tr> -->
                         <tr>
                             <td class="item">上課地點</td>
                             <td>
@@ -171,13 +166,13 @@
                         </tr>
                     </table>
                     <div class="ctr_b">
-                        <a href="#" class="btn">送出</a><a href="#" class="reset">重設</a>
+                        <button type="submit" class="btn">送出</button><button type="reset">重設</a>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         <!-- <div class="crossLine"></div> -->
             <div class="student_info clearfix">
-                <div class="data clearfix">
+                <div class="student-data clearfix">
                     <p class="title">學員資料</p>
                     <ul>
                         <li class="item">學員編號/身分證字號 :</li>

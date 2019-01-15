@@ -32,15 +32,15 @@
     margin-top: 3px;
 }
 #table_1 {
-    margin: 0 auto 20px;
-    min-width: 350px;
+    margin: 15px auto 20px;
+    min-width: 400px;
     line-height: 35px;
 }
 #mainContent .border {
     border: 0.8px dashed #ff5511;
     border-radius: 25px;
     position: relative;
-    padding: 25px;
+    padding: 15px;
     margin: auto;
     width: 600px;
 }
@@ -48,14 +48,14 @@
     position: absolute;
     display: inline-block;
     top: -0.8em;
-    left: 15%;
+    left: 8%;
     background-color: #fff;
     padding: 0 15px;
     font-size: 20px;
     letter-spacing: 1.5px;
 }
 #mainContent #table_1 td {
-    padding-left: 15px;
+    padding-left: 10px;
     background-color: #f8e2d5;
     border: 1px solid #ffefe6;
 }
@@ -63,6 +63,7 @@
     background-color: #ffccaa;
     border-bottom: 1px solid #ffefe6;
     width: 80px;
+    font-weight: 420;
     text-align: center;
     letter-spacing: 1.5px;
     padding: 0;
@@ -70,7 +71,7 @@
 #mainContent #table_1 input, #mainContent #table_1 select {
     font-size: 16px;
     height: 25px;
-    width: 150px;
+    width: 200px;
     border: 0.8px solid #d3d3d3;
 }
 #mainContent #table_1 input[name="date"] {
@@ -80,14 +81,14 @@
     text-align: center;
     margin-top: 5px;
 }
-#mainContent .border .ctr_btn a {
+#mainContent .border .ctr_btn button {
     margin: 0 5px;
-    padding: 3px 10px;
+    line-height: 23px;
     font-size: 16px;
     background-color: #ffccaa;
     border: 0.6px solid #ffbe88;
 }
-#mainContent .border .ctr_btn a:hover {
+#mainContent .border .ctr_btn button:hover {
     background-color: #d86100;
     color: #fff;
 }

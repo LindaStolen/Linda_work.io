@@ -99,14 +99,16 @@ h1.title::after {
     text-align: center;
     padding-top: 15px;
 }
-#content .ctrl_btn a {
-    padding: 3px 10px;
+#content .ctrl_btn button {
+    padding: 0px 10px;
     margin: 0 5px;
+    line-height: 25px;
+    font-size: 16px;
     background-color: #74ccc080;
     color: #000;
     border: 0.8px solid #75bbb0;
 }
-#content .ctrl_btn a:hover {
+#content .ctrl_btn button:hover {
     background-color: rgba(66, 116, 109, 0.5);
     color: #fff;
 }

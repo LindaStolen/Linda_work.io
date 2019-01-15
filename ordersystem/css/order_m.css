@@ -22,6 +22,7 @@
 #mainContent .student-num p {
     display: inline-block;
     padding-right: 5px;
+    vertical-align: middle;
 }
 #mainContent .student-num input {
     line-height: 20px;
@@ -29,15 +30,16 @@
 #mainContent .condition input[name="date"] {
     padding: 0 0 0 5px;
 }
-/*#mainContent .btn a,*/ #mainContent .condition .ctr_b a {
+/*#mainContent .btn a,*/ #mainContent .condition .ctr_b button {
     display: inline-block;
     margin: 8px 5px 0;
+    font-size: 16px;
     padding: 0 12px;
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
     /* border-radius: 30px; */
 }
-#mainContent .condition .ctr_b a:hover {
+#mainContent .condition .ctr_b button:hover {
     background-color: #ad835c;
     color: #fff;
 }
@@ -63,7 +65,7 @@
     margin-top: 50px;
     display: none;
 }
-#mainContent .data {
+#mainContent .student-data {
     max-width: 600px;
     padding: 25px;
     margin: 25px auto;
@@ -71,18 +73,18 @@
     text-align: center;
     border: 1.5px solid #ccc;
 }
-#mainContent .data ul {
+#mainContent .student-data ul {
     display: flex;
     justify-content: space-evenly;
 }
-#mainContent .data li {
+#mainContent .student-data li {
     float: left;
     line-height: 35px;
     letter-spacing: 1px;
     font-size: 17px;
     border-bottom: 1px solid #ccc;
 }
-#mainContent .data ul .item {
+#mainContent .student-data ul .item {
     font-weight: 430;
     border-bottom: none;
 }
@@ -90,7 +92,7 @@
     padding-left: 8px;
     line-height: 40px;
     border: 0.8px solid #c08c6d;
-    background-color: #fce2d7;
+    background-color: #ffece3;
 }
 /* #mainContent .student_info table td {
     padding: 0;
@@ -101,7 +103,7 @@
 #mainContent .student_info table .item, #mainContent .condition table .item {
     height: 35px;
     text-align: center;
-    background-color: #ffd8c6;
+    background-color: #ffe5d6;
 }
 #mainContent .condition table input, #mainContent .condition table select {
     height: 25px;

@@ -32,30 +32,34 @@
     margin-top: 3px;
 }
 /* input */
-#mainContent p {
+.search {
     text-align: center;
-    font-size: 17.5px;
+    font-size: 18px;
 }
-#mainContent .btn {
-    text-align: center;
-    padding: 20px 0;
-    margin: 0 250px;
+.search p {
+    margin-right: 3px;
+    display: inline-block;
+    vertical-align: middle;
 }
-#mainContent .btn button {
-    padding: 1.5px 10px;
-    margin: 10px 5px 0;
+.search input {
+    line-height: 20px;
+}
+.control button {
+    padding: 0px 12px;
+    margin: 15px 5px 0;
     display: inline-block;
     font-size: 16px;
     background-color: #97c068;
     border: 0.5px solid #597538;
 }
-#mainContent .btn button:hover {
+.control button:hover {
     background-color: #46704f;
     color: #fff;
 }
 /* 結果資料 */
 #mainContent dd {
     display: none;
+    text-align: center;
 }
 #mainContent .data {
     width: 600px;
@@ -100,6 +104,7 @@
     max-width: 1000px;
     margin: auto;
     font-size: 17px;
+    text-align: left;
     position: relative;
 }
 /*#mainContent .ctr_btn a, */#mainContent .ctr_btn .condition {
@@ -164,4 +169,15 @@
 }
 #mainContent #table_2 td, #mainContent #table_ td {
     border: 0.8px solid #46704f;
+}
+dd #backto {
+    text-align: center;
+    background-color: #d7ffb7;
+    border: 1px solid #a0cc6d;
+    line-height: 25px;
+    display: inline-block;
+    width: 80px;
+    margin: 50px 0 0;
+    text-align: center;
+    border-radius: 25px;
 }

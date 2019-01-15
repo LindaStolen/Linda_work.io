@@ -28,7 +28,7 @@ $(document).ready(function(){
             </li>
         </ul>                                
     </td>
-    <td><button>確定</button></td></tr>`
+    <td><button type="submit">確定</button></td></tr>`
     // $(".edit").hide();
     $(".fa-edit").click(function(){
         var tr = $(this).parent().parent();

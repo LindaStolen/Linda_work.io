@@ -37,7 +37,9 @@
     font-size: 18px;
 }
 #mainContent .search p {
+    margin-right: 3px;
     display: inline-block;
+    vertical-align: middle;
 }
 #mainContent .search input {
     line-height: 20px;
@@ -51,11 +53,14 @@
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
 }
-#mainContent .student_info {
+.data {
+    display: none;
+}
+dl #student_info {
     text-align: center;
     margin: 70px auto;
 }
-#mainContent .student_info .border {
+dl #student_info .border {
     border: 1.5px solid #ccc;
     /* border-bottom: 5px double #ccc; */
     position: relative;
@@ -63,7 +68,7 @@
     margin: auto;
     padding: 25px;
 }
-#mainContent .student_info .title {
+dl #student_info .title {
     position: absolute;
     top: -20px;
     left: 5%;
@@ -74,17 +79,17 @@
     letter-spacing: 1px;
     color: #723300;
 }
-#mainContent .student_info ul {
+dl #student_info ul {
     display: flex;
     justify-content: space-evenly;
     letter-spacing: 1px;
     font-size: 17px;
     line-height: 35px;
 }
-#mainContent .student_info ul li {
+dl #student_info ul li {
     border-bottom: 1px solid #ccc;
 }
-#mainContent .student_info ul .item {
+dl #student_info ul .item {
     font-weight: 430;
     border-bottom: none;
 }
@@ -143,18 +148,18 @@
     margin: 30px 0;
     border-bottom: 1px solid #ccc;
 }
-
-.data .tabs {
+/* 頁籤 */
+.tabs {
     clear: left;
     min-width: 680px;
     margin: 10px 0 0px;    
 }
-.data ul {
+.tabs ul {
     height: 32px;
     border-bottom: 1px solid #c08c6d;
     border-left: 1px solid #c08c6d;
 }
-.data li {
+.tabs li {
     float: left;
     height: 31px;
     line-height: 31px;
@@ -166,15 +171,15 @@
     border-bottom: #c08c6d;
     background-color: #fde9dd;
 }
-.data li a {
+.tabs li a {
     display: block;
     padding: 0 20px;
 }
-.data li a:hover {
+.tabs li a:hover {
     background-color: #967967;
     color: #fff;
 }
-.data ul .active a {
+.tabs ul .active a {
     background-color: #967967;
     color: #fff;
 }
@@ -205,7 +210,7 @@ dd {
     border-top: none;
     padding: 15px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     /* background-color: #aaa; */
 }
 .data table tr {
@@ -215,7 +220,10 @@ dd {
     border: 0.8px solid #222;
 }
 
-dl .backto {
+.back {
+    text-align: center;
+}
+dl #backto {
     background-color: #d7ffb7;
     border: 1px solid #a0cc6d;
     line-height: 25px;
@@ -225,25 +233,3 @@ dl .backto {
     text-align: center;
     border-radius: 25px;
 }
-/* #mainContent .used {
-    position: relative;
-}
-#mainContent .col-6 h3 {
-    font-size: 22px;
-    font-weight: 420;
-    margin-top: 30px;
-}
-#mainContent .col-6 .condition {
-    line-height: 30px;
-    text-align: right;
-    margin-bottom: 5px;
-    /* vertical-align: middle; */
-/* }
-#mainContent .col-6 .condition select, #mainContent .col-6 .condition input {
-    height: 20px;
-    font-size: 16px;
-}
-#mainContent .col-6 .condition span {
-    display: inline-block;
-    margin: 5px;
-}  */
