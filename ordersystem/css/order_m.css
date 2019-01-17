@@ -27,7 +27,7 @@
 #mainContent .student-num input {
     line-height: 20px;
 }
-#mainContent .condition input[name="date"] {
+#mainContent .condition #date-single {
     padding: 0 0 0 5px;
 }
 /*#mainContent .btn a,*/ #mainContent .condition .ctr_b button {

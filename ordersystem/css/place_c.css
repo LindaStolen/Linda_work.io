@@ -48,17 +48,14 @@
     padding-left: 10px;
     border: 0.8px solid #cc5d2a;
 }
-#mainContent #table_1 select {
+#mainContent #table_1 select, #mainContent #table_1 input {
     border: none;
-    height: 22px;
-    width: 200px;
+    height: 25px;
+    width: 220px;
     font-size: 16.5px;
 }
 #mainContent #table_1 input {
-    border: none;
-    height: 22px;
-    width: 150px;
-    font-size: 16.5px;
+    padding: 0 0 0 5px;
 }
 #mainContent .ctr_btn {
     text-align: center;
@@ -94,7 +91,7 @@
 /* 結果列表顯示 */
 #mainContent #table_2 {
     margin: 50px auto 0;
-    min-width: 550px;
+    min-width: 580px;
     text-align: center;
     line-height: 35px;
     display: none;

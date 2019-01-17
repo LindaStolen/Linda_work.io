@@ -3,16 +3,16 @@ $(document).ready(function(){
     console.log($('.daterangepicker'));
     console.log(document.readyState);
     // if(document.readyState == 'complete'){
-    console.log($('.show-ranges')[0]);
+    // console.log($('.show-ranges')[0]);
 
        
     // }
-    console.log($('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright'));
-    $('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright').on('click','.ranges',function(e){
-        console.log(22222222);
-        console.log(e);
-        console.log($(this));
-    });
+    // console.log($('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright'));
+    // $('body > div.daterangepicker.ltr.auto-apply.show-ranges.opensright').on('click','.ranges',function(e){
+    //     console.log(22222222);
+    //     console.log(e);
+    //     console.log($(this));
+    // });
     // $('#datepicker').change(function(){
     //     // console.log($(this).val());
     //     // console.log($(this).val());

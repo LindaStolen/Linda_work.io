@@ -59,7 +59,7 @@
 /* 結果資料 */
 #mainContent dd {
     display: none;
-    text-align: center;
+    /* text-align: center; */
 }
 #mainContent .data {
     width: 600px;
@@ -169,15 +169,4 @@
 }
 #mainContent #table_2 td, #mainContent #table_ td {
     border: 0.8px solid #46704f;
-}
-dd #backto {
-    text-align: center;
-    background-color: #d7ffb7;
-    border: 1px solid #a0cc6d;
-    line-height: 25px;
-    display: inline-block;
-    width: 80px;
-    margin: 50px 0 0;
-    text-align: center;
-    border-radius: 25px;
 }

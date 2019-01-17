@@ -11,6 +11,9 @@
     <!-- <link rel="stylesheet" href="css/jquery-ui.min.css" /> -->
     <link rel="stylesheet" href="css/daterangepicker.css">
     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sign-in.js"></script>
+    <script src="js/showData.js"></script>
     <title>預約管理</title>
 </head>
 <body>
@@ -74,7 +77,7 @@
             <form action="">
                 <div class="student-num">
                     <p>請輸入預約學員編號/身分證字號</p>
-                    <input type="text" maxlength="10" required>
+                    <input type="text" maxlength="10" autocomplete="off" placeholder="TW0000000" required>
                 </div>
                 <!--  -->
                 <div class="condition">
@@ -87,42 +90,43 @@
                             <td class="item">上課地點</td>
                             <td>
                                 <select name="location" id="location">
-                                    <option value="">總公司</option>
-                                    <option value="">花蓮數位學堂</option>
-                                    <option value="">宜蘭數位學堂</option>
-                                    <option value="">台北大碩</option>
-                                    <option value="">東華數位學堂</option>
-                                    <option value="">基隆數位學堂</option>
-                                    <option value="">新莊數位學堂</option>
-                                    <option value="">三峽數位學堂</option>
-                                    <option value="">景美數位學堂</option>
-                                    <option value="">淡水數位學堂</option>
-                                    <option value="">台北數位學堂</option>
-                                    <option value="">中壢數位學堂</option>
-                                    <option value="">桃園數位學堂</option>
-                                    <option value="">林口數位學堂</option>
-                                    <option value="">中央數位學堂</option>
-                                    <option value="">苗栗數位學堂</option>
-                                    <option value="">新竹數位學堂</option>
-                                    <option value="">逢甲數位學堂</option>
-                                    <option value="">彰化數位學堂</option>
-                                    <option value="">東海數位學堂</option>
-                                    <option value="">台中數位學堂</option>
-                                    <option value="">嘉義數位學堂</option>
-                                    <option value="">斗六數位學堂</option>
-                                    <option value="">虎尾數位學堂</option>
-                                    <option value="">民雄數位學堂</option>
-                                    <option value="">台南數位學堂</option>
-                                    <option value="">屏東數位學堂</option>
-                                    <option value="">楠梓數位學堂</option>
-                                    <option value="">高大數位學堂</option>
-                                    <option value="">高雄數位學堂</option>
+                                    <option value="">請選擇上課地點</option>
+                                    <option value="0">總公司</option>
+                                    <option value="1">花蓮數位學堂</option>
+                                    <option value="2">宜蘭數位學堂</option>
+                                    <option value="3">台北大碩</option>
+                                    <option value="4">東華數位學堂</option>
+                                    <option value="5">基隆數位學堂</option>
+                                    <option value="6">新莊數位學堂</option>
+                                    <option value="7">三峽數位學堂</option>
+                                    <option value="8">景美數位學堂</option>
+                                    <option value="9">淡水數位學堂</option>
+                                    <option value="10">台北數位學堂</option>
+                                    <option value="11">中壢數位學堂</option>
+                                    <option value="12">桃園數位學堂</option>
+                                    <option value="13">林口數位學堂</option>
+                                    <option value="14">中央數位學堂</option>
+                                    <option value="15">苗栗數位學堂</option>
+                                    <option value="16">新竹數位學堂</option>
+                                    <option value="17">逢甲數位學堂</option>
+                                    <option value="18">彰化數位學堂</option>
+                                    <option value="19">東海數位學堂</option>
+                                    <option value="20">台中數位學堂</option>
+                                    <option value="21">嘉義數位學堂</option>
+                                    <option value="22">斗六數位學堂</option>
+                                    <option value="23">虎尾數位學堂</option>
+                                    <option value="24">民雄數位學堂</option>
+                                    <option value="25">台南數位學堂</option>
+                                    <option value="26">屏東數位學堂</option>
+                                    <option value="27">楠梓數位學堂</option>
+                                    <option value="28">高大數位學堂</option>
+                                    <option value="29">高雄數位學堂</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td class="item">上課日期</td>
-                            <td><input type="text" id="datepicker" placeholder="請選擇預約日期"></td>
+                            <td><input type="text" id="date-single" placeholder="請選擇預約日期" autocomplete="off"></td> <!-- single select-->
                         </tr>
                         <tr>
                             <td class="item">課程名稱</td>
@@ -153,10 +157,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="item">上課時段</td>
+                            <td class="item">上課場次</td>
                             <td>
                                 <select name="time" id="time">
-                                    <option value="">請選擇預約時段</option>
+                                    <option value="">請選擇預約場次</option>
                                     <option value="">8:30-11:50</option>
                                     <option value="">12:00-15:20</option>
                                     <option value="">15:40-18:30</option>
@@ -166,7 +170,7 @@
                         </tr>
                     </table>
                     <div class="ctr_b">
-                        <button type="submit" class="btn">送出</button><button type="reset">重設</a>
+                        <button type="submit" class="check-btn">送出</button><button type="reset">重設</a>
                     </div>
                 </div>
             </form>
@@ -224,13 +228,10 @@
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/sign-in.js"></script>
-    <script src="js/showData.js"></script>
     <script src="js/whatDayisToday.js"></script>
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
-    <script src="js/daterangepicker-master/dateranger.js" defer></script>
+    <script src="js/date-single.js"></script>
 
 </body>
 </html>

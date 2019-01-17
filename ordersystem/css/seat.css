@@ -24,6 +24,9 @@
 #mainContent .location li i {
     margin-right: 5px;
 }
+.location .date {
+    display: inline-block;
+}
 #mainContent .location select, #mainContent .location input {
     height: 23px;
     width: 140px;

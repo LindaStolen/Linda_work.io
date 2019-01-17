@@ -15,6 +15,7 @@
   font-family: arial;
   font-size: 15px;
   line-height: 1em;
+  z-index: 9999;
 }
 
 .daterangepicker:before, .daterangepicker:after {
@@ -226,15 +227,18 @@
 
 .daterangepicker select.monthselect, .daterangepicker select.yearselect {
   font-size: 12px;
-  padding: 1px;
-  height: auto;
+  height: 23px;  /*Linda fix at 2019-01-16*/
   margin: 0;
   cursor: default;
+  vertical-align: middle; /*Linda fix at 2019-01-16*/
 }
 
 .daterangepicker select.monthselect {
   margin-right: 2%;
-  width: 56%;
+  /*Linda fix at 2019-01-16*/
+  width: 35%;
+  padding-bottom: 1px;
+  /*line-height: 15px;  Linda fix at 2019-01-16*/
 }
 
 .daterangepicker select.yearselect {
@@ -275,15 +279,24 @@
 
 .daterangepicker .drp-selected {
   display: inline-block;
-  font-size: 12px;
-  padding-right: 8px;
+  /*Linda fix at 2019-01-16*/
+  width: 185px;
+  text-align: center;
+  line-height: 25px;
+  border: 2px solid #fff024;  
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 8px; 
+  /*Linda fix at 2019-01-16*/
 }
 
 .daterangepicker .drp-buttons .btn {
   margin-left: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 8px;
+  /*Linda fix at 2019-01-16*/
+  font-size: 15px;
+  font-weight: 420;
+  /* padding: 2px 5px; */
+  /*Linda fix at 2019-01-16*/
 }
 
 .daterangepicker.show-ranges .drp-calendar.left {

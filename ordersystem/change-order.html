@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/change-order.css">
     <link rel="stylesheet" href="css/css/all.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- <link rel="stylesheet" href="css/change-new.css"> -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
-    <script src="js/datepicker/jquery-ui.min.js"></script>
-    <script src="js/datepicker/single-date.js"></script>
     <!-- <script src="js/new-window.js"></script> -->
     <title>修改/刪除預約</title>
 </head>
@@ -23,7 +22,7 @@
     <div id="light-box" class="full-width">
         <div class="border">
             <h1>修改預約</h1>
-            <div class="close"><i class="fas fa-times-circle"></i></div>
+            <i class="fas fa-times-circle close"></i>
             <form action="">
                 <table id="table_1">
                     <tr>
@@ -45,29 +44,30 @@
                             <td class="item">上課地點</td>
                             <td>
                                 <select name="place" id="" required>
-                                    <option value="">台北數位學堂</option>
-                                    <option value="">新竹數位學堂</option>
-                                    <option value="">台中數位學堂</option>
-                                    <option value="">台南數位學堂</option>
-                                    <option value="">高雄數位學堂</option>
+                                    <option value="">請選擇上課地點</option>
+                                    <option value="0">台北數位學堂</option>
+                                    <option value="1">新竹數位學堂</option>
+                                    <option value="2">台中數位學堂</option>
+                                    <option value="3">台南數位學堂</option>
+                                    <option value="4">高雄數位學堂</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td class="item">上課日期</td>
                             <td>
-                                <input type="text" name="" id="datepicker" placeholder="請選擇上課日期" required>
+                                <input type="text" name="" id="date-singleChange" placeholder="請選擇上課日期" autocomplete="off"  required>
                             </td>
                         </tr>
                         <tr>
-                            <td class="item">上課時段</td>
+                            <td class="item">上課場次</td>
                             <td>
                                 <select name="time" id="">
-                                    <option value="">請選擇上課時段</option>
-                                    <option value="">08:30-11:50</option>
-                                    <option value="">12:00-15:20</option>
-                                    <option value="">15:30-18:50</option>
-                                    <option value="">19:00-22:20</option>
+                                    <option value="">請選擇上課場次</option>
+                                    <option value="1">08:30-11:50</option>
+                                    <option value="2">12:00-15:20</option>
+                                    <option value="3">15:30-18:50</option>
+                                    <option value="4">19:00-22:20</option>
                                 </select>
                             </td>
                         </tr>
@@ -76,12 +76,12 @@
                             <td>
                                 <select name="seat" id="" required>
                                     <option value="">請選擇座位編號</option>
-                                    <option value="">A01</option>
-                                    <option value="">A02</option>
-                                    <option value="">B01</option>
-                                    <option value="">B02</option>
-                                    <option value="">C01</option>
-                                    <option value="">C02</option>
+                                    <option value="0">A01</option>
+                                    <option value="1">A02</option>
+                                    <option value="2">B01</option>
+                                    <option value="3">B02</option>
+                                    <option value="4">C01</option>
+                                    <option value="5">C02</option>
                                 </select>
                             </td>
                         </tr>
@@ -162,9 +162,9 @@
             <div class="condition">
                 <form action="">
                     <p>請輸入預約學員編號或身分證</p>
-                    <input type="text" maxlength="10" required>
+                    <input type="text" class="id" maxlength="10" autocomplete="off" placeholder="TW0000000" required>
                     <div class="control-bar">
-                        <button class="correct">確定</button><button class="cancle" type="reset">取消</button>
+                        <button type="submit" class="correct">確定</button><button class="cancle" type="reset">取消</button>
                     </div>
                 </form>
             </div>
@@ -186,7 +186,7 @@
                             <thead>
                                 <th style="width:15%" class="day">日期</th>
                                 <th style="width:18%" class="place">地點</th>
-                                <th style="width:17%" class="time">時段</th>
+                                <th style="width:17%" class="time">場次</th>
                                 <th style="width:18%" class="class">課程名稱</th>
                                 <th style="width:12%" class="seatnum">座位編號</th>
                                 <th style="width:17%" class="delete">修改/刪除</th>
@@ -252,10 +252,12 @@
         $('.change').click(function(){
             $("#light-box").show();
             let item = $(this).parent().parent();
-            console.log(item);
+            // console.log(item);
             $('.light-submit').unbind("click").click(function(){
                 alert("修改完成");
                 $('#light-box').hide();
+                $("#date-singleChange").val("");
+                $('#light-box select').val("");
                 $('.student_info').show();
                 // console.log(item);
                 item.css("backgroundColor","yellow");
@@ -276,5 +278,8 @@
             $(this).parent().parent().remove();
         })
     </script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/date-single.js"></script>
 </body>
 </html>

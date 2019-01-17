@@ -12,9 +12,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
-    <script src="js/dateranger.js"></script>
-    <script src="js/daterangepicker-master/moment.min.js"></script>
-    <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <title>場次查詢</title>
 </head>
 <body>
@@ -79,9 +76,9 @@
             <div class="clearfix">
                 <ul class="location">
                     <li>
-                        <!-- <span>上課地點:</span> -->
                         <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂(ip位置) -->
-                            <!-- 總公司權限 -->
+                            <span class="here">台北數位學堂</span>
+                            <!-- 總公司權限
                             <select name="" id="tkb">
                                 <option value="">總公司</option>
                                 <option value="">新竹數位學堂</option>
@@ -89,7 +86,7 @@
                                 <option value="">中壢數位學堂</option>
                                 <option value="">高雄數位學堂</option>
                                 <option value="">台北數位學堂</option>
-                            </select>
+                            </select> -->
                         </div>
                     </li>
                     <li class="date">
@@ -107,7 +104,7 @@
                         <tr>
                             <td class="item">日期</td>
                             <td>
-                                <input type="text" name="date" id="">
+                                <input type="text" name="date" id="date-single" autocomplete="off">
                             </td>
                         </tr>
                         <tr>
@@ -115,10 +112,25 @@
                             <td>
                                 <select name="time" id="">
                                     <option value="">請選擇場次</option>
-                                    <option value="">08:30-11:50</option>
-                                    <option value="">12:00-15:20</option>
-                                    <option value="">15:30-18:50</option>
-                                    <option value="">19:00-22:20</option>
+                                    <option value="0">全場次</option>
+                                    <option value="1">08:30-11:50</option>
+                                    <option value="2">12:00-15:20</option>
+                                    <option value="3">15:30-18:50</option>
+                                    <option value="4">19:00-22:20</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="item">地點</td>
+                            <td>
+                                <select name="place" id="">
+                                    <option value="">請選擇地點</option>
+                                    <option value="0">全台</option>
+                                    <option value="1">台北數位學堂</option>
+                                    <option value="2">新竹數位學堂</option>
+                                    <option value="3">台中數位學堂</option>
+                                    <option value="4">台南數位學堂</option>
+                                    <option value="5">高雄數位學堂</option>
                                 </select>
                             </td>
                         </tr>
@@ -165,5 +177,8 @@
         </div>
     </div>
     <script src="js/whatDayisToday.js"></script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/date-single.js"></script>
 </body>
 </html>

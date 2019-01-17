@@ -20,3 +20,4 @@ var date = today.getDay();
 // today_str = currentDateTime[0]+"年"+currentDateTime[1]+"月"+currentDateTime[2]+"日";
 // $("#date").text(today.getFullYear()+ " 年 " + (today.getMonth()+1) + " 月 " + today.getDate() + " 日");
 $("#date").text(today.getFullYear()+ " 年 " + (today.getMonth()+1) + " 月 " + today.getDate() + " 日" + chDay[date]);
+$(".date").text(today.getFullYear()+ "-" + (today.getMonth()+1) + "-" + today.getDate());

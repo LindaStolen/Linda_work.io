@@ -57,7 +57,6 @@
     display: none;
 }
 dl #student_info {
-    text-align: center;
     margin: 70px auto;
 }
 dl #student_info .border {
@@ -218,18 +217,4 @@ dd {
 }
 .data table td{
     border: 0.8px solid #222;
-}
-
-.back {
-    text-align: center;
-}
-dl #backto {
-    background-color: #d7ffb7;
-    border: 1px solid #a0cc6d;
-    line-height: 25px;
-    display: inline-block;
-    width: 80px;
-    margin: auto;
-    text-align: center;
-    border-radius: 25px;
 }

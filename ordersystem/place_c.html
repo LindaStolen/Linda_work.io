@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/place_c.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
@@ -96,12 +98,12 @@
                     </li>
                 </ul>
             </div>
-            <form action="" method="POST">
+            <form action="" method="post">
                 <table id="table_1">
                     <tr>
                         <td class="item">停課日期</td>
                         <td>
-                            <input type="date" name="date" id="">&nbsp;~&nbsp;<input type="date" name="date" id="">
+                            <input type="text" name="date-single-close" id="date" placeholder="請選擇日期" autocomplete="off" required>
                         </td>
                     </tr>
                     <tr>
@@ -207,6 +209,9 @@
     
     </div>
     <script src="js/whatDayisToday.js"></script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/date-single.js"></script>
     <script>
         $(function(){
             $("#table_2").hide();
@@ -220,6 +225,7 @@
                     return false;
                 }else { //都有值
                     $("#table_2").show();
+                    let d = $("input[name='date-single-close']").val();
                     let t = $("#time option:selected").text();
                     let s = $("#status option:selected").text();
                     let r = $("#reason option:selected").text();
@@ -227,13 +233,16 @@
                     let c = //字串樣板
                         `
                         <tr>
-                            <td>2018-11-27</td>    
+                            <td>${d}</td>    
                             <td>${p}</td>    
                             <td>${t}</td>    
                             <td>${s}</td>    
-                            <td>${r}</td>    
+                            <td>${r}</td>
                         </tr>
                         `;
+                        
+                    $("#table_1 input").val("");
+                    $("#table_1 select").val("");
                     $("#table_2").append(c);
                     return false;
                 }

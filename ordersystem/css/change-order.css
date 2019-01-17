@@ -164,11 +164,12 @@
 }
 #light-box .border {
     max-width: 600px;
-    height: 350px;
+    height: auto;
     border: 1.2px dotted #572006;
     border-radius:25px;
     position: relative;
     margin: 150px auto;
+    padding: 0 20px 20px;
     background-color:#fff;
     /* display: none; */
 }
@@ -183,12 +184,12 @@
     background-image: linear-gradient(hsla(0, 0%, 100%, 0) 45% ,#fff 70%);
     letter-spacing: 1.5px;
 }
-#light-box .border .close .fa-times-circle {
+#light-box .border .fa-times-circle {
     font-size: 20px;
     float: right;
-    margin: 10px 10px 0 0;
+    margin: 15px 0 0;
 }
-#light-box .border .close .fa-times-circle:hover {
+#light-box .border .fa-times-circle:hover {
     color: #ddd;
 }
 #light-box #table_1, #table_2 {
@@ -230,13 +231,13 @@
     margin-top: 3px;
     border: 1px solid #ddd;
 }
-#table_2 input[id="datepicker"] {
+#table_2 input[id="date-singleChange"] {
     padding: 0 0 0 5px;
-    color: #000;
 }
 #light-box .ctr-btn {
     text-align: center;
     line-height: 30px;
+    /* padding: 10px; */
 }
 #light-box .ctr-btn button {
     margin: 0 8px;
