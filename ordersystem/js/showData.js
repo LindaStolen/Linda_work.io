@@ -9,13 +9,14 @@ $(document).ready(function(){
     })
 
     //新增預約
-    $('.check-btn').click(function(){
-        $(".crossLine").show();
-        $(".student_info").show();
-        $("input").val("");
-        $("select").val("");
-        return false;
-    })
+    // $('.check-btn').click(function(){
+    //     $(".crossLine").show();
+    //     $(".student_info").show();
+    //     $("input").val("");
+    //     $("select").val("");
+    //     console.log(123)
+    //     return false;
+    // })
 
     // 修改刪除預約
     $('.correct').click(function(){

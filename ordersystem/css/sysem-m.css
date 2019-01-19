@@ -1,0 +1,85 @@
+/* content */
+#mainContent {
+    margin-top: 70px;
+    padding: 50px 50px 50px 80px;
+    min-width: 700px;
+}
+#mainContent .sub-title {
+    margin:30px 50px 100px 0;
+    border-bottom: 1px dashed #9c9c9c;
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+/* 停場表格 */
+#mainContent #table_1 {
+    margin: auto;
+    min-width: 580px;
+    background-color: #ffe1cd;
+    line-height: 35px;
+}
+#mainContent #table_1 .item {
+    width: 150px;
+    text-align: center;
+    letter-spacing: 1px;
+    /* background-color: #ffdbca; */
+    padding: 0;
+}
+#mainContent #table_1 td {
+    padding-left: 10px;
+    border: 0.8px solid #cc5d2a;
+}
+#mainContent #table_1 select, #mainContent #table_1 input[type="text"] {
+    border: none;
+    height: 25px;
+    width: 250px;
+    font-size: 16.5px;
+}
+#mainContent #table_1 input {
+    padding: 0 0 0 5px;
+}
+#mainContent textarea {
+    /* min-width: 260px;
+    min-height: 80px; */
+    margin-top: 10px;
+    font-size: 16px;
+    padding-left: 3px;
+    border: none;
+}
+#mainContent .ctr_btn {
+    text-align: center;
+    margin-top: 25px;
+    vertical-align: middle;
+}
+#mainContent .ctr_btn button {
+    margin: 0 5px;
+    padding: 0 10px;
+    line-height: 27px;
+    font-size: 16px;
+    color: #000;
+    background-color: #ffd0b1;
+    border: 0.6px solid #cc5d2a;
+}
+#mainContent .ctr_btn button:hover, #mainContent .ctr_btn .submit:hover {
+    background-color: #d86100;
+    color: #fff;
+}
+/* 表格地點選擇 */
+#mainContent .place{
+    padding-right: 8px;
+}
+#mainContent #table_1 ul {
+    font-size: 16px;
+    float: left;
+}
+#result {
+    margin: 50px auto;
+    width: 750px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+#result td {
+    border: 1px solid #ddd;
+    line-height: 30px;
+}

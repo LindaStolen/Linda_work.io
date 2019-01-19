@@ -11,7 +11,7 @@
     font-size: 20px;
     font-weight: 400;
 }
-.location {
+/* .location {
     margin: 0 50px 50px 0;
     padding-top: 30px;
     font-size: 18px;
@@ -21,6 +21,9 @@
     display: inline-block;
     margin: 0 10px;
 }
+.date {
+    display: inline-block;
+}
 .location li i {
     margin-right: 5px;
 }
@@ -29,10 +32,11 @@
     width: 140px;
     font-size: 16px;
     vertical-align: middle;
-}
+} */
 
 /* 顯示資料 */
 #mainContent .search {
+    margin: 80px 0;
     text-align: center;
     font-size: 18px;
 }

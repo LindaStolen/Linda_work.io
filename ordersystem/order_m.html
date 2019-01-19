@@ -70,6 +70,7 @@
             <ul class="permission">
                 <li><a href="permission.html">群組管理</a></li>
                 <li><a href="personal.html">個人權限設定</a></li>
+                <li><a href="system-m.html">系統管理</a></li>
             </ul>
         </div>
         <div id="mainContent">
@@ -77,7 +78,7 @@
             <form action="">
                 <div class="student-num">
                     <p>請輸入預約學員編號/身分證字號</p>
-                    <input type="text" maxlength="10" autocomplete="off" placeholder="TW0000000" required>
+                    <input type="text" maxlength="10" autocomplete="off" required>
                 </div>
                 <!--  -->
                 <div class="condition">
@@ -133,11 +134,11 @@
                             <td>
                                 <select name="classname" id="classname">
                                     <option value="">請選擇預約課程</option>
-                                    <option value="">作業研究</option>
-                                    <option value="">行政學</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                    <option value="0">作業研究</option>
+                                    <option value="1">行政學</option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                    <option value="4"></option>
                                 </select>
                             </td>
                         </tr>
@@ -146,12 +147,12 @@
                             <td>
                                 <select name="seat" id="seat">
                                     <option value="">請選擇座位編號</option>
-                                    <option value="">A01</option>
-                                    <option value="">A02</option>
-                                    <option value="">A03</option>
-                                    <option value="">A04</option>
-                                    <option value="">A05</option>
-                                    <option value="">A06</option>
+                                    <option value="0">A01</option>
+                                    <option value="1">A02</option>
+                                    <option value="2">A03</option>
+                                    <option value="3">A04</option>
+                                    <option value="4">A05</option>
+                                    <option value="5">A06</option>
                                 </select>
                                 <a class="search_s">查詢座位狀態</a>
                             </td>
@@ -161,10 +162,10 @@
                             <td>
                                 <select name="time" id="time">
                                     <option value="">請選擇預約場次</option>
-                                    <option value="">8:30-11:50</option>
-                                    <option value="">12:00-15:20</option>
-                                    <option value="">15:40-18:30</option>
-                                    <option value="">19:00-22:00</option>
+                                    <option value="0">8:30-11:50</option>
+                                    <option value="1">12:00-15:20</option>
+                                    <option value="2">15:40-18:30</option>
+                                    <option value="3">19:00-22:00</option>
                                 </select>
                             </td>
                         </tr>
@@ -186,21 +187,13 @@
                     </ul>
                 </div>
                 <!-- <div class="title">預約學員資料</div> -->
-                <form action="">
+                <form action="javascript:;">
                     <table class="result">
                         <thead>
                             <th style="width:40%;"></th>
                             <th style="width:60%;"></th>
-                            <!-- <th style="width:15%;"></th>
-                            <th style="width:20%;"></th> -->
                         </thead>
-                        <tbody>
-                            <!-- <tr class="data">
-                                <td class="item">學員編號</td>
-                                <td class="">TW001234567</td>
-                                <td class="item">學員姓名</td>
-                                <td class="">蛙拉拉</td>
-                            </tr> -->
+                        <!-- <tbody>
                             <tr>
                                 <td class="item">上課地點</td>
                                 <td>台北數位學堂</td>
@@ -221,7 +214,7 @@
                                 <td class="item">上課時段</td>
                                 <td>13:00-15:50</td>
                             </tr>
-                        </tbody>
+                        </tbody> -->
                     </table>
                 </form>
             </div>
@@ -232,6 +225,55 @@
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/date-single.js"></script>
+    <script>
+        $("form").submit(function(){
+            let v = $("#location option:selected").val();
+            let v1 = $("#date-single").val();
+            let v2 = $("#classname option:selected").val();
+            let v3 = $("#seat option:selected").val();
+            let v4 = $("#time option:selected").val();
+            if(v == ""||v1 == ""||v2 == ""||v3 == ""||v4 == ""){ //第一個空值
+                alert("叫~~ 你~~ 選~~~");
+                return false;
+            }else { //都有值
+                $(".student_info").show();
+                let l = $("#location option:selected").text();
+                let d = $("#date-single").val();
+                let c = $("#classname option:selected").text();
+                let s = $("#seat option:selected").text();
+                let t = $("#time option:selected").text();
+                let r = //字串樣板
+                    `
+                    <tr>
+                        <td class="item">上課地點</td>
+                        <td>${l}</td>
+                    </tr>    
+                    <tr>
+                        <td class="item">上課日期</td>
+                        <td>${d}</td>
+                    </tr>    
+                    <tr>
+                        <td class="item">課程名稱</td>
+                        <td>${c}</td>
+                    </tr>    
+                    <tr>
+                        <td class="item">上課座位</td>
+                        <td>${s}</td>
+                    </tr>    
+                    <tr>
+                        <td class="item">上課場次</td>
+                        <td>${t}</td>
+                    </tr>
+                    `;
+                    
+                $(".student-num input").val("");
+                $(".condition table input").val("");
+                $(".condition table select").val("");
+                $(".result").append(r);
+                return false;
+            }
+        });
+    </script>
 
 </body>
 </html>

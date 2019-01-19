@@ -13,10 +13,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
-    <script src="js/dateranger.js"></script>
     <script src="js/radiotoggle.js"></script>
-    <script src="js/daterangepicker-master/moment.min.js"></script>
-    <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <title>查詢預約紀錄</title>
 </head>
 <body>
@@ -28,9 +25,7 @@
         <h1 class="title">預約座位系統</h1>
         <ul>
             <li id="date"></li>
-            <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
-            <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
         </ul>
     </div>
     <div class="user clearfix">
@@ -47,7 +42,7 @@
             <ul class="main">
                 <li><a href="index.html">學生到班狀況</a></li>
                 <li><a href="forstudent.html" target="blank">學生上課座位查詢</a></li>
-                <li><a href="statistic.html.html">預約到班統計</a></li>
+                <li><a href="statistic.html">預約到班統計</a></li>
             </ul>
             <h2><i class="far fa-calendar-check"></i>預約管理</h2>
             <ul class="order_m">
@@ -73,40 +68,18 @@
             <ul class="permission">
                 <li><a href="permission.html">群組管理</a></li>
                 <li><a href="personal.html">個人權限設定</a></li>
+                <li><a href="system-m.html">系統管理</a></li>
             </ul>
         </div>
     <!-- content -->
     <div id="mainContent">
         <h2 class="sub-title">學生管理 \ 預約紀錄</h2>
-        <div class="clearfix">
-        <ul class="location">
-            <li>
-                <div><i class="fas fa-map-marker-alt"></i>台北數位學堂<!-- (ip位置) -->
-                    <!-- 總公司權限
-                    <select name="" id="tkb">
-                        <option value="">總公司</option>
-                        <option value="">新竹數位學堂</option>
-                        <option value="">台南數位學堂</option>
-                        <option value="">中壢數位學堂</option>
-                        <option value="">高雄數位學堂</option>
-                        <option value="">台北數位學堂</option>
-                    </select> -->
-                </div>
-            </li>
-            <li class="date">
-                <div><i class="far fa-calendar-alt"></i>2018-11-07</div>
-            </li>
-            <li class="time">
-                <div><i class="far fa-clock"></i>08:30-11:50</div>
-            </li>
-        </ul>
-        </div>
         <div class="search">
             <form action="">
                 <p>請輸入學員編號或身分證字號</p>
                 <input type="text" maxlength="10" required>
                 <div class="control">
-                    <button class="correct">確定</button><button type="reset">取消</button>
+                    <button type="submit" class="correct">確定</button><button type="reset">取消</button>
                 </div>
             </form>
             <!-- </form> -->
@@ -130,7 +103,7 @@
                     </li>
                     <li>
                         <span>日期區間 :</span>
-                        <input type="text" name="date" id="" ><button>查詢</button>
+                        <input type="text" name="" id="date-range-search" autocomplete="off" required><button>查詢</button>
                     </li>
                     <!-- <a href="#" target="_blank" class="record">預約更改紀錄</a> -->
                 </div>
@@ -232,5 +205,8 @@
     </div>
     
     <script src="js/whatDayisToday.js"></script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/date-range.js"></script>
 </body>
 </html>

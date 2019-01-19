@@ -48,7 +48,7 @@ $("#date-singleChange").on("apply.daterangepicker", function(ev, picker) {
 });
 
 // date-single停場設定
-$("input[name='date-single-close']").daterangepicker({
+$("#date-single-close").daterangepicker({
     "autoUpdateInput": false,
     "singleDatePicker": true,
     "locale": {
@@ -66,7 +66,7 @@ $("input[name='date-single-close']").daterangepicker({
 },function(start, end, label) {
     console.log('New date selected: ' + start.format('YYYY-MM-DD'));
   });
-  console.log($("input[name='date-single-close']"));
-$("input[name='date-single-close']").on("apply.daterangepicker", function(ev, picker) {
+  console.log($("#date-single-close"));
+$("#date-single-close").on("apply.daterangepicker", function(ev, picker) {
     $(this).val(picker.startDate.format("YYYY-MM-DD"));
 });

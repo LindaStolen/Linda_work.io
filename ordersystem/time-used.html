@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <link rel="stylesheet" href="css/daterangepicker.css">
+
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/toggle-addafter.js"></script>
     <script src="js/radiotoggle.js"></script>
     <script src="js/tabs-effect.js"></script>
     <script src="js/showData.js"></script>
-    <script src="js/daterangepicker-master/moment.min.js"></script>
-    <script src="js/daterangepicker-master/daterangepicker.js"></script>
-    <script src="js/daterangepicker-master/dateranger.js"></script>
     <title>時數使用餘額</title>
 </head>
 <body>
@@ -74,15 +72,16 @@
                 <ul class="permission">
                     <li><a href="permission.html">群組管理</a></li>
                     <li><a href="personal.html">個人權限設定</a></li>
+                    <li><a href="system-m.html">系統管理</a></li>
                 </ul>
             </div>
         <!-- 時數使用記錄 -->
             <div id="mainContent">
                 <h2 class="sub-title">學生管理 \ 學習時數查詢</h2>
-                <div class="clearfix">
+                <!-- <div class="clearfix">
                     <ul class="location">
                         <li class="place">
-                            <div><i class="fas fa-map-marker-alt"></i><!-- 台北數位學堂 -->
+                            <div><i class="fas fa-map-marker-alt"></i>
                                 <select name="" id="tkb">
                                     <option value="">總公司</option>
                                     <option value="">新竹數位學堂</option>
@@ -93,9 +92,8 @@
                                 </select>
                             </div>
                         </li>
-                        <li class="date">
-                            <div><i class="far fa-calendar-alt"></i>
-                                <input type="text" id="datepicker" value="2018-11-07">                            
+                        <li>
+                            <i class="far fa-calendar-alt"></i><div class="date">
                             </div>
                         </li>
                         <li class="time">
@@ -109,13 +107,13 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <dl class="search">
                     <form action="">
                         <p>請輸入學員編號或身分證字號</p>
                         <input type="text" maxlength="10" required>
                         <div class="control-bar">
-                            <button class="correct">確定</button><button class="cancel" type="reset">取消</button>
+                            <button  type="submit" class="correct">確定</button><button class="cancel" type="reset">取消</button>
                         </div>
                     </form>
                 </dl>
@@ -270,7 +268,7 @@
                                         <option value="">作業系統</option>
                                         <option value="">線性代數</option>
                                     </select>
-                                    <span>日期區間</span><input type="text" name="" id="used">
+                                    <span>日期區間</span><input type="text" name="" class="date-range-search" autocomplete="off" required>
                                     <button type="submit">確定</button>
                                 </form>
                             </div>
@@ -321,7 +319,7 @@
                                         <option value="">作業系統</option>
                                         <option value="">線性代數</option>
                                 </select>
-                                <span>日期區間</span><input type="text" name="" class="datepicker">
+                                <span>日期區間</span><input type="text" name="" class="date-range-search">
                                 <button>確定</button>
                             </div>
                             <form action="">
@@ -330,8 +328,7 @@
                                         <th>日期</th>
                                         <th>課程</th>
                                         <th>異動原因</th>
-                                        <th>增加異動(mins)</th>
-                                        <th>減少異動(mins)</th>
+                                        <th>異動(mins)</th>
                                         <th>餘額</th>
                                         <th>經手人</th>
                                     </thead>
@@ -341,7 +338,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -350,7 +346,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -359,7 +354,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -368,7 +362,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -377,7 +370,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -386,7 +378,6 @@
                                             <td>計組與計結</td>
                                             <td>吃飯</td>
                                             <td>+100</td>
-                                            <td></td>
                                             <td>868</td>
                                             <td>嚕啦啦</td>
                                         </tr>
@@ -399,5 +390,8 @@
         </div>
     </div>
     <script src="js/whatDayisToday.js"></script>
+    <script src="js/daterangepicker-master/moment.min.js"></script>
+    <script src="js/daterangepicker-master/daterangepicker.js"></script>
+    <script src="js/date-range.js"></script>
 </body>
 </html>

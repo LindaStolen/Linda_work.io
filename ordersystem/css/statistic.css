@@ -22,6 +22,9 @@
     display: inline-block;
     margin: 0 10px;
 }
+.date {
+    display: inline-block;
+}
 .location li i {
     margin-right: 5px;
 }
@@ -51,7 +54,7 @@ table td {
     border: 1px solid #856d51;
     line-height: 30px;
 }
-table input[name="date-range"] {
+table #date-range {
     margin-left: 8px;
     width: 250px;
     height: 22.5px;

@@ -1,0 +1,112 @@
+/* #main {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    border: 1px solid #ddd;
+    font-size: 17px;
+    box-shadow: inset 3.5px -3.5px 7px  #acacac;
+} */
+/* #main #bulletin {
+    min-height: 300px;
+    margin: 35px;
+    border-radius: 20px;
+    background-color: #fff1e8;
+    position: relative;
+    grid-column: 1 / span 3;
+    box-shadow: 2px -2px 6px #aaa;
+} */
+/* #bulletin h2 {
+    position: absolute;
+    top: -22px;
+    left: 8%;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 2px 8px;
+    background-color: #ffa33a;
+}
+#main .nav-item {
+    display: inline-block;
+    background-color: #fff;
+    min-height: 150px;
+    border-radius: 20px;
+    margin: 0 35px 35px;
+    background-color: #fff1e8;
+    box-shadow: 2px -2px 4px #aaa;
+    position: relative;
+}
+.nav-item p {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 410;
+    padding: 3px 5px;
+    background-color: #ffd13a;
+    position: absolute;
+    top: -15px;
+}
+#content {
+    margin: 25px;
+}
+.nav-item .content {
+    padding: 20px 15px 15px;
+} */
+
+/*左右*/
+#main {
+    /* padding-top: 70px; */
+    display: grid;
+    grid-template-columns: 35% 65%;
+    /* grid-gap: 15px; */
+    /* border: 1px solid #ddd; */
+    font-size: 17px;
+    box-shadow: inset 3.5px -3.5px 5px  #c9c9c9;
+    background-color: #fdf8f5e0;
+}
+#main #bulletin {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    border-radius: 20px;
+    background-color: #fff1e8;
+    position: relative;
+    margin: 30px;
+    min-height: 300px;
+    box-shadow: 2px -2px 4px #aaa;
+}
+/* nav {
+    margin: 30px;
+} */
+dd {
+    margin: 0;
+    padding: 75px 30px 0;
+}
+.nav-item{
+    background-color: #fff1e8;
+    border-radius: 20px;
+    margin: 30px;
+    min-height: 150px;
+    position: relative;
+    box-shadow: 2px -2px 4px #aaa;
+}
+h2 {
+    position: absolute;
+    top: -22px;
+    left: 5%;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 2px 8px;
+    background-color: #ffa33a;
+}
+#content {
+    padding: 30px;
+}
+.nav-item p {
+    position: absolute;
+    top: -15px;
+    left: 5%;
+    font-size: 17px;
+    padding: 2px 8px;
+    background-color: #ffd13a;
+}
+.content {
+    padding: 25px 15px 15px;
+}

@@ -22,6 +22,9 @@
     display: inline-block;
     margin: 0 10px;
 }
+.date {
+    display: inline-block;
+}
 .location li i {
     margin-right: 5px;
 }
@@ -32,7 +35,7 @@
     margin-top: 3px;
 }
 #mainContent #table_1 {
-    margin: auto;
+    margin: 100px auto;
     min-width: 580px;
     background-color: #ffe1cd;
     line-height: 35px;

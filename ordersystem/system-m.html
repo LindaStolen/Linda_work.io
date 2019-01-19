@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/place_c.css">
+    <link rel="stylesheet" href="css/sysem-m.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
     <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- <link rel="stylesheet" href="css/chosen_2019.min.css"> -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
-    <title>停場設定</title>
+    <title>系統管理</title>
 </head>
 <body>
-    <!-- top nav -->
     <div class="top full-width">
         <div class="logo">
-                <a><img src="images/logo (1).png" alt=""></a>
+            <a><img src="images/logo (1).png" alt=""></a>
         </div>
         <h1 class="title">預約座位系統</h1>
         <ul>
@@ -36,9 +36,7 @@
         </ul>
     </div>
     <div id="container">
-    <!-- side nav -->
         <div class="nav_side">
-            <!-- <div class="logo"></div> -->
             <h2><i class="fas fa-home"></i>本館現況</h2>
             <ul class="main">
                 <li><a href="index.html">學生到班狀況</a></li>
@@ -72,55 +70,73 @@
                 <li><a href="system-m.html">系統管理</a></li>
             </ul>
         </div>
-    <!-- content -->
         <div id="mainContent">
-            <h2 class="sub-title">場次管理 \ 停場設定</h2>
-            <!-- <div class="clearfix">
-                <ul class="location">
-                    <li>
-                        <div><i class="fas fa-map-marker-alt"></i> 台北數位學堂
-                            總公司權限
-                            <select name="" id="tkb">
-                                <option value="">總公司</option>
-                                <option value="">新竹數位學堂</option>
-                                <option value="">台南數位學堂</option>
-                                <option value="">中壢數位學堂</option>
-                                <option value="">高雄數位學堂</option>
-                                <option value="">台北數位學堂</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="far fa-calendar-alt"></i><div class="date">2018-11-07</div>
-                    </li>
-                    <li class="time">
-                        <div><i class="far fa-clock"></i>08:30-11:50</div>
-                    </li>
-                </ul>
-            </div> -->
-            <form action="" method="post">
+            <h2 class="sub-title">權限管理 \ 系統管理</h2>
+            <form action="">
                 <table id="table_1">
                     <tr>
                         <td class="item">停課日期</td>
                         <td>
-                            <input type="text" name="date-single-close" id="date-single-close" placeholder="請選擇日期" autocomplete="off" required>
+                            <input type="text" name="" id="date-single-close" placeholder="請選擇日期" autocomplete="off" required>
                         </td>
                     </tr>
-                    <!--區行政
                     <tr>
-                        <td class="item">停場地點</td> 
-                        <td>
-                            <select name="place" id="place">
+                        <td class="item">停場地點</td>
+                        <td class="place">
+                            <!-- <select name="place" id="place">
                                 <option value="">請選擇地點</option>
-                                <option value="0">全北區</option>
+                                <option value="0">全台</option>
                                 <option value="1">台北數位學堂</option>
                                 <option value="2">新竹數位學堂</option>
                                 <option value="3">台中數位學堂</option>
                                 <option value="4">台南數位學堂</option>
                                 <option value="5">高雄數位學堂</option>
-                            </select>
+                            </select> -->
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="selectAll" id="" value="全省"> 全省
+                                </li>
+                            </ul>
+                            <ul> <!-- about order -->
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="台北數位學堂"> 台北數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="桃園數位學堂"> 桃園數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="中壢數位學堂"> 中壢數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="林口數位學堂"> 林口數位學堂
+                                </li>
+                            </ul>
+                            <ul> <!-- about seat -->
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="新竹數位學堂"> 新竹數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="台中數位學堂"> 台中數位學堂
+                                </li>
+                            </ul>
+                            <ul> <!-- about place -->
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="台南數位學堂"> 台南數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="高雄數位學堂"> 高雄數位學堂
+                                </li>
+                            </ul>
+                            <ul> <!-- about permission -->
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="高屏數位學堂"> 高屏數位學堂
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="check" id="" value="宜蘭數位學堂"> 宜蘭數位學堂
+                                </li>
+                            </ul>
                         </td>
-                    </tr>-->
+                    </tr>
                     <tr>
                         <td class="item">停課場次</td>
                         <td>
@@ -134,7 +150,7 @@
                             </select>
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td class="item">場次狀態</td>
                         <td>
                             <select name="" id="status">
@@ -143,85 +159,34 @@
                                 <option value="2">停場</option>
                             </select>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td class="item">停課原因</td>
                         <td>
-                            <select name="reason" id="reason">
-                                <option value="">請選擇停課原因</option>
-                                <option value="9">場地租借(新營學堂)</option>
-                                <option value="8">施工、整修</option>
-                                <option value="7">國定假日停場</option>
-                                <option value="6">學堂搬遷</option>
-                                <option value="5">政府公告停止上班/上課</option>
-                                <option value="4">環境清潔</option>
-                                <option value="3">大樓停水/停電</option>
-                                <option value="2">中華電信系統維護</option>
-                                <option value="1">電腦機制維護</option>
-                                <option value="0">TKB公告停場</option>
-                            </select>
+                            <textarea cols="35" rows="5" placeholder="請填寫原因" required></textarea>
                         </td>
                     </tr>
                 </table>
                 <div class="ctr_btn">
-                    <!--<input type="submit" class="submit">--> <button type="submit">送出</button> <button class="cancel" type="reset">清除</button>
+                    <!--<input type="submit" class="submit">--> <button type="submit" class="check">送出</button> <button class="cancel" type="reset">清除</button>
                 </div>
             </form>
-            <form method="post" action="javascript:;">
-                <table id="table_2">
-                    <thead>
-                        <th style="width:20%;">日期</th>
-                        <!-- <th style="width:20%;">地點</th> -->
-                        <th style="width:20%;">時段</th>
-                        <th style="width:20%;">狀態</th>
-                        <th style="width:20%;">原因</th>
-                    </thead>
-                </table>
-                <p>** 場次狀態異動的異動表格 ** <br>
-                        目前以空表格插入調整後的場次狀態，正式應該是以當天全場次顯示，調整過的以紅字標示。</p>
-            </form>
+            <div class="show"></div>
+            <table id="result">
+                <tr>
+                    <td style="width:25%;">停場日期</td>
+                    <td style="width:25%;">停場地點</td>
+                    <td style="width:25%;">停場場次</td>
+                    <td style="width:25%;">停場原因</td>
+                </tr>
+            </table>
         </div>
-    
     </div>
     <script src="js/whatDayisToday.js"></script>
+    <script src="js/sys-table-add.js"></script>
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/date-single.js"></script>
-    <script>
-        $(function(){
-            $("#table_2").hide();
-            $("form").submit(function(){
-                let v = $("#time option:selected").val();
-                let v1 = $("#status option:selected").val();
-                let v2 = $("#reason option:selected").val();
-                let v3 = $("#place option:selected").val();
-                if(v == ""||v1 == ""||v2 == ""||v3 == ""){ //第一個空值
-                    alert("叫~~ 你~~ 選~~~");
-                    return false;
-                }else { //都有值
-                    $("#table_2").show();
-                    let d = $("#date-single-close").val();
-                    let t = $("#time option:selected").text();
-                    let s = $("#status option:selected").text();
-                    let r = $("#reason option:selected").text();
-                    // let p = $("#place option:selected").text();
-                    let c = //字串樣板
-                        `
-                        <tr>
-                            <td>${d}</td>
-                            <td>${t}</td>    
-                            <td>${s}</td>    
-                            <td>${r}</td>
-                        </tr>
-                        `;
-                        
-                    $("#table_1 input").val("");
-                    $("#table_1 select").val("");
-                    $("#table_2").append(c);
-                    return false;
-                }
-            });
-        });        
-    </script>
+    
 </body>
 </html>
