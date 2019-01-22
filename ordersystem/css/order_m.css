@@ -43,12 +43,25 @@
     background-color: #ad835c;
     color: #fff;
 }
+.yes {
+    color: rgb(255, 255, 255);
+    padding: 2px 5px;
+    margin-left: 5px;
+    background-color: rgb(255, 0, 0);
+    display: none;
+}
+.no {
+    color: #fff;
+    padding: 2px 5px;
+    margin-left: 5px;
+    background-color: rgb(0, 0, 255);
+    display: none;
+}
 .condition table, .student_info .result  {
     margin: auto;
     min-width: 600px;
     font-size: 17px;
 }
-
 #mainContent .title {
     text-align: center;
     padding: 0 15px;

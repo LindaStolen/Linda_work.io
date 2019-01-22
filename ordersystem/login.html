@@ -12,8 +12,9 @@
     <script src="js/sign-in.js"></script>
     <title>TKB 客服端預約機制</title>
 </head>
-<body>
-    <div id="content" class="full-width">
+<body class="clearfix">
+    <!-- <img src="http://source.unsplash.com/random/1600x760" alt=""> -->
+    <!-- <div id="content" class="full-width"> -->
         <div id="door" class="clearfix">
             <h1>客服端預約機制登入</h1>
             <form action="">
@@ -24,20 +25,15 @@
                     <i class="fas fa-key"></i><input type="password" name="pw" id="pw" autocomplete="off" required>
                 </div>
                 <div class="else"><a href="#">忘記密碼</a></div>
-                <button type="submit" id="login">登入</button>
+                <button type="submit" id="login" onclick="javascript:location.href='index.html'">登入</button>
             </form>
         </div>
         <footer>
             <p class="notice">建議最佳瀏覽器版本：IE8、Chrome 40、Safari 5、FireFox 30 以上版本</p>
         </footer>
-    </div>
+    <!-- </div> -->
     <script>
-        //  $(window).onresize(function(){
-        //     $("#door").();
-        //     $("body").attr("style","overflow-y: hidden");
-        //     photoWidth = $(window).innerWidth();
-        //     $('.photo').attr('style', `width:${photoWidth}px`);
-        // })
+        $("#login")
     </script>
 </body>
 </html>

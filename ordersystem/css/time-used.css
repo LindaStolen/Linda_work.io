@@ -116,9 +116,9 @@ dl #student_info ul .item {
     border: 0.8px solid #c08c6d;
     text-align: center;
 }
-#mainContent table td, #mainContent table tr {
+/* #mainContent table td, #mainContent table tr {
     line-height: 30px;
-}
+} */
 #mainContent .data h3 {
     font-size: 22px; 
     font-weight: 420;

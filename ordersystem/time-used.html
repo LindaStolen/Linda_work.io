@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
     <link rel="stylesheet" href="css/time-used.css">
     <link rel="stylesheet" href="css/forall.css">
     <link rel="stylesheet" href="css/css/all.min.css">
@@ -16,6 +17,7 @@
     <script src="js/radiotoggle.js"></script>
     <script src="js/tabs-effect.js"></script>
     <script src="js/showData.js"></script>
+    <script src="js/datatables.min.js"></script>
     <title>時數使用餘額</title>
 </head>
 <body>
@@ -132,18 +134,18 @@
                         </div>
                     <form action="">
                         <h3><i class="far fa-bookmark"></i>學習時數總表</h3>
-                        <dd class="sort">
+                        <!-- <dd class="sort">
                             <span>排列方式</span>
                             <input type="radio" name="sort" value="date" checked="checked">上課日期
                             <input type="radio" name="sort" value="class">科目
-                        </dd>
+                        </dd> -->
                         <div id="used-time">
-                            <table>
+                            <table id="data-1">
                                 <thead>
                                     <th>科目</th>
                                     <th>到期日</th>
                                     <th>學習時數(分鐘)</th>
-                                    <th>以使用時數(分鐘)</th>
+                                    <th>已使用時數(分鐘)</th>
                                     <th>剩餘時數(分鐘)</th>
                                     <th>上課狀態</th>
                                 </thead>
@@ -158,7 +160,7 @@
                                     </tr>
                                     <tr>
                                         <td>多益解題班</td>
-                                        <td>2019-12-01</td>
+                                        <td>2019-12-02</td>
                                         <td>13500</td>
                                         <td>1500</td>
                                         <td>12000</td>
@@ -166,7 +168,7 @@
                                     </tr>
                                     <tr>
                                         <td>多益解題班</td>
-                                        <td>2019-12-01</td>
+                                        <td>2017-12-03</td>
                                         <td>13500</td>
                                         <td>1500</td>
                                         <td>12000</td>
@@ -174,7 +176,7 @@
                                     </tr>
                                     <tr>
                                         <td>多益解題班</td>
-                                        <td>2019-12-01</td>
+                                        <td>2018-12-05</td>
                                         <td>13500</td>
                                         <td>1500</td>
                                         <td>12000</td>
@@ -182,7 +184,23 @@
                                     </tr>
                                     <tr>
                                         <td>多益解題班</td>
-                                        <td>2019-12-01</td>
+                                        <td>2019-12-10</td>
+                                        <td>13500</td>
+                                        <td>100</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-12</td>
+                                        <td>13500</td>
+                                        <td>500</td>
+                                        <td>12000</td>
+                                        <td>本班</td>
+                                    </tr>
+                                    <tr>
+                                        <td>多益解題班</td>
+                                        <td>2019-12-15</td>
                                         <td>13500</td>
                                         <td>1500</td>
                                         <td>12000</td>
@@ -190,23 +208,7 @@
                                     </tr>
                                     <tr>
                                         <td>多益解題班</td>
-                                        <td>2019-12-01</td>
-                                        <td>13500</td>
-                                        <td>1500</td>
-                                        <td>12000</td>
-                                        <td>本班</td>
-                                    </tr>
-                                    <tr>
-                                        <td>多益解題班</td>
-                                        <td>2019-12-01</td>
-                                        <td>13500</td>
-                                        <td>1500</td>
-                                        <td>12000</td>
-                                        <td>本班</td>
-                                    </tr>
-                                    <tr>
-                                        <td>多益解題班</td>
-                                        <td>2019-12-01</td>
+                                        <td>2019-12-16</td>
                                         <td>13500</td>
                                         <td>1500</td>
                                         <td>12000</td>
@@ -216,7 +218,7 @@
                             </table>
                         </div>
                         <div id="change-time">
-                            <table>
+                            <table id="data-2">
                                 <thead>
                                     <th>科目</th>
                                     <th>到期日</th>
@@ -319,7 +321,7 @@
                                         <option value="">作業系統</option>
                                         <option value="">線性代數</option>
                                 </select>
-                                <span>日期區間</span><input type="text" name="" class="date-range-search">
+                                <span>日期區間</span><input type="text" name="" class="date-range-search" autocomplete="off" required>
                                 <button>確定</button>
                             </div>
                             <form action="">
@@ -393,5 +395,11 @@
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/date-range.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#data-1").DataTable();
+            $("#data-2").DataTable();            
+        });
+    </script>
 </body>
 </html>

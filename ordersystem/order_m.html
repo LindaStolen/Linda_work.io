@@ -14,6 +14,19 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
+    <script>
+        // $(function(){
+        //     $.ajax({
+        //         url: "test.json",
+        //         success:function(){
+        //             console.log("success");
+        //         },
+        //         error:function(){
+        //             console.log("error");
+        //         },
+        //     });
+        // });
+    </script>
     <title>預約管理</title>
 </head>
 <body>
@@ -154,7 +167,10 @@
                                     <option value="4">A05</option>
                                     <option value="5">A06</option>
                                 </select>
-                                <a class="search_s">查詢座位狀態</a>
+                                <span class="yes">已預約</span>
+                                <span class="no">未預約</span>
+                                <!-- <a class="search_s">查詢座位狀態</a> -->
+                                <!-- <span id="seatStatus"></span> -->
                             </td>
                         </tr>
                         <tr>
@@ -272,6 +288,21 @@
                 $(".result").append(r);
                 return false;
             }
+        });
+
+        $("select #seat").on(function(){
+            $.ajax({
+                url: 'test.json',
+                type : "POST",
+                dataType : 'json',
+                data : $("#form").serialize(),
+                success : function(result) {
+                    console.log(result);
+                },
+                error: function(result) {
+                    console.log(result);
+                }
+            })
         });
     </script>
 
