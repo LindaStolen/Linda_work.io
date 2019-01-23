@@ -15,9 +15,9 @@ $("#date-single").daterangepicker({
     maxDate: moment().subtract(-7, 'days'),
     "autoApply": false,
 },function(start, end, label) {
-    console.log('New date selected: ' + start.format('YYYY-MM-DD'));
+    // console.log('New date selected: ' + start.format('YYYY-MM-DD'));
   });
-  console.log($("#date-single"));
+//   console.log($("#date-single"));
 $("#date-single").on("apply.daterangepicker", function(ev, picker) {
     $(this).val(picker.startDate.format("YYYY-MM-DD"));
 });
@@ -40,9 +40,9 @@ $("#date-singleChange").daterangepicker({
     maxDate: moment().subtract(-7, 'days'),
     "autoApply": false,
 },function(start, end, label) {
-    console.log('New date selected: ' + start.format('YYYY-MM-DD'));
+    // console.log('New date selected: ' + start.format('YYYY-MM-DD'));
   });
-  console.log($("#date-singleChange"));
+//   console.log($("#date-singleChange"));
 $("#date-singleChange").on("apply.daterangepicker", function(ev, picker) {
     $(this).val(picker.startDate.format("YYYY-MM-DD"));
 });
@@ -64,9 +64,9 @@ $("#date-single-close").daterangepicker({
     minDate: moment(),
     "autoApply": false,
 },function(start, end, label) {
-    console.log('New date selected: ' + start.format('YYYY-MM-DD'));
+    // console.log('New date selected: ' + start.format('YYYY-MM-DD'));
   });
-  console.log($("#date-single-close"));
+//   console.log($("#date-single-close"));
 $("#date-single-close").on("apply.daterangepicker", function(ev, picker) {
     $(this).val(picker.startDate.format("YYYY-MM-DD"));
 });

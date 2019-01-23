@@ -15,17 +15,6 @@
     <script src="js/sign-in.js"></script>
     <script src="js/showData.js"></script>
     <script>
-        // $(function(){
-        //     $.ajax({
-        //         url: "test.json",
-        //         success:function(){
-        //             console.log("success");
-        //         },
-        //         error:function(){
-        //             console.log("error");
-        //         },
-        //     });
-        // });
     </script>
     <title>預約管理</title>
 </head>
@@ -91,7 +80,7 @@
             <form action="">
                 <div class="student-num">
                     <p>請輸入預約學員編號/身分證字號</p>
-                    <input type="text" maxlength="10" autocomplete="off" required>
+                    <input type="text" id="num" maxlength="10" autocomplete="off" required>
                 </div>
                 <!--  -->
                 <div class="condition">
@@ -160,17 +149,22 @@
                             <td>
                                 <select name="seat" id="seat">
                                     <option value="">請選擇座位編號</option>
-                                    <option value="0">A01</option>
-                                    <option value="1">A02</option>
-                                    <option value="2">A03</option>
-                                    <option value="3">A04</option>
-                                    <option value="4">A05</option>
-                                    <option value="5">A06</option>
+                                    <option value="A01">A01</option>
+                                    <option value="A02">A02</option>
+                                    <option value="A03">A03</option>
+                                    <option value="A04">A04</option>
+                                    <option value="A05">A05</option>
+                                    <option value="A06">A06</option>
+                                    <option value="A07">A07</option>
+                                    <option value="A08">A08</option>
+                                    <option value="A09">A09</option>
+                                    <option value="A09">A09</option>
+                                    <option value="A10">A10</option>
                                 </select>
-                                <span class="yes">已預約</span>
-                                <span class="no">未預約</span>
+                                <!-- <span class="yes">已預約</span>
+                                <span class="no">未預約</span> -->
                                 <!-- <a class="search_s">查詢座位狀態</a> -->
-                                <!-- <span id="seatStatus"></span> -->
+                                <span id="result"></span>
                             </td>
                         </tr>
                         <tr>
@@ -242,68 +236,88 @@
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/date-single.js"></script>
     <script>
-        $("form").submit(function(){
-            let v = $("#location option:selected").val();
-            let v1 = $("#date-single").val();
-            let v2 = $("#classname option:selected").val();
-            let v3 = $("#seat option:selected").val();
-            let v4 = $("#time option:selected").val();
-            if(v == ""||v1 == ""||v2 == ""||v3 == ""||v4 == ""){ //第一個空值
-                alert("叫~~ 你~~ 選~~~");
-                return false;
-            }else { //都有值
-                $(".student_info").show();
-                let l = $("#location option:selected").text();
-                let d = $("#date-single").val();
-                let c = $("#classname option:selected").text();
-                let s = $("#seat option:selected").text();
-                let t = $("#time option:selected").text();
-                let r = //字串樣板
-                    `
-                    <tr>
-                        <td class="item">上課地點</td>
-                        <td>${l}</td>
-                    </tr>    
-                    <tr>
-                        <td class="item">上課日期</td>
-                        <td>${d}</td>
-                    </tr>    
-                    <tr>
-                        <td class="item">課程名稱</td>
-                        <td>${c}</td>
-                    </tr>    
-                    <tr>
-                        <td class="item">上課座位</td>
-                        <td>${s}</td>
-                    </tr>    
-                    <tr>
-                        <td class="item">上課場次</td>
-                        <td>${t}</td>
-                    </tr>
-                    `;
-                    
-                $(".student-num input").val("");
-                $(".condition table input").val("");
-                $(".condition table select").val("");
-                $(".result").append(r);
-                return false;
-            }
-        });
-
-        $("select #seat").on(function(){
-            $.ajax({
-                url: 'test.json',
-                type : "POST",
-                dataType : 'json',
-                data : $("#form").serialize(),
-                success : function(result) {
-                    console.log(result);
+        $.ajax({
+                url:"test.json",
+                success:function(data){
+                    $("#seat").change(function(){
+                        $(".status").remove();
+                        let seat = $("#seat").val();
+                        // console.log("座位 :"+seat);
+                        // console.log(data.length);
+                        let i;
+                        let seatnum = data.seatnum;
+                        for(i = 0; i < data.length; i++){
+                            if(seat == data[i].seatnum){
+                                let status = data[i].status;
+                                let content = `<span class="status">${status}<span><br>`;
+                                $("#result").append(content);
+                            };
+                        }
+                    });
+                    $("form").submit(function(){
+                        let v = $("#location option:selected").val();
+                        let v1 = $("#date-single").val();
+                        let v2 = $("#classname option:selected").val();
+                        let v3 = $("#seat option:selected").val();
+                        let v4 = $("#time option:selected").val();
+                        if(v == ""||v1 == ""||v2 == ""||v3 == ""||v4 == ""){ //排除空值
+                            alert("誰是空值!");
+                            console.log(v);
+                            console.log(v1);
+                            console.log(v2);
+                            console.log(v3);
+                            console.log(v4);
+                            return false;
+                        }else { //都有值
+                            $(".student_info").show();
+                            let l = $("#location option:selected").text();
+                            console.log(l);
+                            let d = $("#date-single").val();
+                            console.log(d);
+                            let c = $("#classname option:selected").text();
+                            console.log(c);
+                            let s = $("#seat option:selected").text();
+                            console.log(s);
+                            let t = $("#time option:selected").text();
+                            console.log(t);
+                            let r = //字串樣板
+                                `
+                                <tr>
+                                    <td class="item">上課地點</td>
+                                    <td>${l}</td>
+                                </tr>    
+                                <tr>
+                                    <td class="item">上課日期</td>
+                                    <td>${d}</td>
+                                </tr>    
+                                <tr>
+                                    <td class="item">課程名稱</td>
+                                    <td>${c}</td>
+                                </tr>    
+                                <tr>
+                                    <td class="item">上課座位</td>
+                                    <td>${s}</td>
+                                </tr>    
+                                <tr>
+                                    <td class="item">上課場次</td>
+                                    <td>${t}</td>
+                                </tr>
+                                `;
+                                
+                            $(".student-num input").val("");
+                            $(".condition table input").val("");
+                            $(".condition table select").val("");
+                            $('#result').empty();
+                            $(".result").empty();
+                            $(".result").append(r);
+                            return false;
+                        }
+                    });
                 },
-                error: function(result) {
-                    console.log(result);
-                }
-            })
-        });
+                error:function(){
+                    console.log("error");
+                },
+            });
     </script>
 
 </body>

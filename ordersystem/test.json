@@ -1,7 +1,12 @@
-[{"a01":"order"},
-    {"a02":"order"},
-    {"a03":"order"},
-    {"a04":"can use"},
-    {"a05":"can use"},
-    {"a06":"order"},
-    {"a07":"can use"}]
+[
+    {"seatnum":"A01","status":"order"},
+    {"seatnum":"A02","status":"order"},
+    {"seatnum":"A03","status":"order"},
+    {"seatnum":"A04","status":"can use"},
+    {"seatnum":"A05","status":"can use"},
+    {"seatnum":"A06","status":"order"},
+    {"seatnum":"A07","status":"can use"},
+    {"seatnum":"A08","status":"can use"},
+    {"seatnum":"A09","status":"can use"},
+    {"seatnum":"A10","status":"can use"}
+]
