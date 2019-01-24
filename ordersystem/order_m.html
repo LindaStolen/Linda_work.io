@@ -35,7 +35,7 @@
     <div class="user clearfix">
         <ul>
             <li><a>資料設定</a></li>
-            <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
+            <li class="logout"><a href="login.html"><i class="fas fa-sign-out-alt"></i>登出</a></li>
         </ul>
     </div>
     <div id="container" class="clearfix">
@@ -237,87 +237,87 @@
     <script src="js/date-single.js"></script>
     <script>
         $.ajax({
-                url:"test.json",
-                success:function(data){
-                    $("#seat").change(function(){
-                        $(".status").remove();
-                        let seat = $("#seat").val();
-                        // console.log("座位 :"+seat);
-                        // console.log(data.length);
-                        let i;
-                        let seatnum = data.seatnum;
-                        for(i = 0; i < data.length; i++){
-                            if(seat == data[i].seatnum){
-                                let status = data[i].status;
-                                let content = `<span class="status">${status}<span><br>`;
-                                $("#result").append(content);
-                            };
-                        }
-                    });
-                    $("form").submit(function(){
-                        let v = $("#location option:selected").val();
-                        let v1 = $("#date-single").val();
-                        let v2 = $("#classname option:selected").val();
-                        let v3 = $("#seat option:selected").val();
-                        let v4 = $("#time option:selected").val();
-                        if(v == ""||v1 == ""||v2 == ""||v3 == ""||v4 == ""){ //排除空值
-                            alert("誰是空值!");
-                            console.log(v);
-                            console.log(v1);
-                            console.log(v2);
-                            console.log(v3);
-                            console.log(v4);
-                            return false;
-                        }else { //都有值
-                            $(".student_info").show();
-                            let l = $("#location option:selected").text();
-                            console.log(l);
-                            let d = $("#date-single").val();
-                            console.log(d);
-                            let c = $("#classname option:selected").text();
-                            console.log(c);
-                            let s = $("#seat option:selected").text();
-                            console.log(s);
-                            let t = $("#time option:selected").text();
-                            console.log(t);
-                            let r = //字串樣板
-                                `
-                                <tr>
-                                    <td class="item">上課地點</td>
-                                    <td>${l}</td>
-                                </tr>    
-                                <tr>
-                                    <td class="item">上課日期</td>
-                                    <td>${d}</td>
-                                </tr>    
-                                <tr>
-                                    <td class="item">課程名稱</td>
-                                    <td>${c}</td>
-                                </tr>    
-                                <tr>
-                                    <td class="item">上課座位</td>
-                                    <td>${s}</td>
-                                </tr>    
-                                <tr>
-                                    <td class="item">上課場次</td>
-                                    <td>${t}</td>
-                                </tr>
-                                `;
-                                
-                            $(".student-num input").val("");
-                            $(".condition table input").val("");
-                            $(".condition table select").val("");
-                            $('#result').empty();
-                            $(".result").empty();
-                            $(".result").append(r);
-                            return false;
-                        }
-                    });
-                },
-                error:function(){
-                    console.log("error");
-                },
-            });
+            url:"test.json",
+            success:function(data){
+                $("#seat").change(function(){
+                    $(".status").remove();
+                    let seat = $("#seat").val();
+                    // console.log("座位 :"+seat);
+                    // console.log(data.length);
+                    let i;
+                    let seatnum = data.seatnum;
+                    for(i = 0; i < data.length; i++){
+                        if(seat == data[i].seatnum){
+                            let status = data[i].status;
+                            let content = `<span class="status">${status}<span><br>`;
+                            $("#result").append(content);
+                        };
+                    }
+                });
+                $("form").submit(function(){
+                    let v = $("#location option:selected").val();
+                    let v1 = $("#date-single").val();
+                    let v2 = $("#classname option:selected").val();
+                    let v3 = $("#seat option:selected").val();
+                    let v4 = $("#time option:selected").val();
+                    if(v == ""||v1 == ""||v2 == ""||v3 == ""||v4 == ""){ //排除空值
+                        alert("誰是空值!");
+                        console.log(v);
+                        console.log(v1);
+                        console.log(v2);
+                        console.log(v3);
+                        console.log(v4);
+                        return false;
+                    }else { //都有值
+                        $(".student_info").show();
+                        let l = $("#location option:selected").text();
+                        console.log(l);
+                        let d = $("#date-single").val();
+                        console.log(d);
+                        let c = $("#classname option:selected").text();
+                        console.log(c);
+                        let s = $("#seat option:selected").text();
+                        console.log(s);
+                        let t = $("#time option:selected").text();
+                        console.log(t);
+                        let r = //字串樣板
+                            `
+                            <tr>
+                                <td class="item">上課地點</td>
+                                <td>${l}</td>
+                            </tr>    
+                            <tr>
+                                <td class="item">上課日期</td>
+                                <td>${d}</td>
+                            </tr>    
+                            <tr>
+                                <td class="item">課程名稱</td>
+                                <td>${c}</td>
+                            </tr>    
+                            <tr>
+                                <td class="item">上課座位</td>
+                                <td>${s}</td>
+                            </tr>    
+                            <tr>
+                                <td class="item">上課場次</td>
+                                <td>${t}</td>
+                            </tr>
+                            `;
+                            
+                        $(".student-num input").val("");
+                        $(".condition table input").val("");
+                        $(".condition table select").val("");
+                        $('#result').empty();
+                        $(".result").empty();
+                        $(".result").append(r);
+                        return false;
+                    }
+                });
+            },
+            error:function(){
+                console.log("error");
+            },
+        });
     </script>
 
 </body>

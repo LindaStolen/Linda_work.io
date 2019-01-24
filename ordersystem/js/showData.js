@@ -1,12 +1,12 @@
 // place-manage&change 
 $(document).ready(function(){
-    $('.check').click(function(){
-        // alert('setting is done!');
-        $("#table_2").show();
-        $("#table_1 input").val("");
-        $("#table_1 select").val("");
-        return false;
-    })
+    // $('.check').click(function(){
+    //     alert('setting is done!');
+    //     $("#table_2").show();
+    //     $("#table_1 input").val("");
+    //     $("#table_1 select").val("");
+    //     return false;
+    // })
 
     //新增預約
     // $('.check-btn').click(function(){

@@ -113,3 +113,36 @@
 #mainContent #table_2 tr {
     border: 0.8px solid #fff;
 }
+td a {
+    display: inline-block;
+    /* line-height: 25px;
+    padding: 0 8px; */
+    font-weight: 400;
+    color: #34665e;
+    border-radius: 15px;
+}
+.single-time-result {
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+}
+.single-time-result table {
+    border: 1px solid #bbb;
+    width: 100%;
+}
+.single-time-result td {
+    border: 1px solid #eee;
+    line-height: 35px;
+    background-color: #ffe3cc;
+}
+.place-date, .place-location {
+    text-align-last: left;
+    padding-left: 5px;
+    background-color: #ffc170;
+    font-size: 16.5px;
+}
+.single-time-result .item {
+    width: 25%;
+    font-weight: 410;
+    background-color: #ffccaa;
+}

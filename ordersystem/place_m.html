@@ -23,15 +23,13 @@
         <h1 class="title">預約座位系統</h1>
         <ul>
             <li id="date"></li>
-            <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
-            <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
         </ul>
     </div>
     <div class="user clearfix">
         <ul>
             <li><a>資料設定</a></li>
-            <li class="logout"><a><i class="fas fa-sign-out-alt"></i>登出</a></li>
+            <li class="logout"><a href="login.html"><i class="fas fa-sign-out-alt"></i>登出</a></li>
         </ul>
     </div>
     <div id="container">
@@ -105,26 +103,13 @@
                         <tr>
                             <td class="item">日期</td>
                             <td>
-                                <input type="text" name="date" id="date-single" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="item">場次</td>
-                            <td>
-                                <select name="time" id="">
-                                    <option value="">請選擇場次</option>
-                                    <option value="0">全場次</option>
-                                    <option value="1">08:30-11:50</option>
-                                    <option value="2">12:00-15:20</option>
-                                    <option value="3">15:30-18:50</option>
-                                    <option value="4">19:00-22:20</option>
-                                </select>
+                                <input type="text" name="date" id="date-single" autocomplete="off" placeholder="請選擇日期" required>
                             </td>
                         </tr>
                         <tr>
                             <td class="item">地點</td>
                             <td>
-                                <select name="place" id="">
+                                <select name="place" id="place">
                                     <option value="">請選擇地點</option>
                                     <option value="0">全台</option>
                                     <option value="1">台北數位學堂</option>
@@ -135,51 +120,102 @@
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                            <td class="item">場次</td>
+                            <td>
+                                <select name="time" id="time">
+                                    <option value="">請選擇場次</option>
+                                    <option value="0">全場次</option>
+                                    <option value="1">08:30-11:50</option>
+                                    <option value="2">12:00-15:20</option>
+                                    <option value="3">15:30-18:50</option>
+                                    <option value="4">19:00-22:20</option>
+                                </select>
+                            </td>
+                        </tr>
                     </table>
                     <div class="ctr_btn">
                         <button class="check" type="submit">確定</button><button type="reset">清除</button>
                     </div>
                 </div>
-                <table id="table_2">
-                    <thead>
-                        <th style="width:25%;">日期</th>
-                        <th style="width:25%;">場次</th>
-                        <th style="width:25%;">狀態</th>
-                        <th style="width:25%;">備註</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">08:30-11:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
-                        </tr>
-                        <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">12:00-15:20</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
-                        </tr>
-                        <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">15:30-18:50</td>
-                            <td class="p_status">正常</td>
-                            <td class="p_else"></td>
-                        </tr>
-                        <tr>
-                            <td class="p_date">2018/11/25</td>
-                            <td class="p_time">19:00-22:20</td>
-                            <td class="p_status" style="color:red; font-weight: 480;">停場</td>
-                            <td class="p_else">感恩節回家吃烤雞!</td>
-                        </tr>
-                    </tbody>
-                </table>
             </form>
+                <!-- <span class="place-date"></span><span class="place-location"></span> -->
+                <table id="table_2">
+                    <tr>
+                        <td class="place-date" colspan="2"></td>
+                        <td class="place-location" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="p_time">08:30-11:50</td>
+                        <td class="p_status">正常</td>
+                        <td class="p_else"></td>
+                        <td class="p_back"></td>
+                    </tr>
+                    <tr>
+                        <td class="p_time">12:00-15:20</td>
+                        <td class="p_status">正常</td>
+                        <td class="p_else"></td>
+                        <td class="p_back"></td>
+                    </tr>
+                    <tr>
+                        <td class="p_time">15:30-18:50</td>
+                        <td class="p_status">正常</td>
+                        <td class="p_else"></td>
+                        <td class="p_back"></td>
+                    </tr>
+                    <tr>
+                        <td class="p_time">19:00-22:20</td>
+                        <td class="p_status" style="color:red; font-weight: 480;">停場</td>
+                        <td class="p_else">感恩節回家吃烤雞!</td>
+                        <td class="p_back"><a>取消停場</a></td>
+                    </tr>
+                </table>
+            <div class="single-time-result"></div>
         </div>
     </div>
     <script src="js/whatDayisToday.js"></script>
     <script src="js/daterangepicker-master/moment.min.js"></script>
     <script src="js/daterangepicker-master/daterangepicker.js"></script>
     <script src="js/date-single.js"></script>
+    <script>
+        $("form").submit(function(){
+            let day = $("#date-single").val();
+            let loca = $("#place option:selected").text();
+            let times = $("#time option:selected").val();
+            $(".place-date").text(day);
+            $(".place-location").text(loca);
+            if(times == ""||times == "0"){
+                $("#table_2").show();
+            }else{
+                let t = $("#time option:selected").text();
+                let str = `
+                <table>
+                    <tr>
+                        <td class="place-date" colspan="2">日期: ${day}</td>
+                        <td class="place-location" colspan="2">地點: ${loca}</td>
+                    </tr>
+                    <tr>
+                        <td class="item">場次</td>
+                        <td class="item">狀態</td>
+                        <td class="item">原因</td>
+                        <td class="item">功能</td>
+                    </tr>
+                    <tr>
+                        <td class="p_time">${t}</td>
+                        <td class="p_status">停場</td>
+                        <td class="p_else">國定假日</td>
+                        <td class="p_back"><button class="del">刪除</button></td>
+                    </tr>
+                </table>
+                `;
+                $("#table_2").hide();
+                $("#date-single").val("");
+                $("#place").val("");
+                $("#time").val("");
+                $(".single-time-result").append(str);
+            }
+            return false;
+        });
+    </script>
 </body>
 </html>
