@@ -43,8 +43,8 @@
                         <tr>
                             <td class="item">上課地點</td>
                             <td>
-                                <select name="place" id="" required>
-                                    <option value="">請選擇上課地點</option>
+                                <select name="place" id="place" required>
+                                    <option value="">請選擇</option>
                                     <option value="0">台北數位學堂</option>
                                     <option value="1">新竹數位學堂</option>
                                     <option value="2">台中數位學堂</option>
@@ -62,8 +62,8 @@
                         <tr>
                             <td class="item">上課場次</td>
                             <td>
-                                <select name="time" id="">
-                                    <option value="">請選擇上課場次</option>
+                                <select name="time" id="time">
+                                    <option value="">請選擇</option>
                                     <option value="1">08:30-11:50</option>
                                     <option value="2">12:00-15:20</option>
                                     <option value="3">15:30-18:50</option>
@@ -74,8 +74,8 @@
                         <tr>
                             <td class="item">座位選擇</td>
                             <td>
-                                <select name="seat" id="" required>
-                                    <option value="">請選擇座位編號</option>
+                                <select name="seat" id="seat" required>
+                                    <option value="">請選擇</option>
                                     <option value="0">A01</option>
                                     <option value="1">A02</option>
                                     <option value="2">B01</option>
@@ -88,13 +88,13 @@
                         <tr>
                             <td class="item">課程名稱</td>
                             <td>
-                                <select name="class" id="" required>
-                                    <option value="">Please Choose A Class You Want to Watch</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                <select name="class" id="class" required>
+                                    <option value="">請選擇</option>
+                                    <option value="0">線性代數</option>
+                                    <option value="1">離散數學</option>
+                                    <option value="2">演算法</option>
+                                    <option value="3">資料結構</option>
+                                    <option value="4">計組與計結</option>
                                 </select>
                             </td>
                         </tr>
@@ -185,20 +185,20 @@
                     <form action="">
                         <table>
                             <thead>
-                                <th style="width:15%" class="day">日期</th>
-                                <th style="width:18%" class="place">地點</th>
-                                <th style="width:17%" class="time">場次</th>
-                                <th style="width:18%" class="class">課程名稱</th>
-                                <th style="width:12%" class="seatnum">座位編號</th>
-                                <th style="width:17%" class="delete">修改/刪除</th>
+                                <th style="width:15%">日期</th>
+                                <th style="width:18%">地點</th>
+                                <th style="width:17%">場次</th>
+                                <th style="width:18%">課程名稱</th>
+                                <th style="width:12%">座位編號</th>
+                                <th style="width:17%">修改/刪除</th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>A002</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">A002</td>
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
@@ -251,17 +251,37 @@
     <script src="js/whatDayisToday.js"></script>
     <script>
         $('.change').click(function(){
+            // return ture;
             $("#light-box").show();
             let item = $(this).parent().parent();
-            // console.log(item);
-            $('.light-submit').unbind("click").click(function(){
+            $('form').submit(function(){
                 alert("修改完成");
                 $('#light-box').hide();
+                let p = $("#place option:selected").text();
+                let d = $("#date-singleChange").val();
+                let t = $("#time option:selected").text();
+                let s = $("#seat option:selected").text();
+                let c = $("#class option:selected").text();
+                let str = `
+                    <tr class="tr">
+                        <td class="day">${d}</td>
+                        <td class="place">${p}</td>
+                        <td class="time">${t}</td>
+                        <td class="class">${c}</td>
+                        <td class="seatnum">${s}</td>
+                        <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
+                    </tr>
+                `;
+                console.log(str);
+                
+                item.replaceWith(str);
+                $(".tr").css("backgroundColor","yellow");
                 $("#date-singleChange").val("");
                 $('#light-box select').val("");
                 $('.student_info').show();
+
                 // console.log(item);
-                item.css("backgroundColor","yellow");
+                // str.addClass("new");
                 return false;
             })
         })

@@ -57,6 +57,10 @@
     background-color: #ffc880;
     border: 0.8px solid #ffb75a;
 }
+#mainContent .search .control-bar button:hover {
+    background-color: #996b2e;
+    color: #fff;
+}
 .data {
     display: none;
 }

@@ -59,6 +59,7 @@
 /* 結果資料 */
 #mainContent dd {
     display: none;
+    margin: 0 10%;
     /* text-align: center; */
 }
 #mainContent .data {
@@ -99,33 +100,35 @@
 } */
 
 /* 表格顯示方式 */
-#mainContent .ctr_btn {
-    padding: 30px;
+/* #mainContent .ctr_btn {
+    padding: 30px 0;
     max-width: 1000px;
     margin: auto;
     font-size: 17px;
     text-align: left;
     position: relative;
-}
-/*#mainContent .ctr_btn a, */#mainContent .ctr_btn .condition {
+} */
+/*#mainContent .ctr_btn a, #mainContent .ctr_btn .condition {
     display: inline-block;
-}
-.ctr_btn .condition span, .ctr_btn .condition input[type="radio"]{
+}*/
+/* .ctr_btn .condition span, .ctr_btn .condition input[type="radio"]{
     vertical-align: middle;
     letter-spacing: 0.8px;
-}
-.ctr_btn .record {
+} */
+.record {
     background-color: #ffe0cd;
-    position: absolute;
+    /* position: absolute;
     right: 30px;
-    bottom: 30px;
+    bottom: 30px; */
+    float: right;
+    margin-bottom: 5px;
     padding: 3px 12px;
     letter-spacing: 0.8px;
     border: 0.8px solid #597538;
     border-radius: 25px;
     font-size: 15.5px;
 }
-.ctr_btn .record:hover {
+.record:hover {
     color: #fff;
     background-color: #386e49;
 }
@@ -158,13 +161,11 @@
     min-width: 600px;
 }
 #mainContent #table_2 th, #mainContent #table_ th {
-    line-height: 35px;
     border: 0.8px solid #46704f;
     background-color: #b0df7c;
     font-weight: 420;
 }
 #mainContent #table_2 tr,#mainContent #table_ tr {
-    line-height: 35px;
     text-align: center;
 }
 #mainContent #table_2 td, #mainContent #table_ td {
