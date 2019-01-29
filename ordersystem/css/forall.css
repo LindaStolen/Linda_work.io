@@ -2,7 +2,7 @@
 #container {
     display: grid;
     grid-template-columns: 17% 83%;
-    padding: 0 20px 0 30px;
+    padding: 0 0 0 30px;
     position: relative;
 }
 .top {
@@ -59,7 +59,7 @@
 #container .nav_side {
     min-width: 220px;
     padding-top: 50px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 #container .nav_side ul {
     padding: 0 0 10px 0;

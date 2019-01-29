@@ -1,6 +1,6 @@
 #mainContent {
     margin-top: 70px;
-    padding: 50px 50px 50px 80px;
+    padding: 50px 20px;
     min-width: 700px;
 }
 #mainContent .sub-title {
@@ -11,25 +11,7 @@
     font-size: 20px;
     font-weight: 400;
 }
-/* .location {
-    margin: 0 50px 50px 0;
-    padding-top: 30px;
-    font-size: 18px;
-    float: right;
-}
-.location li {
-    display: inline-block;
-    margin: 0 10px;
-}
-.location li i {
-    margin-right: 5px;
-}
-.location select {
-    height: 25px;
-    width: 130px;
-    font-size: 16px;
-    margin-top: 3px;
-} */
+
 /* input */
 .search {
     margin: 80px 0;
@@ -95,31 +77,8 @@
     font-weight: 430;
     border-bottom: none;
 }
-/* #mainContent .data .record {
-    text-align: center;
-} */
-
-/* 表格顯示方式 */
-/* #mainContent .ctr_btn {
-    padding: 30px 0;
-    max-width: 1000px;
-    margin: auto;
-    font-size: 17px;
-    text-align: left;
-    position: relative;
-} */
-/*#mainContent .ctr_btn a, #mainContent .ctr_btn .condition {
-    display: inline-block;
-}*/
-/* .ctr_btn .condition span, .ctr_btn .condition input[type="radio"]{
-    vertical-align: middle;
-    letter-spacing: 0.8px;
-} */
 .record {
     background-color: #ffe0cd;
-    /* position: absolute;
-    right: 30px;
-    bottom: 30px; */
     float: right;
     margin-bottom: 5px;
     padding: 3px 12px;
@@ -133,7 +92,6 @@
     background-color: #386e49;
 }
 #mainContent .ctr_btn .condition li {
-    /* float: left; */
     margin: 0 5px;
 }
 #mainContent .ctr_btn input {
@@ -170,4 +128,11 @@
 }
 #mainContent #table_2 td, #mainContent #table_ td {
     border: 0.8px solid #46704f;
+}
+/* 套件類別名稱 */
+#table_2_paginate .paginate_button {
+    padding: 3px 8px;
+}
+#table_2_paginate {
+    padding-top: 0.755em;
 }

@@ -1,0 +1,54 @@
+/* 預約記錄燈箱 */
+#light-box {
+    padding: 80px 0;
+}
+#light-box h1 {
+    display: inline-block;
+    width: 320px;
+    margin-left: 8%;
+    font-size: 28px;
+    font-weight: 450;
+    color: #641c00;
+    letter-spacing: 1.5px;
+    border-bottom: 0.8px dashed #641c00;
+}
+#light-box #table_1 {
+    width: 85%;
+    margin: 70px auto 25px;
+    font-size: 17.5px;
+    line-height: 28px;
+}
+/* #order-info_wrapper {
+    width: 100%;
+    margin: 20px 0;
+} */
+#light-box #table_1 td {
+    width: 25%;
+    border: 0.8px solid #aaa;
+    background-color: #d2f4ff;
+    padding-left: 8px;
+    height: 35px;
+}
+#order-info td {
+    text-align: center;
+    background-color: #d2f4ff;
+    border: 0.8px solid #aaa;
+    padding: 3px 5px;
+}
+#light-box #table_1 .item, #order-info .item th{
+    text-align:center;
+    background-color: #96dbdb;
+    border: 0.8px solid #aaa;
+    font-weight: 420;
+}
+/* 套件類別名稱 */
+#order-info_wrapper {
+    width: 85%;
+    margin: 25px auto;
+}
+#order-info_paginate .paginate_button {
+    padding: 3px 8px;
+}
+#order-info_paginate {
+    padding-top: 0.755em;
+}

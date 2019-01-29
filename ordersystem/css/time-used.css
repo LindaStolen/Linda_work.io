@@ -1,6 +1,6 @@
 #mainContent {
     margin-top: 70px;
-    padding: 50px 50px 50px 80px;
+    padding: 50px 20px;
     min-width: 700px;
 }
 #mainContent .sub-title {
@@ -11,29 +11,6 @@
     font-size: 20px;
     font-weight: 400;
 }
-/* .location {
-    margin: 0 50px 50px 0;
-    padding-top: 30px;
-    font-size: 18px;
-    float: right;
-}
-.location li, #mainContent .place-data li {
-    display: inline-block;
-    margin: 0 10px;
-}
-.date {
-    display: inline-block;
-}
-.location li i {
-    margin-right: 5px;
-}
-.location select, #mainContent .location input {
-    height: 23px;
-    width: 140px;
-    font-size: 16px;
-    vertical-align: middle;
-} */
-
 /* 顯示資料 */
 #mainContent .search {
     margin: 80px 0;
@@ -120,9 +97,6 @@ dl #student_info ul .item {
     border: 0.8px solid #c08c6d;
     text-align: center;
 }
-/* #mainContent table td, #mainContent table tr {
-    line-height: 30px;
-} */
 #mainContent .data h3 {
     font-size: 22px; 
     font-weight: 420;
@@ -154,6 +128,13 @@ dl #student_info ul .item {
     padding:  5px;
     margin: 30px 0;
     border-bottom: 1px solid #ccc;
+}
+/* 套件類別名稱 */
+#data-1_paginate .paginate_button {
+    padding: 3px 8px;
+}
+#data-1_paginate {
+    padding-top: 0.755em;
 }
 /* 頁籤 */
 .tabs {

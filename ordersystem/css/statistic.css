@@ -1,6 +1,6 @@
 #mainContent {
     margin-top: 70px;
-    padding: 50px 50px 50px 80px;
+    padding: 50px 20px;
     min-width: 700px;
 }
 #mainContent .sub-title {
@@ -82,8 +82,8 @@ table button {
 } */
 .tabs {
     clear: left;
-    min-width: 650px;
-    margin: 50px 30px 0 0;    
+    max-width: 85%;
+    margin: 50px auto 0;
 }
 #mainContent .tabs ul {
     height: 32px;

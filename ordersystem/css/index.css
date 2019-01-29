@@ -1,19 +1,8 @@
 /* content */
 #mainContent {
     margin-top: 70px;
-    padding: 50px 50px 50px 80px;
+    padding: 50px 20px;
     min-width: 700px;
-}
-/* start page */
-#mainContent .start {
-    width: 500px;
-    height: 500px;
-    margin: 80px auto;
-    border-radius: 50%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.521),rgba(255, 255, 255, 0.521)), url(../images/photo-1112.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
 }
 /* 學生到班狀況 */
 #mainContent .start p {
@@ -58,7 +47,7 @@
 /* 學生資料表格 */
 #mainContent table {
     margin: auto;
-    min-width: 650px;
+    width: 85%;
 }
 #mainContent table th {
     font-size: 18px;

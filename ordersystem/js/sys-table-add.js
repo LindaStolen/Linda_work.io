@@ -7,7 +7,7 @@ let arr = new Array();
 let temp = [];
 
 $("#result").hide();
-// $(".show").hide();
+$(".show").hide();
 
 $("input[name='selectAll']").click(function(){
     if($(this).prop('checked')){

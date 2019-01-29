@@ -13,11 +13,11 @@ $("#date-single").daterangepicker({
         },
     minDate: moment(),
     maxDate: moment().subtract(-7, 'days'),
-    "autoApply": false,
+    "autoApply": false
 },function(start, end, label) {
     // console.log('New date selected: ' + start.format('YYYY-MM-DD'));
   });
-//   console.log($("#date-single"));
+  console.log($("#date-single"));
 $("#date-single").on("apply.daterangepicker", function(ev, picker) {
     $(this).val(picker.startDate.format("YYYY-MM-DD"));
 });

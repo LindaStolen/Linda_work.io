@@ -202,43 +202,43 @@
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>A003</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">A003</td>
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>A004</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">A004</td>
                                     <td class="ctr_b"><a class="change" >修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>B004</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">B004</td>
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>B001</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">B001</td>
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
-                                    <td>2018-11-15</td>
-                                    <td>台北數位學堂</td>
-                                    <td>8:00-11:50</td>
-                                    <td>作業研究</td>
-                                    <td>B002</td>
+                                    <td class="day">2018-11-15</td>
+                                    <td class="place">台北數位學堂</td>
+                                    <td class="time">8:00-11:50</td>
+                                    <td class="class">作業研究</td>
+                                    <td class="seatnum">B002</td>
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                             </tbody>
@@ -252,8 +252,13 @@
     <script>
         $('.change').click(function(){
             // return ture;
-            $("#light-box").show();
             let item = $(this).parent().parent();
+            let td = $(this).parent();
+            $("#light-box").show(function(){
+                let arr = [ ];
+            });
+            // console.log($(item).find($(".place")));
+            $(td).prevAll().text("");
             $('form').submit(function(){
                 alert("修改完成");
                 $('#light-box').hide();
@@ -262,26 +267,15 @@
                 let t = $("#time option:selected").text();
                 let s = $("#seat option:selected").text();
                 let c = $("#class option:selected").text();
-                let str = `
-                    <tr class="tr">
-                        <td class="day">${d}</td>
-                        <td class="place">${p}</td>
-                        <td class="time">${t}</td>
-                        <td class="class">${c}</td>
-                        <td class="seatnum">${s}</td>
-                        <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
-                    </tr>
-                `;
-                console.log(str);
-                
-                item.replaceWith(str);
-                $(".tr").css("backgroundColor","yellow");
+                $(item).find($(".day")).text(d);
+                $(item).find($(".place")).text(p);
+                $(item).find($(".time")).text(t);
+                $(item).find($(".seatnum")).text(s);
+                $(item).find($(".class")).text(c);
+                $(item).css("backgroundColor","yellow");
                 $("#date-singleChange").val("");
                 $('#light-box select').val("");
                 $('.student_info').show();
-
-                // console.log(item);
-                // str.addClass("new");
                 return false;
             })
         })

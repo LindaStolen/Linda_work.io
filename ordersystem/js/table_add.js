@@ -78,10 +78,38 @@ $('.submit').click(function(){
     
     $(".revise").click(function(){
         $("#light-box").show();
+        let change = $(this).parent().parent();
+        $("form").submit(function(){
+            $("#light-box").hide();
+            let rename = $("#rename").val();
+            let newItem = $(".search-choice").text();
+            $(change).find($(".g-name")).text(rename);
+            $(change).find($(".p-item")).text(newItem);
+            $("#table_1 input").val("");
+            $(".search-choice").detach();
+            $(".chosen-results li").removeClass("result-selected").addClass("active-result");
+            $("#table_1 textarea").val("");
+            return false;
+        });
     });
     $(".no").click(function(){
         $(".no").parent().parent().remove();
-    })
+    });
+    // 關燈箱
+    $(".close").click(function(){
+        $("#light-box").hide();
+        $("#table_1 input").val("");
+        $(".search-choice").detach();
+        $(".chosen-results li").removeClass("result-selected").addClass("active-result");
+        $("#table_1 textarea").val("");
+    });
+    $(".light-del").click(function(){
+        $("#light-box").hide();
+        $("#table_1 input").val("");
+        $(".search-choice").detach();
+        $(".chosen-results li").removeClass("result-selected").addClass("active-result");
+        $("#table_1 textarea").val("");
+    });
     return false;
 });
 

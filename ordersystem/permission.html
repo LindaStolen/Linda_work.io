@@ -23,9 +23,7 @@
         <h1 class="title">預約座位系統</h1>
         <ul>
             <li id="date"></li>
-            <!-- <li class="catalog"><a href="#"><i class="far fa-list-alt"></i>回目錄</a></li> -->
             <li class="manager"><a href="start.html" id="catelog"><i class="far fa-list-alt"></i>回目錄</a><a href="#" id="user"><i class="fas fa-user"></i>管理者</a></li>
-            <!-- <li class="enter"><a href="#"><i class="fas fa-sign-out-alt"></i>登出</a></li> -->
         </ul>
     </div>
     <div class="user clearfix">
@@ -41,10 +39,10 @@
             <i class="fas fa-times-circle close"></i>
             <!-- <div class="close"><i class="fas fa-times-circle"></i></div> -->
             <form action="">
-                <table id=table_1>
+                <table id="table_1">
                     <tr>
                         <td class="item">群組名稱</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" id="rename" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td class="item">權限項目</td>
@@ -67,12 +65,13 @@
                     <tr>
                         <td class="item">備註</td>
                         <td>
-                            <textarea name="" id="" cols="35" rows="8"></textarea>
+                            <textarea name="" id="" cols="35" rows="8" autocomplete="off"></textarea>
                         </td>
                     </tr>
                 </table>
+                <div class="ctr-btn"><button type="submit" class="light-submit">確定</button><button type="reset" class="light-del">取消</button></div>
             </form>
-            <div class="ctr-btn"><a href="" class="light-submit">確定</a><a href="" class="light-del">取消</a></div>
+            <!-- <div class="ctr-btn"><button type="submit" class="light-submit">確定</button><button type="reset" class="light-del">取消</button></div> -->
         </div>
     </div>
     <div id="container">
@@ -115,37 +114,6 @@
     <!-- content -->
         <div id="mainContent">
             <h2 class="sub-title">權限管理 \ 群組管理</h2>
-            <!-- <div class="clearfix">
-                <ul class="location">
-                    <li class="place">
-                        <div><i class="fas fa-map-marker-alt"></i>
-                            <select name="" id="tkb">
-                                <option value="">總公司</option>
-                                <option value="">新竹數位學堂</option>
-                                <option value="">台南數位學堂</option>
-                                <option value="">中壢數位學堂</option>
-                                <option value="">高雄數位學堂</option>
-                                <option value="">台北數位學堂</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="date">
-                        <div><i class="far fa-calendar-alt"></i>
-                            <input type="text" id="datepicker" value="2018-11-07">
-                        </div>
-                    </li>
-                    <li class="time">
-                        <div><i class="far fa-clock"></i>
-                            <select name="" id="">
-                                <option value="">08:30-11:50</option>
-                                <option value="">08:30-11:50</option>
-                                <option value="">08:30-11:50</option>
-                                <option value="">08:30-11:50</option>
-                            </select>
-                        </div>
-                    </li>
-                </ul>
-            </div> -->
             <div class="add-g">
                 <form action="" autocomplete="off">
                     <table>
@@ -227,12 +195,6 @@
         $(function(){
             $('.multify').chosen();
         });
-        // $(".revise").click(function(){
-        //     $("#light-box").show();
-        // })
-        $(".close").click(function(){
-            $("#light-box").hide();
-        })
     </script>
     <script src="js/chosen.js"></script>
     <script src="js/whatDayisToday.js"></script>

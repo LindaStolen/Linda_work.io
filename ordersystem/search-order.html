@@ -95,21 +95,8 @@
                     <li class="item">學員姓名 :</li>
                     <li class="">蛙拉拉</li>
                 </ul>
-                <!-- <div class="record"><a href="" target="_blank">預約更改記錄</a></div> -->
             </div>
-            <!-- <div class="ctr_btn"> -->
-                <!-- <div class="condition clearfix">
-                    <li><span>排序</span>
-                        <input type="radio" name="sequence" id="" value="d" checked="checked"><span>上課日期</span>
-                        <input type="radio" name="sequence" id="" value="n"><span>課程名稱</span>
-                    </li>
-                    <li>
-                        <span>日期區間 :</span>
-                        <input type="text" name="" id="date-range-search" autocomplete="off" required><button>查詢</button>
-                    </li>
-                </div> -->
-                <a href="#" target="_blank" class="record">預約更改紀錄</a>
-            <!-- </div> -->
+                <a href="#" class="record">預約更改紀錄</a>
             <form action="">
                 <table id="table_2" class="order-h">
                     <thead>
@@ -226,6 +213,9 @@
     <script>
         $("#table_2").DataTable(function(){
 
+        });
+        $(".record").click(function(){
+            window.open('order-record.html','預約更改紀錄',config='height=450px,width=1080px');
         });
     </script>
 </body>

@@ -16,7 +16,7 @@ $(document).ready(function(){
         <ul class="new-edit">
             <li class="title">本次更新狀態</li>
             <li>經手人:吧哪哪</li>
-            <li>日期: <input type="text" name="" id=""></li>
+            <li>日期: <input type="text" id="date-single" autocomplete="off"></li>
             <li>原因: <input type="text"></li>
             <li>狀態: 
                 <select name="" id="status">
@@ -28,7 +28,7 @@ $(document).ready(function(){
             </li>
         </ul>                                
     </td>
-    <td><button type="submit">確定</button></td></tr>`
+    <td><button type="submit">確定</button></td></tr>`;
     // $(".edit").hide();
     $(".fa-edit").click(function(){
         var tr = $(this).parent().parent();
@@ -37,6 +37,29 @@ $(document).ready(function(){
             tr.after(list);
             $("tr.edit").addClass("edit-hide");
             status = true;
+            $("#date-single").daterangepicker({
+                "autoUpdateInput": false,
+                "singleDatePicker": true,
+                "locale": {
+                    format: "YYYY-MM-DD",
+                    applyLabel: "確定",
+                    cancelLabel: "清除",
+                    // customRangeLabel: "自訂日期區間",
+                    daysOfWeek: ["日", "一", "二", "三", "四", "五", "六"],
+                    monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+                    "7月", "8月", "9月", "10月", "11月", "12月"
+                    ],
+                },
+                minDate: moment(),
+                maxDate: moment().subtract(-7, 'days'),
+                "autoApply": false
+                },function(start, end, label) {
+                // console.log('New date selected: ' + start.format('YYYY-MM-DD'));
+            });
+              console.log($("#date-single"));
+            $("#date-single").on("apply.daterangepicker", function(ev, picker) {
+                $(this).val(picker.startDate.format("YYYY-MM-DD"));
+            });
             console.log("success");
             return false;
         } else if (status == true){
