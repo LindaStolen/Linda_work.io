@@ -185,15 +185,17 @@
                     <form action="">
                         <table>
                             <thead>
-                                <th style="width:15%">日期</th>
+                                <th style="width:12%">預約日期</th>
+                                <th style="width:12%">上課日期</th>
                                 <th style="width:18%">地點</th>
-                                <th style="width:17%">場次</th>
+                                <th style="width:15%">場次</th>
                                 <th style="width:18%">課程名稱</th>
-                                <th style="width:12%">座位編號</th>
-                                <th style="width:17%">修改/刪除</th>
+                                <th style="width:10%">座位編號</th>
+                                <th style="width:12%">修改/刪除</th>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -202,6 +204,7 @@
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -210,6 +213,7 @@
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -218,6 +222,7 @@
                                     <td class="ctr_b"><a class="change" >修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -226,6 +231,7 @@
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -234,6 +240,7 @@
                                     <td class="ctr_b"><a class="change">修改</a><a class="delete">刪除</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="order-day">2018-11-08</td>
                                     <td class="day">2018-11-15</td>
                                     <td class="place">台北數位學堂</td>
                                     <td class="time">8:00-11:50</td>
@@ -254,14 +261,12 @@
             // return ture;
             let item = $(this).parent().parent();
             let td = $(this).parent();
-            $("#light-box").show(function(){
-                let arr = [ ];
-            });
+            $("#light-box").show();
             // console.log($(item).find($(".place")));
-            $(td).prevAll().text("");
             $('form').submit(function(){
                 alert("修改完成");
                 $('#light-box').hide();
+                $(td).prevAll().text("");
                 let p = $("#place option:selected").text();
                 let d = $("#date-singleChange").val();
                 let t = $("#time option:selected").text();
