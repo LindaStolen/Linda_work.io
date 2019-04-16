@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>產品內頁</title>
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("top").style.display = "block";
+            } else {
+                document.getElementById("top").style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        $(document).ready(function(){
+            $('#book-inner').slick({
+                dots: false,
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll:3,
+                arrows:false,
+            });
+            $('#recommond-book').slick({
+                dots: false,
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll:3,
+                responsive: [ 
+                {
+                    breakpoint: 572,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows:false,
+                    }
+                }]
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wishbox text-center modal" role="dialog" aria-hidden="true">
+        <div class="add-light d-inline-block modal-dialog modal-content modal-sm rounded-0" role="document">
+            <span class="title">Tip
+                <button type="button" class="close btn btn-light" data-dismiss="modal" arial-label="Close">
+                    <span arial-hidden="true">&times;</span>
+                </button>
+            </span>
+            <span>已成功加入許願清單！可至會員專區查看。</span>
+        </div>
+    </div>
+    <div class="buybox text-center modal" role="dialog" aria-hidden="true">
+        <div class="add-light d-inline-block modal-dialog modal-content modal-sm rounded-0" role="document">
+            <span class="title">Tip
+                <button type="button" class="close btn btn-light" data-dismiss="modal" arial-label="Close">
+                    <span arial-hidden="true">&times;</span>
+                </button>
+            </span>
+            <span>已成功加入購物車！可至購物車查看。</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="#">
+            <img src="images/bookshop-s-06.png" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">普考</button>
+            </form>
+            <!-- <div class="btn-group ml-lg-auto text-center">
+                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray-400 mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-book fa-lg"></i>
+                    書籍分類
+                </boutton>
+                <div class="dropdown-menu dropdown-menu-right ml-3 border border-gray rounded" aria-labelledby="category-all">
+                    <button class="dropdown-item" type="button">考試用書</button>
+                    <button class="dropdown-item" type="button">我想上課</button>
+                    <button class="dropdown-item" type="button">課程教具</button>
+                </div>
+            </div> -->
+            <ul class="navbar-nav px-3 ml-lg-auto">
+                <li class="nav-item mx-lg-2 dropdown my-lg-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-book fa-lg mr-2"></i><span>書籍分類</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-light rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">考試用書</a>
+                        <a class="dropdown-item" href="#">我想上課</a>
+                        <a class="dropdown-item" href="#">課程教具</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>hi, 會員</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">會員設定</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                        <a class="dropdown-item" href="#">訂單查詢</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 my-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
+                    </a>
+                    <div id="wish-list" class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="wish-list">
+                        <a class="dropdown-item" href="#">運費計算方式</a>
+                        <a class="dropdown-item" href="#">結帳方式</a>
+                        <a class="dropdown-item" href="#">課程報名</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-lg-5 mt-3 pt-5">
+        <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="cartMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/書城版型設計_cart.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="cartMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="recentMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/書城版型設計_recent-look.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="recentMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
+            </div>
+        </div>
+                    
+        <table class="wrap position-fixed" style="right:0; bottom:10%; max-width:10%;">
+            <tr>
+                <td>
+                    <a href="#" id="top">
+                        <img src="images/to-top-07.png" alt="" class="img-fluid">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td href="#" class="message">
+                    <a href="#" class="message">
+                        <img src="images/message-07.png" alt="" class="img-fluid">
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <nav aria-label="breadcrumb" class="mx-lg-5 mt-sm-5 pl-lg-5">
+            <ol class="breadcrumb pl-lg-5 ml-lg-5">
+                <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
+                <li class="breadcrumb-item"><a href="#">國營考試</a></li>
+                <li class="breadcrumb-item active" aria-current="page">講錯重點系列</li>
+            </ol>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-1"></div>
+                <div class="col-sm-12 col-lg-7">
+                    <div class="row pl-lg-3">
+                        <div class="product-detail col-lg-6 col-12">
+                            <div class="container text-center pb-2">
+                                <img src="images/9789863455448.jpg" alt="" class="img-fluid" style="box-shadow: 2px 2px 3px #dbc;">
+                            </div>
+                            <div class="container-fluid border border-green rounded-top rounded-bottom mt-1">
+                                <div id="book-inner" class="my-2">
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=5" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=6" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=71" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-detail pl-lg-5 col-12 col-lg-6 mb-5">
+                            <h4 style="letter-spacing:3px;" class="my-3 pb-1 pr-2 border-bottom border-dark">國營事業講重點</h4>
+                            <div class="book-name mb-3"><span class="h3 font-weight-bold pr-2">法學緒論</span><!--<div class="display-6">-->(含法律常識)<!--</div>--></div>
+                            <ul class="detail-list pl-0" style="list-style:none; font-size: 18px;">
+                                <li class="mb-2 editor text-gray">作者/蔣仲典</li>
+                                <li class="mb-2 isbn text-gray">ISBN/9758665955788</li>
+                                <li class="mb-2 vision text-gray">版本/一版</li>
+                                <li class="mb-2 publish-date text-gray">出版日期/2018年09月</li>
+                                <li class="mb-2 pricing text-gray">定價/新台幣600元</li>
+                                <li class="mb-2 count text-gray">優惠折扣/75折</li>
+                            </ul>
+                            <a id="wish" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0 mr-lg-2" data-toggle="modal" data-target=".wishbox">
+                                <img src="images/wish-08.png" alt="">
+                            </a>
+                            <a id="add-buy" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0" data-toggle="modal" data-target=".buybox">
+                                <img src="images/add-08.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content p-lg-3">
+                        <div class="border-bottom border-green-02" style="line-height: 30px;">
+                            <span class="lable tag bg-green-02 px-3 py-1 rounded-top text-white" style="font-size:18px; letter-spacing: 15px; ">內容</span>
+                        </div>
+                        <div class="book-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">書本內容</span>
+                            <p class="pb-lg-3 pb-3 border-bottom border-light">
+                                未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
+                                人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
+                            </p>
+                        </div>
+                        <div class="editor-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">作者介紹</span>
+                            <p class="pb-lg-3 pb-3 border-bottom border-light">
+                                未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
+                                人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
+                            </p>
+                        </div>
+                        <div class="pic-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">內容試閱</span>
+                            <div class="row m-1 pb-lg-3 pb-3 border-bottom border-light">
+                                <img src="http://source.unsplash.com/random/250x180" alt="" class="img-fluid">
+                                <img src="http://source.unsplash.com/random/250x180?sig=1" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="video-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                            <span class="lable text-coffee d-inline-block pb-2">搶先試聽</span>
+                            <div class="embed-responsive embed-responsive-16by9" style="max-width:94%;">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
+                            </div>
+                        </div>
+                        <div class="border-bottom border-green-02 pt-5" style="line-height: 30px;">
+                            <span class="lable tag bg-green-02 px-3 py-1 rounded-top text-white" style="font-size:20px;">買這本書的人也買了</span>
+                        </div>
+                        <div class="container-fluid">
+                            <div id="recommond-book" class="my-3 mb-3">
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                                <div class="px-2">
+                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            <div class="ad my-4 my-lg-0 col-lg-3 text-center">
+                <a href="#">
+                    <img class="my-3 img-fluid" src="images/CJ63_CJ73_800_418_1080101_0331.jpg" class="rounded" alt="">
+                </a>
+                <a href="#">
+                    <img class="my-3 img-fluid" src="images/CJ63_CJ73_800_418_1080101_0331.jpg" class="rounded" alt="">
+                </a>
+                <div class="embed-responsive embed-responsive-4by3 mx-auto" style="width:300px;">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3 col-sm-12 col-lg-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話：(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3">
+                <ul id="taso" class="p-2" style="list-style:none;">
+                    <li class="lable bold text-coffee" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">公職書苑</a>
+                    </li>
+                    <li class="lable bold text-coffee" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="connection" class="p-2" style="list-style:none;">
+                    <li class="lable bold text-coffee" style="font-size:16.5px;">
+                        相關連結
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">資料增補</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">實體書店</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">圖書目錄下載</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">防詐騙宣導</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">性騷擾防治相關</a>
+                    </li>
+                </ul>
+                <ul id="buy" class="p-2" style="list-style:none;">
+                    <li class="lable bold text-coffee" style="font-size:16.5px;">
+                        線上購買
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">XO題庫測驗學院</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-light" style="font-size:16px">博客來</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">墊腳石購物網</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">金石堂</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-light" style="font-size:16px">三民網路書店</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.  客服專線：02-23814314</p>
+    </div>
+</body>
+</html>
