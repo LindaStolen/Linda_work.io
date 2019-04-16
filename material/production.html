@@ -56,24 +56,42 @@
     </script>
 </head>
 <body>
-    <div class="wishbox text-center modal" role="dialog" aria-hidden="true">
-        <div class="add-light d-inline-block modal-dialog modal-content modal-sm rounded-0" role="document">
-            <span class="title">Tip
-                <button type="button" class="close btn btn-light" data-dismiss="modal" arial-label="Close">
-                    <span arial-hidden="true">&times;</span>
-                </button>
-            </span>
-            <span>已成功加入許願清單！可至會員專區查看。</span>
+    <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已成功加入願望清單，請至會員專區查看！
+                    <br>
+                    <br>
+                    <br>
+                    <b style="color:red;">但你真得確定不現在買嗎！！！</b>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="buybox text-center modal" role="dialog" aria-hidden="true">
-        <div class="add-light d-inline-block modal-dialog modal-content modal-sm rounded-0" role="document">
-            <span class="title">Tip
-                <button type="button" class="close btn btn-light" data-dismiss="modal" arial-label="Close">
-                    <span arial-hidden="true">&times;</span>
-                </button>
-            </span>
-            <span>已成功加入購物車！可至購物車查看。</span>
+    <div class="modal" id="buybox"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已經幫你放到購物車裡囉！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-green btn-sm" data-dismiss="modal">還沒買夠買起來！</button>
+                    <button type="button" class="btn btn-light btn-sm">這些就可以了,結帳！</button>
+                </div>
+            </div>
         </div>
     </div>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
@@ -84,14 +102,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
-            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-7">
+                <input class="form-control my-2 rounded-0" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append my-2">
                     <a class="input-group-text fas fa-search py-2" href="#"></a>
                 </div>
-                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">國營考試</button>
-                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">高考</button>
-                <button class="keyWord btn btn-sm ml-1 bg-green" type="button">普考</button>
+                <div class="keywords mb-sm-2 mb-lg-0 mt-lg-2 pt-lg-1 col-sm-12 col-lg-5 px-0">
+                    <button class="keyWord btn btn-sm ml-1 bg-green" type="button">國營考試</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-green" type="button">高考</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-green" type="button">普考</button>
+                </div>
             </form>
             <!-- <div class="btn-group ml-lg-auto text-center">
                 <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray-400 mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,7 +130,7 @@
                         <i class="fas fa-book fa-lg mr-2"></i><span>書籍分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-light rounded" aria-labelledby="member">
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
                         <a class="dropdown-item" href="#">考試用書</a>
                         <a class="dropdown-item" href="#">我想上課</a>
                         <a class="dropdown-item" href="#">課程教具</a>
@@ -132,11 +152,6 @@
                     <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                         <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
                     </a>
-                    <div id="wish-list" class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="wish-list">
-                        <a class="dropdown-item" href="#">運費計算方式</a>
-                        <a class="dropdown-item" href="#">結帳方式</a>
-                        <a class="dropdown-item" href="#">課程報名</a>
-                    </div>
                 </li>
             </ul>
         </div>
@@ -154,7 +169,7 @@
         </div>
         <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
             <a class="dropdown-toggle" href="#" role="button" id="recentMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="images/書城版型設計_recent-look.png" alt="" class="img-fluid">
+                <img src="images/書城版型設計_recent-look.png" alt="" class="img-fluid">
             </a>
             <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="recentMenuLink">
                 <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
@@ -218,12 +233,14 @@
                                 <li class="mb-2 pricing text-gray">定價/新台幣600元</li>
                                 <li class="mb-2 count text-gray">優惠折扣/75折</li>
                             </ul>
-                            <a id="wish" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0 mr-lg-2" data-toggle="modal" data-target=".wishbox">
-                                <img src="images/wish-08.png" alt="">
-                            </a>
-                            <a id="add-buy" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0" data-toggle="modal" data-target=".buybox">
-                                <img src="images/add-08.png" alt="">
-                            </a>
+                            <div class="d-flex">
+                                <a id="wish" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0 mr-lg-2" data-toggle="modal" data-target="#wishbox">
+                                    <img src="images/wish.jpg" alt="" class="img-fluid" style="max-width:90%">
+                                </a>
+                                <a id="add-buy" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0" data-toggle="modal" data-target="#buybox">
+                                    <img src="images/buy.jpg" alt="" class="img-fluid" style="max-width:90%">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="content p-lg-3">

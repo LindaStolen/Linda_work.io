@@ -3815,7 +3815,7 @@ tbody.collapse.show {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 9997;
   display: none;
   float: left;
   min-width: 85px;
@@ -6321,7 +6321,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 9999;
   display: none;
   overflow: hidden;
   outline: 0;
@@ -6387,7 +6387,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 9999;
   background-color: #000;
 }
 
@@ -8370,7 +8370,7 @@ button.bg-dark:focus {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 9997;
 }
 
 .fixed-bottom {
@@ -8378,7 +8378,7 @@ button.bg-dark:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 9997;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -8386,7 +8386,7 @@ button.bg-dark:focus {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 9996;
   }
 }
 

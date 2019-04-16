@@ -59,6 +59,11 @@
         })
         
     </script>
+    <style>
+        .forBook, .blocks {
+            z-index: -999;
+        }
+    </style>
     </head>
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
@@ -95,7 +100,7 @@
                         <i class="fas fa-book fa-lg mr-2"></i><span>書籍分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                    <div class="dropdown-menu dropdown-menu-right border border-light rounded" aria-labelledby="member">
                         <a class="dropdown-item" href="#">考試用書</a>
                         <a class="dropdown-item" href="#">我想上課</a>
                         <a class="dropdown-item" href="#">課程教具</a>
@@ -117,17 +122,12 @@
                     <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                         <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
                     </a>
-                    <div id="wish-list" class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="wish-list">
-                        <a class="dropdown-item" href="#">運費計算方式</a>
-                        <a class="dropdown-item" href="#">結帳方式</a>
-                        <a class="dropdown-item" href="#">課程報名</a>
-                    </div>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container-fluid mt-lg-5 mt-3 pt-5">
-        <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%;">
+        <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="images/書城版型設計_cart.png" alt="" class="img-fluid">
             </a>
@@ -137,7 +137,7 @@
                 <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
             </div>
         </div>
-        <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%;">
+        <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="images/書城版型設計_recent-look.png" alt="" class="img-fluid">
             </a>
