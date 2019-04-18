@@ -39,14 +39,15 @@ $purple:  #6f42c1 !default;
 $indigo:  #6610f2 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
-$green-01:  #22AC38 !default;
-$green-02:  #00913A !default;
-$green-03:  #006934 !default;
+$green:   #7FC747 !default;
+$green-01:  #9DD4BE !default;
+$green-02:  #60B392 !default;
+$green-03:  #1B9866 !default;
 $yellow:  #ffc107 !default;
-$green:   #8FC31F !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 $coffee:  #40220F !default;
+$orange:  #ffa467 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -55,14 +56,15 @@ $colors: map-merge((
   "purple":     $purple,
   "pink":       $pink,
   "red":        $red,
+  "green":      $green,
   "green-01":     $green-01,
   "green-02":     $green-02,
   "green-03":     $green-03,
   "yellow":     $yellow,
-  "green":      $green,
   "teal":       $teal,
   "cyan":       $cyan,
   "coffee":     $coffee,
+  "orange":     $orange,
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800
@@ -93,7 +95,9 @@ $theme-colors: map-merge((
   "green-03":     $green-03,
   "light":      $light,
   "gray":       $gray-600,
-  "dark":       $dark
+  "dark":       $dark,
+  "white":       $white,
+  "orange":       $orange
 ), $theme-colors);
 // stylelint-enable
 

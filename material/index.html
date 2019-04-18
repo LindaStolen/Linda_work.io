@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="scss/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css"> -->
+    <link rel="stylesheet" href="css/elastislide.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/jquery.elastislide.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     
@@ -78,6 +81,12 @@
                     <span class="sr-only">Next</span>
                 </a> -->
             </div>
+            <ul id="carousel" class="elastislide-list">
+                <li><a href="#"><img src="https://source.unsplash.com/random/280x378?sig=29" alt="image01" /></a></li>
+                <li><a href="#"><img src="https://source.unsplash.com/random/280x378?sig=35" alt="image02" /></a></li>
+                <li><a href="#"><img src="https://source.unsplash.com/random/280x378?sig=45" alt="image03" /></a></li>
+                <li><a href="#"><img src="https://source.unsplash.com/random/280x378?sig=45" alt="image03" /></a></li>
+            </ul>
         </div>
     <script>
             $(document).ready(function(){
@@ -104,6 +113,9 @@
                 //     asNavFor: '#slider',
                 //     touch: true,
                 // });
+                $('#carousel').elastiside({
+                    
+                });
             });
         </script>
 </body>
