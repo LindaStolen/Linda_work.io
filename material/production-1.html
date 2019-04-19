@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="/css/flexslider.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $('#book-inner').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll:3,
+            arrows:false,
+        });
+        $('#recommond-book').slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll:3,
+            responsive: [ 
+            {
+                breakpoint: 572,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows:false,
+                }
+            }]
+        });
+    })
+</script>
+<body>
+    <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已成功加入願望清單，請至會員專區查看！
+                    <br>
+                    <br>
+                    <br>
+                    <b style="color:red;">但你真得確定不現在買嗎！！！</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="buybox"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已經幫你放到購物車裡囉！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-green btn-sm" data-dismiss="modal">還沒買夠買起來！</button>
+                    <button type="button" class="btn btn-light btn-sm">這些就可以了,結帳！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="#">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-7">
+                <input class="form-control my-2 rounded-0" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append my-2">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <div class="keywords mb-sm-2 mb-lg-0 mt-lg-2 pt-lg-1 col-sm-12 col-lg-5 px-0">
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">國營考試</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+                </div>
+            </form>
+            <!-- <div class="btn-group ml-lg-auto text-center">
+                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray-400 mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-book fa-lg"></i>
+                    書籍分類
+                </boutton>
+                <div class="dropdown-menu dropdown-menu-right ml-3 border border-gray rounded" aria-labelledby="category-all">
+                    <button class="dropdown-item" type="button">考試用書</button>
+                    <button class="dropdown-item" type="button">我想上課</button>
+                    <button class="dropdown-item" type="button">課程教具</button>
+                </div>
+            </div> -->
+            <ul class="navbar-nav px-3 ml-lg-auto">
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-book fa-lg mr-2"></i><span>書籍分類</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">考試用書</a>
+                        <a class="dropdown-item" href="#">我想上課</a>
+                        <a class="dropdown-item" href="#">課程教具</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>hi, 會員</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">會員設定</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                        <a class="dropdown-item" href="#">訂單查詢</a>
+                        <a class="dropdown-item" href="#">常見問題</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-lg-5 p-lg-2 mt-5">
+        <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="cartMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/buy-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="cartMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="recentMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/view-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="recentMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
+            </div>
+        </div>
+        <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%;">
+            <img src="images/totop-12-12.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
+            <img src="images/message-12-12.png" alt="" class="img-fluid">
+        </a>
+        <nav aria-label="breadcrumb" class=" w-75 mx-lg-5 pl-lg-5">
+            <ol class="breadcrumb mb-0 px-0 px-lg-3 pt-2">
+                <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
+                <li class="breadcrumb-item"><a href="#">國營考試</a></li>
+                <li class="breadcrumb-item active" aria-current="page">講錯重點系列</li>
+            </ol>
+        </nav>
+        <div class="row px-lg-5 mx-lg-5">
+            <div class="col-lg-5 cover">
+                <img src="images/9789863455448.jpg" alt="" srcset="">
+                <div class="border border-green rounded-top rounded-bottom mt-1">
+                    <div id="book-inner" class="my-2">
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=5" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=6" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=71" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
