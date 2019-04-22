@@ -9,37 +9,59 @@
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="/css/flexslider.css">
+    <link rel="stylesheet" href="css/flexslider.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.js"></script>
-    <script src="/js/jquery.flexslider-min.js"></script>
+    <script src="/js/jquery.jcarousel.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <script>
     $(document).ready(function(){
-        $('#book-inner').slick({
+        // $('#book-inner').slick({
+        //     dots: true,
+        //     infinite: true,
+        //     slidesToShow: 4,
+        //     slidesToScroll:3,
+        //     arrows:false,
+        // });
+        // $('#recommond-book').slick({
+        //     dots: false,
+        //     infinite: true,
+        //     slidesToShow: 5,
+        //     slidesToScroll:3,
+        //     responsive: [ 
+        //     {
+        //         breakpoint: 572,
+        //         settings: {
+        //             slidesToShow: 2,
+        //             slidesToScroll: 2,
+        //             arrows:false,
+        //         }
+        //     }]
+        // });
+        $('.success').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+            });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.success',
             dots: true,
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll:3,
-            arrows:false,
+            centerMode: true,
+            focusOnSelect: true
         });
-        $('#recommond-book').slick({
-            dots: false,
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll:3,
-            responsive: [ 
-            {
-                breakpoint: 572,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows:false,
-                }
-            }]
-        });
+        $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails",
+                directionNav: false,
+                slideshow: false,
+            });
     })
 </script>
 <body>
@@ -166,25 +188,64 @@
         <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
             <img src="images/message-12-12.png" alt="" class="img-fluid">
         </a>
-        <nav aria-label="breadcrumb" class=" w-75 mx-lg-5 pl-lg-5">
-            <ol class="breadcrumb mb-0 px-0 px-lg-3 pt-2">
-                <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
-                <li class="breadcrumb-item"><a href="#">國營考試</a></li>
-                <li class="breadcrumb-item active" aria-current="page">講錯重點系列</li>
-            </ol>
-        </nav>
         <div class="row px-lg-5 mx-lg-5">
-            <div class="col-lg-5 cover">
-                <img src="images/9789863455448.jpg" alt="" srcset="">
-                <div class="border border-green rounded-top rounded-bottom mt-1">
-                    <div id="book-inner" class="my-2">
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=5" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=6" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=71" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                        <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
+            <nav aria-label="breadcrumb" class=" w-100 mx-lg-5 mx-3">
+                <ol class="breadcrumb mb-0 px-0 px-lg-3 pt-2">
+                    <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
+                    <li class="breadcrumb-item"><a href="#">國營考試</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">講錯重點系列</li>
+                </ol>
+            </nav>
+            <div class="col-lg-1"></div>
+            <div class="product-detail col-lg-7 cover ml-0 d-flex">
+                <div class="success">
+                    <div><img src="https://source.unsplash.com/random/280x378?sig=1" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/280x378?sig=23" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/280x378?sig=33" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/280x378?sig=66" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/280x378?sig=135" class="img-fluid" alt=""></div>
+                </div>
+                <div class="slider-nav slide">
+                    <div><img src="https://source.unsplash.com/random/?sig=1" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/?sig=23" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/?sig=33" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/?sig=66" class="img-fluid" alt=""></div>
+                    <div><img src="https://source.unsplash.com/random/?sig=135" class="img-fluid" alt=""></div>
+                </div>
+                <!-- <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="https://source.unsplash.com/random/90x120?sig=1">
+                        <img src="https://source.unsplash.com/random/280x378?sig=1" class="img-fluid"/>
+                        </li>
+                        <li data-thumb="https://source.unsplash.com/random/90x120?sig=15">
+                        <img src="https://source.unsplash.com/random/280x378?sig=15" class="img-fluid"/>
+                        </li>
+                        <li data-thumb="https://source.unsplash.com/random/90x120?sig=25">
+                        <img src="https://source.unsplash.com/random/280x378?sig=25" class="img-fluid"/>
+                        </li>
+                        <li data-thumb="https://source.unsplash.com/random/90x120?sig=5">
+                        <img src="https://source.unsplash.com/random/280x378?sig=5" class="img-fluid"/>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="text-detail pl-lg-5 mb-5 d-inline-block">
+                    <h4 style="letter-spacing:3px;" class="my-3 pb-1 pr-2 border-bottom border-dark">國營事業講重點</h4>
+                    <div class="book-name mb-3"><span class="h4 font-weight-bold pr-2">法學緒論</span>(含法律常識)</div>
+                    <ul class="detail-list pl-0" style="list-style:none;">
+                        <li class="mb-1 editor text-gray">作者/蔣仲典</li>
+                        <li class="mb-1 isbn text-gray">ISBN/9758665955788</li>
+                        <li class="mb-1 vision text-gray">版本/一版</li>
+                        <li class="mb-1 publish-date text-gray">出版日期/2018年09月</li>
+                        <li class="mb-1 pricing text-gray">定價/新台幣600元</li>
+                        <li class="mb-1 count text-gray">優惠折扣/75折</li>
+                    </ul>
+                    <div class="d-flex">
+                        <a id="wish" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0 mr-lg-2" data-toggle="modal" data-target="#wishbox">
+                            <img src="images/wish.jpg" alt="" class="img-fluid" style="max-width:90%">
+                        </a>
+                        <a id="add-buy" role="button" class="btn btn-outline-light border-0 rounded mt-lg-3 p-0" data-toggle="modal" data-target="#buybox">
+                            <img src="images/buy.jpg" alt="" class="img-fluid" style="max-width:90%">
+                        </a>
                     </div>
                 </div>
             </div>

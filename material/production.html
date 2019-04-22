@@ -32,13 +32,13 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
         $(document).ready(function(){
-            $('#book-inner').slick({
-                dots: true,
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll:3,
-                arrows:false,
-            });
+            // $('#book-inner').slick({
+            //     dots: true,
+            //     infinite: true,
+            //     slidesToShow: 4,
+            //     slidesToScroll:3,
+            //     arrows:false,
+            // });
             $('#recommond-book').slick({
                 dots: false,
                 infinite: true,
@@ -54,25 +54,25 @@
                     }
                 }]
             });
-            // $('#slider').flexslider({
+            $('.success').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+                });
+            $('.slider-nav').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                asNavFor: '.success',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true
+            });
+            // $('.flexslider').flexslider({
             //     animation: "slide",
-            //     controlNav: false,
+            //     controlNav: "thumbnails",
             //     directionNav: false,
-            //     animationLoop: false,
-            //     slideshow: false,
-            //     sync: "#carousel",
-            //     // touch: true,
-            // });
-            // $('#carousel').flexslider({
-            //     animation: "slide",
-            //     controlNav: true,
-            //     directionNav: false,
-            //     animationLoop: false,
-            //     slideshow: false,
-            //     itemWidth: 90,
-            //     itemMargin: 10,
-            //     asNavFor: '#slider',
-            //     touch: true,
             // });
         });
     </script>
@@ -174,7 +174,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid mt-lg-3 mt-3 pt-4 pt-lg-5">
+    <div class="container mt-lg-3 mt-3 pt-4 pt-lg-5">
         <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
             <a class="dropdown-toggle" href="#" role="button" id="cartMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="images/buy-12.png" alt="" class="img-fluid">
@@ -212,35 +212,37 @@
                 </td>
             </tr>
         </table>
-        <nav aria-label="breadcrumb" class=" w-75 mx-lg-5 pl-lg-5">
+        <nav aria-label="breadcrumb" class="mx-lg-5">
             <ol class="breadcrumb mb-0 px-0 px-lg-3">
                 <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
                 <li class="breadcrumb-item"><a href="#">國營考試</a></li>
                 <li class="breadcrumb-item active" aria-current="page">講錯重點系列</li>
             </ol>
         </nav>
-        <div class="container-fluid w-75">
+        <!-- <div class="container-fluid"> -->
             <div class="row">
             <!-- <div class="col-lg-1"></div> -->
-                <div class="col-sm-12 col-lg-7">
+                <div class="col-sm-12 col-lg-10">
                     <div class="row pl-lg-3">
-                        <div class="product-detail col-lg-6 col-12">
-                            <div class="container text-center pb-2">
-                                <img src="images/9789863455448.jpg" alt="" class="img-fluid" style="box-shadow: 2px 2px 3px #dbc;">
+                        <div class="product-detail col-lg-4 col-12">
+                            <div class="success border border-light">
+                                <div><img src="images/9789863455448.jpg" class="img-fluid mx-auto" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/280x378?sig=1" class="img-fluid" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/280x378?sig=23" class="img-fluid" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/280x378?sig=33" class="img-fluid" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/280x378?sig=66" class="img-fluid" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/280x378?sig=135" class="img-fluid" alt=""></div>
                             </div>
-                            <div class="container-fluid border border-green rounded-top rounded-bottom mt-1">
-                                <div id="book-inner" class="my-2">
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=5" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=6" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=71" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                                    <div class="px-2"><img src="https://source.unsplash.com/random/110x140?sig=100" class="img-fluid"></div>
-                                </div>
+                            <div class="slider-nav slide border border-light my-1">
+                                <!-- <div><img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto" alt=""></div> -->
+                                <div><img src="https://source.unsplash.com/random/90x120?sig=1" class="img-fluid mx-auto" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/90x120?sig=23" class="img-fluid mx-auto" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/90x120?sig=33" class="img-fluid mx-auto" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/90x120?sig=66" class="img-fluid mx-auto" alt=""></div>
+                                <div><img src="https://source.unsplash.com/random/90x120?sig=135" class="img-fluid mx-auto" alt=""></div>
                             </div>
                         </div>
-                        <div class="text-detail pl-lg-5 col-12 col-lg-6 mb-5">
+                        <div class="text-detail ml-lg-3 pl-lg-5 col-12 col-lg-4 mb-5">
                             <h4 style="letter-spacing:3px;" class="my-3 pb-1 pr-2 border-bottom border-dark">國營事業講重點</h4>
                             <div class="book-name mb-3"><span class="h4 font-weight-bold pr-2">法學緒論</span>(含法律常識)</div>
                             <ul class="detail-list pl-0" style="list-style:none;">
@@ -261,94 +263,121 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-                    <div class="col-lg-10 col-12 mt-lg-3">
-                        <div class="border-bottom border-green-02" style="line-height: 30px;">
-                            <span class="lable tag bg-green-02 px-3 py-1 rounded-top text-white" style="font-size:18px; letter-spacing: 15px; ">內容</span>
+                </div>
+                <div class="col-lg-2"></div>
+            <section>
+                <div class="col-lg-10 col-12 mt-lg-3">
+                    <div class="border-bottom border-green-02" style="line-height: 30px;">
+                        <span class="lable tag bg-green-02 px-2 py-1 text-white font" style="font-size:18px; letter-spacing: 15px; ">內容</span>
+                    </div>
+                    <div class="book-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                        <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">書本內容</span>
+                        <p class="pb-lg-3 pb-3 border-bottom border-light ">
+                            未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
+                            人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
+                        </p>
+                    </div>
+                    <div class="editor-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                        <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">作者介紹</span>
+                        <p class="pb-lg-3 pb-3 border-bottom border-light">
+                            未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
+                            人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
+                        </p>
+                    </div>
+                    <div class="pic-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                        <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">內容試閱</span>
+                        <div class="row m-1 pb-lg-3 pb-3 border-bottom border-light">
+                            <img src="http://source.unsplash.com/random/250x180" alt="" class="img-fluid">
+                            <img src="http://source.unsplash.com/random/250x180?sig=1" alt="" class="img-fluid">
                         </div>
-                        <div class="book-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
-                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">書本內容</span>
-                            <p class="pb-lg-3 pb-3 border-bottom border-light ">
-                                未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
-                                人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
-                            </p>
+                    </div>
+                    <div class="video-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                        <span class="lable text-coffee d-inline-block pb-2">搶先試聽</span>
+                        <div class="embed-responsive embed-responsive-16by9" style="max-width:94%;">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
                         </div>
-                        <div class="editor-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
-                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">作者介紹</span>
-                            <p class="pb-lg-3 pb-3 border-bottom border-light">
-                                未說的風之五……的中學保單工造快行即市賣，已老成何地校影生鄉明時兒；十府我門是。與未們你度洲元地你風立福：景東傳在花人須都以境該去得歡金個上受小道。政單思初電放健，一說然無多具黑個女熱造因。檢是開。四車這？加根期生要對當報下也都解苦。司太演再布便，上一藥……了全其大由說學了華也情天？
-                                人新於現來開密活光標司說國頭際我，以心器定過活道密二無家可則國一市投活，不上可，跟水有過、施裡設獲與新；品山百第習團品土差上，回基著農通己老化飯！基的國選非以身國完。冷來山跟人境發？老聯紅親或只間出包麗、場件級用小電目酒西一高企轉供題出工日長論山那選了的形對日土則也後女個子新，想產消運之！下王孩看汽，雖痛學初在日生的與個說觀有國裝更全家我絕排、一通源技二紅是吃本！年戰。
-                            </p>
-                        </div>
-                        <div class="pic-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
-                            <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">內容試閱</span>
-                            <div class="row m-1 pb-lg-3 pb-3 border-bottom border-light">
-                                <img src="http://source.unsplash.com/random/250x180" alt="" class="img-fluid">
-                                <img src="http://source.unsplash.com/random/250x180?sig=1" alt="" class="img-fluid">
+                    </div>
+                    <div class="border-bottom border-green-02 pt-5" style="line-height: 30px;">
+                        <span class="lable tag bg-green-02 px-2 py-1 text-white font-weight-bold" style="font-size:20px;">買這本書的人也買了</span>
+                    </div>
+                    <div class="container">
+                        <div id="recommond-book" class="my-3 mb-3">
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="video-zone px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
-                            <span class="lable text-coffee d-inline-block pb-2">搶先試聽</span>
-                            <div class="embed-responsive embed-responsive-16by9" style="max-width:94%;">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="border-bottom border-green-02 pt-5" style="line-height: 30px;">
-                            <span class="lable tag bg-green-02 px-3 py-1 rounded-top text-white" style="font-size:20px;">買這本書的人也買了</span>
-                        </div>
-                        <div class="container-fluid">
-                            <div id="recommond-book" class="my-3 mb-3">
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
                                 </div>
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
+                            </div>
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
                                 </div>
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
+                            </div>
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
                                 </div>
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
-                                </div>
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
-                                </div>
-                                <div class="px-2">
-                                    <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
-                                    <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
-                                        <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
-                                        <small class="book-publish text-secondary">鼎茂研究室</small>
-                                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
-                                    </div>
+                            </div>
+                            <div class="px-2">
+                                <img src="images/9789863454939-120x150.jpg" class="img-fluid mx-auto">
+                                <div class="detail text-left mt-lg-2 mx-lg-2 d-inline-block">
+                                    <div class="book-name text text-coffee"><strong class="d-inline-block">2019環境工程技師</strong></div>
+                                    <small class="book-publish text-secondary">鼎茂研究室</small>
+                                    <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-2">
+                        <ul class="commond pl-lg-2 nav flex-column">
+                        <li class="border border-bottom-light">
+                            <em>1.</em>
+                            <img src="https://source.unsplash.com/random/100x100" alt="" class="d-block">
+                            <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nihil </a></p>
+                        </li>
+                        <li class="border-light border-bottom">
+                            <em>2.</em>
+                            <img src="https://source.unsplash.com/random/100x100" alt="" class="d-block">
+                            <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nihil </a></p>
+                        </li>
+                        <li class="border border-bottom-light">
+                            <em>3.</em>
+                            <img src="https://source.unsplash.com/random/100x100" alt="" class="d-block">
+                            <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nihil </a></p>
+                        </li>
+                        <li class="border border-bottom-light">
+                            <em>4.</em>
+                            <img src="https://source.unsplash.com/random/100x100" alt="" class="d-block">
+                            <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nihil </a></p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
             <!-- <div class="ad my-4 my-lg-0 col-lg-3 text-center">
                 <a href="#">
                     <img class="my-3 img-fluid" src="images/CJ63_CJ73_800_418_1080101_0331.jpg" class="rounded" alt="">
@@ -360,9 +389,9 @@
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
                 </div>
             </div> -->
-            <div class="col-lg-1"></div>
+            
             </div>
-        </div>
+        <!-- </div> -->
     </div>
     <div id="footer" class="bg-green-01 px-lg-5 px-3">
         <div class="row d-flex justify-content-lg-between">
