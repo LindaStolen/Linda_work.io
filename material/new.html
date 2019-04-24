@@ -56,6 +56,29 @@
                     }
                 }]
             });
+            $('#slick-2').slick({
+                dots: false,
+                infinite: true,
+                slidesToShow: 6,
+                slidesToScroll:3,
+                responsive: [ 
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 3,
+                        arrows:true,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows:false
+                    }
+                }]
+            });
         })
         
     </script>
@@ -125,7 +148,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid mt-lg-2 mt-3 pt-5">
+    <div class="container-fluid mt-lg-2 mt-3 pt-lg-5 pt-4">
         <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="images/buy-12.png" alt="" class="img-fluid">
@@ -146,33 +169,230 @@
                 <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
             </div>
         </div>
-        <!-- <table class="wrap position-fixed" style="right:0; bottom:10%; max-width:10%;">
-            <tr>
-                <td> -->
-                    <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%;">
-                        <img src="images/totop-12-12.png" alt="" class="img-fluid">
-                    </a>
-                <!-- </td>
-            </tr>
-            <tr>
-                <td href="#" class="message"> -->
-                    <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
-                        <img src="images/message-12-12.png" alt="" class="img-fluid">
-                    </a>
-                <!-- </td>
-            </tr>
-        </table> -->
-        <!-- 中間部分 -->
-            <div class="container-fluid">
-                <div id="forad" class="mx-lg-5">
-                    <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=5" class="img-fluid mx-auto"></div>
-                    <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=6" class="img-fluid mx-auto"></div>
-                    <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=71" class="img-fluid mx-auto"></div>
+        <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%;">
+            <img src="images/totop-12-12.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
+            <img src="images/message-12-12.png" alt="" class="img-fluid">
+        </a>
+        <div class="container">
+            <div id="forad" class="mx-lg-5">
+                <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=5" class="img-fluid mx-auto"></div>
+                <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=6" class="img-fluid mx-auto"></div>
+                <div class=""><img src="https://source.unsplash.com/random/1000x300?sig=71" class="img-fluid mx-auto"></div>
+            </div>
+        </div>
+        <div class="container px-lg-5 my-5">
+            <div id="title-label" class="h5 pb-1 pl-lg-4 mb-4 mx-lg-5">公職考試精選推薦</div>
+            <div id="slick" class="forBook w-100 mx-auto my-3" style="max-width:95%;">
+                <div class="px-1 px-lg-3">
+                    <img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle "><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle "><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 dark"><img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 warning"><img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 dark"><img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 white"><img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 warning"><img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 white"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 dark"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 warning"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 dark"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 white"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="px-1 px-lg-3 warning"><img src="https://source.unsplash.com/random/185x230?sig=5" class="img-fluid mx-auto d-block">
+                    <div class="detail text-left mt-lg-2">
+                        <div class="book-name text text-coffee"><strong class="">2019環境工程技師</strong></div>
+                        <small class="book-publish text-secondary">鼎茂研究室</small>
+                        <div class="book-pricing"><strong class="text-danger">$1000</strong></div>
+                    </div>
+                    <div class="record d-flex justify-content-between">
+                        <span class="watching bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid"src="images/i-see-u.png" alt="" srcset="">
+                            <span class="account align-middle"><small>10K+</small></span>
+                        </span>
+                        <span class="buying bg-orange rounded d-block p-1 px-1 text-center">
+                            <img class="d-inline-block img-fluid" src="images/buy-all.png" alt="">
+                            <span class="account align-middle"><small>100K</small></span>
+                        </span>
+                    </div>
                 </div>
             </div>
-        <div class="container-fluid px-lg-5 my-5">
-            <div id="title-label" class="h5 pb-1 pl-lg-4 mb-4 mx-lg-5">公職考試精選推薦</div>
-            <div id="slick" class="forBook w-100 mx-auto mt-3" style="max-width:95%;">
+            <div id="title-label" class="h5 pb-1 pl-lg-4 pt-lg-5 my-4 mx-lg-5">國家考試精選推薦</div>
+            <div id="slick-2" class="forBook w-100 mx-auto my-3" style="max-width:95%;">
                 <div class="px-1 px-lg-3">
                     <img src="https://source.unsplash.com/random/185x230?sig=7" class="img-fluid d-block">
                     <div class="detail text-left mt-lg-2">
