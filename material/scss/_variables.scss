@@ -70,7 +70,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $green-01 !default;
+$primary:       $gray-500 !default;
 $secondary:     $green-02 !default;
 $success:       $green-03 !default;
 $info:          $cyan !default;
