@@ -14,20 +14,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        window.onscroll = function() {scrollFunction()};
+        // window.onscroll = function() {scrollFunction()};
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-                document.getElementById("top").style.display = "block";
-            } else {
-                document.getElementById("top").style.display = "none";
-            }
-        }
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        //         document.getElementById("top").style.display = "block";
+        //     } else {
+        //         document.getElementById("top").style.display = "none";
+        //     }
+        // }
         // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        // function topFunction() {
+        //     document.body.scrollTop = 0; // For Safari
+        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // }
         $(document).ready(function() {
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
@@ -43,7 +43,7 @@
     <div class="modal fade" id="loginBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header">   
                 <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">歡迎登入</h5>
                 <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -140,7 +140,9 @@
         </div>
     </nav>
     <div class="container border-gray mt-lg-3 mt-3 pt-4 pt-lg-5">
-        <div class="progress-bar bg-blue mx-5 py-3">進度條圖</div>
+        <div class="steps-bar mx-auto py-3 w-75 text-center">
+            <img src="images/steps_c.png" alt="" class="img-fluid rounded">
+        </div>
         <section class="my-5 mx-5">
             <ul class="nav nav-tabs border-bottom border-gray" role="tablist">
                 <li class="nav-item  border-bottom border-gray">
@@ -152,33 +154,66 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active bg-white" id="buy-list" role="tabpanel">
-                    <table class="table table-bordered">
-                        <thead class="text-center">
-                            <tr>
-                                <th scope="col"><span>序號</span></th>
-                                <th scope="col"><span>商品圖</span></th>
-                                <th scope="col"><span>商品名稱</span></th>
-                                <th scope="col"><span>商品售價</span></th>
-                                <th scope="col"><span>數量</span></th>
-                                <th scope="col"><span>小計</span></th>
-                                <th scope="col"><span>變更</span></th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <td scope="row" class="align-middle"><span>1</span></td>
-                                <td class="align-middle"><img src="images/9789863454984-50x63.jpg" alt=""></td>
-                                <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
-                                <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
-                                <td class="align-middle"><input type="text" name="" id="" style="width:30px;"></td>
-                                <td class="align-middle">NT500元</td>
-                                <td class="align-middle">
-                                    <a href="#" class="text-coffee btn btn-sm btn-outline-dark p-1" role="button">下次再買</a>
-                                    <a href="#" class="text-coffee btn btn-sm btn-outline-dark p-1" role="button">刪除</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form action="" method="post">
+                        <table class="table table-bordered mb-4">
+                            <thead class="text-center">
+                                <tr>
+                                    <th scope="col"><span>序號</span></th>
+                                    <th scope="col"><span>商品圖</span></th>
+                                    <th scope="col"><span>商品名稱</span></th>
+                                    <th scope="col"><span>商品售價</span></th>
+                                    <th scope="col"><span>數量</span></th>
+                                    <th scope="col"><span>小計</span></th>
+                                    <th scope="col"><span>變更</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td scope="row" class="align-middle"><span>1</span></td>
+                                    <td class="align-middle"><a href="#"><img src="images/50x63/s_0001_9789863455448.png" alt=""></a></td>
+                                    <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
+                                    <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
+                                    <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
+                                    <td class="align-middle">NT500元</td>
+                                    <td class="align-middle">
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="align-middle"><span>2</span></td>
+                                    <td class="align-middle"><a href="#"><img src="images/50x63/s_0000_9789863455455.png" alt=""></a></td>
+                                    <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
+                                    <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
+                                    <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
+                                    <td class="align-middle">NT500元</td>
+                                    <td class="align-middle">
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7">
+                                        <p class="total mb-0 text-right">目前選購<b class="mx-1 text-danger">2</b>項商品(未含運費)，小計NT<b class="mx-1 text-danger">1000</b>元</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span class="text-coffee font-weight-bold d-inline-block mt-2" style="font-size: 16.5px;">購買須知</span>
+                        <ul class="declare border-top border-dark pt-2">
+                            <li class="text-danger font-weight-bold">取貨及付款方式限超商取貨付款，可選擇的超商有：全家便利商店、萊爾富。</li>
+                            <li>每筆訂單限用乙張電子折價券。</li>
+                            <li>物流處理費 40 元，消費金額滿 1000 元(含)，則免收物流處理費。</li>
+                            <li>消費金額計算方式：試題金額 - 全館活動折扣金額 - 電子折價券金額。</li>
+                        </ul>
+                        <p class="mb-0">
+                            <input type="checkbox" class="mr-2" name="adgree" id="">我已仔細閱讀並明瞭<a href="#" class="text-gray">「網站使用條款」</a>、<a href="#" class="text-gray">「隱私權政策」</a>等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。
+                        </p>
+                        <div class="nextStep text-right mt-4">
+                            <button class="btn-sm btn-green mr-2">繼續購物</button>
+                            <input type="button" class="btn-sm btn-orange" value="下一步" onclick="location.href='pay-deliver.html'">
+                        </div>
+                    </form>
                 </div>
                 <div class="tab-pane fade bg-white" id="wish-list" role="tabpanel">
                     <table class="table table-bordered">
@@ -194,11 +229,11 @@
                         <tbody class="text-center">
                             <tr>
                                 <td scope="row" class="align-middle"><span>1</span></td>
-                                <td class="align-middle"><img src="images/9789863454984-50x63.jpg" alt=""></td>
+                                <td class="align-middle"><a href="#"><img src="images/50x63/s_0002_9789863455318.png" alt=""></a></td>
                                 <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
                                 <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
                                 <td class="align-middle">
-                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button">下次再買</a>
+                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button">立即購買</a>
                                     <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button">刪除</a>
                                 </td>
                             </tr>
@@ -208,6 +243,51 @@
             </div>
         </section>
     </div>
-    
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                </ul>
+                
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
 </body>
 </html>

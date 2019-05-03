@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一手交錢一手交貨</title>
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // window.onscroll = function() {scrollFunction()};
+
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        //         document.getElementById("top").style.display = "block";
+        //     } else {
+        //         document.getElementById("top").style.display = "none";
+        //     }
+        // }
+        // // When the user clicks on the button, scroll to the top of the document
+        // function topFunction() {
+        //     document.body.scrollTop = 0; // For Safari
+        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // }
+        $(document).ready(function() {
+            $('#member').hide();
+            $('#loginCheck').click('hide.bs.modal',function(e){
+                $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            });
+        })        
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="#">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <!-- <div class="btn-group ml-lg-auto">
+                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-book fa-lg"></i>
+                    書籍分類
+                </boutton>
+                <div class="dropdown-menu dropdown-menu-right ml-3 border border-light rounded" aria-labelledby="category-all">
+                    <button class="dropdown-item" type="button">考試用書</button>
+                    <button class="dropdown-item" type="button">我想上課</button>
+                    <button class="dropdown-item" type="button">課程教具</button>
+                </div>
+            </div> -->
+            <ul class="navbar-nav px-3 ml-lg-auto">
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">書籍分類</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
+                        <a class="dropdown-item" href="#">考試用書</a>
+                        <a class="dropdown-item" href="#">我想上課</a>
+                        <a class="dropdown-item" href="#">課程教具</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 已登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span></span>
+                    </a>
+                    <!-- 未登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">會員設定</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                        <a class="dropdown-item" href="#">訂單查詢</a>
+                        <a class="dropdown-item" href="#">常見問題</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 註冊 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="signup" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container border-gary mt-lg-3 mt-3 pt-4 pt-lg-5">
+        <div class="steps-bar mx-auto py-3 w-75 text-center">
+            <img src="images/steps_2_工作區域 1.png" alt="" class="img-fluid rounded">
+        </div>
+        <section class="my-5 mx-5">
+            <form action="" method="post">
+                <table class="table table-bordered mb-5">
+                    <thead>
+                        <th class="bg-green-01">
+                            <span class="font-weight-bold text-coffee">收貨人資料</span>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-coffee"><a href="#">常用收件人名單/暫定</a></td>
+                        </tr>
+                        <tr>
+                            <td class="px-lg-5">
+                                <div class="form-group row">
+                                    <label for="memberName" class="col-sm-2 col-form-lable">收件人姓名</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="memberName" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="phonenum" class="col-sm-2 col-form-lable">手機</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="phonenum" autocomplete="off"required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control " id="address">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="add-info" id="add-info" value="add-info">
+                                    <label class="form-check-label" for="add-info">
+                                        以上新增至《收貨人通訊錄》
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered mb-5">
+                    <thead>
+                        <th class="bg-green-01">
+                            <span class="text-coffee font-weight-bold">發票資訊</span>
+                            <span class="text-danger ml-3 small font-weight-bold">本公司電子發票依據財政部國稅局電子發票實施作業要點開立，買受人為營業人之電子發票格式依相關規定記載。</span>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr data-toggle="collapse" href="#code">
+                            <td class="px-lg-5 align-middle">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
+                                    <label class="form-check-label" for="donate">
+                                        捐贈發票
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="collapse" id="code">
+                            <td class="pl-lg-5">
+                                <div class="form-group row pl-3">
+                                    <label for="donateCode" class="col-sm-2 col-form-lable">愛心捐贈碼</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="donateCode">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" href="#method">
+                            <td class="px-lg-5 align-middle" colspan="3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="invoiceType" id="person" value="person">
+                                    <label class="form-check-label" for="person">
+                                        個人電子發票
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="collapse" id="method">
+                            <td>
+                                <ul style="list-style:none;">
+                                    <li class="pl-lg-5">
+                                        <div class="form-group row">
+                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="paper">
+                                            <label for="paper" class="col-sm-2 col-form-lable">索取紙本發票</label>
+                                        </div>
+                                    </li>
+                                    <li class="pl-lg-5">
+                                        <div class="form-group row">
+                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="naturalMan">
+                                            <label for="naturalManCode" class="col-sm-2 col-form-lable">自然人憑證載具：</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="naturalManCode">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="pl-lg-5">
+                                        <div class="form-group row">
+                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="phone-barcode">
+                                            <label for="phone-barcode" class="col-sm-2 col-form-lable">手機條碼載具：</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="phone-barcode">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" href="#company">
+                            <td class="px-lg-5 align-middle">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
+                                    <label class="form-check-label" for="donate">
+                                        公司戶發票
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="collapse" id="company">
+                            <td class="px-lg-3">
+                                <ul style="list-style:none;">
+                                    <li class="form-group row">
+                                        <label for="uniformNum" class="col-sm-2 col-form-label">統一編號：</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control" id="uniformNum">
+                                        </div>
+                                    </li>
+                                    <li class="form-group row">
+                                        <label for="company-Name" class="col-sm-2 col-form-label">公司名稱：</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control" id="company-Name">
+                                        </div>
+                                    </li>
+                                    <li class="form-group row">
+                                        <label for="contact-tel" class="col-sm-2 col-form-label">聯絡電話：</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control" id="contact-tel">
+                                        </div>
+                                    </li>
+                                    <li class="form-group row">
+                                        <label for="address" class="col-sm-2 col-form-label">通訊地址：</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="address">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="checkOut text-right">
+                    <button type="submit" class="btn-sm btn-orange text-white font-weight-bold">確定結帳</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                </ul>
+                
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
+</body>
+</html>

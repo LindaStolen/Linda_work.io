@@ -14,20 +14,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        window.onscroll = function() {scrollFunction()};
+        // window.onscroll = function() {scrollFunction()};
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-                document.getElementById("top").style.display = "block";
-            } else {
-                document.getElementById("top").style.display = "none";
-            }
-        }
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        //         document.getElementById("top").style.display = "block";
+        //     } else {
+        //         document.getElementById("top").style.display = "none";
+        //     }
+        // }
         // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+        // function topFunction() {
+        //     document.body.scrollTop = 0; // For Safari
+        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // }
         $(document).ready(function() {
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
@@ -140,27 +140,145 @@
             </ul>
         </div>
     </nav>
-    <div class="container border-gray mt-lg-3 mt-3 pt-4 pt-lg-5">
+    <div class="container mt-lg-3 mt-3 pt-4 pt-lg-5">
+        <div class="col-lg-2"></div>
         <!-- <div class="progress-bar bg-blue mx-5 py-3">進度條圖</div> -->
-        <section class="my-5 mx-5">
+        <section class="my-lg-5 mx-lg-5 p-lg-4 pt-2">
             <form action="" method="post">
-                <label for="form" class="h3 font-weight-bold">加入會員</label>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <table class="table table-bordered mx-auto" style="max-width: 60%;">
+                    <tbody class="">
+                        <tr>
+                            <td rowspan="7" class="h-100 px-1 bg-green text-white">
+                                <label for="form" class="h4 font-weight-bold d-flex flex-column align-items-center">
+                                    <span>加</span>
+                                    <span>入</span>
+                                    <span>會</span>
+                                    <span>員</span>
+                                </label>
+                            </td>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">會員姓名</p>
+                                <span class="small">Your name</span>
+                            </td>
+                            <td>
+                                <input type="text" name="userName" id="userName" autocomplete="none" required>
+                                <p class="small text-gray">請填寫真實姓名</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">會員帳號</p>
+                                <span class="small">Your ID</span>
+                            </td>
+                            <td>
+                                <input type="text" name="userID" id="userID" autocomplete="none" required>
+                                <p class="small text-gray">請輸入常用電子信箱作為帳號</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">密碼</p>
+                                <span class="small">Password</span></td>
+                            <td>
+                                <input type="password" name="register-password" id="register-password" autocomplete="none" required>
+                                <p class="small text-gray">英文數字混合,至少8位數以上</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">密碼確認</p>
+                                <span class="small">ComfirmPassword</span>
+                            </td>
+                            <td>
+                                <input type="password" name="" id="passwordCheck" autocomplete="none" required></td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">手機</p>
+                                <span class="small">Your phone number</span>
+                            </td>
+                            <td><input type="text" name="phoneNumber" id="phoneNumber" placeholder="0912345678" autocomplete="none" required></td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">地址</p>
+                                <span class="small">Address</span>
+                            </td>
+                            <td>
+                                <input type="text" name="address" id="address" autocomplete="none" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-check mx-auto col-lg-7 col-12">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="mb-1">
+                        訂閱會員專函
+                    </label>
+                    <p class="small" for="defaultCheck1">
+                        每月初針對黃金、白金、鑽石會員固定發送，通知您當月最新會員等級、分級優惠、生日優惠等會員資訊。
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <div class="form-check mx-auto col-lg-7 col-12">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="mb-1">
+                        訂閱商品/活動訊息
+                    </label>
+                    <p class="small" for="defaultCheck1">
+                        不定期透過email通知最新商品活動及優惠資訊。
+                    </p>
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div class="button-group text-center mt-lg-4 d-lg-flex justify-content-center">
+                    <button type="submit" class="btn btn-blue font-weight-bold mr-lg-3">送出資料</button>
+                    <button type="" class="btn btn-blue font-weight-bold">取消</button>
                 </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                </ul>
+                
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
     </div>
 </body>
 </html>
