@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找"蝦米冬冬"相關商品</title>
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                document.getElementById("top").style.display = "block";
+            } else {
+                document.getElementById("top").style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        $(document).ready(function() {
+            $('#member').hide();
+            $('#loginCheck').click('hide.bs.modal',function(e){
+                $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            });
+        })        
+    </script>
+</head>
+<body>
+    <div class="modal fade" id="loginBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">歡迎登入</h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="username">使用者帳號</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="請輸入信箱地址" autocomplete="off" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">使用者密碼</label><a href="#" class="small ml-2">忘記密碼<i class="far fa-question-circle"></i></a>
+                        <input type="password" class="form-control" id="password" placeholder="請輸入密碼" autocomplete="off" required="required">
+                    </div>
+                    <div class="form-group text-right">
+                        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-left">
+                <button type="button" class="registered btn btn-light btn-outline-blue">註冊</button>
+                <button type="submit" class="btn btn-green-03 text-white" id="loginCheck"  data-dismiss="modal">登入</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="#">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <!-- <div class="btn-group ml-lg-auto">
+                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-book fa-lg"></i>
+                    書籍分類
+                </boutton>
+                <div class="dropdown-menu dropdown-menu-right ml-3 border border-light rounded" aria-labelledby="category-all">
+                    <button class="dropdown-item" type="button">考試用書</button>
+                    <button class="dropdown-item" type="button">我想上課</button>
+                    <button class="dropdown-item" type="button">課程教具</button>
+                </div>
+            </div> -->
+            <ul class="navbar-nav px-3 ml-lg-auto">
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">書籍分類</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
+                        <a class="dropdown-item" href="#">考試用書</a>
+                        <a class="dropdown-item" href="#">我想上課</a>
+                        <a class="dropdown-item" href="#">課程教具</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 已登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span></span>
+                    </a>
+                    <!-- 未登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="#">會員設定</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                        <a class="dropdown-item" href="#">訂單查詢</a>
+                        <a class="dropdown-item" href="#">常見問題</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 註冊 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="signup" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+                <!-- <li class="nav-item mx-lg-2 my-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="container my-lg-5 py-lg-3">
+        <div class="announcement text-center">
+            <img src="https://source.unsplash.com/random/1000x100" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-12">
+            <p class="border-bottom mt-1 mt-lg-3 text-orange font-weight-bold"><i class="fas fa-crown mr-2"></i>銷售排行榜 : :</p>
+            <ul class="commond pl-lg-2 nav flex-column">
+                <li class="border-bottom border-light mb-2 text-center position-relative">
+                    <em class="position-absolute" style="left:0;">1.</em>
+                    <img src="https://source.unsplash.com/random/100x100" alt="" class="">
+                    <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
+                </li>
+                <li class="border-light border-bottom mb-2 text-center position-relative">
+                    <em class="position-absolute" style="left:0;">2.</em>
+                    <img src="https://source.unsplash.com/random/100x100" alt="" class="">
+                    <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
+                </li>
+                <li class=" border-bottom border-light mb-2 text-center position-relative">
+                    <em class="position-absolute" style="left:0;">3.</em>
+                    <img src="https://source.unsplash.com/random/100x100" alt="" class="">
+                    <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
+                </li>
+                <li class="border-bottom borderlight mb-2 text-center position-relative">
+                    <em class="position-absolute" style="left:0;">4.</em>
+                    <img src="https://source.unsplash.com/random/100x100" alt="" class="">
+                    <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
+                </li>
+                <li class="border-bottom borderlight mb-2 text-center position-relative">
+                    <em class="position-absolute" style="left:0;">5.</em>
+                    <img src="https://source.unsplash.com/random/100x100" alt="" class="">
+                    <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

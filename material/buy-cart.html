@@ -29,13 +29,13 @@
         //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         // }
         $(document).ready(function() {
-            $('#member').hide();
-            $('#loginCheck').click('hide.bs.modal',function(e){
-                $('#member').toggle('#login');
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
                 $('#member span').text('會員您好');
                 $('#login').hide();
                 $('#signup').hide();
-            });
+            // });
         })        
     </script>
 </head>
@@ -141,9 +141,9 @@
     </nav>
     <div class="container border-gray mt-lg-3 mt-3 pt-4 pt-lg-5">
         <div class="steps-bar mx-auto py-3 w-75 text-center">
-            <img src="images/steps_c.png" alt="" class="img-fluid rounded">
+            <img src="images/steps_3_工作區域 1.png" alt="" class="img-fluid rounded">
         </div>
-        <section class="my-5 mx-5">
+        <section class="my-lg-5 mx-lg-5 mx-3 my-3">
             <ul class="nav nav-tabs border-bottom border-gray" role="tablist">
                 <li class="nav-item  border-bottom border-gray">
                     <a class="nav-link active" href="#buy-list" data-toggle="tab" role="tab" aria-selected="true">購物清單</a>
@@ -155,7 +155,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active bg-white" id="buy-list" role="tabpanel">
                     <form action="" method="post">
-                        <table class="table table-bordered mb-4">
+                        <table class="table table-bordered table-responsive mb-4">
                             <thead class="text-center">
                                 <tr>
                                     <th scope="col"><span>序號</span></th>
@@ -176,7 +176,7 @@
                                     <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
                                     <td class="align-middle">NT500元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-0" role="button">下次再買</a>
                                         <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>
@@ -188,7 +188,7 @@
                                     <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
                                     <td class="align-middle">NT500元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-0" role="button">下次再買</a>
                                         <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>

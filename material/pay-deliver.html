@@ -29,13 +29,13 @@
         //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         // }
         $(document).ready(function() {
-            $('#member').hide();
-            $('#loginCheck').click('hide.bs.modal',function(e){
-                $('#member').toggle('#login');
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
                 $('#member span').text('會員您好');
                 $('#login').hide();
                 $('#signup').hide();
-            });
+            // });
         })        
     </script>
 </head>
@@ -111,163 +111,167 @@
         <div class="steps-bar mx-auto py-3 w-75 text-center">
             <img src="images/steps_2_工作區域 1.png" alt="" class="img-fluid rounded">
         </div>
-        <section class="my-5 mx-5">
+        <section class="my-lg-5 mx-lg-5 mx-3 my-3">
             <form action="" method="post">
-                <table class="table table-bordered mb-5">
-                    <thead>
-                        <th class="bg-green-01">
-                            <span class="font-weight-bold text-coffee">收貨人資料</span>
-                        </th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-coffee"><a href="#">常用收件人名單/暫定</a></td>
-                        </tr>
-                        <tr>
-                            <td class="px-lg-5">
-                                <div class="form-group row">
-                                    <label for="memberName" class="col-sm-2 col-form-lable">收件人姓名</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="memberName" autocomplete="off" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="phonenum" class="col-sm-2 col-form-lable">手機</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="phonenum" autocomplete="off"required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control " id="address">
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="add-info" id="add-info" value="add-info">
-                                    <label class="form-check-label" for="add-info">
-                                        以上新增至《收貨人通訊錄》
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="table table-bordered mb-5">
-                    <thead>
-                        <th class="bg-green-01">
-                            <span class="text-coffee font-weight-bold">發票資訊</span>
-                            <span class="text-danger ml-3 small font-weight-bold">本公司電子發票依據財政部國稅局電子發票實施作業要點開立，買受人為營業人之電子發票格式依相關規定記載。</span>
-                        </th>
-                    </thead>
-                    <tbody>
-                        <tr data-toggle="collapse" href="#code">
-                            <td class="px-lg-5 align-middle">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
-                                    <label class="form-check-label" for="donate">
-                                        捐贈發票
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="collapse" id="code">
-                            <td class="pl-lg-5">
-                                <div class="form-group row pl-3">
-                                    <label for="donateCode" class="col-sm-2 col-form-lable">愛心捐贈碼</label>
-                                    <div class="col-sm-3">
-                                        <input type="text" class="form-control" id="donateCode">
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-toggle="collapse" href="#method">
-                            <td class="px-lg-5 align-middle" colspan="3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="invoiceType" id="person" value="person">
-                                    <label class="form-check-label" for="person">
-                                        個人電子發票
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="collapse" id="method">
-                            <td>
-                                <ul style="list-style:none;">
-                                    <li class="pl-lg-5">
-                                        <div class="form-group row">
-                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="paper">
-                                            <label for="paper" class="col-sm-2 col-form-lable">索取紙本發票</label>
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <th class="bg-green-01">
+                                <span class="font-weight-bold text-coffee">收貨人資料</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-coffee"><a href="#">常用收件人名單/暫定</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-lg-5">
+                                    <div class="form-group row">
+                                        <label for="memberName" class="col-sm-2 col-form-lable">收件人姓名</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" id="memberName" autocomplete="off" required>
                                         </div>
-                                    </li>
-                                    <li class="pl-lg-5">
-                                        <div class="form-group row">
-                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="naturalMan">
-                                            <label for="naturalManCode" class="col-sm-2 col-form-lable">自然人憑證載具：</label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="naturalManCode">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="phonenum" class="col-sm-2 col-form-lable">手機</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" id="phonenum" autocomplete="off"required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control " id="address">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="add-info" id="add-info" value="add-info">
+                                        <label class="form-check-label" for="add-info">
+                                            以上新增至《收貨人通訊錄》
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <th class="bg-green-01">
+                                <span class="text-coffee font-weight-bold">發票資訊</span>
+                                <span class="text-danger ml-3 small font-weight-bold">本公司電子發票依據財政部國稅局電子發票實施作業要點開立，買受人為營業人之電子發票格式依相關規定記載。</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr data-toggle="collapse" href="#code">
+                                <td class="px-lg-5 align-middle">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
+                                        <label class="form-check-label" for="donate">
+                                            捐贈發票
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="collapse" id="code">
+                                <td class="pl-lg-5">
+                                    <div class="form-group row pl-3">
+                                        <label for="donateCode" class="col-sm-2 col-form-lable">愛心捐贈碼</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" id="donateCode">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-toggle="collapse" href="#method">
+                                <td class="px-lg-5 align-middle" colspan="3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="invoiceType" id="person" value="person">
+                                        <label class="form-check-label" for="person">
+                                            個人電子發票
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="collapse" id="method">
+                                <td>
+                                    <ul style="list-style:none;">
+                                        <li class="pl-lg-5">
+                                            <div class="form-group row">
+                                                <input class="form-check-input" type="radio" name="person-Type" id="person" value="paper">
+                                                <label for="paper" class="col-sm-2 col-form-lable">索取紙本發票</label>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="pl-lg-5">
-                                        <div class="form-group row">
-                                            <input class="form-check-input" type="radio" name="person-Type" id="person" value="phone-barcode">
-                                            <label for="phone-barcode" class="col-sm-2 col-form-lable">手機條碼載具：</label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="phone-barcode">
+                                        </li>
+                                        <li class="pl-lg-5">
+                                            <div class="form-group row">
+                                                <input class="form-check-input" type="radio" name="person-Type" id="person" value="naturalMan">
+                                                <label for="naturalManCode" class="col-sm-2 col-form-lable">自然人憑證載具：</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="naturalManCode">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr data-toggle="collapse" href="#company">
-                            <td class="px-lg-5 align-middle">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
-                                    <label class="form-check-label" for="donate">
-                                        公司戶發票
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="collapse" id="company">
-                            <td class="px-lg-3">
-                                <ul style="list-style:none;">
-                                    <li class="form-group row">
-                                        <label for="uniformNum" class="col-sm-2 col-form-label">統一編號：</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" id="uniformNum">
-                                        </div>
-                                    </li>
-                                    <li class="form-group row">
-                                        <label for="company-Name" class="col-sm-2 col-form-label">公司名稱：</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" id="company-Name">
-                                        </div>
-                                    </li>
-                                    <li class="form-group row">
-                                        <label for="contact-tel" class="col-sm-2 col-form-label">聯絡電話：</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" class="form-control" id="contact-tel">
-                                        </div>
-                                    </li>
-                                    <li class="form-group row">
-                                        <label for="address" class="col-sm-2 col-form-label">通訊地址：</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control" id="address">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="checkOut text-right">
+                                        </li>
+                                        <li class="pl-lg-5">
+                                            <div class="form-group row">
+                                                <input class="form-check-input" type="radio" name="person-Type" id="person" value="phone-barcode">
+                                                <label for="phone-barcode" class="col-sm-2 col-form-lable">手機條碼載具：</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="phone-barcode">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr data-toggle="collapse" href="#company">
+                                <td class="px-lg-5 align-middle">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="invoiceType" id="donate" value="donate">
+                                        <label class="form-check-label" for="donate">
+                                            公司戶發票
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="collapse" id="company">
+                                <td class="px-lg-3">
+                                    <ul style="list-style:none;">
+                                        <li class="form-group row">
+                                            <label for="uniformNum" class="col-sm-2 col-form-label">統一編號：</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="uniformNum">
+                                            </div>
+                                        </li>
+                                        <li class="form-group row">
+                                            <label for="company-Name" class="col-sm-2 col-form-label">公司名稱：</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="company-Name">
+                                            </div>
+                                        </li>
+                                        <li class="form-group row">
+                                            <label for="contact-tel" class="col-sm-2 col-form-label">聯絡電話：</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="contact-tel">
+                                            </div>
+                                        </li>
+                                        <li class="form-group row">
+                                            <label for="address" class="col-sm-2 col-form-label">通訊地址：</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="address">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="checkOut text-right mb-3">
                     <button type="submit" class="btn-sm btn-orange text-white font-weight-bold">確定結帳</button>
                 </div>
             </form>
