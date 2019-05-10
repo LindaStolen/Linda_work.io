@@ -71,7 +71,7 @@
             <ul class="navbar-nav px-3 ml-lg-auto">
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">書籍分類</span>
+                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
@@ -137,13 +137,13 @@
                                         <div class="col-sm-7">
                                             <input type="text" class="form-control" id="phonenum" autocomplete="off"required>
                                         </div>
-                                    </div>
+                                    <!-- </div>
                                     <div class="form-group row">
                                         <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
                                         <div class="col-sm-7">
                                             <input type="text" class="form-control " id="address">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </td>
                             </tr>
                             <tr>
@@ -270,9 +270,26 @@
                             </tr>
                         </tbody>
                     </table>
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <th class="bg-green-01">選擇門市</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-lg-5">
+                                    <div class="row">
+                                        <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
+                                        <div class="col-sm-7">
+                                            <input type="button" class="" id="address" value="選擇門市" onclick="location.href='http://map.ezship.com.tw/ezship_map_web_2014.jsp'">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="checkOut text-right mb-3">
-                    <button type="submit" class="btn-sm btn-orange text-white font-weight-bold">確定結帳</button>
+                    <button type="submit" class="btn-sm btn-orange text-white font-weight-bold" onclick="location.href='list-check.html'">確定結帳</button>
                 </div>
             </form>
         </section>

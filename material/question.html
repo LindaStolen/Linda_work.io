@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>註冊會員</title>
+    <title>疑難雜症大哉問</title>
     <link rel="stylesheet" href="scss/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -14,20 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        // window.onscroll = function() {scrollFunction()};
-
-        // function scrollFunction() {
-        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        //         document.getElementById("top").style.display = "block";
-        //     } else {
-        //         document.getElementById("top").style.display = "none";
-        //     }
-        // }
-        // When the user clicks on the button, scroll to the top of the document
-        // function topFunction() {
-        //     document.body.scrollTop = 0; // For Safari
-        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        // }
         $(document).ready(function() {
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
@@ -36,8 +22,7 @@
                 $('#login').hide();
                 $('#signup').hide();
             });
-        })
-        
+        })  
     </script>
 </head>
 <body>
@@ -137,105 +122,153 @@
                         <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
                     </a>
                 </li>
+                <!-- <li class="nav-item mx-lg-2 my-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
+                    </a>
+                </li> -->
             </ul>
         </div>
     </nav>
-    <div class="container mt-lg-3 mt-3 pt-4 pt-lg-5">
-        <div class="col-lg-2"></div>
-        <!-- <div class="progress-bar bg-blue mx-5 py-3">進度條圖</div> -->
-        <section class="my-lg-4 mx-lg-5 p-lg-4">
-            <form action="" method="post">
-                <table class="table table-bordered mx-auto" style="max-width: 60%;">
-                    <tbody class="">
-                        <tr>
-                            <td rowspan="7" class="h-100 px-1 bg-green text-white">
-                                <label for="form" class="h4 font-weight-bold d-flex flex-column align-items-center">
-                                    <span>加</span>
-                                    <span>入</span>
-                                    <span>會</span>
-                                    <span>員</span>
-                                </label>
-                            </td>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">會員姓名</p>
-                                <span class="small">Your name</span>
-                            </td>
-                            <td>
-                                <input type="text" name="userName" id="userName" autocomplete="none" required>
-                                <p class="small mb-0 text-gray">請填寫真實姓名</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">電子信箱</p>
-                                <span class="small">Your E-mail</span>
-                            </td>
-                            <td>
-                                <input type="text" name="userID" id="userID" autocomplete="none" required>
-                                <p class="small mb-0 text-gray">請輸入常用電子信箱</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">密碼</p>
-                                <span class="small">Password</span></td>
-                            <td>
-                                <input type="password" name="register-password" id="register-password" autocomplete="none" required>
-                                <p class="small mb-0 text-gray">英文數字混合,至少8位數以上</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">密碼確認</p>
-                                <span class="small">ComfirmPassword</span>
-                            </td>
-                            <td class="align-middle">
-                                <input type="password" name="" id="passwordCheck" autocomplete="none" required></td>
-                        </tr>
-                        <tr>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">手機</p>
-                                <span class="small">Your phone number</span>
-                            </td>
-                            <td>
-                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="0912345678" autocomplete="none" required>
-                                <p class="small mb-0 text-gray">請輸入正確電話號碼以便接收驗證簡訊</p></td>
-                        </tr>
-                        <tr>
-                            <td scope="column" class="w-25 bg-light">
-                                <p class="mb-1">地址</p>
-                                <span class="small">Address</span>
-                            </td>
-                            <td class="align-middle">
-                                <input type="text" name="address" id="address" autocomplete="none" required>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="form-check mx-auto col-lg-7 col-12">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="mb-1">
-                        訂閱會員專函
-                    </label>
-                    <p class="small" for="defaultCheck1">
-                        每月初針對黃金、白金、鑽石會員固定發送，通知您當月最新會員等級、分級優惠、生日優惠等會員資訊。
-                    </p>
+    <div class="container my-lg-5 py-lg-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">鼎茂書城</a></li>
+                <li class="breadcrumb-item active"><a href="#">常見問題</a></li>
+                <!-- <li class="breadcrumb-item active" aria-current="page"></li> -->
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-3">
+                <div class="contactUs border border-light px-4 pt-3">
+                    <p class="subtitel mb-1">與我們連絡</p>
+                    <ul class="pl-3">
+                        <li><a href="#">客服信箱</a></li>
+                        <li><a href="#">客服專線</a></li>
+                        <li><a href="#">線上客服</a></li>
+                    </ul>
                 </div>
-                <div class="form-check mx-auto col-lg-7 col-12">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="mb-1">
-                        訂閱商品/活動訊息
-                    </label>
-                    <p class="small" for="defaultCheck1">
-                        不定期透過email通知最新商品活動及優惠資訊。
-                    </p>
+            </div>
+            <div class="col-7">
+                <div id="accordion my-lg-4">
+                    <div class="card">
+                        <div class="card-header p-1" id="mainOne">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#material">
+                            <button class="btn btn-link text-coffee font-weight-bold">
+                                購物說明
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="material" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
+                            <ul class=" pt-2" style="list-style:square;">
+                                <li><a href="#">購物需要加入會員嗎</a></li>
+                                <li><a href="#">如何找商品</a></li>
+                                <li><a href="#">到店取貨找不到門市</a></li>
+                                <li><a href="#">到貨會有簡訊通知嗎</a></li>
+                                <li><a href="#">缺貨商品調貨的等待時間</a></li>
+                                <li><a href="#">取貨方式與運費說明</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-1" id="mainTwo">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo">
+                            <button class="btn btn-link text-coffee font-weight-bold collapsed">
+                                付款方式
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
+                        <ul class="pt-2" style="list-style:square;">
+                            <li><a href="#">到店取貨付現金</a></li>
+                            <li><a href="#">取貨方式與運費說明</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-1" id="mainThree">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#collapseThree">
+                            <button class="btn btn-link text-coffee font-weight-bold collapsed">
+                                出貨進度
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                        <ul class="pt-2" style="list-style:square;">
+                            <li><a href="#">如何查詢歷史訂單記錄</a></li>
+                            <li><a href="#">如何確定訂單是否成立</a></li>
+                            <li><a href="#">配送進度查詢</a></li>
+                            <li><a href="#">訂單成立後可否異動</a></li>
+                            <li><a href="#">只收到部分商品?</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-1" id="mainThree">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#invoice">
+                            <button class="btn btn-link text-coffee font-weight-bold collapsed">
+                                發票說明
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="invoice" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                        <ul class="pt-2" style="list-style:square;">
+                            <li><a href="#">發票種類</a></li>
+                            <li><a href="#">電子發票說明</a></li>
+                            <li><a href="#">可否變更發票種類與內容</a></li>
+                            <li><a href="#">可否開多張發票或合併開</a></li>
+                            <li><a href="#">如何索取紙本發票</a></li>
+                            <li><a href="#">發票遺失是否可以補發</a></li>
+                            <li><a href="#">拿到的發票是否可以兌獎</a></li>
+                            <li><a href="#">電子發票中獎該怎麼領取</a></li>
+                            <li><a href="#">可以捐贈嗎</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-1" id="mainThree">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#aboutStock">
+                            <button class="btn btn-link text-coffee font-weight-bold collapsed">
+                                出貨進度
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="aboutStock" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                        <ul class="pt-2" style="list-style:square;">
+                            <li><a href="#">退換貨說明</a></li>
+                            <li><a href="#">退換貨需要附發票嗎</a></li>
+                            <li><a href="#">訂錯可否更換不同商品</a></li>
+                            <li><a href="#">鑑賞期說明</a></li>
+                            <li><a href="#">超過鑑賞期怎麼辦</a></li>
+                            <li><a href="#">收到不是我訂購的商品</a></li>
+                            <li><a href="#">退款說明</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header p-1" id="mainThree">
+                        <h5 class="mb-0" data-toggle="collapse" data-target="#aboutMember">
+                            <button class="btn btn-link text-coffee font-weight-bold collapsed">
+                                會員相關
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="aboutMember" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                        <ul class="pt-2" style="list-style:square;">
+                            <li><a href="#">申請/修改會員資料</a></li>
+                            <li><a href="#">訂閱/取消電子報</a></li>
+                            <li><a href="#">查詢歷史訂單</a></li>
+                            <li><a href="#">查看購物車</a></li>
+                            <li><a href="#">查詢紅利及電子禮券</a></li>
+                            <li><a href="#">查詢現金帳戶</a></li>
+                            <li><a href="#">載具小幫手</a></li>
+                            <li><a href="#">商品追蹤記錄</a></li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="button-group text-center mt-lg-4 d-lg-flex justify-content-center">
-                    <button type="submit" class="btn btn-blue font-weight-bold mr-lg-3">送出資料</button>
-                    <button type="" class="btn btn-blue font-weight-bold">取消</button>
-                </div>
-            </form>
-        </section>
+            </div>
+        </div>
     </div>
     <div id="footer" class="bg-green-01 px-lg-5 px-3">
         <div class="row d-flex justify-content-lg-between">
