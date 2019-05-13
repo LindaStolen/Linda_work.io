@@ -72,14 +72,14 @@
                 </form>
             </div>
             <div class="modal-footer text-left">
-                <button type="button" class="registered btn btn-light btn-outline-blue">註冊</button>
+                <button type="button" class="registered btn btn-light btn-outline-blue" onclick="location.href='registered.html'">註冊</button>
                 <button type="submit" class="btn btn-green-03 text-white" id="loginCheck"  data-dismiss="modal">登入</button>
             </div>
             </div>
         </div>
     </div>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
-        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="#">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
         <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,7 @@
                 <div class="input-group-append">
                     <a class="input-group-text fas fa-search py-2" href="#"></a>
                 </div>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'"v>國營考試</button>
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
             </form>
@@ -128,10 +128,10 @@
                         <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
-                        <a class="dropdown-item" href="#">會員設定</a>
+                        <a class="dropdown-item" href="registered.html">會員設定</a>
                         <a class="dropdown-item" href="#">追蹤清單</a>
-                        <a class="dropdown-item" href="#">訂單查詢</a>
-                        <a class="dropdown-item" href="#">常見問題</a>
+                        <a class="dropdown-item" href="buy-cart.html">訂單查詢</a>
+                        <a class="dropdown-item" href="question.html">常見問題</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">會員登出</a>
                     </div>
@@ -170,10 +170,10 @@
             <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
         </div>
     </div>
-    <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%;">
+    <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%; z-index: 1000;">
         <img src="images/totop-12-12.png" alt="" class="img-fluid">
     </a>
-    <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
+    <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%; z-index: 1000;">
         <img src="images/message-12-12.png" alt="" class="img-fluid">
     </a>
     <div class="container my-lg-5 py-lg-3">
@@ -197,7 +197,7 @@
                         <li>
                             <a href="#" class="text-info">2018試題大補帖經濟部新進職員企管類</a>
                         </li>
-                        <li>蔣仲典/編著；鼎茂研究室/出版</li>
+                        <li><a href="#">蔣仲典編著</a>；<a href="#">鼎茂研究室出版</a></li>
                         <li><span class="small mr-2">原價 : NT<del>$850</del></span>NT$<span class="text-danger font-weight-bold">750</span></li>
                     </ul>
                 </div>
@@ -224,22 +224,23 @@
                     </ul>
                 </div>
             </div>
-            <div class="productList col-9"> 
+            <div class="productList col-lg-9 col-12"> 
+                <div class="condition text-right">排序方式
+                    <select name="sort" id="sort">
+                        <option value="0">依出版日期(新到舊)</option>
+                        <option value="1">依出版日期(舊到新)</option>
+                        <option value="2">依暢銷度</option>
+                        <option value="3">依價錢(高到低)</option>
+                        <option value="4">依價錢(低到高)</option>
+                    </select>
+                </div>
                 <div class="subti rounded bg-light my-3 px-2 py-1 position-relative">國家考試\書籍 新書列表 
-                    <span class="condition d-inline-block position-absolute" style="right: 2%;">排序方式
-                        <select name="sort" id="sort">
-                            <option value="0">依出版日期(新到舊)</option>
-                            <option value="1">依出版日期(舊到新)</option>
-                            <option value="2">依暢銷度</option>
-                            <option value="3">依價錢(高到低)</option>
-                            <option value="4">依價錢(低到高)</option>
-                        </select>
-                    </span> </div>
+                    </div>
                 <div class="bookBox ml-1 mb-2 row">
-                    <div class="pic d-inline-block col-2">
+                    <div class="pic text-center d-inline-block col-lg-2">
                         <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
                     </div>
-                    <div class="describe col-7">
+                    <div class="describe col-lg-7">
                         <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
@@ -247,17 +248,37 @@
                             <a href="production.html"><img src="images/more-03.png" alt=""></a> 
                         </p>
                     </div>
-                    <div class="moneyCome col-3">
+                    <div class="moneyCome col-lg-3">
+                        <div class="count mb-1">優惠價<b class="text-danger">9</b>折<b class="text-danger">369</b>元</div>
+                        <div>
+                            <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
+                            <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookBox ml-1 mb-2 row">
+                    <div class="pic text-center d-inline-block col-lg-2">
+                        <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
+                    </div>
+                    <div class="describe col-lg-7">
+                        <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
+                        <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
+                        <p class="text-truncate d-inline-block">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
+                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                        </p>
+                    </div>
+                    <div class="moneyCome col-lg-3">
                         <div class="count mb-1">優惠價<b class="text-danger">9</b>折 , <b class="text-danger">369</b>元</div>
                         <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
                         <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
                 <div class="bookBox ml-1 mb-2 row">
-                    <div class="pic d-inline-block col-2">
+                    <div class="pic text-center d-inline-block col-lg-2">
                         <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
                     </div>
-                    <div class="describe col-7">
+                    <div class="describe col-lg-7">
                         <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
@@ -265,17 +286,17 @@
                             <a href="production.html"><img src="images/more-03.png" alt=""></a> 
                         </p>
                     </div>
-                    <div class="moneyCome col-3">
+                    <div class="moneyCome col-lg-3">
                         <div class="count mb-1">優惠價<b class="text-danger">9</b>折 , <b class="text-danger">369</b>元</div>
                         <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
                         <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
                 <div class="bookBox ml-1 mb-2 row">
-                    <div class="pic d-inline-block col-2">
+                    <div class="pic text-center d-inline-block col-lg-2">
                         <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
                     </div>
-                    <div class="describe col-7">
+                    <div class="describe col-lg-7">
                         <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
@@ -283,17 +304,17 @@
                             <a href="production.html"><img src="images/more-03.png" alt=""></a> 
                         </p>
                     </div>
-                    <div class="moneyCome col-3">
+                    <div class="moneyCome col-lg-3">
                         <div class="count mb-1">優惠價<b class="text-danger">9</b>折 , <b class="text-danger">369</b>元</div>
                         <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
                         <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
                 <div class="bookBox ml-1 mb-2 row">
-                    <div class="pic d-inline-block col-2">
+                    <div class="pic text-center d-inline-block col-lg-2">
                         <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
                     </div>
-                    <div class="describe col-7">
+                    <div class="describe col-lg-7">
                         <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
@@ -301,25 +322,7 @@
                             <a href="production.html"><img src="images/more-03.png" alt=""></a> 
                         </p>
                     </div>
-                    <div class="moneyCome col-3">
-                        <div class="count mb-1">優惠價<b class="text-danger">9</b>折 , <b class="text-danger">369</b>元</div>
-                        <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
-                        <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
-                    </div>
-                </div>
-                <div class="bookBox ml-1 mb-2 row">
-                    <div class="pic d-inline-block col-2">
-                        <img src="https://source.unsplash.com/random/120x120" alt="" class="img-fluid">
-                    </div>
-                    <div class="describe col-7">
-                        <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
-                        <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
-                        <p class="text-truncate d-inline-block">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
-                        </p>
-                    </div>
-                    <div class="moneyCome col-3">
+                    <div class="moneyCome col-lg-3">
                         <div class="count mb-1">優惠價<b class="text-danger">9</b>折 , <b class="text-danger">369</b>元</div>
                         <button role="button" class="buyThis btn btn-sm btn-outline-dark"><i class="fas fa-cart-arrow-down mr-1"></i>加入購物車</button>
                         <button role="button" class="likeThis btn btn-sm btn-outline-purple"><i class="fas fa-heart"></i></button>
