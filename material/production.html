@@ -16,6 +16,15 @@
     <script src="/js/jquery.flexslider-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <style>
+        .catalog {
+            height: 150px;
+            overflow: hidden;
+        }
+        .catalog.active {
+            height: auto;
+        }
+    </style>
     <script>
         window.onscroll = function() {scrollFunction()};
 
@@ -192,7 +201,7 @@
                         <i class="fas fa-book fa-lg mr-2"></i><span>商品分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-lg-gray border-0 rounded" aria-labelledby="member">
+                    <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded">
                         <a class="dropdown-item" href="#">考試用書</a>
                         <a class="dropdown-item" href="#">我想上課</a>
                         <a class="dropdown-item" href="#">課程教具</a>
@@ -207,7 +216,7 @@
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
                         <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                    <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded">
                         <a class="dropdown-item" href="registered.html">會員設定</a>
                         <a class="dropdown-item" href="#">追蹤清單</a>
                         <a class="dropdown-item" href="buy-cart.html">訂單查詢</a>
@@ -234,6 +243,7 @@
                 <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
                 <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
                 <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 bg-warning font-weight-bold" href="buy-cart.html" role="button">繳錢嘍</a>
             </div>
         </div>
         <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
@@ -322,10 +332,58 @@
                     <img src="https://source.unsplash.com/random/300x187?sig=57" alt="" class="img-fluid mt-2 rounded">
                 </div>
             <section class="row container pr-0">
-                <div class="col-lg-10 col-12 mt-lg-3 mt-3">
+                <div class="big-case col-lg-10 col-12 mt-lg-3 mt-3">
                     <div class="border-bottom border-green-03" style="line-height: 30px;">
                         <span class="lable tag mt-5 px-2 py-1 text-green font-weight-bold" style="font-size:20px;">內容</span>
                     </div>
+                    <div class="front px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
+                        <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">目錄</span>
+                        <p class="catalog pb-lg-3 pb-3">
+                                關於為貓做的那些設計<br>
+                                室內設計師│ ST des_gn stud_o 蔡思棣<br>
+                                寵物行為訓練師│單熙汝<br>
+                                寵物產品設計│ MYZOO動物緣<br>
+                                <br>
+                                Chapter1行為篇<br>
+                                Point1 打造夢幻貓宅，先了解貓咪的天性<br>
+                                Point 2 改善居住空間，糾正貓咪壞壞行為<br>
+                                <br>
+                                Chapter2生活篇<br>
+                                Point 1 這樣打掃，貓宅常清爽乾淨<br>
+                                Point 2 小心危險！貓咪居家安全須知<br>
+                                Point 3 貼心用品，貓咪超幸福感！<br>
+                                <br>
+                                Chapter3設計篇<br>
+                                Point 1 挑對材質，貓咪貓奴住得都舒適<br>
+                                Point 2 獨立貓屋，專屬貓咪的私人空間<br>
+                                Point 3 住宅貓化，合乎貓體工學的宅設計<br>
+                                Point 4 貼心照護，和愛貓一起住到老<br>
+                                <br>
+                                Chapter4實踐篇<br>
+                                Case01 可共享可獨立，幸福加倍的訂製貓宅<br>
+                                Case02 夫妻與二貓的通透浪漫工業宅<br>
+                                Case03 多動線貓咪廊道，打造毛小孩趣味樂園<br>
+                                Case04 全室開放，貓咪恣意遊走不拘束<br>
+                                Case05 漂浮貓屋創造人與貓生活遊戲共存場域<br>
+                                Case06 不著痕跡的工業風個性貓宅<br>
+                                Case07 給愛貓五星享受的LOFT 都會宅<br>
+                                Case08 木質基調詮釋自然療癒貓宅<br>
+                                Case09 自由走動生活的日式清新貓樂園<br>
+                                Case10 捨一房，換來人貓共用的開闊餐廳<br>
+                                Case11 陪喵星人一起變老的北歐宅<br>
+                                Case12 在自由開闊的空間，享受人貓彼此陪伴的時光<br>
+                                Case13 融合人貓同居需求的清新微型貓宅<br>
+                                Case14 超開放機能空間給貓咪隨性遊走的步調<br>
+                                Case15 開闊無阻動線打造清爽簡約貓宅<br>
+                                Case16 整合手法讓小坪數也能有專屬貓屋<br>
+                                Case17 屋中屋vs 貓迷宮的人貓幸福宅<br>
+                                Case18 櫥窗貓屋拉近2 人2 貓距離<br>
+                                附錄／<br>
+                                DESIGNER DATA<br>
+                                SHOP DATA<br>
+                            </p>
+                        </div>
+                        <button class="upClose btn btn-sm font-weight-bold ml-4" role="button">more</button>
                     <div class="book-introduce px-lg-4 pt-lg-4 px-3 pt-3 my-lg-3">
                         <span class="lable text-coffee d-inline-block pb-2" style="font-size:18px">書本內容</span>
                         <p class="pb-lg-3 pb-3 border-bottom border-light ">
@@ -528,4 +586,17 @@
         <p class="text-center mb-0 text-coffee h6">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+        $(".upClose").click(function(){
+            if($(".catalog").hasClass("active")){
+                $(".catalog").removeClass("active");
+                $(".upClose").text("more");
+            }else {
+                $(".catalog").addClass("active");
+                $(".upClose").text("close");
+            }
+        })
+    })
+</script>
 </html>

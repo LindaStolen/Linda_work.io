@@ -162,6 +162,33 @@
         </div>
     </nav>
     <div class="container my-5 py-3">
+        <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/buy-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 bg-warning font-weight-bold" href="buy-cart.html" role="button">繳錢嘍</a>
+            </div>
+        </div>
+        <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/view-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
+            </div>
+        </div>
+        <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%; z-index: 1000;">
+            <img src="images/totop-12-12.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%; z-index: 1000;">
+            <img src="images/message-12-12.png" alt="" class="img-fluid">
+        </a>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="#">鼎茂書城</a></li>
@@ -190,85 +217,87 @@
                     <option value="#return">退貨說明</option>
                     <option value="#aboutmember">會員相關</option>
                 </select>
-                <section id="howBuy" class="mt-5">
+                <section id="howBuy">
                     <div id="accordion">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="mainOne">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#material">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hbOne">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     購物須要加入會員嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="material" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
+                            <div id="hb-1" class="collapse" aria-labelledby="hbOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
+                                </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="mainTwo">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hbTwo">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     如何找商品
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
-                            <div class="">
+                            <div id="hb-2" class="collapse" aria-labelledby="hbTwo" data-parent="#accordion">
+                            <div class="card-body">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="mainThree">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapseThree">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hbThree">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     到店取貨找不到門市
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hb-3" class="collapse" aria-labelledby="hbThree" data-parent="#accordion">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="main4">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapse4">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hb4">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     到貨會有簡訊通知嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapse4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hb-4" class="collapse" aria-labelledby="hb4" data-parent="#accordion">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="main5">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapse5">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hb5">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     缺貨商品調貨的等待時間
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapse5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hb-5" class="collapse" aria-labelledby="hb5" data-parent="#accordion">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-03" id="main6">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapse6">
+                            <div class="card-header p-1 border-bottom border-green-03" id="hb6">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hb-6">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     取貨方式與運費說明
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapse6" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hb-6" class="collapse" aria-labelledby="hb6" data-parent="#accordion">
                             <div class="card-body">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, porro nesciunt eos fugiat deserunt quos pariatur? Quam blanditiis alias vitae exercitationem sapiente culpa dolor voluptas.
                             </div>
@@ -277,84 +306,86 @@
                     </div>
                 </section>
                 <section id="howPay" class="mt-5">
-                    <div id="accordion">
+                    <div id="accordion-2">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="mainOne">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp1">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hpOne">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     購物須要加入會員嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp1" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
+                            <div id="hp-1" class="collapse" aria-labelledby="hpOne" data-parent="#accordion-2">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
+                                </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="mainTwo">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp2">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hpTwo">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     如何找商品
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp2" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
-                            <div class="">
+                            <div id="hp-2" class="collapse" aria-labelledby="hpTwo" data-parent="#accordion-2">
+                            <div class="card-body">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="mainThree">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp4">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hpThree">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     到店取貨找不到門市
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hp-3" class="collapse" aria-labelledby="hpThree" data-parent="#accordion-2">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="main4">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp5">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hp4">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     到貨會有簡訊通知嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hp-4" class="collapse" aria-labelledby="hp4" data-parent="#accordion-2">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="main5">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp6">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hp5">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     缺貨商品調貨的等待時間
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp6" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hp-5" class="collapse" aria-labelledby="hp5" data-parent="#accordion-2">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-02" id="main6">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp7">
+                            <div class="card-header p-1 border-bottom border-green-02" id="hp6">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#hp-6">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     取貨方式與運費說明
                                 </button>
                             </h5>
                             </div>
-                            <div id="hp7" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="hp-6" class="collapse" aria-labelledby="hp6" data-parent="#accordion-2">
                             <div class="card-body">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, porro nesciunt eos fugiat deserunt quos pariatur? Quam blanditiis alias vitae exercitationem sapiente culpa dolor voluptas.
                             </div>
@@ -363,70 +394,70 @@
                     </div>
                 </section>
                 <section id="stock" class="mt-5">
-                    <div id="accordion">
+                    <div id="accordion-3">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-01" id="mainOne">
+                            <div class="card-header p-1 border-bottom border-green-01" id="stockOne">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#st1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     如何查詢歷史訂單記錄
                                 </button>
                             </h5>
                             </div>
-                            <div id="st1" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
+                            <div id="st1" class="collapse" aria-labelledby="stockOne" data-parent="#accordion-3">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-01" id="mainTwo">
+                            <div class="card-header p-1 border-bottom border-green-01" id="stockTwo">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#st2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     如何確定訂單是否成立
                                 </button>
                             </h5>
                             </div>
-                            <div id="st2" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
+                            <div id="st2" class="collapse" aria-labelledby="stockTwo" data-parent="#accordion-3">
                             <div class="">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-01" id="mainThree">
+                            <div class="card-header p-1 border-bottom border-green-01" id="stockThree">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#st3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     配送進度查詢
                                 </button>
                             </h5>
                             </div>
-                            <div id="st3" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="st3" class="collapse" aria-labelledby="stockThree" data-parent="#accordion-3">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-01" id="main4">
+                            <div class="card-header p-1 border-bottom border-green-01" id="stock4">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#st4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     訂單成立後可否異動
                                 </button>
                             </h5>
                             </div>
-                            <div id="st4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="st4" class="collapse" aria-labelledby="stock4" data-parent="#accordion-3">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green-01" id="main5">
+                            <div class="card-header p-1 border-bottom border-green-01" id="stock5">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#st5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     只收到部分商品?
                                 </button>
                             </h5>
                             </div>
-                            <div id="st5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="st5" class="collapse" aria-labelledby="stock5" data-parent="#accordion-3">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
@@ -435,126 +466,126 @@
                     </div>
                 </section>
                 <section id="invoice" class="mt-5">
-                    <div id="accordion">
+                    <div id="accordion-4">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="mainOne">
+                            <div class="card-header p-1 border-bottom border-green" id="invoiceOne">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     發票種類
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv1" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
+                            <div id="iv1" class="collapse" aria-labelledby="invoiceOne" data-parent="#accordion-4">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="mainTwo">
+                            <div class="card-header p-1 border-bottom border-green" id="invoiceTwo">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     電子發票說明
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv2" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
+                            <div id="iv2" class="collapse" aria-labelledby="invoiceTwo" data-parent="#accordion-4">
                             <div class="">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="mainThree">
+                            <div class="card-header p-1 border-bottom border-green" id="invoiceThree">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     可否變更發票種類與內容
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv3" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv3" class="collapse" aria-labelledby="invoiceThree" data-parent="#accordion-4">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main4">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice4">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     可否開多張發票或合併開
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv4" class="collapse" aria-labelledby="invoice4" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main5">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice5">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     如何索取紙本發票
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv5" class="collapse" aria-labelledby="invoice5" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main6">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice6">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv6">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     發票遺失可以補發嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv6" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv6" class="collapse" aria-labelledby="invoice6" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main7">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice7">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#iv7">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     拿到的發票是否可以兌獎
                                 </button>
                             </h5>
                             </div>
-                            <div id="iv7" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv7" class="collapse" aria-labelledby="invoice7" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main8">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapse8">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice8">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#iv8">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     電子發票中獎該怎麼領取
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapse8" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv8" class="collapse" aria-labelledby="invoice8" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-green" id="main9">
-                            <h5 class="mb-0" data-toggle="collapse" data-target="#collapse9">
+                            <div class="card-header p-1 border-bottom border-green" id="invoice9">
+                            <h5 class="mb-0" data-toggle="collapse" data-target="#iv9">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     可以捐贈嗎
                                 </button>
                             </h5>
                             </div>
-                            <div id="collapse9" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="iv9" class="collapse" aria-labelledby="invoice9" data-parent="#accordion-4">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
@@ -563,70 +594,70 @@
                     </div>
                 </section>
                 <section id="return" class="mt-5">
-                    <div id="accordion">
+                    <div id="accordion-5">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-info" id="mainOne">
+                            <div class="card-header p-1 border-bottom border-info" id="returnOne">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#rt1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     如何查詢歷史訂單記錄
                                 </button>
                             </h5>
                             </div>
-                            <div id="rt1" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
+                            <div id="rt1" class="collapse" aria-labelledby="returnOne" data-parent="#accordion-5">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-info" id="mainTwo">
+                            <div class="card-header p-1 border-bottom border-info" id="returnTwo">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#rt2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     如何確定訂單是否成立
                                 </button>
                             </h5>
                             </div>
-                            <div id="rt2" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
+                            <div id="rt2" class="collapse" aria-labelledby="returnTwo" data-parent="#accordion-5">
                             <div class="">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-info" id="mainThree">
+                            <div class="card-header p-1 border-bottom border-info" id="returnThree">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#rt3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     配送進度查詢
                                 </button>
                             </h5>
                             </div>
-                            <div id="rt3" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="rt3" class="collapse" aria-labelledby="returnThree" data-parent="#accordion-5">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-info" id="main4">
+                            <div class="card-header p-1 border-bottom border-info" id="return4">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#rt4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     訂單成立後可否異動
                                 </button>
                             </h5>
                             </div>
-                            <div id="rt4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="rt4" class="collapse" aria-labelledby="return4" data-parent="#accordion-5">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-info" id="main5">
+                            <div class="card-header p-1 border-bottom border-info" id="return5">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#rt5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     只收到部分商品?
                                 </button>
                             </h5>
                             </div>
-                            <div id="rt5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="rt5" class="collapse" aria-labelledby="return5" data-parent="#accordion-5">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
@@ -635,112 +666,112 @@
                     </div>
                 </section>
                 <section id="aboutmember" class="mt-5">
-                    <div id="accordion">
+                    <div id="accordion-6">
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="mainOne">
+                            <div class="card-header p-1 border-bottom border-danger" id="memberOne">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb1">
                                 <button class="btn btn-link text-coffee font-weight-bold">
                                     申請/修改會員資料
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb1" class="collapse" aria-labelledby="mainOne" data-parent="#accordion">
+                            <div id="mb1" class="collapse" aria-labelledby="memberOne" data-parent="#accordion-6">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deserunt?
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="mainTwo">
+                            <div class="card-header p-1 border-bottom border-danger" id="memberTwo">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb2">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     訂閱/取消電子報
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb2" class="collapse" aria-labelledby="mainTwo" data-parent="#accordion">
+                            <div id="mb2" class="collapse" aria-labelledby="memberTwo" data-parent="#accordion-6">
                             <div class="">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus mollitia dolores rem hic, atque ad, ipsam doloremque explicabo, ratione molestias. Odio sit rerum totam magnam vitae nobis, dolorem aspernatur in. Cupiditate minima, officia voluptatum tenetur porro maxime tempora dolor repudiandae natus, at, expedita animi optio eos similique odio? Ipsa impedit numquam unde labore fugiat ab ea repellendus iure dolores voluptates! Eveniet, exercitationem vero perspiciatis magnam aut expedita quam assumenda illum voluptatem impedit, cumque voluptates, quo veritatis sunt beatae earum.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="mainThree">
+                            <div class="card-header p-1 border-bottom border-danger" id="memberThree">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb3">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     查詢歷史訂單
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb3" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb3" class="collapse" aria-labelledby="memberThree" data-parent="#accordion-6">
                             <div class="card-body">
                                 123456789#2
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="main4">
+                            <div class="card-header p-1 border-bottom border-danger" id="member4">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb4">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     查看購物車
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb4" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb4" class="collapse" aria-labelledby="member4" data-parent="#accordion-6">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi repellat molestiae cupiditate possimus vel, cumque numquam, assumenda ipsam deleniti asperiores sapiente non temporibus doloremque blanditiis quis neque nemo quaerat.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="main5">
+                            <div class="card-header p-1 border-bottom border-danger" id="member5">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb5">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     查詢紅利及電子禮券
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb5" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb5" class="collapse" aria-labelledby="member5" data-parent="#accordion-6">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="main6">
+                            <div class="card-header p-1 border-bottom border-danger" id="member6">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb6">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     查詢現金帳戶
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb6" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb6" class="collapse" aria-labelledby="member6" data-parent="#accordion-6">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="main7">
+                            <div class="card-header p-1 border-bottom border-danger" id="member7">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb7">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     載具小幫手
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb7" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb7" class="collapse" aria-labelledby="member7" data-parent="#accordion-6">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header p-1 border-bottom border-danger" id="main8">
+                            <div class="card-header p-1 border-bottom border-danger" id="member8">
                             <h5 class="mb-0" data-toggle="collapse" data-target="#mb8">
                                 <button class="btn btn-link text-coffee font-weight-bold collapsed">
                                     商品追蹤記錄
                                 </button>
                             </h5>
                             </div>
-                            <div id="mb8" class="collapse" aria-labelledby="mainThree" data-parent="#accordion">
+                            <div id="mb8" class="collapse" aria-labelledby="member8" data-parent="#accordion-6">
                             <div class="card-body">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam saepe aliquid. Nobis harum voluptatem in itaque omnis, error aut.
                             </div>
