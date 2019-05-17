@@ -24,6 +24,9 @@
         .catalog.active {
             height: auto;
         }
+        #top {
+            display: none;
+        }
     </style>
     <script>
         window.onscroll = function() {scrollFunction()};
@@ -177,23 +180,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
-            <form class="form-inline input-group input-group-sm col-12 col-lg-7">
-                <input class="form-control my-2 rounded-0" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append my-2">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
                     <a class="input-group-text fas fa-search py-2" href="#"></a>
                 </div>
-                <div class="keywords mb-sm-2 mb-lg-0 mt-lg-2 pt-lg-1 col-sm-12 col-lg-5 px-0">
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
-                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
             </form>
-            <!-- <div class="btn-group ml-lg-auto text-center">
-                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray-400 mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- <div class="btn-group ml-lg-auto">
+                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-book fa-lg"></i>
                     書籍分類
                 </boutton>
-                <div class="dropdown-menu dropdown-menu-right ml-3 border border-gray rounded" aria-labelledby="category-all">
+                <div class="dropdown-menu dropdown-menu-right ml-3 border border-light rounded" aria-labelledby="category-all">
                     <button class="dropdown-item" type="button">考試用書</button>
                     <button class="dropdown-item" type="button">我想上課</button>
                     <button class="dropdown-item" type="button">課程教具</button>
@@ -202,10 +203,10 @@
             <ul class="navbar-nav px-3 ml-lg-auto">
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        <i class="fas fa-book fa-lg mr-2"></i><span>商品分類</span>
+                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded">
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
                         <a class="dropdown-item" href="#">考試用書</a>
                         <a class="dropdown-item" href="#">我想上課</a>
                         <a class="dropdown-item" href="#">課程教具</a>
@@ -220,7 +221,7 @@
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
                         <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded">
+                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
                         <a class="dropdown-item" href="registered.html">會員設定</a>
                         <a class="dropdown-item" href="wanna-buy.html">追蹤清單</a>
                         <a class="dropdown-item" href="buy-cart.html">訂單查詢</a>
@@ -231,10 +232,15 @@
                 </li>
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
                     <!-- 註冊 -->
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="signup" role="button" data-toggle="modal" data-target="#loginBox">
+                    <a class="nav-link dropdown-toggle text-coffee" href="registered.html" id="signup" role="button" onclick="location.href='registered.html'">
                         <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
                     </a>
                 </li>
+                <!-- <li class="nav-item mx-lg-2 my-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
+                    </a>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -587,7 +593,7 @@
                 <!-- </div> -->
                 <div class="col-lg-2"></div>
             </div>
-        <p class="text-center mb-0 text-coffee h6">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
     </div>
 </body>
 <script>

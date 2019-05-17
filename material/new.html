@@ -17,7 +17,7 @@
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
-            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
                 document.getElementById("top").style.display = "block";
             } else {
                 document.getElementById("top").style.display = "none";
@@ -90,7 +90,9 @@
         
     </script>
     <style>
-        
+        #top {
+            display: none;
+        }
     </style>
     </head>
 <body>
