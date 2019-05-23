@@ -44,7 +44,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;"></h5>
+                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">成功訊息</h5>
                 <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -56,6 +56,26 @@
             </div>
             <div class="modal-footer text-left">
                 <button type="submit" class="btn btn-green-03 text-white" id="check"  data-dismiss="modal" onclick="location.href='new.html'">OK！</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="falseBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">錯誤提示</h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4" id="false">
+                <p>很抱歉，您輸入的驗證碼錯誤</p>
+                <p>請按下<span class="text-gray p-1 border border-gray rounded">重新發送</span>接收驗證簡訊，謝謝</p>
+                <p>祝您 &nbsp; 順心</p>
+            </div>
+            <div class="modal-footer text-left">
+                <button type="submit" class="btn btn-green-03 text-white" id="closeBox" data-dismiss="modal">OK！</button>
             </div>
             </div>
         </div>
@@ -141,7 +161,8 @@
                 <button class="veri-btn btn btn-green btn-sm " role="button" data-toggle="modal" data-target="#successBox">GoGo</button>
             </div>
             <div class="reSend w-50 mt-lg-3 text-center mx-auto">
-                <button class="btn btn-outline-gray">還未收到驗證碼簡訊請按我</button>
+                <p class="mb-1">還未收到/輸入錯誤驗證碼請按下</p>
+                <button class="btn btn-outline-gray">重新發送</button>
             </div>
         <!-- </form> -->
     </div>
