@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-submenu.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-submenu.js"></script>
     <script src="js/slick.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -37,7 +39,6 @@
                 $('#signup').hide();
             });
         })
-        
     </script>
 </head>
 <body>
@@ -60,14 +61,58 @@
             </form>
             <ul class="navbar-nav px-3 ml-lg-auto">
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" tabindex="0" data-toggle="dropdown" data-submenu>
                         <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
-                        <a class="dropdown-item" href="#">考試用書</a>
-                        <a class="dropdown-item" href="#">我想上課</a>
-                        <a class="dropdown-item" href="#">課程教具</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown dropleft dropdown-submenu">
+                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">第一層</button>
+                        
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">Sub action</button>
+                            
+                                <div class="dropdown dropright dropdown-submenu">
+                                    <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+                            
+                                    <div class="dropdown-menu">
+                                    <button class="dropdown-item" type="button">Sub action</button>
+                                    <button class="dropdown-item" type="button">Another sub action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                    </div>
+                                </div>
+                            
+                                <button class="dropdown-item" type="button">Something else here</button>
+                                <button class="dropdown-item" type="button" disabled>Disabled action</button>
+                            
+                                <div class="dropdown dropleft dropdown-submenu">
+                                    <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+                            
+                                    <div class="dropdown-menu">
+                                    <button class="dropdown-item" type="button">Sub action</button>
+                                    <button class="dropdown-item" type="button">Another sub action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-header">幹嘛用的</div>
+                        
+                        <div class="dropdown dropleft dropdown-submenu">
+                            <button class="dropdown-item dropdown-toggle" type="button">也是第一層</button>
+                        
+                            <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">Sub action</button>
+                            <button class="dropdown-item" type="button">Another sub action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                            </div>
+                        </div>
+                        
+                        <button class="dropdown-item" type="button">第一層</button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" type="button">Separated link</button>
+                  
                     </div>
                 </li>
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
@@ -98,7 +143,58 @@
         </div>
     </nav>
     <div class="containermt-lg-3 mt-3 pt-4 pt-lg-5">
+        <div class="content px-5" style="height: 650px;">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"data-submenu>
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown dropleft dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">Sub action</button>
+                            <div class="dropdown dropleft dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+                        
+                                <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">Sub action</button>
+                                <button class="dropdown-item" type="button">Another sub action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
+                            </div>
+                        
+                            <button class="dropdown-item" type="button">Something else here</button>
+                            <button class="dropdown-item" type="button" disabled>Disabled action</button>
+                        
+                            <div class="dropdown dropleft dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+                        
+                                <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">Sub action</button>
+                                <button class="dropdown-item" type="button">Another sub action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-header">Dropdown header</div>
+                        
+                    <div class="dropdown dropleft dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+                    
+                        <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">Sub action</button>
+                        <button class="dropdown-item" type="button">Another sub action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </div>
+                    <button class="dropdown-item" type="button">Something else here</button>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item" type="button">Separated link</button>
+                </div>
+            </div>
 
+        </div>
     </div>
     <div id="footer" class="bg-green-01 px-lg-5 px-3">
         <div class="row d-flex justify-content-lg-between">
@@ -146,5 +242,8 @@
         </div>
         <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
     </div>
+    <script>
+        $('[data-submenu]').submenupicker();
+    </script>
 </body>
 </html>
