@@ -181,27 +181,107 @@
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">高考</button>
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
             </form>
-            <!-- <div class="btn-group ml-lg-auto">
-                <boutton id="category-all" class="dropdown-toggle btn btn-md text-gray mx-lg-3 mx-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-book fa-lg"></i>
-                    書籍分類
-                </boutton>
-                <div class="dropdown-menu dropdown-menu-right ml-3 border border-light rounded" aria-labelledby="category-all">
-                    <button class="dropdown-item" type="button">考試用書</button>
-                    <button class="dropdown-item" type="button">我想上課</button>
-                    <button class="dropdown-item" type="button">課程教具</button>
-                </div>
-            </div> -->
             <ul class="navbar-nav px-3 ml-lg-auto">
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                         <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
                         <i class="fas fa-caret-down"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="category">
-                        <a class="dropdown-item" href="#">考試用書</a>
-                        <a class="dropdown-item" href="#">我想上課</a>
-                        <a class="dropdown-item" href="#">課程教具</a>
+                    <div class="dropdown-menu-right dropdown-menu border-coffee rounded-0" style="min-width:750px;">
+                        <div class="row flex-row-reverse my-2 mx-3" id="tab-hover" style="min-height:300px;">
+                            <ul class="tab-btn col-2 nav nav-pills pr-0" style="list-style: none;">
+                                <li class="nav-item"><a class="nav-link" href="#tb1">研究所</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tb2">公職考試</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tb3">升學考試</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tb4">專業教科書</a></li>
+                            </ul>
+                            <div id="tb1" class="col-10 tab-inner">
+                                <div class="d-flex flex-row-reverse">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="tb2" class="col-10 tab-inner">
+                                <div class="d-flex flex-row-reverse">
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">各類特考</li>
+                                            <li class="pl-3 border-left"><a href="#">移民特考</a></li>
+                                            <li class="pl-3 border-left"><a href="#">調查特考</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">高普考試</li>
+                                            <li class="pl-3 border-left"><a href="#">機械類</a></li>
+                                            <li class="pl-3 border-left"><a href="#">環境工程環保行政環保技術</a></li>
+                                            <li class="pl-3 border-left"><a href="#">行政民政人事行政戶政</a></li>
+                                            <li class="pl-3 border-left"><a href="#">法制法律廉政</a></li>
+                                            <li class="pl-3 border-left"><a href="#">電機電子電信</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊處理</a></li>
+                                            <li class="pl-3 border-left"><a href="#">共同科目</a></li>
+                                            <li class="pl-3 border-left"><a href="#">文化行政</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">專業證照</li>
+                                            <li class="pl-3 border-left"><a href="#">技師執照</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tb3" class="col-10 tab-inner">
+                                <div class="d-flex flex-row-reverse">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國營事業</li>
+                                            <li class="pl-3 border-left"><a href="#">經濟部新進人員</a></li>
+                                            <li class="pl-3 border-left"><a href="#">台電顧員</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="tb4" class="col-10 tab-inner">
+                                <div class="d-flex flex-row-reverse">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
@@ -592,7 +672,16 @@
     </div>
 </body>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function(){
+        $(function(){
+            var $li = $('ul .tab-btn li');
+                $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+            
+                $li.mouseenter(function(){
+                    $($(this).find('a'). attr ('href')).show().siblings('.tab-inner').hide();
+                    $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+        });
         $(".upClose").click(function(){
             if($(".catalog").hasClass("active")){
                 $(".catalog").removeClass("active");
@@ -602,6 +691,6 @@
                 $(".upClose").text("close");
             }
         })
-    })
+    });
 </script>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MDtest</title>
-    <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <!-- <link rel="stylesheet" href="scss/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap-submenu.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -14,8 +14,14 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="js/bootstrap-4.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-submenu.min.js"></script>
+    <style>
+        .popover {
+            min-width: 750px;
+            
+        }
+    </style>
     
 </head>
 <body>
@@ -89,53 +95,107 @@
                         Dropdown 2
                       </a>
               
-                      <div class="dropdown-menu">
-                        <div class="dropdown dropright dropdown-submenu">
-                <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
-              
-                <div class="dropdown-menu">
-                  <button class="dropdown-item" type="button">Sub action</button>
-              
-                  <div class="dropdown dropright dropdown-submenu">
-                    <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
-              
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Sub action</button>
-                      <button class="dropdown-item" type="button">Another sub action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
+                    <div class="dropdown-menu" style="min-width:750px;">
+                        <!-- <div class="dropdown dropright dropdown-submenu"> -->
+                            <div class="row mx-3 my-2">
+                                <div class="col-2 nav flex-column nav-pills text-center" id="book-catagory" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="tab" href="#v-pills-home">研究所</a>
+                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="tab" href="#v-pills-profile">公職考試</a>
+                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="tab" href="#v-pills-messages">升學考試</a>
+                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="tab" href="#v-pills-settings">專業教科書</a>
+                                </div>
+                                <div class="col-10 tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel">
+                                        <div class="d-flex">
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                </ul>
+                                            </span>
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                    <li class="pl-3 border-left">資訊管理研究所</li>
+                                                </ul>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">
+                                        <div class="d-flex">
+                                            <div class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">各類特考</li>
+                                                    <li class="pl-3 border-left">移民特考</li>
+                                                    <li class="pl-3 border-left">調查特考</li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">高普考試</li>
+                                                    <li class="pl-3 border-left">機械類</li>
+                                                    <li class="pl-3 border-left">環境工程環保行政環保技術</li>
+                                                    <li class="pl-3 border-left">行政民政人事行政戶政</li>
+                                                    <li class="pl-3 border-left">法制法律廉政</li>
+                                                    <li class="pl-3 border-left">電機電子電信</li>
+                                                    <li class="pl-3 border-left">資訊處理</li>
+                                                    <li class="pl-3 border-left">共同科目</li>
+                                                    <li class="pl-3 border-left">文化行政</li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">專業證照</li>
+                                                    <li class="pl-3 border-left">技師執照</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
+                                        <div class="d-flex">
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">國營事業</li>
+                                                    <li class="pl-3 border-left">經濟部新進人員</li>
+                                                    <li class="pl-3 border-left">台電顧員</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel">
+                                        <div class="d-flex">
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                </ul>
+                                            </span>
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                </ul>
+                                            </span>
+                                            <span class="w-25 d-inline-block pl-1 mr-2">
+                                                <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                                    <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                                    <li class="pl-3 border-left">消防用書</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
                     </div>
-                  </div>
-              
-                  <button class="dropdown-item" type="button">Something else here</button>
-                  <button class="dropdown-item" type="button" disabled>Disabled action</button>
-              
-                  <div class="dropdown dropright dropdown-submenu">
-                    <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-              
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Sub action</button>
-                      <button class="dropdown-item" type="button">Another sub action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="dropdown-header">Dropdown header</div>
-              
-              <div class="dropdown dropright dropdown-submenu">
-                <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-              
-                <div class="dropdown-menu">
-                  <button class="dropdown-item" type="button">Sub action</button>
-                  <button class="dropdown-item" type="button">Another sub action</button>
-                  <button class="dropdown-item" type="button">Something else here</button>
-                </div>
-              </div>
-              
-              <button class="dropdown-item" type="button">Something else here</button>
-              <div class="dropdown-divider"></div>
-              <button class="dropdown-item" type="button">Separated link</button>
               
                       </div>
                     </li>
@@ -200,106 +260,37 @@
                 </div>
             </nav>
             <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="list-group border border-0" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">研究所</a>
-                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                <ul>
+                    <li>
+                        <div class="cata"><a href="#">研究所</a></div>
+                        <div class="popover" style="display:;">
+                            <div class="d-flex">
+                                <span class="w-25 d-inline-block pl-1 mr-2">
+                                    <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                        <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                    </ul>
+                                </span>
+                                <span class="w-25 d-inline-block pl-1 mr-2">
+                                    <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                        <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                        <li class="pl-3 border-left">資訊管理研究所</li>
+                                    </ul>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                            <ul style="list-style:none;">
-                                <li class="font-weight-bold">研究所</li>
-                                <li>國立台北大學
-                                    <ul>
-                                        <li>資訊管理研究所</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul style="list-style:none;">
-                                <li class="font-weight-bold">公職考試</li>
-                                <li>各類特考
-                                    <ul>
-                                        <li>移民特考</li>
-                                        <li>調查特考</li>
-                                    </ul>
-                                </li>
-                                <li>高普考試
-                                    <ul>
-                                        <li>機械類</li>
-                                        <li>環境工程環保行政環保技術</li>
-                                        <li>行政民政人事行政戶政</li>
-                                        <li>法制法律廉政</li>
-                                        <li>電機電子電信</li>
-                                        <li>資訊處理</li>
-                                        <li>共同科目</li>
-                                        <li>文化行政</li>
-                                    </ul>
-                                </li>
-                                <li>專業證照
-                                    <ul>
-                                        <li>技師執照</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul style="list-style:none;">
-                                <li class="font-weight-bold">就業考試
-                                    <ul>
-                                        <li>國營事業</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul style="list-style:none;">
-                                <li class="font-weight-bold">升學考試
-                                    <ul>
-                                        <li>商管研究
-                                            <ul>
-                                                <li>商管財金類</li>
-                                                <li>經濟學</li>
-                                            </ul>
-                                        </li>
-                                        <li>理工研究
-                                            <ul>
-                                                <li>電雞電子</li>
-                                                <li>機械工程</li>
-                                                <li>資訊工程</li>
-                                            </ul>
-                                        </li>
-                                        <li>大學轉學考
-                                            <ul>
-                                                <li>工科、私醫</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul style="list-style:none;">
-                                <li class="font-weight-bold">專業教科書
-                                    <ul>
-                                        <li>大專用書
-                                            <ul>
-                                                <li>消防用書</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                    <li><div class="cata"><a href="#">公職考試</a></div></li>
+                    <li><div class="cata"><a href="#">升學考試</a></div></li>
+                    <li><div class="cata"><a href="#">專業教科書</a></div></li>
+                </ul>
             </div>
     <script>
-        $(document).ready(function(){
-            $('[data-submenu]').submenupicker();
-        })
+        
     </script>
 </body>
 </html>
