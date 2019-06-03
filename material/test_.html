@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="scss/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap-submenu.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="css/datatables.css">
     
     <!-- <link rel="stylesheet" href="assets/css/highlighter.css"> -->
     
@@ -16,87 +17,101 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-submenu.min.js"></script>
+    <script src="js/datatables.js"></script>
     <style>
-        .popover {
-            min-width: 750px;
-            
+        /* .details-control::before {
+            content: "";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        } */
+        td.details-control {
+            background: url("fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg") no-repeat center;
+            background-position: 45% 11.5px;
+            cursor: pointer;
+        }
+
+        td.shonw td.details-control {
+            background: url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat center;
+            /* margin-left: 15px;    */
+            background-position: 45%  11.5px;
+            cursor: pointer;
         }
     </style>
     
 </head>
 <body>
-        <nav class="navbar navbar-light bg-light navbar-expand-sm">
-                <a class="navbar-brand">Navbar</a>
-              
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
-                        Dropdown
-                      </a>
-              
-                      <div class="dropdown-menu">
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <a class="navbar-brand">Navbar</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    Dropdown
+                    </a>
+            
+                    <div class="dropdown-menu">
                         <div class="dropdown dropright dropdown-submenu">
-                <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
-              
-                <div class="dropdown-menu">
-                  <button class="dropdown-item" type="button">Sub action</button>
-              
-                  <div class="dropdown dropright dropdown-submenu">
-                    <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
-              
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Sub action</button>
-                      <button class="dropdown-item" type="button">Another sub action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
+                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">Action</button>
+                            
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">Sub action</button>
+                            
+                                <div class="dropdown dropright dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">Another sub action</button>
+                            
+                                <div class="dropdown-menu">
+                                    <button class="dropdown-item" type="button">Sub action</button>
+                                    <button class="dropdown-item" type="button">Another sub action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
+                                </div>
+                            
+                                <button class="dropdown-item" type="button">Something else here</button>
+                                <button class="dropdown-item" type="button" disabled>Disabled action</button>
+                            
+                                <div class="dropdown dropright dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+                            
+                                <div class="dropdown-menu">
+                                    <button class="dropdown-item" type="button">Sub action</button>
+                                    <button class="dropdown-item" type="button">Another sub action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="dropdown-header">Dropdown header</div>
+                            
+                        <div class="dropdown dropright dropdown-submenu">
+                            <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
+                            
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">Sub action</button>
+                                <button class="dropdown-item" type="button">Another sub action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                            </div>
+                        </div>
+                            
+                        <button class="dropdown-item" type="button">Something else here</button>
+                        <div class="dropdown-divider"></div>
+                        <button class="dropdown-item" type="button">Separated link</button>
                     </div>
-                  </div>
-              
-                  <button class="dropdown-item" type="button">Something else here</button>
-                  <button class="dropdown-item" type="button" disabled>Disabled action</button>
-              
-                  <div class="dropdown dropright dropdown-submenu">
-                    <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-              
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Sub action</button>
-                      <button class="dropdown-item" type="button">Another sub action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="dropdown-header">Dropdown header</div>
-              
-              <div class="dropdown dropright dropdown-submenu">
-                <button class="dropdown-item dropdown-toggle" type="button">Another action</button>
-              
-                <div class="dropdown-menu">
-                  <button class="dropdown-item" type="button">Sub action</button>
-                  <button class="dropdown-item" type="button">Another sub action</button>
-                  <button class="dropdown-item" type="button">Something else here</button>
-                </div>
-              </div>
-              
-              <button class="dropdown-item" type="button">Something else here</button>
-              <div class="dropdown-divider"></div>
-              <button class="dropdown-item" type="button">Separated link</button>
-              
-                      </div>
-                    </li>
-              
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
-                        Dropdown 2
-                      </a>
-              
-                    <div class="dropdown-menu" style="min-width:750px;">
-                        <!-- <div class="dropdown dropright dropdown-submenu"> -->
+                </li>
+            
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    Dropdown 2
+                    </a>
+            
+                    <!-- <div class="dropdown-menu" style="min-width:750px;">
+                        <div class="dropdown dropright dropdown-submenu">
                             <div class="row mx-3 my-2">
                                 <div class="col-2 nav flex-column nav-pills text-center" id="book-catagory" role="tablist" aria-orientation="vertical">
                                     <a class="nav-link" id="v-pills-home-tab" data-toggle="tab" href="#v-pills-home">研究所</a>
@@ -193,78 +208,77 @@
                                         </div>
                                     </div>
                                 </div>
-                            <!-- </div> -->
+                            </div>
+                        </div>
+                    </div> -->
+            
+        </div>
+                </ul>
+            
+                <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    Dropdown 3
+                    </a>
+            
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown dropleft dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">cake</button>
+                    
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">磅蛋糕</button>
+                        
+                            <div class="dropdown dropleft dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">檸檬磅蛋糕</button>
+                        
+                                <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">單片</button>
+                                <button class="dropdown-item" type="button">1/2模</button>
+                                <button class="dropdown-item" type="button">整模</button>
+                                </div>
+                            </div>
+                        
+                            <button class="dropdown-item" type="button">乳酪蛋糕</button>
+                            <button class="dropdown-item" type="button">戚風蛋糕</button>
+                        
+                            <div class="dropdown dropleft dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">伯爵戚風</button>
+                        
+                                <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">單片</button>
+                                <button class="dropdown-item" type="button">四吋</button>
+                                <button class="dropdown-item" type="button">八吋</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-              
-                      </div>
-                    </li>
-                  </ul>
-              
-                  <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
-                        Dropdown 3
-                      </a>
-              
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown dropleft dropdown-submenu">
-                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">cake</button>
-                        
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" type="button">磅蛋糕</button>
-                            
-                                <div class="dropdown dropleft dropdown-submenu">
-                                    <button class="dropdown-item dropdown-toggle" type="button">檸檬磅蛋糕</button>
-                            
-                                    <div class="dropdown-menu">
-                                    <button class="dropdown-item" type="button">單片</button>
-                                    <button class="dropdown-item" type="button">1/2模</button>
-                                    <button class="dropdown-item" type="button">整模</button>
-                                    </div>
-                                </div>
-                            
-                                <button class="dropdown-item" type="button">乳酪蛋糕</button>
-                                <button class="dropdown-item" type="button">戚風蛋糕</button>
-                            
-                                <div class="dropdown dropleft dropdown-submenu">
-                                    <button class="dropdown-item dropdown-toggle" type="button">伯爵戚風</button>
-                            
-                                    <div class="dropdown-menu">
-                                    <button class="dropdown-item" type="button">單片</button>
-                                    <button class="dropdown-item" type="button">四吋</button>
-                                    <button class="dropdown-item" type="button">八吋</button>
-                                    </div>
-                                </div>
-                            </div>
+            
+                    <div class="dropdown-header">Dropdown header</div>
+            
+                    <div class="dropdown dropleft dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" type="button">餅乾</button>
+                    
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">美式餅乾</button>
+                            <button class="dropdown-item" type="button">義式脆餅</button>
+                            <button class="dropdown-item" type="button">翻糖餅乾</button>
                         </div>
-              
-                        <div class="dropdown-header">Dropdown header</div>
-              
-                        <div class="dropdown dropleft dropdown-submenu">
-                            <button class="dropdown-item dropdown-toggle" type="button">餅乾</button>
-                        
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" type="button">美式餅乾</button>
-                                <button class="dropdown-item" type="button">義式脆餅</button>
-                                <button class="dropdown-item" type="button">翻糖餅乾</button>
-                            </div>
-                        </div>
-                        
-                        <button class="dropdown-item" type="button">咖啡?</button>
-                        <div class="dropdown-divider"></div>
-                        <button class="dropdown-item" type="button">Separated link</button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+                    </div>
+                    
+                    <button class="dropdown-item" type="button">咖啡?</button>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item" type="button">Separated link</button>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </nav>
             <div class="container">
                 <ul>
                     <li>
                         <div class="cata"><a href="#">研究所</a></div>
-                        <div class="popover" style="display:;">
-                            <div class="d-flex">
+                        <div class="popover" style="display:0;">
+                            <!-- <div class="d-flex">
                                 <span class="w-25 d-inline-block pl-1 mr-2">
                                     <ul class="pl-0 d-inline-block" style="list-style: none;">
                                         <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
@@ -281,16 +295,116 @@
                                         <li class="pl-3 border-left">資訊管理研究所</li>
                                     </ul>
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
                     </li>
                     <li><div class="cata"><a href="#">公職考試</a></div></li>
                     <li><div class="cata"><a href="#">升學考試</a></div></li>
                     <li><div class="cata"><a href="#">專業教科書</a></div></li>
                 </ul>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered text-center" id="table">
+                        <thead>
+                            <th>項次</th>
+                            <th>訂單編號</th>
+                            <th>訂購日期</th>
+                            <th>付款方式</th>
+                            <th>訂單金額</th>
+                            <th>發票號碼</th>
+                            <th>處理狀態</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="details-control"><!--<img src="fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg" style="max-width: 15px;">-->1</td>
+                                <td>A20190530001</td>
+                                <td>2019-05-01</td>
+                                <td>貨到付款</td>
+                                <td>$1650</td>
+                                <td>Vn 04170910</td>
+                                <td class="font-weight-bold text-danger">未出貨</td>
+                            </tr>
+                            <tr>
+                                <td class="details-control"><!--<i class="fas fa-plus-circle"></i>-->2</td>
+                                <td>A20190530001</td>
+                                <td>2019-03-04</td>
+                                <td>貨到付款</td>
+                                <td>$1650</td>
+                                <td>Vj 65610575</td>
+                                <td>已出貨</td>
+                            </tr>
+                            <tr>
+                                <td class="details-control"><!--<i class="fas fa-plus-circle"></i>-->3</td>
+                                <td>A20190530001</td>
+                                <td>2019-02-25</td>
+                                <td>貨到付款</td>
+                                <td>$1650</td>
+                                <td>Vj 55187790</td>
+                                <td class="font-weight-bold text-danger">未出貨</td>
+                            </tr>
+                            <tr>
+                                <td class="details-control"><!--<i class="fas fa-plus-circle"></i>-->4</td>
+                                <td>A20190530001</td>
+                                <td>2019-01-10</td>
+                                <td>貨到付款</td>
+                                <td>$1650</td>
+                                <td>Pu 08100512</td>
+                                <td>運送中</td>
+                            </tr>
+                            <tr>
+                                <td class="details-control"><!--<i class="fas fa-plus-circle"></i>-->5</td>
+                                <td>A20190530001</td>
+                                <td>2018-05-01</td>
+                                <td>貨到付款</td>
+                                <td>$1650</td>
+                                <td>Pw 12110814</td>
+                                <td class="text-info">完成取貨</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
     <script>
-        
+        $(document).ready(function(){
+            var table = $("#table").DataTable({
+                "sort": false,
+                // "processing":true
+            });
+            $('#table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg') no-repeat 11% center; background-position: 45% 11.5px");
+                }
+                else {
+                    // Open this row		        
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat 11% center; background-position: 45% 11.5px");
+                }
+            });
+            function format ( d ) {
+                return '<table class="table mb-0 table-bordered-0">'+
+                    '<tr>'+
+                        '<td>項次</td>'+
+                        '<td>商品名稱</td>'+
+                        '<td>金額</td>'+
+                        '<td>數量</td>'+
+                        '<td>小計</td>'+
+                    '</tr>'+
+                    '<tr>'+
+                        '<td>1</td>'+
+                        '<td><a href="#">2018試題大補帖經濟部新進職員企管類</a></td>'+
+                        '<td>$300</td>'+
+                        '<td>3</td>'+
+                        '<td>$900</td>'+
+                    '</tr>'
+                '</table>';
+            }
+        })
     </script>
 </body>
 </html>

@@ -212,7 +212,7 @@
                     <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded" aria-labelledby="member">
                         <a class="dropdown-item" href="registered.html">會員設定</a>
                         <a class="dropdown-item" href="wanna-buy.html">追蹤清單</a>
-                        <a class="dropdown-item" href="buy-cart.html">訂單查詢</a>
+                        <a class="dropdown-item" href="order-search.html">訂單查詢</a>
                         <a class="dropdown-item" href="question.html">常見問題</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">會員登出</a>
@@ -232,25 +232,28 @@
             </ul>
         </div>
     </nav>
-    <div class="dropleft show position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
-        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="images/buy-12.png" alt="" class="img-fluid">
-        </a>
-        <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
-            <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
-            <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
-            <a class="dropdown-item left-item px-0 bg-warning font-weight-bold" href="buy-cart.html" role="button">繳錢嘍</a>
+    <div class="static position-fixed" style="right:0; top:32%; max-width:10%; z-index: 1000;">
+        <div class="dropleft show">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/buy-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-gray" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454939-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/9789863454984-50x63.jpg" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light total font-weight-bold"><p class="mb-0 text-coffee small">總計(未含運)</p>$1650</a>
+                <a class="dropdown-item left-item px-0 bg-warning font-weight-bold" href="buy-cart.html" role="button">繳錢嘍</a>
+            </div>
         </div>
-    </div>
-    <div class="dropleft show position-fixed" style="right:0; top:42%; max-width:10%; z-index: 1000;">
-        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="images/view-12.png" alt="" class="img-fluid">
-        </a>
-        <div class="dropdown-menu text-center rounded-0 border-coffee" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
-            <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
-            <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
+        <div class="dropleft show">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="images/view-12.png" alt="" class="img-fluid">
+            </a>
+            <div class="dropdown-menu text-center rounded-0 border-gray" style="max-width:85px;" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0 border border-light" href="#"><img src="images/message-07.png" alt=""></a>
+                <a class="dropdown-item left-item px-0" href="#"><img src="images/message-07.png" alt=""></a>
+            </div>
         </div>
     </div>
     <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%; z-index: 1000;">
@@ -317,18 +320,19 @@
                         <option value="4">依價錢(低到高)</option>
                     </select>
                 </div>
-                <div class="subti rounded bg-light my-3 px-2 py-1 position-relative">國家考試\書籍 新書列表 
-                    </div>
+                <div class="subti rounded bg-light my-3 px-2 py-1 position-relative">國家考試\書籍 新書列表</div>
+                <!-- <div class="none w-100 text-center h5" style="height: 50%;"><p style="line-height: 150px
+                ">查無資料</p></div> -->
                 <div class="bookBox ml-1 mb-2 row">
                     <div class="pic text-center d-inline-block col-lg-2">
-                        <img src="images/original/A05161919-1.jpg" alt="" class="img-fluid">
+                        <a href="production.html"><img src="images/original/A05161919-1.jpg" alt="" class="img-fluid"></a>
                     </div>
                     <div class="describe col-lg-7">
-                        <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
+                        <h5 class="bookName"><a href="production.html" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente! laudantium quaerat odit sapiente! laudantium quaerat odit sapiente!odit sapiente! laudantium quaerat odit sapiente!odit sapiente! laudantium quaerat odit sapiente!
+                            <!-- <a href="production.html"><img src="images/more-03.png" alt=""></a>  -->
                         </p>
                     </div>
                     <div class="moneyCome col-lg-3">
@@ -347,8 +351,8 @@
                         <h5 class="bookName"><a href="#" class=" text-info">ipsum dolor sit amet consectetur, adipisicing elit.</a></h5>
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, 
+                            <!-- <a href="production.html"><img src="images/more-03.png" alt=""></a>  -->
                         </p>
                     </div>
                     <div class="moneyCome col-lg-3">
@@ -366,7 +370,7 @@
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                            <!-- <a href="production.html"><img src="images/more-03.png" alt=""></a>  -->
                         </p>
                     </div>
                     <div class="moneyCome col-lg-3">
@@ -384,7 +388,7 @@
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                            <!-- <a href="production.html"><img src="images/more-03.png" alt=""></a>  -->
                         </p>
                     </div>
                     <div class="moneyCome col-lg-3">
@@ -402,7 +406,7 @@
                         <span class="editorInfo small"><a href="#">蔣仲典編著</a>，<a href="#">鼎茂研究室出版</a>，出版日期：2018-05-07</span>
                         <p class="text-truncate d-inline-block">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at quasi sint? Odio recusandae minus architecto iste enim modi illo veritatis, laudantium quaerat odit sapiente!
-                            <a href="production.html"><img src="images/more-03.png" alt=""></a> 
+                            <!-- <a href="production.html"><img src="images/more-03.png" alt=""></a>  -->
                         </p>
                     </div>
                     <div class="moneyCome col-lg-3">

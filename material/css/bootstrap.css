@@ -19,7 +19,7 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --coffee: #40220F;
-  --orange: #ffa467;
+  --orange: #ff9148;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
@@ -10412,13 +10412,15 @@ button.bg-teal:focus {
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: normal;
+  /* white-space: normal; */
   word-wrap: break-word;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-
+.text-truncate::after {
+  content: url(../images/more-03.png);
+}
 .text-left {
   text-align: left !important;
 }

@@ -6,10 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>貨到哪了呢?</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css"> 
+    <link rel="stylesheet" href="css/datatables.css"> 
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/datatables.js"></script>
+    <style>
+        td.details-control {
+            background: url("fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg") no-repeat center;
+            background-position: 45% 15px;
+            cursor: pointer;
+        }
+
+        td.shonw td.details-control {
+            background: url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat center;
+            background-position: 45%  15px;
+            cursor: pointer;
+        }
+    </style>
     <script>
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
@@ -229,7 +244,110 @@
                 <li class="breadcrumb-item active" aria-current="page">訂單查詢</li>
             </ol>
         </nav>
-
+        <div class="message-text border border-coffee px-4 py-2">
+            <div class="font-weight-bold">親愛的 OOO 您好</div>
+            <ol class="content mb-2">
+                <li>產品均享有十天猶豫期之權益 (注意 猶豫期非試用期)，若退/換回產品非全新狀態且包裝完整，恕不接受退/換貨。<br> *依通訊交易解除權合理例外情事適用準則 ，5類商品無10天猶豫期，請參閱商品退貨需知。</li>
+                <li>下載版序號、珠寶、黃金累訂單之商品暫不提供線上退/換貨，3C類商品暫不提供換貨服務，其他商品僅限換貨1次。</li>
+                <li>若無法線上操作，請您利用聯絡客服功能，將有專人盡速爲您處理。</li>
+            </ol>
+            <div class="subtTitle font-weight-bold">退/換貨規範</div>
+            <ol>
+                <li>群組促銷商品 (例:單品任選、滿額、滿件等)屬單一商品，恕不提供拆件退貨。</li>
+                <li>限定配送狀態為<span class="text-danger">已送達</span>，且為同一品號之商品，方可進行換貨服務。</li>
+            </ol>
+            <!-- <div class="text-gray">條件選擇</div> -->
+            <form action="" method="get">
+                <table>
+                    <thead class="text-gray">
+                        <th>條件選擇</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-2"><label class="mb-0" for="input">訂單狀態</label></td>
+                            <td class="px-2">
+                                <input class="ml-2" type="radio" name="status" id="aMonth">一個月內訂單
+                                <input class="ml-2" type="radio" name="status" id="notShipped">未出貨訂單
+                                <input class="ml-2" type="radio" name="status" id="backChange">退/換貨訂單
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-2"><label class="mb-0" for="input">查詢日期</label></td>
+                            <td class="px-2">
+                                <input class="mx-2" type="text" name="start-date" id="start-date">至
+                                <input class="mx-2" type="text" name="end-date" id="end-date">退/換貨訂單
+                                
+                            </td>
+                            <td class="px-2"><button type="submit" role="button" class="btn-sm btn-orange">查詢</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="order-result p-4">
+            <div class="text-gray pb-3 font-weight-bold">一個月內訂單 <span class="text-danger">共5筆訂單</span></div>
+            <table class="table table-striped table-bordered text-center" id="order-table">
+                <thead>
+                    <th>項次</th>
+                    <th>訂單編號</th>
+                    <th>訂購日期</th>
+                    <th>付款方式</th>
+                    <th>訂單金額</th>
+                    <th>發票號碼</th>
+                    <th>處理狀態</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="details-control">1</td>
+                        <td>A20190530001</td>
+                        <td>2019-05-01</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vn 04170910</td>
+                        <td class="font-weight-bold text-danger">未出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">2</td>
+                        <td>A20190530001</td>
+                        <td>2019-03-04</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vj 65610575</td>
+                        <td>已出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">3</td>
+                        <td>A20190530001</td>
+                        <td>2019-02-25</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vj 55187790</td>
+                        <td class="font-weight-bold text-danger">未出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">4</td>
+                        <td>A20190530001</td>
+                        <td>2019-01-10</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Pu 08100512</td>
+                        <td>運送中</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">5</td>
+                        <td>A20190530001</td>
+                        <td>2018-05-01</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Pw 12110814</td>
+                        <td class="text-info">完成取貨</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="order-notice text-center">
+            <img src="images/訂單注意事項.jpg" alt="" class="img-fluid">
+        </div>
     </div>
     <div id="footer" class="bg-green-01 px-lg-5 px-3">
         <div class="row d-flex justify-content-lg-between">
@@ -291,6 +409,46 @@
                         $(this).addClass('active'). siblings ('.active').removeClass('active');
                 });
             });
+            var table = $("#order-table").DataTable({
+                "sort": false,
+                // "processing":true
+                "filter": false
+            });
+            $('#order-table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg') no-repeat 11% center; background-position: 45% 15px");
+                }
+                else {
+                    // Open this row		        
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat 11% center; background-position: 45% 15px");
+                }
+            });
+            function format ( d ) {
+                return '<table class="table mb-0" border="0">'+
+                    '<tr>'+
+                        '<td>項次</td>'+
+                        '<td>商品名稱</td>'+
+                        '<td>金額</td>'+
+                        '<td>數量</td>'+
+                        '<td>小計</td>'+
+                    '</tr>'+
+                    '<tr>'+
+                        '<td>1</td>'+
+                        '<td><a href="#">2018試題大補帖經濟部新進職員企管類</a></td>'+
+                        '<td>$300</td>'+
+                        '<td>3</td>'+
+                        '<td>$900</td>'+
+                    '</tr>'
+                '</table>';
+            }
         });
     </script>
 </body>

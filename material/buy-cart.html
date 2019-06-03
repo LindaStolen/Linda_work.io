@@ -69,6 +69,36 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已成功加入願望清單！
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="buy" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center rounded-0">
+                <div class="modal-header py-1">
+                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body h-50">
+                    已成功加入購物車！
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
         <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
@@ -212,7 +242,7 @@
                     <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
                         <a class="dropdown-item" href="registered.html">會員設定</a>
                         <a class="dropdown-item" href="wanna-buy.html">追蹤清單</a>
-                        <a class="dropdown-item" href="buy-cart.html">訂單查詢</a>
+                        <a class="dropdown-item" href="order-search.html">訂單查詢</a>
                         <a class="dropdown-item" href="question.html">常見問題</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">會員登出</a>
@@ -248,6 +278,7 @@
                                 <tr>
                                     <th scope="col"><span>序號</span></th>
                                     <th scope="col"><span>商品圖</span></th>
+                                    <th scope="col"><span>書籍編號</span></th>
                                     <th scope="col"><span>商品名稱</span></th>
                                     <th scope="col"><span>商品售價</span></th>
                                     <th scope="col"><span>數量</span></th>
@@ -259,32 +290,43 @@
                                 <tr>
                                     <td scope="row" class="align-middle"><span>1</span></td>
                                     <td class="align-middle"><a href="#"><img src="images/50x63/s_0001_9789863455448.png" alt=""></a></td>
+                                    <td class="align-middle"><a href="#">A20190601001</a></td>
                                     <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
-                                    <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
-                                    <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
-                                    <td class="align-middle">NT500元</td>
+                                    <td class="align-middle"><p class="mb-1"><del>NT350元</del></p> <p class="mb-0">NT315元</p></td>
+                                    <td class="align-middle"><input type="text" class="rounded text-center" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
+                                    <td class="align-middle">NT315元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button">下次再買</a>
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button" data-toggle="modal" data-target="#wishbox">下次再買</a>
+                                        <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="align-middle"><span>2</span></td>
                                     <td class="align-middle"><a href="#"><img src="images/50x63/s_0000_9789863455455.png" alt=""></a></td>
+                                    <td class="align-middle"><a href="#">A20190601002</a></td>
                                     <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
-                                    <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
-                                    <td class="align-middle"><input type="text" class="rounded" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
-                                    <td class="align-middle">NT500元</td>
+                                    <td class="align-middle"><p class="mb-1"><del>NT270元</del></p> <p class="mb-0">NT243元</p></td>
+                                    <td class="align-middle"><input type="text" class="rounded text-center" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
+                                    <td class="align-middle">NT243元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button">下次再買</a>
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button" data-toggle="modal" data-target="#wishbox">下次再買</a>
+                                        <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="7">
-                                        <p class="total mb-0 text-right">目前選購<b class="mx-1 text-danger">2</b>項商品(未含運費)，總計NT<b class="mx-1 text-danger">1000</b>元(含稅)</p>
+                                    <td colspan="8">
+                                        <ul class="mb-0" style="list-style: none;">
+                                            <li class="total mb-0 text-right">目前選購<b class="mx-1 text-danger">2</b>項商品(未含運費)，小計 NT<b class="mx-1 text-danger">558</b>元(含稅)</li>
+                                            <li class="total mb-0 text-right">物流處理費：$150 <span class="text-light" style="display:none;">/ 滿千免運</span></li>                                            
+                                            <li class="total mb-0 text-right text-danger">總計：$708 </li>                                            
+                                        </ul>
                                     </td>
                                 </tr>
+                                <!-- <tr>
+                                    <td colspan="8">
+                                        <p class="total mb-0 text-right">物流處理費：$150 <span class="text-light">/ 滿千免運</span></p>
+                                    </td>
+                                </tr> -->
                             </tbody>
                         </table>
                         <span class="text-coffee font-weight-bold d-inline-block mt-2" style="font-size: 16.5px;">購買須知</span>
@@ -322,12 +364,16 @@
                                 <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
                                 <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
                                 <td class="align-middle">
-                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button">立即購買</a>
-                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button">刪除</a>
+                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button" data-toggle="modal" data-target="#buy">立即購買</a>
+                                    <a href="#" class="del text-white btn btn-sm btn-dark p-1" role="button">刪除</a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="nextStep text-right mt-4">
+                        <button class="btn-sm btn-green mr-2" oncilck="location.href=''">繼續購物</button>
+                        <input type="button" class="btn-sm btn-orange" value="回首頁" onclick="location.href='new.html'">
+                    </div>
                 </div>
             </div>
         </section>
@@ -392,6 +438,9 @@
                         $(this).addClass('active'). siblings ('.active').removeClass('active');
                 });
             });
+            $('.del').click(function del(){
+                confirm("確定刪除此商品?");
+            })
         });
     </script>
 </body>
