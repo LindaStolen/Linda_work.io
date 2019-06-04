@@ -26,6 +26,9 @@
         //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         // }
         $(document).ready(function() {
+            $("#tobemember").click(function(){
+                alert("感謝您花時間填寫註冊資料，驗證碼已寄出，按下確定後將帶您前往驗證頁面，輸入驗證碼送出即完成註冊程序！");
+            });
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
                 $('#member').toggle('#login');
@@ -70,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="checkmesBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+    <!-- <div class="modal fade" id="checkmesBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -87,7 +90,7 @@
             </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
         <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
@@ -327,7 +330,7 @@
                     </p>
                 </div>
                 <div class="button-group text-center mt-lg-4 d-lg-flex justify-content-center">
-                    <button type="submit" class="btn btn-blue font-weight-bold mr-lg-3"  data-toggle="modal" data-target="#checkmesBox">送出資料</button>
+                    <button type="submit" class="btn btn-blue font-weight-bold mr-lg-3" id="tobemember" data-toggle="modal" data-target="#checkmesBox">送出資料</button>
                     <button type="" class="btn btn-blue font-weight-bold">取消</button>
                 </div>
             </form>

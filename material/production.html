@@ -41,13 +41,12 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
         $(document).ready(function(){
-            // $('#book-inner').slick({
-            //     dots: true,
-            //     infinite: true,
-            //     slidesToShow: 4,
-            //     slidesToScroll:3,
-            //     arrows:false,
-            // });
+            $("#wish").click(function(){
+                confirm('已成功加入追蹤清單');
+            });
+            $("#add-buy").click(function(){
+                alert('已成功加入購物車');
+            });
             $('#recommond-book').slick({
                 dots: false,
                 infinite: true,
@@ -122,7 +121,7 @@
             </div>
         </div>
     </div>
-    <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
+    <!-- <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content text-center rounded-0">
                 <div class="modal-header py-1">
@@ -136,7 +135,6 @@
                     <br>
                     <br>
                     <br>
-                    <!-- <b style="color:red;">但你真得確定不現在買嗎！！！</b> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">對啊先不要。</button>
@@ -163,7 +161,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
         <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">

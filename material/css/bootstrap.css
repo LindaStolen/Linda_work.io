@@ -584,6 +584,12 @@ pre code {
   .container {
     max-width: 540px;
   }
+  #book-case {
+    max-width:540px;
+}
+  .dropdown-menu {
+    font-size: 0.8em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -596,6 +602,12 @@ pre code {
   .container {
     max-width: 960px;
   }
+  #book-case {
+    min-width: 750px;
+  }
+  /* .tab-btn li a {
+      font-size: 14.45px;
+  } */
 }
 
 @media (min-width: 1200px) {
