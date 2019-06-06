@@ -7,9 +7,12 @@
     <title>註冊會員</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet">  
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/alertify.js"></script>
     <script>
         // window.onscroll = function() {scrollFunction()};
 
@@ -27,7 +30,7 @@
         // }
         $(document).ready(function() {
             $("#tobemember").click(function(){
-                alert("感謝您花時間填寫註冊資料，驗證碼已寄出，按下確定後將帶您前往驗證頁面，輸入驗證碼送出即完成註冊程序！");
+                alertify.alert("感謝您花時間填寫註冊資料，驗證碼已寄出，<br>按下確定後將帶您前往驗證頁面，輸入驗證碼送出即完成註冊程序！");
             });
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
@@ -329,7 +332,7 @@
                         不定期透過email通知最新商品活動及優惠資訊。
                     </p>
                 </div>
-                <div class="button-group text-center mt-lg-4 d-lg-flex justify-content-center">
+                <div class="button-group text-center mt-lg-4 mb-3 d-lg-flex justify-content-center">
                     <button type="submit" class="btn btn-blue font-weight-bold mr-lg-3" id="tobemember" data-toggle="modal" data-target="#checkmesBox">送出資料</button>
                     <button type="" class="btn btn-blue font-weight-bold">取消</button>
                 </div>

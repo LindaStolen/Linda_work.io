@@ -7,9 +7,12 @@
     <title>驗證一下唄</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.core.css" rel="stylesheet">  
+    <link href="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.default.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
     <script>
         // window.onscroll = function() {scrollFunction()};
 
@@ -26,6 +29,12 @@
         //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         // }
         $(document).ready(function() {
+            $('.veri-btn').click(function(){
+                alertify.alert("親愛的用戶，恭喜您完成註冊程序！<br>幾秒後將帶您回首頁，重新登入後即可開始享有書城服務與優惠！<br>祝您 &nbsp; 順心")
+            });
+            $('.resend').click(function(){
+                alertify.alert("很抱歉，您輸入的驗證碼錯誤<br>請按下 &nbsp;<span class='text-gray p-1 border border-gray rounded'>重新發送</span>&nbsp; 接收驗證簡訊，謝謝<br>祝您 &nbsp; 順心")
+            });
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
                 $('#member').toggle('#login');
@@ -37,26 +46,6 @@
     </script>
 </head>
 <body>
-    <div class="modal fade" id="successBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">成功訊息</h5>
-                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body p-4">
-                <p>親愛的用戶，恭喜您完成註冊程序！</p>
-                <p>幾秒後將帶您回首頁，重新登入後即可開始享有書城服務與優惠！</p>
-                <p>祝您 &nbsp; 順心</p>
-            </div>
-            <div class="modal-footer text-left">
-                <button type="submit" class="btn btn-green-03 text-white" id="check"  data-dismiss="modal" onclick="location.href='new.html'">OK！</button>
-            </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="falseBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -235,11 +224,11 @@
                 <h5 class="d-inline-block border-bottom border-green-03 font-weight-bold pb-1">收到驗證碼了吧?</h5>
                 <p class="sub text-center mt-3 mb-1">很棒！請在下方輸入驗證碼</p>
                 <input type="text" class="rounded border-light">
-                <button class="veri-btn btn btn-green btn-sm " role="button" data-toggle="modal" data-target="#successBox">GoGo</button>
+                <button class="veri-btn btn btn-green btn-sm " role="button">GoGo</button>
             </div>
             <div class="reSend w-50 mt-lg-3 text-center mx-auto">
                 <p class="mb-1">還未收到/輸入錯誤驗證碼請按下</p>
-                <button class="btn btn-outline-gray">重新發送</button>
+                <button class="btn btn-outline-gray resend">重新發送</button>
             </div>
         <!-- </form> -->
     </div>

@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet"> 
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/alertify.js"></script>
     <style>
         .catalog {
             height: 150px;
@@ -42,10 +45,10 @@
         }
         $(document).ready(function(){
             $("#wish").click(function(){
-                confirm('已成功加入追蹤清單');
+                alertify.alert('已成功加入追蹤清單');
             });
             $("#add-buy").click(function(){
-                alert('已成功加入購物車');
+                alertify.alert('已成功加入購物車');
             });
             $('#recommond-book').slick({
                 dots: false,

@@ -7,9 +7,12 @@
     <title>購物車</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet">  
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/alertify.js"></script>
     <script>
         // window.onscroll = function() {scrollFunction()};
 
@@ -69,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
+    <!-- <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content text-center rounded-0">
                 <div class="modal-header py-1">
@@ -98,7 +101,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
         <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
@@ -296,7 +299,7 @@
                                     <td class="align-middle"><input type="text" class="rounded text-center" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
                                     <td class="align-middle">NT315元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button" data-toggle="modal" data-target="#wishbox">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0 wish" role="button">下次再買</a>
                                         <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>
@@ -309,7 +312,7 @@
                                     <td class="align-middle"><input type="text" class="rounded text-center" name="amount" style="width:30px; border: 1px solid #aaa;"></td>
                                     <td class="align-middle">NT243元</td>
                                     <td class="align-middle">
-                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0" role="button" data-toggle="modal" data-target="#wishbox">下次再買</a>
+                                        <a href="#" class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0 wish">下次再買</a>
                                         <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1" role="button">刪除</a>
                                     </td>
                                 </tr>
@@ -364,7 +367,7 @@
                                 <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
                                 <td class="align-middle"><p class="mb-1"><del>NT650元</del></p> <p class="mb-0">NT500元</p></td>
                                 <td class="align-middle">
-                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button" data-toggle="modal" data-target="#buy">立即購買</a>
+                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button" id="buy">立即購買</a>
                                     <a href="#" class="del text-white btn btn-sm btn-dark p-1" role="button">刪除</a>
                                 </td>
                             </tr>
@@ -438,8 +441,14 @@
                         $(this).addClass('active'). siblings ('.active').removeClass('active');
                 });
             });
+            $('.wish').click(function(){
+                alertify.log("已成功加入追蹤清單！");
+            });
+            $('#buy').click(function(){
+                alertify.alert("已成功加入購物車！");
+            });
             $('.del').click(function del(){
-                confirm("確定刪除此商品?");
+                alertify.confirm("確定刪除此商品?");
             })
         });
     </script>

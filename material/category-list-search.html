@@ -7,9 +7,12 @@
     <title>找"蝦米冬冬"相關商品</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet">  
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/alertify.js"></script>
     <script>
         window.onscroll = function() {scrollFunction()};
 
@@ -34,10 +37,10 @@
                 $('#signup').hide();
             });
             $('.buyThis').click(function(){
-                alert('已將商品加入購物車囉!');
+                alertify.alert('已將商品加入購物車囉!');
             });
             $('.likeThis').click(function(){
-                alert('已將商品加入追蹤清單囉!');
+                alertify.alert('已將商品加入追蹤清單囉!');
             });
         })        
     </script>
