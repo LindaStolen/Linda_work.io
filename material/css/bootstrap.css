@@ -587,7 +587,7 @@ pre code {
   #book-case {
     max-width:540px;
 }
-  .dropdown-menu {
+  .dropdown-menu >.tab-btn {
     font-size: 0.8em;
   }
 }

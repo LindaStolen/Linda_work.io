@@ -14,27 +14,12 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
     <script>
-        // window.onscroll = function() {scrollFunction()};
-
-        // function scrollFunction() {
-        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        //         document.getElementById("top").style.display = "block";
-        //     } else {
-        //         document.getElementById("top").style.display = "none";
-        //     }
-        // }
-        // When the user clicks on the button, scroll to the top of the document
-        // function topFunction() {
-        //     document.body.scrollTop = 0; // For Safari
-        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        // }
         $(document).ready(function() {
             $('.veri-btn').click(function(){
                 alertify.alert("親愛的用戶，恭喜您完成註冊程序！<br>幾秒後將帶您回首頁，重新登入後即可開始享有書城服務與優惠！<br>祝您 &nbsp; 順心")
-            });
-            $('.resend').click(function(){
-                alertify.alert("很抱歉，您輸入的驗證碼錯誤<br>請按下 &nbsp;<span class='text-gray p-1 border border-gray rounded'>重新發送</span>&nbsp; 接收驗證簡訊，謝謝<br>祝您 &nbsp; 順心")
-            });
+            }); //這邊好像要寫判斷
+                //alertify.alert("很抱歉，您輸入的驗證碼錯誤<br>請按下 &nbsp;<span class='text-gray p-1 border border-gray rounded'>重新發送</span>&nbsp; 接收驗證簡訊，謝謝<br>祝您 &nbsp; 順心")
+            
             $('#member').hide();
             $('#loginCheck').click('hide.bs.modal',function(e){
                 $('#member').toggle('#login');

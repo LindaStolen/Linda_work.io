@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">    
-    <!-- <link rel="stylesheet" href="css/flickity.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <!-- <script src="js/flickity.min.js"></script> -->
-    <!-- <script src="js/owl.carousel.min.js"></script> -->
-    <script src="js/slick.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet">  
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/alertify.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
     <script>
        $(document).ready(function() {
             // $("#owl-demo").owlCarousel({
@@ -60,68 +58,516 @@
             }]
             });
         });
-        
+        $(document).ready(function() {
+            $('#member').hide();
+            $('#loginCheck').click('hide.bs.modal',function(e){
+                $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            });
+        });
+        $(function() {
+            $('#main-menu').smartmenus();
+        });
+        // $(function() {
+        //     $('#main-menu').smartmenus({
+        //         mainMenuSubOffsetX: -1,
+        //         mainMenuSubOffsetY: 4,
+        //         subMenusSubOffsetX: 6,
+        //         subMenusSubOffsetY: -6
+        //     });
+        //         });
+
+        // // SmartMenus mobile menu toggle button
+        // $(function() {
+        //     var $mainMenuState = $('#main-menu-state');
+        //         if ($mainMenuState.length) {
+        //             // animate mobile menu
+        //             $mainMenuState.change(function(e) {
+        //                 var $menu = $('#main-menu');
+        //                 if (this.checked) {
+        //                     $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+        //                 } else {
+        //                     $menu.show().slideUp(250, function() { $menu.css('display', ''); });
+        //                 }
+        //                 });
+        //                 // hide mobile menu beforeunload
+        //                 $(window).bind('beforeunload unload', function() {
+        //                 if ($mainMenuState[0].checked) {
+        //                     $mainMenuState[0].click();
+        //                 }
+        //             });
+        //     }
+        // });
     </script>
     <!-- <style>
-        .carousel-cell {
-            width: 28%;
-            height: 150px;
-            margin-right: 10px;
+        .main-nav {
+            background: #eee;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
             border-radius: 5px;
-            counter-increment: carousel-cell;
+        }
+
+        @media (min-width: 768px) {
+            .main-nav {
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                -ms-border-radius: 50px;
+                -o-border-radius: 50px;
+                border-radius: 50px;
+            }
+        }
+
+        .main-nav:after {
+            clear: both;
+            content: "\00a0";
+            display: block;
+            height: 0;
+            font: 0px/0 serif;
+            overflow: hidden;
+        }
+
+        .nav-brand {
+            float: left;
+            margin: 0;
+        }
+
+        .nav-brand a {
+            display: block;
+            padding: 12px 12px 12px 20px;
+            color: #555;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 17px;
+            text-decoration: none;
+        }
+
+        #main-menu {
+            clear: both;
+        }
+
+        @media (min-width: 768px) {
+            #main-menu {
+                float: right;
+                clear: none;
+            }
+        }
+
+
+        /* Mobile menu toggle button */
+
+        .main-menu-btn {
+            float: right;
+            margin: 6px 10px;
+            position: relative;
+            display: inline-block;
+            width: 29px;
+            height: 29px;
+            text-indent: 29px;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+
+        /* hamburger icon */
+
+        .main-menu-btn-icon,
+        .main-menu-btn-icon:before,
+        .main-menu-btn-icon:after {
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            height: 2px;
+            width: 24px;
+            background: #555;
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+        }
+
+        .main-menu-btn-icon:before {
+            content: '';
+            top: -7px;
+            left: 0;
+        }
+
+        .main-menu-btn-icon:after {
+            content: '';
+            top: 7px;
+            left: 0;
+        }
+
+
+        /* x icon */
+
+        #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+            height: 0;
+            background: transparent;
+        }
+
+        #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+            top: 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+            top: 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+        /* hide menu state checkbox (keep it visible to screen readers) */
+
+        #main-menu-state {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+
+        /* hide the menu in mobile view */
+
+        #main-menu-state:not(:checked) ~ #main-menu {
+            display: none;
+        }
+
+        #main-menu-state:checked ~ #main-menu {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+        /* hide the button in desktop view */
+            .main-menu-btn {
+                position: absolute;
+                top: -99999px;
+            }
+            /* always show the menu in desktop view */
+            #main-menu-state:not(:checked) ~ #main-menu {
+                display: block;
+            }
+        }
+
+
+        /* IGNORE: Unrelated generic demo styles */
+
+        body {
+            margin: 8px;
+            background: #fff;
+            color: #aaa;
+            font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .demo-text {
+            margin: 3em 22px;
+        }
+
+        .demo-text p {
+            margin-bottom: 1em;
+        }
+
+        .demo-text a {
+            color: #999;
         }
     </style> -->
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light p-0">
-        <a class="navbar-brand" style="max-width:25%;" href="#">
-            <img src="https://source.unsplash.com/random/150x100" alt="" class="img-fluid max-width:100%">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
+        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <form class="form-inline input-group input-group-sm col-12 col-lg-6">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                        <a class="input-group-text fas fa-search py-2" href="#"></a>
-                    </div>
-                    <button class="keyWord btn btn-sm ml-1 bg-gray" type="button">國營考試</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-gray" type="button">高考</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-gray" type="button">普考</button>
-                </form>
-                <div class="dropdown my-2 ml-lg-auto">
-                    <boutton id="dropdownMenu2" class="category-all dropdown-toggle btn btn-sm bg-light btn-light mx-3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">書籍分類</boutton>
-                    <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
-                    </div>
+        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
                 </div>
-                <ul class="navbar-nav px-3">
-                    <li class="nav-item mx-lg-2 dropdown my-lg-4">
-                        <a class="nav-link " href="#menu" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="menu">
-                            <i class="fas fa-user-circle fa-lg mr-2"></i>hi, 會員
-                        </a>
-                        <div id="menu" class="collapse" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">會員設定</a>
-                        <a class="dropdown-item" href="#">追蹤清單</a>
-                        <a class="dropdown-item" href="#">訂單查詢</a>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="navbar-nav px-3 ml-lg-auto">
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">書籍分類</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu-right dropdown-menu border-coffee rounded-0" id="book-case">
+                        <div class="my-2 mx-2" id="tab-hover" style="min-height:300px;">
+                            <ul class="tab-btn nav nav-pills mb-2" style="list-style: none;">
+                                <li class="nav-item rounded-top my-1 px-1"><a class="nav-link" href="#tb1">研究所</a></li>
+                                <li class="nav-item rounded-top my-1 px-1"><a class="nav-link" href="#tb2">公職考試</a></li>
+                                <li class="nav-item rounded-top my-1 px-1"><a class="nav-link" href="#tb3">就業考試</a></li>
+                                <li class="nav-item rounded-top my-1 px-1"><a class="nav-link" href="#tb3">升學考試</a></li>
+                                <li class="nav-item rounded-top my-1 px-1"><a class="nav-link" href="#tb4">專業教科書</a></li>
+                            </ul>
+                            <div id="tb1" class="tab-inner">
+                                <div class="d-flex">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="tb2" class="col-10 tab-inner">
+                                <div class="d-flex">
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">各類特考</li>
+                                            <li class="pl-3 border-left"><a href="#">移民特考</a></li>
+                                            <li class="pl-3 border-left"><a href="#">調查特考</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">高普考試</li>
+                                            <li class="pl-3 border-left"><a href="#">機械類</a></li>
+                                            <li class="pl-3 border-left"><a href="#">環境工程環保行政環保技術</a></li>
+                                            <li class="pl-3 border-left"><a href="#">行政民政人事行政戶政</a></li>
+                                            <li class="pl-3 border-left"><a href="#">法制法律廉政</a></li>
+                                            <li class="pl-3 border-left"><a href="#">電機電子電信</a></li>
+                                            <li class="pl-3 border-left"><a href="#">資訊處理</a></li>
+                                            <li class="pl-3 border-left"><a href="#">共同科目</a></li>
+                                            <li class="pl-3 border-left"><a href="#">文化行政</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">專業證照</li>
+                                            <li class="pl-3 border-left"><a href="#">技師執照</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tb3" class="col-10 tab-inner">
+                                <div class="d-flex">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">國營事業</li>
+                                            <li class="pl-3 border-left"><a href="#">經濟部新進人員</a></li>
+                                            <li class="pl-3 border-left"><a href="#">台電顧員</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="tb4" class="col-10 tab-inner">
+                                <div class="d-flex">
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                    <span class="w-25 d-inline-block pl-1 mr-2">
+                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
+                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
+                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 已登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span></span>
+                    </a>
+                    <!-- 未登入 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right border border-sm-0 border-lg-gray rounded" aria-labelledby="member">
+                        <a class="dropdown-item" href="registered.html">會員設定</a>
+                        <a class="dropdown-item" href="wanna-buy.html">追蹤清單</a>
+                        <a class="dropdown-item" href="order-search.html">訂單查詢</a>
+                        <a class="dropdown-item" href="question.html">常見問題</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">會員登出</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-lg-2 my-lg-4 dropdown">
-                        <a class="nav-link" href="#menu-1" id="navbarDropdown" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="menu-1">
-                            <i class="fas fa-th-large fa fa-lg"></i>
-                        </a>
-                        <div id="menu-1" class="collapse" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">願望清單</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                </li>
+                <li class="nav-item mx-lg-2 dropdown my-lg-2">
+                    <!-- 註冊 -->
+                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="signup" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+                <!-- <li class="nav-item mx-lg-2 my-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="wish-list" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-th-large fa fa-lg mr-2"></i><span>常見問題</span>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
     </nav>
+    <nav class="main-nav" role="navigation">
+
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <input id="main-menu-state" type="checkbox" />
+        <label class="main-menu-btn" for="main-menu-state">
+          <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+        </label>
+      
+        <h2 class="nav-brand"><a href="#">Brand</a></h2>
+      
+        <!-- Sample menu definition -->
+        <ul id="main-menu" class="sm sm-clean">
+          <li><a href="http://www.smartmenus.org/">Home</a></li>
+          <li><a href="http://www.smartmenus.org/about/">About</a>
+            <ul>
+              <li><a href="http://www.smartmenus.org/about/introduction-to-smartmenus-jquery/">Introduction to SmartMenus jQuery</a></li>
+              <li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
+              <li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
+              <li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
+                <ul>
+                  <li><a href="http://vadikom.com/about/">About Vadikom</a></li>
+                  <li><a href="http://vadikom.com/projects/">Projects</a></li>
+                  <li><a href="http://vadikom.com/services/">Services</a></li>
+                  <li><a href="http://www.smartmenus.org/about/vadikom/privacy-policy/">Privacy policy</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="http://www.smartmenus.org/download/">Download</a></li>
+          <li><a href="http://www.smartmenus.org/support/">Support</a>
+            <ul>
+              <li><a href="http://www.smartmenus.org/support/premium-support/">Premium support</a></li>
+              <li><a href="http://www.smartmenus.org/support/forums/">Forums</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.smartmenus.org/docs/">Docs</a></li>
+          <li><a href="#">Sub test</a>
+            <ul>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#" class="disabled">Disabled menu item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">more...</a>
+                <ul>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">more...</a>
+                    <ul>
+                      <li><a href="#">Dummy item</a></li>
+                      <li><a href="#" class="current">A 'current' class item</a></li>
+                      <li><a href="#">Dummy item</a></li>
+                      <li><a href="#">more...</a>
+                        <ul>
+                          <li><a href="#">subMenusMinWidth</a></li>
+                          <li><a href="#">10em</a></li>
+                          <li><a href="#">forced.</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Dummy item</a></li>
+                      <li><a href="#">Dummy item</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="http://www.smartmenus.org/contact/">Contact</a></li>
+        </ul>
+      </nav>
     <!-- <div class="flickity-carousel mt-5 pt-5" data-flickity='{ "groupCells": true }'>
         <div class="carousel-cell">
             <a href="#">
