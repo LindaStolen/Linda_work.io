@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
     <link rel="stylesheet" href="css/alertify.core.css"> 
-    <link href="css/alertify.default.css" rel="stylesheet">  
+    <link href="css/alertify.default.css" rel="stylesheet">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
     <script src="js/alertify.js"></script>
     <script>
         // window.onscroll = function() {scrollFunction()};
@@ -39,6 +42,7 @@
                 $('#login').hide();
                 $('#signup').hide();
             });
+            $('#main-menu').smartmenus({});
         })
         
     </script>
@@ -94,14 +98,14 @@
             </div>
         </div>
     </div> -->
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white border-bottom border-green-03 p-0">
-        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
-        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="form-inline input-group input-group-sm col-12 col-lg-6">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
@@ -111,145 +115,92 @@
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
             </form>
-            <ul class="navbar-nav px-3 ml-lg-auto">
-                <li class="nav-item mx-lg-2 dropdown my-lg-2">
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
-                        <i class="fas fa-caret-down"></i>
+            <ul id="main-menu" class="sm sm-clean px-3 py-1 ml-lg-auto">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
                     </a>
-                    <div class="dropdown-menu-right dropdown-menu border-coffee rounded-0" style="min-width:750px;">
-                        <div class="row flex-row-reverse my-2 mx-3" id="tab-hover" style="min-height:300px;">
-                            <ul class="tab-btn col-2 nav nav-pills pr-0" style="list-style: none;">
-                                <li class="nav-item"><a class="nav-link" href="#tb1">研究所</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#tb2">公職考試</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#tb3">升學考試</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#tb4">專業教科書</a></li>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
                             </ul>
-                            <div id="tb1" class="col-10 tab-inner">
-                                <div class="d-flex flex-row-reverse">
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                        </ul>
-                                    </span>
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">國立台北大學</li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                            <li class="pl-3 border-left"><a href="#">資訊管理研究所</a></li>
-                                        </ul>
-                                    </span>
-                                </div>
-                            </div>
-                            <div id="tb2" class="col-10 tab-inner">
-                                <div class="d-flex flex-row-reverse">
-                                    <div class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">各類特考</li>
-                                            <li class="pl-3 border-left"><a href="#">移民特考</a></li>
-                                            <li class="pl-3 border-left"><a href="#">調查特考</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">高普考試</li>
-                                            <li class="pl-3 border-left"><a href="#">機械類</a></li>
-                                            <li class="pl-3 border-left"><a href="#">環境工程環保行政環保技術</a></li>
-                                            <li class="pl-3 border-left"><a href="#">行政民政人事行政戶政</a></li>
-                                            <li class="pl-3 border-left"><a href="#">法制法律廉政</a></li>
-                                            <li class="pl-3 border-left"><a href="#">電機電子電信</a></li>
-                                            <li class="pl-3 border-left"><a href="#">資訊處理</a></li>
-                                            <li class="pl-3 border-left"><a href="#">共同科目</a></li>
-                                            <li class="pl-3 border-left"><a href="#">文化行政</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">專業證照</li>
-                                            <li class="pl-3 border-left"><a href="#">技師執照</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="tb3" class="col-10 tab-inner">
-                                <div class="d-flex flex-row-reverse">
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">國營事業</li>
-                                            <li class="pl-3 border-left"><a href="#">經濟部新進人員</a></li>
-                                            <li class="pl-3 border-left"><a href="#">台電顧員</a></li>
-                                        </ul>
-                                    </span>
-                                </div>
-                            </div>
-                            <div id="tb4" class="col-10 tab-inner">
-                                <div class="d-flex flex-row-reverse">
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                        </ul>
-                                    </span>
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                        </ul>
-                                    </span>
-                                    <span class="w-25 d-inline-block pl-1 mr-2">
-                                        <ul class="pl-0 d-inline-block" style="list-style: none;">
-                                            <li class="font-weight-bold mb-1 text-info">大專用書</li>
-                                            <li class="pl-3 border-left"><a href="#">消防用書</a></li>
-                                        </ul>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item mx-lg-2 dropdown my-lg-2">
-                    <!-- 已登入 -->
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        <i class="fas fa-user-circle fa-lg mr-2"></i><span></span>
-                    </a>
-                    <!-- 未登入 -->
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
                         <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
-                        <a class="dropdown-item" href="registered.html">會員設定</a>
-                        <a class="dropdown-item" href="wanna-buy.html">追蹤清單</a>
-                        <a class="dropdown-item" href="order-search.html">訂單查詢</a>
-                        <a class="dropdown-item" href="question.html">常見問題</a>
+                    <ul>
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">會員登出</a>
-                    </div>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item mx-lg-2 dropdown my-lg-2">
-                    <!-- 註冊 -->
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="signup" role="button">
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
                         <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="container mt-lg-3 mt-3 pt-4 pt-lg-5">
+    <div class="container mb-lg-5 py-lg-3">
         <div class="col-lg-2"></div>
         <!-- <div class="progress-bar bg-blue mx-5 py-3">進度條圖</div> -->
-        <section class="my-lg-4 mx-lg-5 p-lg-4">
+        <section class="my-lg-4 mx-lg-5">
             <form action="" method="post">
                 <table class="table table-bordered mx-auto" style="max-width: 60%;">
                     <tbody class="">
                         <tr>
-                            <td rowspan="7" class="h-100 px-1 bg-green text-white">
+                            <td rowspan="10" class="h-100 px-1 bg-green text-white">
                                 <label for="form" class="h4 font-weight-bold d-flex flex-column align-items-center">
                                     <span>加</span>
                                     <span>入</span>
@@ -268,11 +219,29 @@
                         </tr>
                         <tr>
                             <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">性別</p>
+                                <span class="small">Your Gender</span>
+                            </td>
+                            <td class="align-middle">
+                                <input type="text" name="Gender" id="Gender" class="pl-1" autocomplete="none" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">生日</p>
+                                <span class="small">Your Birthday</span>
+                            </td>
+                            <td class="align-middle">
+                                <input type="text" name="birthday" id="birthday" class="pl-1" placeholder="yyyy/mm/dd" autocomplete="none" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
                                 <p class="mb-1">手機</p>
                                 <span class="small">Your phone number</span>
                             </td>
                             <td>
-                                <input type="text" name="phoneNumber" id="userID" placeholder="0912345678" autocomplete="none" required>
+                                <input type="text" name="phoneNumber" id="userID" class="pl-1" placeholder="0912345678" autocomplete="none" required>
                                 <p class="small mb-0 text-gray">請輸入正確電話號碼以便接收驗證簡訊</p>
                             </td>
                         </tr>
@@ -291,7 +260,7 @@
                                 <span class="small">ComfirmPassword</span>
                             </td>
                             <td class="align-middle">
-                                <input type="password" name="" id="passwordCheck" autocomplete="none" required></td>
+                                <input type="password" name="" id="passwordCheck" autocomplete="none" required> <span class="text-danger small">密碼不符</span></td>
                         </tr>
                         <tr>
                             <td scope="column" class="w-25 bg-light">
@@ -301,6 +270,39 @@
                             <td>
                                 <input type="text" class="w-50" name="userID" id="usermail" autocomplete="none" required>
                                 <p class="small mb-0 text-gray">請輸入常用電子信箱</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">最高學歷</p>
+                                <span class="small">Your highest education</span>
+                            </td>
+                            <td class="align-middle">
+                                <select class="w-50" name="education" id="education" required>
+                                    <option value="0">請選擇</option>
+                                    <option value="1">請選擇</option>
+                                    <option value="2">請選擇</option>
+                                    <option value="3">請選擇</option>
+                                    <option value="4">請選擇</option>
+                                    <option value="5">請選擇</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="column" class="w-25 bg-light">
+                                <p class="mb-1">職業</p>
+                                <span class="small">Your Career</span>
+                            </td>
+                            <td class="align-middle">
+                                <select class="w-50" name="career" id="career" required>
+                                    <option value="0">請選擇</option>
+                                    <option value="1">學生</option>
+                                    <option value="2">1234579</option>
+                                    <option value="3">eojfowie</option>
+                                    <option value="4">ewpjepf</option>
+                                    <option value="5">brtweijp</option>
+                                    <option value="6">wepojx.fo</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>

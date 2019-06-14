@@ -1,16 +1,13 @@
 .sm-clean {
-  background: #eeeeee;
+  background: transparent;
   border-radius: 5px;
 }
 .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active {
   padding: 13px 20px;
   /* make room for the toggle button (sub indicator) */
-  padding-right: 58px;
+  /* padding-right: 58px; */
   color: #555555;
-  font-family: "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 17px;
+  font-family: "微軟正黑體", "宋體", "Helvetica Neue", Arial, sans-serif, "Segoe UI";
   text-decoration: none;
 }
 .sm-clean a.current {
@@ -126,7 +123,7 @@
   /* ...end */
   .sm-clean {
     padding: 0 10px;
-    background: #eeeeee;
+    background: transparent;
     border-radius: 100px;
   }
   .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, .sm-clean a.highlighted {
@@ -196,7 +193,7 @@
     color: #555555;
   }
   .sm-clean ul a:hover, .sm-clean ul a:focus, .sm-clean ul a:active, .sm-clean ul a.highlighted {
-    background: #eeeeee;
+    background: transparent;
     color: #D23600;
   }
   .sm-clean ul a.current {
@@ -228,7 +225,7 @@
   }
   .sm-clean .scroll-up:hover,
   .sm-clean .scroll-down:hover {
-    background: #eeeeee;
+    background: transparent;
   }
   .sm-clean .scroll-up:hover .scroll-up-arrow {
     border-color: transparent transparent #D23600 transparent;
@@ -299,7 +296,7 @@
     background: #fff;
   }
   .sm-clean.sm-vertical a.disabled {
-    background: #eeeeee;
+    background: transparent;
   }
   .sm-clean.sm-vertical a .sub-arrow {
     right: 8px;
@@ -317,7 +314,7 @@
     padding: 10px 20px;
   }
   .sm-clean.sm-vertical ul a:hover, .sm-clean.sm-vertical ul a:focus, .sm-clean.sm-vertical ul a:active, .sm-clean.sm-vertical ul a.highlighted {
-    background: #eeeeee;
+    background: #ffffff00;
   }
   .sm-clean.sm-vertical ul a.disabled {
     background: #fff;

@@ -7,183 +7,235 @@
     <title>header分類</title>    
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css">
     <link href="css/sm-core-css.css" rel="stylesheet">
     <link href="css/sm-clean.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.smartmenus.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/tempusdominus-bootstrap-4.js"></script>
     <script>
     $(function() {
-  $('#main-menu').smartmenus({
-    mainMenuSubOffsetX: -1,
-    mainMenuSubOffsetY: 4,
-    subMenusSubOffsetX: 6,
-    subMenusSubOffsetY: -6
-  });
-});
-
-// SmartMenus mobile menu toggle button
-$(function() {
-  var $mainMenuState = $('#main-menu-state');
-  if ($mainMenuState.length) {
-    // animate mobile menu
-    $mainMenuState.change(function(e) {
-      var $menu = $('#main-menu');
-      if (this.checked) {
-        $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
-      } else {
-        $menu.show().slideUp(250, function() { $menu.css('display', ''); });
-      }
+        var $mainMenuState = $('#main-menu-state');
+        $('#main-menu').smartmenus({
+            // mainMenuSubOffsetX: -1,
+            // mainMenuSubOffsetY: 4,
+            // subMenusSubOffsetX: 6,
+            // subMenusSubOffsetY: -6
+        });
     });
-    // hide mobile menu beforeunload
-    $(window).bind('beforeunload unload', function() {
-      if ($mainMenuState[0].checked) {
-        $mainMenuState[0].click();
-      }
-    });
-  }
-});
+        
+        $(document).ready(function() {
+            $('#member').hide();
+            $('#loginCheck').click('hide.bs.modal',function(e){
+                $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            });
+            $('.buyThis').click(function(){
+                alertify.alert('已將商品加入購物車囉!');
+            });
+            $('.likeThis').click(function(){
+                alertify.alert('已將商品加入追蹤清單囉!');
+            });
+        })        
     </script>
 </head>
 <body>
-    <nav class="main-nav navbar" role="navigation">
-        <!-- Mobile menu toggle button (hamburger/x icon) -->
-        <!-- <input id="main-menu-state" type="checkbox" />
-        <label class="main-menu-btn" for="main-menu-state">
-          <span class="main-menu-btn-icon"></span> Toggle main menu visibility
-        </label> -->
-        <a class="navbar-brand p-0 pl-3" style="max-width:25%;" href="new.html">
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav w-100" role="navigation">
+        <a href="#" class="nav-brand d-inline-block">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
-        <button class="navbar-toggler mr-1 float-right" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav">
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
-      
-        <!-- Sample menu definition -->
-        <div id="navbar-nav" class="collapse navbar-collapse">
-        <ul id="main-menu" class="sm sm-clean">
-          <li><a href="http://www.smartmenus.org/">Home</a></li>
-          <li><a href="http://www.smartmenus.org/about/">About</a>
-            <ul>
-              <li><a href="http://www.smartmenus.org/about/introduction-to-smartmenus-jquery/">Introduction to SmartMenus jQuery</a></li>
-              <li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
-              <li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
-              <li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
-                <ul>
-                  <li><a href="http://vadikom.com/about/">About Vadikom</a></li>
-                  <li><a href="http://vadikom.com/projects/">Projects</a></li>
-                  <li><a href="http://vadikom.com/services/">Services</a></li>
-                  <li><a href="http://www.smartmenus.org/about/vadikom/privacy-policy/">Privacy policy</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="http://www.smartmenus.org/download/">Download</a></li>
-          <li><a href="http://www.smartmenus.org/support/">Support</a>
-            <ul>
-              <li><a href="http://www.smartmenus.org/support/premium-support/">Premium support</a></li>
-              <li><a href="http://www.smartmenus.org/support/forums/">Forums</a></li>
-            </ul>
-          </li>
-          <li><a href="http://www.smartmenus.org/docs/">Docs</a></li>
-          <li><a href="#">Sub test</a>
-            <ul>
-              <li><a href="#">Dummy item</a></li>
-              <li><a href="#">Dummy item</a></li>
-              <li><a href="#" class="disabled">Disabled menu item</a></li>
-              <li><a href="#">Dummy item</a></li>
-              <li><a href="#">more...</a>
-                <ul>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">more...</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul id="main-menu" class="sm sm-clean ml-lg-auto">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
                     <ul>
-                      <li><a href="#">Dummy item</a></li>
-                      <li><a href="#" class="current">A 'current' class item</a></li>
-                      <li><a href="#">Dummy item</a></li>
-                      <li><a href="#">more...</a>
-                        <ul>
-                          <li><a href="#">subMenusMinWidth</a></li>
-                          <li><a href="#">10em</a></li>
-                          <li><a href="#">forced.</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Dummy item</a></li>
-                      <li><a href="#">Dummy item</a></li>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                  </li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                  <li><a href="#">Dummy item</a></li>
-                </ul>
-              </li>
+                </li>
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul>
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="#" id="signup" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
             </ul>
-          </li>
-          <li><a href="http://www.smartmenus.org/contact/">Contact</a></li>
-        </ul>
-    </div>
+        </div>
     </nav>
+    <div class="container table-responsive">
+        <table class="mx-auto">
+            <thead class="text-gray">
+                <th scope="col">條件選擇</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="px-2 align-middle" scope="row" style="min-width:78px;"><label class="mb-0" for="input">訂單狀態</label></td>
+                    <td class="px-2 d-flex flex-column flex-lg-row">
+                        <span class="py-1"><input class="ml-2" type="radio" name="status" id="aMonth"> 一個月內訂單</span>
+                        <span class="py-1"><input class="ml-2" type="radio" name="status" id="notShipped">未出貨訂單</span>
+                        <span class="py-1"><input class="ml-2" type="radio" name="status" id="backChange">退/換貨訂單</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-2"><label class="mb-0" for="input">查詢日期</label></td>
+                    <td class="px-2 d-flex flex-column flex-lg-row">
+                        <!-- <div class="row mx-3"> -->
+                            <!-- <div class="input-group date px-0" id="datetimepicker7" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker7" placeholder="開始日期"/>
+                                <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            <span class="align-middle p-1">至</span>
+                            <div class="input-group date px-0" id="datetimepicker8" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker8"/>
+                                <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
+                        
+                        <!-- <input class="mx-2" type="text" name="end-date" id="end-date">退/換貨訂單 -->
+                    </td>
+                    <td class="px-2"><button type="submit" role="button" class="btn-sm btn-orange">查詢</button></td>
+                </tr>
+                <!-- <tr>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="container test-2">
+        <div class="subTitle">條件選擇</div>
+        <div class="row state">
+            <div class="text col-3 col-lg-1">訂單狀態</div>
+            <div class="radio col-8 col-lg-3 d-flex flex-column">
+                <span class="py-1"><input type="radio" name="time" id="all">全部 <input type="radio" name="time" id="aMonth" class="ml-2">一個月內訂單</span>
+                <span class="py-1"><input type="radio" name="time" id="notShipped">未出貨訂單<input type="radio" name="time" id="return" class="ml-2">退/換貨訂單</span>
+            </div>
+        </div>
+        <div class="row datetime">
+            <div class="text col-3 col-lg-1">查詢日期</div>
+            <div class="choose col-7 col-lg-3">
+                <div class="input-group date py-1" id="datetimepicker7" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker7" placeholder="開始日期"/>
+                    <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+                <!-- <span class="align-middle p-1">至</span> -->
+                <div class="input-group date py-1" id="datetimepicker8" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker8"  placeholder="結束日期"/>
+                    <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center col-lg-4 col-10 d-inline-block">
+            <button type="submit" role="button" class="btn-sm btn-orange">查詢</button>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('#datetimepicker7').datetimepicker({
+                viewMode: 'months',
+                useCurrent: false,
+                // disabledTimeIntervals: false,
+                viewDate: false,
+                format: 'L'
+            });
+            $('#datetimepicker8').datetimepicker({
+                viewMode: 'months',
+                useCurrent: false,
+                format: 'L'
+            });
+            $("#datetimepicker7").on("change.datetimepicker", function (e) {
+                $('#datetimepicker8').datetimepicker('minDate', e.date);
+            });
+            $("#datetimepicker8").on("change.datetimepicker", function (e) {
+                $('#datetimepicker7').datetimepicker('maxDate', e.date);
+            });
+        });
+    </script>
 </body>
 </html>
