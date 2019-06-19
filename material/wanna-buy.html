@@ -208,8 +208,8 @@
                                 庫存還沒補
                             </td>
                             <td class="align-middle">
-                                <button class="btn btn-sm btn-outline-danger">放入購物車</button>
-                                <button class="btn btn-sm btn-outline-gray">刪除</button>
+                                <button class="btn btn-sm btn-outline-danger to-buy">放入購物車</button>
+                                <button class="btn btn-sm btn-outline-gray clean">刪除</button>
                             </td>
                         </tr>
                         <tr>
@@ -224,16 +224,16 @@
                                 等待庫存補貨
                             </td>
                             <td class="align-middle">
-                                <button class="btn btn-sm btn-outline-danger">放入購物車</button>
-                                <button class="btn btn-sm btn-outline-gray">刪除</button>
+                                <button class="btn btn-sm btn-outline-danger to-buy">放入購物車</button>
+                                <button class="btn btn-sm btn-outline-gray clean">刪除</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="btn-control text-center mt-3">
-                <button class="btn btn-sm btn-danger mr-1" id="A">這幾項我要了</button>
-                <button class="btn btn-sm btn-gray" id="clean">這幾項我不要了</button>
+                <button class="btn btn-sm btn-danger mr-1 to-buy">這幾項我要了</button>
+                <button class="btn btn-sm btn-gray clean">這幾項我不要了</button>
             </div>
         </form>
         <div class="notice-block mt-lg-3">
@@ -313,10 +313,10 @@
                 $("input[name='check']").removeProp('checked');
                 }
         });
-        $("#buyAll").click(function(){
+        $(".to-buy").click(function(){
             alertify.alert("已成功加入購物車！")
         });
-        $("#clean").click(function(){
+        $(".clean").click(function(){
             alertify.confirm("確定要刪除嗎?")
         });
     });
