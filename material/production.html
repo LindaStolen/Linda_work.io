@@ -94,7 +94,8 @@
                 $('#login').hide();
                 $('#signup').hide();
             });
-            $('#main-menu').smartmenus();
+            $('#category').smartmenus();
+            $('.right-side').smartmenus({});
         });
     </script>
 </head>
@@ -131,48 +132,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center rounded-0">
-                <div class="modal-header py-1">
-                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
-                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body h-50">
-                    已成功加入願望清單，請至會員專區查看！
-                    <br>
-                    <br>
-                    <br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">對啊先不要。</button>
-                    <button type="button" class="btn btn-green btn-sm" data-dismiss="modal">好啦！放到購物車</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="buybox"role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center rounded-0">
-                <div class="modal-header py-1">
-                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
-                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body h-50">
-                    已經幫你放到購物車裡囉！
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-green btn-sm" data-dismiss="modal">還沒買夠買起來！</button>
-                    <button type="button" class="btn btn-light btn-sm" onclick="location.href='buy-cart.html'">這些就可以了,結帳！</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <nav class="navbar navbar-expand-lg navbar-ligh main-nav w-100 border-bottom border-green-03 p-0" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
         <a href="new.html" class="nav-brand p-0 pl-3">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
@@ -180,16 +140,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <a class="input-group-text fas fa-search py-2" href="#"></a>
-                </div>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
-            </form>
-            <ul id="main-menu" class="sm sm-clean px-3 py-1 ml-lg-auto">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
                 <li>
                     <a href="#" class="text-coffee">
                         <i class="fas fa-book fa-lg mr-2"></i>書籍分類
@@ -206,8 +157,22 @@
                         <li>
                             <a>公職考試</a>
                             <ul>
-                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
-                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">資訊管理研究所</a></li>
                                 <li><a href="#">資訊管理研究所</a></li>
                             </ul>
@@ -243,6 +208,17 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
                 <li>
                     <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
                     <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
@@ -529,10 +505,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="border border-light px-lg-2">
+                        <div class="add-service my-4 my-lg-2 p-2 border border-gray">
+                            <label for="add-service" class="font-weight-bold border-bottom">會員加值服務</label>
+                            <p>感謝您購買本書，大碩書城日後將不定時更新本書相關資訊，提供您會員獨享的加值服務。</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-12">
                     <p class="border-bottom mt-1 mt-lg-3 text-orange font-weight-bold"><i class="fas fa-crown mr-2"></i>銷售排行榜 : :</p>
-                    <ul class="commond pl-lg-2 nav flex-column">
+                    <ul class="commond pl-lg-2 my-lg-3 nav flex-column">
                         <li class="border-bottom border-light mb-2 text-center position-relative">
                             <em class="position-absolute" style="left:0;">1.</em>
                             <img src="images/original/A05161919-10.jpg" alt="" class="img-fluid px-4">
@@ -559,22 +541,17 @@
                             <p class="small"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></p>
                         </li>
                     </ul>
+                    <div class="feedback">
+                        <p class="title text-orange mb-1"><i class="fas fa-exclamation-triangle mr-2"></i>勘誤區</p>
+                        <div class="describe">若您於閱讀時發現任何問題，請您於此留下相關訊息，謝謝！</div>
+                        <form>
+                            <textarea name="err" id="err" rows="10" class="my-lg-2"></textarea>
+                            <input type="submit" value="submit" class="btn btn-sm btn-info">
+                        </form>
+                    </div>
                 </div>
-            </section>
-            <!-- <div class="ad my-4 my-lg-0 col-lg-3 text-center">
-                <a href="#">
-                    <img class="my-3 img-fluid" src="images/CJ63_CJ73_800_418_1080101_0331.jpg" class="rounded" alt="">
-                </a>
-                <a href="#">
-                    <img class="my-3 img-fluid" src="images/CJ63_CJ73_800_418_1080101_0331.jpg" class="rounded" alt="">
-                </a>
-                <div class="embed-responsive embed-responsive-4by3 mx-auto" style="width:300px;">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HCcUPJEjwDI"></iframe>
-                </div>
-            </div> -->
-            
-            </div>
-        <!-- </div> -->
+            </section>            
+        </div>
     </div>
     <div id="footer" class="bg-green-01 px-lg-5 px-3">
         <div class="row d-flex justify-content-lg-between">

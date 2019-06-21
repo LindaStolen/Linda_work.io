@@ -22,36 +22,30 @@
                 $('#login').hide();
                 $('#signup').hide();
             });
-            $('#main-menu').smartmenus({});
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
             $("section").hide();
             $("#howBuy").show();
             $("#testselect1").change(function(){
                 var testselect = $(this).val();
-                console.log(55555);
                 if(testselect == "#howBuy"){
                     $('section').hide();
                     $("#howBuy").show().addClass("show");
-                    console.log(123);
                 }else if(testselect == "#howPay"){
                     $("section").hide();                
                     $("#howPay").show().addClass("show");
-                    console.log(456);
                 }else if(testselect == "#stock"){
                     $("section").hide();                
                     $("#stock").show().addClass("show");
-                    console.log(590);
                 }else if(testselect == "#invoice"){
                     $("section").hide();                
                     $("#invoice").show().addClass("show");
-                    console.log(666);
                 }else if(testselect == "#return"){
                     $("section").hide();                
                     $("#return").show().addClass("show");
-                    console.log(666);
                 }else if(testselect == "#aboutmember"){
                     $("section").hide();                
                     $("#aboutmember").show().addClass("show");
-                    console.log(666);
                 }
             })
         })  
@@ -90,7 +84,7 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-ligh main-nav w-100 border-bottom border-green-03 p-0" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
             <a href="new.html" class="nav-brand p-0 pl-3">
                 <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
             </a>
@@ -98,16 +92,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="form-inline input-group input-group-sm col-12 col-lg-6">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                        <a class="input-group-text fas fa-search py-2" href="#"></a>
-                    </div>
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
-                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
-                </form>
-                <ul id="main-menu" class="sm sm-clean px-3 py-1 ml-lg-auto">
+                <ul id="category" class="sm sm-clean fa-la mr-2">
                     <li>
                         <a href="#" class="text-coffee">
                             <i class="fas fa-book fa-lg mr-2"></i>書籍分類
@@ -124,8 +109,22 @@
                             <li>
                                 <a>公職考試</a>
                                 <ul>
-                                    <li><a class="font-weight-bold text-info">國立台北大學</a></li>
-                                    <li><a href="#">資訊管理研究所</a></li>
+                                    <li><a class="font-weight-bold">國立台北大學</a>
+                                        <ul>
+                                            <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">資訊管理研究所</a>
+                                        <ul>
+                                            <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                            <li><a href="#">資訊管理研究所</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="#">資訊管理研究所</a></li>
                                     <li><a href="#">資訊管理研究所</a></li>
                                 </ul>
@@ -161,12 +160,23 @@
                             </li>
                         </ul>
                     </li>
+                </ul>
+                <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <a class="input-group-text fas fa-search py-2" href="#"></a>
+                    </div>
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                    <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+                </form>
+                <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
                     <li>
                         <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
                         <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
                             <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
                         </a>
-                        <ul>
+                        <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
                             <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
                             <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
                             <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>

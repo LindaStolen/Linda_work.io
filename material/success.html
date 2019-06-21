@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>恭喜成為會員</title>
-    <!-- <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
-    <link rel="stylesheet" href="css/bootstrap-submenu.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-submenu.min.css"> -->
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap-submenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#member').hide();
@@ -21,6 +22,7 @@
                 $('#member span').text('會員您好');
                 $('#login').hide();
                 $('#signup').hide();
+                // $('#main-menu').smartmenus({});
             });
         })
     </script>
@@ -34,6 +36,75 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             <form class="form-inline input-group input-group-sm col-12 col-lg-6">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
@@ -44,87 +115,7 @@
                 <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
             </form>
             <ul class="navbar-nav px-3 ml-lg-auto">
-                <li class="nav-item mx-lg-2 dropdown my-lg-2">
-                    <a class="nav-link dropdown-toggle text-coffee" href="#" id="category" role="button" tabindex="0" data-toggle="dropdown" data-submenu>
-                        <i class="fas fa-book fa-lg mr-2"></i><span class="text-coffee">商品分類</span>
-                        <i class="fas fa-caret-down"></i>
-                    </a>
-                    <div class="dropdown-menu dropright">
-                        <div class="dropdown dropleft dropdown-submenu">
-                            <button class="dropdown-item dropdown-toggle mb
-                            -4" type="button" data-toggle="dropdown">教材書籍</button>
-                            
-                            <div class="dropdown-menu">
-                                    <div class="dropdown dropleft dropdown-submenu">
-                                        <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">cake</button>
-                                    
-                                        <div class="dropdown-menu">
-                                            <div class="dropdown dropleft dropdown-submenu">
-                                                <button class="dropdown-item dropdown-toggle" type="button">磅蛋糕</button>
-                                                    <div class="dropdown-menu">
-                                                        <div class="dropdown dropleft dropdown-submenu">
-                                                            <div class="dropdown dropleft dropdown-submenu">
-                                                                <button class="dropdown-item dropdown-toggle" type="button">檸檬磅蛋糕</button>
-                                                                <div class="dropdown-menu">
-                                                                    <button class="dropdown-item" type="button">單片</button>
-                                                                    <button class="dropdown-item" type="button">1/2模</button>
-                                                                    <button class="dropdown-item" type="button">整模</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="dropdown dropleft dropdown-submenu">
-                                                                <button class="dropdown-item dropdown-toggle" type="button">伯爵磅蛋糕</button>
-                                                                <div class="dropdown-menu">
-                                                                    <button class="dropdown-item" type="button">單片</button>
-                                                                    <!-- <button class="dropdown-item" type="button">1/2模</button> -->
-                                                                    <button class="dropdown-item" type="button">整模</button>
-                                                                </div>
-                                                            </div>
-                                                        <button class="dropdown-item dropdown-toggle" type="button">藍莓磅蛋糕</button>
-                                                        <div class="dropdown-menu">
-                                                            <button class="dropdown-item" type="button">單片</button>
-                                                            <button class="dropdown-item" type="button">1/2模</button>
-                                                            <button class="dropdown-item" type="button">整模</button>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        
-                                            <button class="dropdown-item" type="button">乳酪蛋糕</button>
-                                            <button class="dropdown-item" type="button">戚風蛋糕</button>
-                                        
-                                            <div class="dropdown dropleft dropdown-submenu">
-                                                <button class="dropdown-item dropdown-toggle" type="button">伯爵戚風</button>
-                                        
-                                                <div class="dropdown-menu">
-                                                <button class="dropdown-item" type="button">單片</button>
-                                                <button class="dropdown-item" type="button">四吋</button>
-                                                <button class="dropdown-item" type="button">八吋</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                          
-                                    <div class="dropdown-header">Dropdown header</div>
-                          
-                                    <div class="dropdown dropleft dropdown-submenu">
-                                        <button class="dropdown-item dropdown-toggle" type="button">餅乾</button>
-                                    
-                                        <div class="dropdown-menu">
-                                            <button class="dropdown-item" type="button">美式餅乾</button>
-                                            <button class="dropdown-item" type="button">義式脆餅</button>
-                                            <button class="dropdown-item" type="button">翻糖餅乾</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <button class="dropdown-item" type="button">咖啡?</button>
-                                    <div class="dropdown-divider"></div>
-                                    <button class="dropdown-item" type="button">Separated link</button>
-                          
-                            </div>
-                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">上課上課</button>
-                            <button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown">教具好玩</button>
-                    </div>
-                </li>
+                
                 <li class="nav-item mx-lg-2 dropdown my-lg-2">
                     <!-- 已登入 -->
                     <a class="nav-link dropdown-toggle text-coffee" href="#" id="member" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
@@ -434,7 +425,7 @@
     </div>
     <script>
         $(document).ready(function(){
-            $('[data-submenu]').submenupicker();
+            $('#category').smartmenus();
         })
     </script>
 </body>

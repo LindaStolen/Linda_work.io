@@ -26,7 +26,8 @@
             $('#login').hide();
             $('#signup').hide();
             // });
-            $('#main-menu').smartmenus({});
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
         })        
     </script>
 </head>
@@ -56,8 +57,6 @@
                                 autocomplete="off" required="required">
                         </div>
                         <div class="form-group text-right">
-                            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                         </div>
                     </form>
                 </div>
@@ -70,37 +69,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal" id="wishbox"role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center rounded-0">
-                <div class="modal-header py-1">
-                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
-                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body h-50">
-                    已成功加入願望清單！
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="buy" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content text-center rounded-0">
-                <div class="modal-header py-1">
-                    <h5 class="modal-title d-inline-block mx-auto" style="letter-spacing:1.5px;">貼心小提醒</h5>
-                    <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body h-50">
-                    已成功加入購物車！
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <nav class="navbar navbar-expand-lg navbar-ligh main-nav w-100 border-bottom border-green-03 p-0" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
         <a href="new.html" class="nav-brand p-0 pl-3">
             <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
         </a>
@@ -109,17 +78,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <a class="input-group-text fas fa-search py-2" href="#"></a>
-                </div>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button"
-                    onclick="location.href='category-list.html'">國營考試</button>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
-                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
-            </form>
-            <ul id="main-menu" class="sm sm-clean px-3 py-1 ml-lg-auto">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
                 <li>
                     <a href="#" class="text-coffee">
                         <i class="fas fa-book fa-lg mr-2"></i>書籍分類
@@ -136,21 +95,24 @@
                         <li>
                             <a>公職考試</a>
                             <ul>
-                                <li><a class="font-weight-bold text-info">國立台北大學</a>
+                                <li><a class="font-weight-bold">國立台北大學</a>
                                     <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a class="font-weight-bold text-info">國立台北大學</a>
+                                <li><a href="#">資訊管理研究所</a>
                                     <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                         <li><a href="#">資訊管理研究所</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
                             </ul>
                         </li>
                         <li>
@@ -184,20 +146,82 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" id="member" class="text-coffee"><i
-                            class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
-                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal"
-                        data-target="#loginBox">
-                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <!-- <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
                     </a>
                     <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
                         <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
                         <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
                         <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
                         <li><a class="dropdown-item" href="question.html">常見問題</a></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">會員登出</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
                         </li>
                     </ul>
                 </li>
@@ -229,7 +253,7 @@
                         <table class="table table-bordered mb-4">
                             <thead class="text-center">
                                 <tr>
-                                    <th scope="col"><span>序號</span></th>
+                                    <th scope="col"><span>項次</span></th>
                                     <th scope="col"><span>商品圖</span></th>
                                     <th scope="col"><span>書籍編號</span></th>
                                     <th scope="col" style="width: 413px;"><span>商品名稱</span></th>
@@ -367,6 +391,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    <span class="text-coffee font-weight-bold d-inline-block mt-2" style="font-size: 16.5px;">購買須知</span>
+                    <ul class="declare border-top border-dark pt-2">
+                        <li>清單中商品進入購物車結賬流程時，將會重新計算最新售價，此處僅為您註記、追蹤，並無法保留庫存。</li>
+                        <li>若商品已下架，系統將自動自清單中移除不另行通知，請您見諒。</li>
+                    </ul>
                     <div class="nextStep text-right mt-4">
                         <button class="btn-sm btn-green mr-2" oncilck="location.href='new.html'">繼續購物</button>
                         <!-- <input type="button" class="btn-sm btn-orange" value="回首頁" onclick="location.href='new.html'"> -->
