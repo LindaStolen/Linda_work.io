@@ -34,6 +34,20 @@
             $('.right-side').smartmenus({});
         })
     </script>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            /* min-height: calc( 100vh - 330px); */
+            flex: 1;
+        } 
+    </style>
 </head>
 <body>
     <div class="modal fade" id="falseBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
@@ -166,69 +180,72 @@
             </ul>
         </div>
     </nav>
-    <div class="container mb-lg-5 pt-lg-3">
-        <!-- <form action=""> -->
-            <div class="writeHere w-50 text-center mx-auto">
-                <h5 class="d-inline-block border-bottom border-green-03 font-weight-bold pb-1">收到驗證碼了吧?</h5>
-                <p class="sub text-center mt-3 mb-1">很棒！請在下方輸入驗證碼</p>
-                <input type="text" class="rounded border-light">
-                <button class="veri-btn btn btn-green btn-sm " role="button">GoGo</button>
-            </div>
-            <div class="reSend w-50 mt-lg-3 text-center mx-auto">
-                <p class="mb-1">還未收到/輸入錯誤驗證碼請按下</p>
-                <button class="btn btn-outline-gray resend">重新發送</button>
-            </div>
-        <!-- </form> -->
-    </div>
-    <div id="footer" class="bg-green-01 px-lg-5 px-3 position-absolute w-100" style="bottom:0;">
-        <div class="row d-flex justify-content-lg-between">
-            <div class="col-lg-2"></div>
-            <div id="aboutTKB" class="p-3">
-                <img src="images/tkb_logo.png" alt="" class="mr-2">
-                <img src="images/tkbqrcode_min.jpg" alt="">
-                <div id="info" class="text-coffee mt-3">
-                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
-                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
-                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+    <!-- <div class="box pb-3" style="min-height: 100%;"> -->
+        <div class="container mb-lg-5 pt-lg-3">
+            <!-- <form action=""> -->
+                <div class="writeHere w-50 text-center mx-auto ">
+                    <h5 class="d-inline-block border-bottom border-green-03 font-weight-bold pb-1">收到驗證碼了吧?</h5>
+                    <p class="sub text-center mt-3 mb-1">很棒！請在下方輸入驗證碼</p>
+                    <input type="text" class="rounded border-light">
+                    <button class="veri-btn btn btn-green btn-sm " role="button">GoGo</button>
                 </div>
-            </div>
-            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
-                <ul id="taso" class="p-3" style="list-style:none;">
-                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
-                        大碩社群
-                    </li>
-                    <li class="link my-2">
-                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
-                    </li>
-                    <li class="link my-2">
-                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
-                    </li>
-                </ul>
-                <ul id="taso" class="p-3" style="list-style:none;">
-                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
-                        大碩部落格
-                    </li>
-                    <li class="link my-2">
-                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
-                    </li>
-                </ul>
-                <ul id="taso" class="p-3" style="list-style:none;">
-                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
-                        關於我們
-                    </li>
-                    <li class="link my-2">
-                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
-                    </li>
-                    <li class="link my-2">
-                        <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
-                    </li>
-                </ul>
-                
-            <!-- </div> -->
-            <div class="col-lg-2"></div>
+                <div class="reSend w-50 mt-lg-3 text-center mx-auto">
+                    <p class="mb-1">還未收到/輸入錯誤驗證碼請按下</p>
+                    <button class="btn btn-outline-gray resend">重新發送</button>
+                </div>
+            <!-- </form> -->
         </div>
-        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
-    </div>
+    <!-- </div> -->
+        <div id="footer" class="bg-green-01 px-lg-5 px-3 w-100">
+            <div class="row d-flex justify-content-lg-between">
+                <div class="col-lg-2"></div>
+                <div id="aboutTKB" class="p-3">
+                    <img src="images/tkb_logo.png" alt="" class="mr-2">
+                    <img src="images/tkbqrcode_min.jpg" alt="">
+                    <div id="info" class="text-coffee mt-3">
+                        <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                        <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                        <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                    </div>
+                </div>
+                <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            大碩社群
+                        </li>
+                        <li class="link my-2">
+                            <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                        </li>
+                        <li class="link my-2">
+                            <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                        </li>
+                    </ul>
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            大碩部落格
+                        </li>
+                        <li class="link my-2">
+                            <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                        </li>
+                    </ul>
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            關於我們
+                        </li>
+                        <li class="link my-2">
+                            <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                        </li>
+                        <li class="link my-2">
+                            <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                        </li>
+                    </ul>
+                    
+                <!-- </div> -->
+                <div class="col-lg-2"></div>
+            </div>
+            <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+        </div>
+    <!-- </div> -->
     <script>
         $(document).ready(function(){
             $(function(){
