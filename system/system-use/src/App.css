@@ -1,0 +1,15 @@
+/*default style*/
+html, body, h1, h2, h3, h4, h5, p, ul, ol ,li,table {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

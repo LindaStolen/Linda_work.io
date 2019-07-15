@@ -1,0 +1,27 @@
+.bodyWrap {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+.navSide {
+    background-color: #FFED66;
+    height: 100%;
+    min-width: 230px;
+}
+.navSide>li {
+    line-height: 40px;
+    border-bottom: 1.5px solid #FFDD00;
+}
+span {
+    margin: 0 10px;
+}
+.subUl {
+    background-color: #D8D8E8;
+}
+.subUl li {
+    padding-left: 15px;
+    border-bottom: 1px solid #bbb;
+}
+section {
+    padding: 25px;
+}

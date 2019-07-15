@@ -1,0 +1,15 @@
+.condition {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+.navCondition {
+    border: .8px solid #555;
+    border-radius: 15px;
+    padding: 15px 10px;
+    min-height: 35%;
+}
+.spin {
+    padding: 3px 15px;
+    border-radius: 45px;
+    background-color: #ddd;
+}
