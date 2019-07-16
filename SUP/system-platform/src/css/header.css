@@ -1,0 +1,11 @@
+.container {
+    /* text-align: center; */
+    border: 5px solid #afe;
+    width: 500px;
+    min-height: 550px;
+    margin: auto;
+}
+.header-name {
+    color: #ccbbdd;
+    text-align: center
+}

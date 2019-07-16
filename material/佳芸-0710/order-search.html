@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>貨到哪了呢?</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css"> 
+    <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap-4.css">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
+    <script src="js/datatables.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/tempusdominus-bootstrap-4.js"></script>
+    <style>
+        td.details-control {
+            background: url("fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg") no-repeat center;
+            background-position: 45% 13.5px;
+            cursor: pointer;
+        }
+
+        td.shonw td.details-control {
+            background: url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat center;
+            background-position: 45%  13.5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                document.getElementById("top").style.display = "block";
+            } else {
+                document.getElementById("top").style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        $(document).ready(function(){
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            // });
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
+        })        
+    </script>
+</head>
+<body>
+    <div class="modal fade" id="loginBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">歡迎登入</h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="username">使用者帳號</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="請輸入信箱地址" autocomplete="off" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">使用者密碼</label><a href="#" class="small ml-2">忘記密碼<i class="far fa-question-circle"></i></a>
+                        <input type="password" class="form-control" id="password" placeholder="請輸入密碼" autocomplete="off" required="required">
+                    </div>
+                    <div class="form-group text-right">
+                        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-left">
+                <button type="button" class="registered btn btn-light btn-outline-blue" onclick="location.href='registered.html'">註冊</button>
+                <button type="submit" class="btn btn-green-03 text-white" id="loginCheck"  data-dismiss="modal">登入</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mb-lg-5 py-lg-3">
+        <a href="#" id="top" class="position-fixed" style="right:0; bottom:20%; max-width:10%;">
+            <img src="images/totop-12-12.png" alt="" class="img-fluid">
+        </a>
+        <a href="#" class="message position-fixed" style="right:0; bottom:10%; max-width:10%;">
+            <img src="images/message-12-12.png" alt="" class="img-fluid">
+        </a>
+        <nav aria-label="breadcrumb" class="mx-lg-5">
+            <ol class="breadcrumb mb-0 px-0 px-lg-3">
+                <li class="breadcrumb-item"><a href="new.html">首頁</a></li>
+                <li class="breadcrumb-item"><a href="#">會員專區</a></li>
+                <li class="breadcrumb-item active" aria-current="page">訂單查詢</li>
+            </ol>
+        </nav>
+        <div class="message-text border border-coffee px-4 py-2">
+            <div class="font-weight-bold">親愛的 OOO 您好</div>
+            <ol class="content mb-2">
+                <li>產品均享有十天猶豫期之權益 (注意 猶豫期非試用期)，若退/換回產品非全新狀態且包裝完整，恕不接受退/換貨。<br> *依通訊交易解除權合理例外情事適用準則 ，5類商品無10天猶豫期，請參閱商品退貨需知。</li>
+                <li>下載版序號、珠寶、黃金累訂單之商品暫不提供線上退/換貨，3C類商品暫不提供換貨服務，其他商品僅限換貨1次。</li>
+                <li>若無法線上操作，請您利用聯絡客服功能，將有專人盡速爲您處理。</li>
+            </ol>
+            <div class="subtTitle font-weight-bold">退/換貨規範</div>
+            <ol>
+                <li>群組促銷商品 (例:單品任選、滿額、滿件等)屬單一商品，恕不提供拆件退貨。</li>
+                <li>限定配送狀態為<span class="text-danger">已送達</span>，且為同一品號之商品，方可進行換貨服務。</li>
+            </ol>
+            <!-- <div class="text-gray">條件選擇</div> -->
+            <form action="" method="get">
+                <!-- <table>
+                    <thead class="text-gray">
+                        <th>條件選擇</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-2"><label class="mb-0" for="input">訂單狀態</label></td>
+                            <td class="px-2">
+                                <input class="ml-2" type="radio" name="status" id="aMonth">一個月內訂單
+                                <input class="ml-2" type="radio" name="status" id="notShipped">未出貨訂單
+                                <input class="ml-2" type="radio" name="status" id="backChange">退/換貨訂單
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-2"><label class="mb-0" for="input">查詢日期</label></td>
+                            <td class="px-2">
+                                <input class="mx-2" type="text" name="start-date" id="start-date">至
+                                <input class="mx-2" type="text" name="end-date" id="end-date">退/換貨訂單
+                                
+                            </td>
+                            <td class="px-2"><button type="submit" role="button" class="btn-sm btn-orange">查詢</button></td>
+                        </tr>
+                    </tbody>
+                </table> -->
+                <div class="subTitle font-weight-bold">條件選擇</div>
+                <div class="row state ml-2">
+                    <div class="text col-3 px-sm-1 px-lg-2 col-lg-1">訂單狀態</div>
+                    <div class="radio col-9 col-lg-6 d-flex flex-column flex-lg-row">
+                        <span class="py-1"><input type="radio" name="time" id="all">全部 <input type="radio" name="time" id="aMonth" class="ml-2">一個月內訂單</span>
+                        <span class="py-1"><input type="radio" name="time" id="notShipped">未出貨訂單<input type="radio" name="time" id="return" class="ml-2">退/換貨訂單</span>
+                    </div>
+                </div>
+                <div class="row datetime ml-2">
+                    <div class="text col-3 px-sm-1 px-lg-2 col-lg-1">查詢日期</div>
+                    <div class="choose col-9 col-lg-6 d-flex flex-column flex-lg-row">
+                        <div class="input-group date py-1" id="datetimepicker7" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker7" placeholder="開始日期"/>
+                            <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                        <!-- <span class="align-middle p-1">至</span> -->
+                        <div class="input-group date py-1 ml-lg-2" id="datetimepicker8" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input d-inline-block" data-target="#datetimepicker8"  placeholder="結束日期"/>
+                            <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center col-lg-4 col-10 d-inline-block">
+                    <button type="submit" role="button" class="btn-sm btn-orange">查詢</button>
+                </div>
+            </form>
+        </div>
+        <div class="order-result p-4 table-responsive">
+            <div class="text-gray pb-3 font-weight-bold">一個月內訂單 <span class="text-danger">共5筆訂單</span></div>
+            <table class="table table-striped table-bordered text-center" id="order-table">
+                <thead>
+                    <th>項次</th>
+                    <th>訂單編號</th>
+                    <th>訂購日期</th>
+                    <th>付款方式</th>
+                    <th>訂單金額</th>
+                    <th>發票號碼</th>
+                    <th>處理狀態</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="details-control">1</td>
+                        <td>A20190530001</td>
+                        <td>2019-05-01</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vn 04170910</td>
+                        <td class="font-weight-bold text-danger">未出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">2</td>
+                        <td>A20190530001</td>
+                        <td>2019-03-04</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vj 65610575</td>
+                        <td>已出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">3</td>
+                        <td>A20190530001</td>
+                        <td>2019-02-25</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Vj 55187790</td>
+                        <td class="font-weight-bold text-danger">未出貨</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">4</td>
+                        <td>A20190530001</td>
+                        <td>2019-01-10</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Pu 08100512</td>
+                        <td>運送中</td>
+                    </tr>
+                    <tr>
+                        <td class="details-control">5</td>
+                        <td>A20190530001</td>
+                        <td>2018-05-01</td>
+                        <td>貨到付款</td>
+                        <td>$1650</td>
+                        <td>Pw 12110814</td>
+                        <td class="text-info">完成取貨</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="order-notice text-center mb-4">
+            <img src="images/訂單注意事項.jpg" alt="" class="img-fluid">
+        </div>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                    </li>
+                </ul>
+                
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                var $li = $('ul .tab-btn li');
+                    $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+                
+                    $li.mouseenter(function(){
+                        $($(this).find('a'). attr ('href')).show().siblings('.tab-inner').hide();
+                        $(this).addClass('active'). siblings ('.active').removeClass('active');
+                });
+            });
+            var table = $("#order-table").DataTable({
+                "sort": false,
+                // "processing":true
+                "filter": false
+            });
+            $('#order-table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/plus-circle.svg') no-repeat 11% center; background-position: 45% 15px");
+                }
+                else {
+                    // Open this row		        
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                    $(this).attr("style","background:url('fontawesome-free-5.5.0-web/svgs/solid/minus-circle.svg') no-repeat 11% center; background-position: 45% 15px");
+                }
+            });
+            function format ( d ) {
+                return '<table class="table mb-0" border="0">'+
+                    '<tr>'+
+                        '<td>項次</td>'+
+                        '<td>商品名稱</td>'+
+                        '<td>金額</td>'+
+                        '<td>數量</td>'+
+                        '<td>小計</td>'+
+                    '</tr>'+
+                    '<tr>'+
+                        '<td>1</td>'+
+                        '<td><a href="#">2018試題大補帖經濟部新進職員企管類</a></td>'+
+                        '<td>$300</td>'+
+                        '<td>3</td>'+
+                        '<td>$900</td>'+
+                    '</tr>'
+                '</table>';
+            };
+            $(function () {
+                $('#datetimepicker7').datetimepicker({
+                    format:'L',
+                    timeZone:'',
+                    dayViewHeaderFormat:'YYYY MMMM',
+                    useCurrent: false,
+                    
+                });
+                $('#datetimepicker8').datetimepicker({
+                    useCurrent: false,
+                    format:'L',
+                });
+                $("#datetimepicker7").on("change.datetimepicker", function (e) {
+                    $('#datetimepicker8').datetimepicker('minDate', e.date);
+                });
+                $("#datetimepicker8").on("change.datetimepicker", function (e) {
+                    $('#datetimepicker7').datetimepicker('maxDate', e.date);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

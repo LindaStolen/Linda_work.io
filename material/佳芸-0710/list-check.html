@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>訂單確認</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            // });
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
+        })
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container border-gary mb-lg-5 pt-lg-3">
+        <div class="steps-bar mx-auto py-3 w-75 text-center">
+            <img src="images/steps_c.png" alt="" class="img-fluid rounded">
+        </div>
+        <section class="mb-lg-5 py-lg-3">
+            <div class="notice">
+                <p class="mb-4">親愛的王小明，<br>我們已收到您的訂單，將盡快為您安排發貨。<br>詳情請查看<a href="#">我的訂單</a>
+                    ，商品發送後，將會發送簡訊通知您，務必在期限內到指定門市領取商品，謝謝！</p>
+            </div>
+            <div class="h5 font-weight-bold d-inline-block">訂單明細確認 //</div>
+            <div class="checkOutlist d-lg-flex justify-content-lg-between px-lg-4 mt-lg-2">
+                <ul class="stock">
+                    <li>訂單編號：18190506</li>
+                    <li>物流編號：59138861 </li>
+                    <li>物流編號：59138861 </li>
+                    <li>訂購時間：2019-04-24 00:00:00 </li>
+                </ul>
+                <ul class="member-info">
+                    <li>收件人姓名：王小明 </li>
+                    <li>連絡電話：0912345678 </li>
+                    <li>收件方式：超商貨到付款</li>
+                    <li>收件門市：新北市板橋區 統一超商 府中門市 </li>
+                </ul>
+                <ul class="invoice-type">
+                    <li>發票類型：捐贈碼</li>
+                    <li>愛心捐贈碼：</li>
+                </ul>
+                <ul class="invoice-type" style="display:none;">
+                    <li>發票類型：個人電子發票</li>
+                    <li>自然人載具：</li>
+                    <li>手機載具：</li>
+                </ul>
+                <ul class="invoice-type" style="display:none;">
+                    <li>發票類型：公司戶</li>
+                    <li>統一編號：</li>
+                    <li>公司名稱：</li>
+                    <li>公司電話：</li>
+                    <li>公司地址：</li>
+                </ul>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered mt-lg-3 text-center">
+                    <thead>
+                        <th class="align-middle">序號</th>
+                        <th class="align-middle">商品圖</th>
+                        <th class="align-middle">書籍編號</th>
+                        <th class="align-middle">商品名稱</th>
+                        <th class="align-middle">數量</th>
+                        <th class="align-middle">單價</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="align-middle"><span>1</span></td>
+                            <td class="align-middle"><a href="#"><img src="images/50x63/s_0001_9789863455448.png" alt=""></a></td>
+                            <td class="align-middle"><a href="#">A20190602001</a></td>
+                            <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
+                            <td class="align-middle">1</td>
+                            <td class="align-middle">NT500元</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="align-middle"><span>2</span></td>
+                            <td class="align-middle"><a href="#"><img src="images/50x63/s_0000_9789863455455.png" alt=""></a></td>
+                            <td class="align-middle"><a href="#">A20190602001</a></td>
+                            <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></td>
+                            <td class="align-middle">1</td>
+                            <td class="align-middle">NT500元</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <ul class="mb-0" style="list-style: none;">
+                                    <li class="total mb-0 text-right">目前選購<b class="mx-1 text-danger">2</b>項商品(未含運費)，小計 NT<b class="mx-1 text-danger">558</b>元(含稅)</li>
+                                    <li class="total mb-0 text-right">物流處理費：$150 <span class="text-light" style="display:none;">/ 滿千免運</span></li>                                            
+                                    <li class="total mb-0 text-right text-danger font-weight-bold">總計：$708 </li>                                            
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bakTohome text-right my-2"><button class="btn-lg btn-green text-white font-weight-bold" onclick="location.href='new.html'">回到首頁</button></div>
+            <div class="notice-2 mt-lg-4 my-3 pb-5 bg-light">
+                <h4 class="text-coffee font-weight-bold">防詐騙聲明<span class="small pl-2 text-gray">暫定</span></h4>
+            </div>
+        </section>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                    </li>
+                </ul>
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                var $li = $('ul .tab-btn li');
+                    $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+                
+                    $li.mouseenter(function(){
+                        $($(this).find('a'). attr ('href')).show().siblings('.tab-inner').hide();
+                        $(this).addClass('active'). siblings ('.active').removeClass('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

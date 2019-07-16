@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一手交錢一手交貨</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
+    <script>
+        // window.onscroll = function() {scrollFunction()};
+
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        //         document.getElementById("top").style.display = "block";
+        //     } else {
+        //         document.getElementById("top").style.display = "none";
+        //     }
+        // }
+        // // When the user clicks on the button, scroll to the top of the document
+        // function topFunction() {
+        //     document.body.scrollTop = 0; // For Safari
+        //     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // }
+        $(document).ready(function() {
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            // });
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
+        })        
+    </script>
+</head>
+<body>
+    <div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">   
+                <h5 class="modal-title text-coffee mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">常用收件人名單</h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4 px-lg-5 table-responsive ">
+                <form action="" method="post">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th></th>
+                            <th class="text-center">收件人姓名</th>
+                            <th class="text-center">收件人電話</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><input type="radio" name="whichOne" id=""></td>
+                                <td class="text-center">大河</td>
+                                <td class="text-center">0845661232</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><input type="radio" name="whichOne" id=""></td>
+                                <td class="text-center">王行寧</td>
+                                <td class="text-center">0845335862</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><input type="radio" name="whichOne" id=""></td>
+                                <td class="text-center">老高</td>
+                                <td class="text-center">0854682232</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer text-left">
+                <button type="button" class="registered btn btn-light btn-outline-blue" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-green-03 text-white" id="check"  data-dismiss="modal">確定</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <!-- <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container border-gary mb-lg-3 pt-lg-3">
+        <div class="steps-bar mx-auto py-3 w-75 text-center">
+            <img src="images/steps_2_工作區域 1.png" alt="" class="img-fluid rounded">
+        </div>
+        <section class="my-lg-5 mx-lg-5 mx-3 my-3">
+            <form action="" method="post">
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <th class="bg-green-01">
+                                <span class="font-weight-bold text-coffee">收貨人資料</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-coffee"><a href="#" data-toggle="modal" data-target="#change">常用收件人名單/暫定</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-lg-5">
+                                    <div class="form-group row">
+                                        <label for="memberName" class="col-sm-2 col-form-lable">收件人姓名</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" id="memberName" autocomplete="off" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="phonenum" class="col-sm-2 col-form-lable">手機</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" id="phonenum" autocomplete="off"required>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group row">
+                                        <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control " id="address">
+                                        </div>
+                                    </div> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="add-info" id="add-info" value="add-info">
+                                        <label class="form-check-label" for="add-info">
+                                            以上同步新增至《收貨人通訊錄》
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table table-responsive">
+                    <table class="table table-bordered mb-5">
+                        <div class="card bg-green-01 rounded-0 p-3">
+                            <span class="text-coffee font-weight-bold d-inline">備註欄<span class="ml-3 small font-weight-bold">如有其他需求可填寫於此，我們將爲您服務。</span></span>                                    
+                        </div>
+                        <div class="card rounded-0">
+                            <div class="card-header py-3 px-2" id="headingOne">
+                                <textarea class="mb-0 p-2 w-100" style="height: 100px;"></textarea>
+                            </div>
+                        </div>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-5">
+                        <tbody>
+                            <div class="accordion" id="invoid-type">
+                                <div class="card bg-green-01 rounded-0 p-3">
+                                    <span class="text-coffee font-weight-bold d-inline">發票資訊<span class="text-danger ml-3 small font-weight-bold">本公司電子發票依據財政部國稅局電子發票實施作業要點開立，買受人為營業人之電子發票格式依相關規定記載。</span></span>                                    
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header p-0 border-bottom border-green" id="headingOne">
+                                    <p class="mb-0 pl-lg-5 py-lg-2" data-toggle="collapse" data-target="#donate" aria-expanded="true" aria-controls="donate">
+                                        <input type="radio" name="invoice" id="donateFor" class="mr-2">發票捐贈
+                                    </p>
+                                    </div>                                
+                                    <div id="donate" class="collapse show" aria-labelledby="headingOne" data-parent="#invoid-type">
+                                    <div class="card-body">
+                                        <div class="form-group row pl-lg-5">
+                                            <label for="donateCode" class="col-sm-2 col-form-lable">愛心捐贈碼</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="donateCode">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header p-0 border-bottom border-green" id="headingTwo">
+                                        <p class="mb-0 pl-lg-5 py-lg-2" data-toggle="collapse" data-target="#person" aria-expanded="true" aria-controls="person">
+                                            <input type="radio" name="invoice" id="person-Type" class="mr-2">個人電子發票
+                                        </p>
+                                    </div>
+                                    <div id="person" class="collapse" aria-labelledby="headingTwo" data-parent="#invoid-type">
+                                    <div class="card-body">
+                                        <ul style="list-style:none;">
+                                            <li class="pl-lg-5">
+                                                <div class="form-group row">
+                                                    <input class="form-check-input" type="radio" name="person-Type" value="paper">
+                                                    <label for="paper" class="col-sm-2 col-form-lable">使用會員載具</label>
+                                                </div>
+                                            </li>
+                                            <li class="pl-lg-5">
+                                                <div class="form-group row">
+                                                    <input class="form-check-input" type="radio" name="person-Type" value="naturalMan">
+                                                    <label for="naturalManCode" class="col-sm-2 col-form-lable">自然人憑證載具：</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="naturalManCode">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="pl-lg-5">
+                                                <div class="form-group row">
+                                                    <input class="form-check-input" type="radio" name="person-Type" value="phone-barcode">
+                                                    <label for="phone-barcode" class="col-sm-2 col-form-lable">手機條碼載具：</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="phone-barcode">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="pl-lg-5">
+                                                <div class="form-group row">
+                                                    <input class="form-check-input" type="radio" name="person-Type" value="phone-barcode">
+                                                    <label for="phone-barcode" class="col-sm-2 col-form-lable">索取紙本發票</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header p-0 border-bottom border-green" id="headingThree">
+                                        <p class="mb-0 pl-lg-5 py-lg-2" data-toggle="collapse" data-target="#company" aria-expanded="true" aria-controls="company">
+                                            <input type="radio" name="invoice" id="companyfor " class="mr-2">公司戶
+                                        </p>
+                                    </div>
+                                    <div id="company" class="collapse" aria-labelledby="headingThree" data-parent="#invoid-type">
+                                    <div class="card-body">
+                                        <ul style="list-style:none;">
+                                            <li class="form-group row">
+                                                <label for="uniformNum" class="col-sm-2 col-form-label">統一編號：</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="uniformNum">
+                                                </div>
+                                            </li>
+                                            <li class="form-group row">
+                                                <label for="company-Name" class="col-sm-2 col-form-label">公司名稱：</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="company-Name">
+                                                </div>
+                                            </li>
+                                            <li class="form-group row">
+                                                <label for="contact-tel" class="col-sm-2 col-form-label">聯絡電話：</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="contact-tel">
+                                                </div>
+                                            </li>
+                                            <li class="form-group row">
+                                                <label for="address" class="col-sm-2 col-form-label">通訊地址：</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="address">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <th class="bg-green-01">選擇門市</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-lg-5">
+                                    <div class="row">
+                                        <label for="address" class="col-sm-2 col-form-lable">請選擇門市</label>
+                                        <div class="col-sm-7">
+                                            <input type="button" class="" id="address" value="選擇門市" onclick="location.href='http://map.ezship.com.tw/ezship_map_web_2014.jsp'">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="checkOut text-right mb-3">
+                    <button type="submit" class="btn-sm btn-orange text-white font-weight-bold" onclick="location.href='list-check.html'">確定結帳</button>
+                </div> -->
+            </form>
+        </section>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩社群
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        大碩部落格
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                    </li>
+                </ul>
+                <ul id="taso" class="p-3" style="list-style:none;">
+                    <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                        關於我們
+                    </li>
+                    <li class="link my-2">
+                        <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                    </li>
+                    <li class="link my-2">
+                        <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                    </li>
+                </ul>
+                
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                var $li = $('ul .tab-btn li');
+                    $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+                
+                    $li.mouseenter(function(){
+                        $($(this).find('a'). attr ('href')).show().siblings('.tab-inner').hide();
+                        $(this).addClass('active'). siblings ('.active').removeClass('active');
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>

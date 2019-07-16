@@ -1,0 +1,11 @@
+#DateRangePickerContainer>#daterangepicker {
+    left: -100px;
+    width: 100%;
+}
+.rangecontainer {
+    display: flex;
+    flex-direction: column;
+}
+#rangeButton0, #rangeButton1, #rangeButton2, #rangeButton3 {
+    display: inline-block;
+}

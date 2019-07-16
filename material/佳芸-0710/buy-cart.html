@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>購物車</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css">
+    <link href="css/alertify.default.css" rel="stylesheet">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
+    <script src="js/alertify.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('#member').hide();
+            // $('#loginCheck').click('hide.bs.modal',function(e){
+            //     $('#member').toggle('#login');
+            $('#member span').text('會員您好');
+            $('#login').hide();
+            $('#signup').hide();
+            // });
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
+        })        
+    </script>
+</head>
+
+<body>
+    <div class="modal fade" id="loginBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label"
+                        style="letter-spacing:1.5px;">歡迎登入</h5>
+                    <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="username">使用者帳號</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
+                                placeholder="請輸入信箱地址" autocomplete="off" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">使用者密碼</label><a href="#" class="small ml-2">忘記密碼<i
+                                    class="far fa-question-circle"></i></a>
+                            <input type="password" class="form-control" id="password" placeholder="請輸入密碼"
+                                autocomplete="off" required="required">
+                        </div>
+                        <div class="form-group text-right">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-left">
+                    <button type="button" class="registered btn btn-light btn-outline-blue"
+                        onclick="location.href='registered.html'">註冊</button>
+                    <button type="submit" class="btn btn-green-03 text-white" id="loginCheck"
+                        data-dismiss="modal">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <!-- <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container border-gray mb-lg-3 pt-lg-3">
+        <div class="steps-bar mx-auto py-3 w-75 text-center">
+            <img src="images/steps_3_工作區域 1.png" alt="" class="img-fluid rounded">
+        </div>
+        <section class="my-lg-5 mx-lg-5 mx-3 my-3">
+            <ul class="nav nav-tabs border-bottom border-gray" role="tablist">
+                <li class="nav-item  border-bottom border-gray">
+                    <a class="nav-link active" href="#buy-list" data-toggle="tab" role="tab"
+                        aria-selected="true">購物清單</a>
+                </li>
+                <li class="nav-item border-bottom border-gray">
+                    <a class="nav-link" href="#wish-list" data-toggle="tab" role="tab" aria-selected="false">願望清單</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active bg-white table table-responsive" id="buy-list" role="tabpanel">
+                    <form action="" method="post">
+                        <table class="table table-bordered mb-4">
+                            <thead class="text-center">
+                                <tr>
+                                    <th scope="col"><span>項次</span></th>
+                                    <th scope="col"><span>商品圖</span></th>
+                                    <th scope="col"><span>書籍編號</span></th>
+                                    <th scope="col" style="width: 413px;"><span>商品名稱</span></th>
+                                    <th scope="col"><span>商品售價</span></th>
+                                    <th scope="col"><span>數量</span></th>
+                                    <th scope="col"><span>小計</span></th>
+                                    <th scope="col"><span>變更</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td scope="row" class="align-middle"><span>1</span></td>
+                                    <td class="align-middle"><a href="#"><img src="images/original/A05161919-13.jpg"
+                                                alt="" class="img-fluid" width="75px"></a></td>
+                                    <td class="align-middle"><a href="#">CJ82310101</a></td>
+                                    <td class="align-middle"><a href="#"
+                                            class="text-dark">公職考試2019試題大補帖【法學知識(綜合法政知識、中華民國憲法、法學大意)】(107年試題)</a></td>
+                                    <td class="align-middle">
+                                        <p class="mb-1"><del>NT350元</del></p>
+                                        <p class="mb-0">NT315元</p>
+                                    </td>
+                                    <td class="align-middle">
+                                        <select name="count" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </td>
+                                    <td class="align-middle">NT315元</td>
+                                    <td class="align-middle">
+                                        <a href="#"
+                                            class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0 wish"
+                                            role="button">下次再買</a>
+                                        <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1"
+                                            role="button">刪除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="align-middle"><span>2</span></td>
+                                    <td class="align-middle"><a href="#"><img src="images/original/A05161919-15.jpg"
+                                                alt="" class="img-fluid" width="75px"></a></td>
+                                    <td class="align-middle"><a href="#">MH03050101</a></td>
+                                    <td class="align-middle"><a href="#"
+                                            class="text-dark">公職考試2019是題大補鐵環境化學與環境維生物學(120-107年試題)三四等</a></td>
+                                    <td class="align-middle">
+                                        <p class="mb-1"><del>NT270元</del></p>
+                                        <p class="mb-0">NT243元</p>
+                                    </td>
+                                    <td class="align-middle">
+                                        <select name="count" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </td>
+                                    <td class="align-middle">NT243元</td>
+                                    <td class="align-middle">
+                                        <a href="#"
+                                            class="text-coffee btn btn-sm btn-outline-green p-1 mb-sm-1 mb-lg-0 wish">下次再買</a>
+                                        <a href="#" class="del text-coffee btn btn-sm btn-outline-green p-1"
+                                            role="button">刪除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8">
+                                        <ul class="mb-0" style="list-style: none;">
+                                            <li class="total mb-0 text-right">目前選購<b
+                                                    class="mx-1 text-danger">2</b>項商品(未含運費)，小計 NT<b
+                                                    class="mx-1 text-danger">558</b>元(含稅)</li>
+                                            <li class="total mb-0 text-right">物流處理費：$150 <span class="text-light"
+                                                    style="display:none;">/ 滿千免運</span></li>
+                                            <li class="total mb-0 text-right text-danger">總計：$708 </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td colspan="8">
+                                        <p class="total mb-0 text-right">物流處理費：$150 <span class="text-light">/ 滿千免運</span></p>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        <span class="text-coffee font-weight-bold d-inline-block mt-2"
+                            style="font-size: 16.5px;">購買須知</span>
+                        <ul class="declare border-top border-dark pt-2">
+                            <li class="text-danger font-weight-bold">取貨及付款方式限超商取貨付款，可選擇的超商有：全家便利商店、萊爾富。</li>
+                            <li>每筆訂單限用乙張電子折價券。</li>
+                            <li>物流處理費 150 元，消費金額滿 1000 元(含)，則免收物流處理費。</li>
+                            <li>消費金額計算方式：書籍金額 - 全館活動折扣金額 - 電子折價券金額。</li>
+                            <li>若您在購後欲取消或修改訂單，請洽客服信箱：tingmao.nschool@gmail.com</li>
+                        </ul>
+                        <p class="mb-0">
+                            <input type="checkbox" class="mr-2" name="adgree" id="">我已仔細閱讀並明瞭<a href="#"
+                                class="text-gray">「網站使用條款」</a>、<a href="#"
+                                class="text-gray">「隱私權政策」</a>等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。
+                        </p>
+                        <div class="nextStep text-right mt-4">
+                            <button class="btn-sm btn-green mr-2">繼續購物</button>
+                            <input type="button" class="btn-sm btn-orange" value="下一步"
+                                onclick="location.href='pay-deliver.html'">
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade bg-white" id="wish-list" role="tabpanel">
+                    <table class="table table-bordered">
+                        <thead class="text-center border border-green-03">
+                            <tr>
+                                <th scope="col"><span>序號</span></th>
+                                <th scope="col"><span>商品圖</span></th>
+                                <th scope="col"><span>商品名稱</span></th>
+                                <th scope="col"><span>商品售價</span></th>
+                                <th scope="col"><span>變更</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td scope="row" class="align-middle"><span>1</span></td>
+                                <td class="align-middle"><a href="#"><img src="images/original/A05161919-16.jpg" alt=""
+                                            class="img-fluid" width="75px"></a></td>
+                                <td class="align-middle"><a href="#" class="text-dark">Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit</a></td>
+                                <td class="align-middle">
+                                    <p class="mb-1"><del>NT650元</del></p>
+                                    <p class="mb-0">NT500元</p>
+                                </td>
+                                <td class="align-middle">
+                                    <a href="#" class="text-white btn btn-sm btn-dark p-1" role="button"
+                                        id="buy">立即購買</a>
+                                    <a href="#" class="del text-white btn btn-sm btn-dark p-1" role="button">刪除</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="text-coffee font-weight-bold d-inline-block mt-2" style="font-size: 16.5px;">願望清單使用須知</span>
+                    <ul class="declare border-top border-dark pt-2">
+                        <li>清單中商品進入購物車結賬流程時，將會重新計算最新售價，此處僅為您註記、追蹤，並無法保留庫存。</li>
+                        <li>若商品已下架，系統將自動自清單中移除不另行通知，請您見諒。</li>
+                    </ul>
+                    <div class="nextStep text-right mt-4">
+                        <button class="btn-sm btn-green mr-2" oncilck="location.href='new.html'">繼續購物</button>
+                        <!-- <input type="button" class="btn-sm btn-orange" value="回首頁" onclick="location.href='new.html'"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="footer" class="bg-green-01 px-lg-5 px-3">
+        <div class="row d-flex justify-content-lg-between">
+            <div class="col-lg-2"></div>
+            <div id="aboutTKB" class="p-3">
+                <img src="images/tkb_logo.png" alt="" class="mr-2">
+                <img src="images/tkbqrcode_min.jpg" alt="">
+                <div id="info" class="text-coffee mt-3">
+                    <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                    <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                    <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                </div>
+            </div>
+            <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+            <ul id="taso" class="p-3" style="list-style:none;">
+                <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                    大碩社群
+                </li>
+                <li class="link my-2">
+                    <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                </li>
+                <li class="link my-2">
+                    <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                </li>
+            </ul>
+            <ul id="taso" class="p-3" style="list-style:none;">
+                <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                    大碩部落格
+                </li>
+                <li class="link my-2">
+                    <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                </li>
+            </ul>
+            <ul id="taso" class="p-3" style="list-style:none;">
+                <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                    關於我們
+                </li>
+                <li class="link my-2">
+                    <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                </li>
+                <li class="link my-2">
+                    <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                </li>
+            </ul>
+
+            <!-- </div> -->
+            <div class="col-lg-2"></div>
+        </div>
+        <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            alertify.set({
+                labels: {
+                    ok: "確定",
+                    cancel: "取消",
+                },
+            })
+            $('.wish').click(function () {
+                alertify.log("已成功加入追蹤清單！");
+            });
+            $('#buy').click(function () {
+                alertify.alert("已成功加入購物車！");
+            });
+            $('.del').click(function del() {
+                alertify.confirm("確定刪除此商品?");
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>驗證一下唄</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.5.0-web/css/all.css">
+    <link rel="stylesheet" href="css/alertify.core.css"> 
+    <link href="css/alertify.default.css" rel="stylesheet">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.min.js"></script>
+    <script src="js/alertify.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.veri-btn').click(function(){
+                alertify.alert("親愛的用戶，恭喜您完成註冊程序！<br>幾秒後將帶您回首頁，重新登入後即可開始享有書城服務與優惠！<br>祝您 &nbsp; 順心")
+            }); //這邊好像要寫判斷
+                //alertify.alert("很抱歉，您輸入的驗證碼錯誤<br>請按下 &nbsp;<span class='text-gray p-1 border border-gray rounded'>重新發送</span>&nbsp; 接收驗證簡訊，謝謝<br>祝您 &nbsp; 順心")
+            
+            $('#member').hide();
+            $('#loginCheck').click('hide.bs.modal',function(e){
+                $('#member').toggle('#login');
+                $('#member span').text('會員您好');
+                $('#login').hide();
+                $('#signup').hide();
+            });
+            $('#category').smartmenus({});
+            $('.right-side').smartmenus({});
+        })
+    </script>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            /* min-height: calc( 100vh - 330px); */
+            flex: 1;
+        } 
+    </style>
+</head>
+<body>
+    <div class="modal fade" id="falseBox" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-green-03 mx-auto font-weight-bold" id="label" style="letter-spacing:1.5px;">錯誤提示</h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4" id="false">
+                <p>很抱歉，您輸入的驗證碼錯誤</p>
+                <p>請按下<span class="text-gray p-1 border border-gray rounded">重新發送</span>接收驗證簡訊，謝謝</p>
+                <p>祝您 &nbsp; 順心</p>
+            </div>
+            <div class="modal-footer text-left">
+                <button type="submit" class="btn btn-green-03 text-white" id="closeBox" data-dismiss="modal">OK！</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-ligh main-nav sticky-top bg-white w-100 border-bottom border-green-03 p-0" role="navigation">
+        <a href="new.html" class="nav-brand p-0 pl-3">
+            <img src="images/Logo-11.jpg" alt="" class="img-fluid max-width:100%">
+        </a>
+        <button class="navbar-toggler mr-1 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="category" class="sm sm-clean fa-la mr-2">
+                <li>
+                    <a href="#" class="text-coffee">
+                        <i class="fas fa-book fa-lg mr-2"></i>書籍分類
+                    </a>
+                    <ul>
+                        <li><a>研究所</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>公職考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold">國立台北大學</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a>
+                                    <ul>
+                                        <li><a class="font-weight-bold text-info">國立台北大學</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                        <li><a href="#">資訊管理研究所</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                                <li><a href="#">資訊管理研究所</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>就業考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">各類特考</a></li>
+                                <li><a href="#">移民特考</a></li>
+                                <li><a href="#">調查特考</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>升學考試</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">高普考試</a></li>
+                                <li><a href="#">機械類</a></li>
+                                <li><a href="#">環境工程環保行政環保技術</a></li>
+                                <li><a href="#">行政民政人事行政戶政</a></li>
+                                <li><a href="#">法制法律廉政</a></li>
+                                <li><a href="#">電機電子電信</a></li>
+                                <li><a href="#">資訊處理</a></li>
+                                <li><a href="#">共同科目</a></li>
+                                <li><a href="#">文化行政</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>專業教科書</a>
+                            <ul>
+                                <li><a class="font-weight-bold text-info">專業證照</a></li>
+                                <li><a href="#">技師執照</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="form-inline input-group input-group-sm col-12 col-lg-6">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <a class="input-group-text fas fa-search py-2" href="#"></a>
+                </div>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button" onclick="location.href='category-list.html'">國營考試</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">高考</button>
+                <button class="keyWord btn btn-sm ml-1 bg-light" type="button">普考</button>
+            </form>
+            <ul class="right-side sm sm-clean px-3 py-1 ml-lg-auto">
+                <li>
+                    <a href="#" id="member" class="text-coffee"><i class="fas fa-user-circle fa-lg mr-2"></i><span></span></a>
+                    <a class="text-coffee" href="#" id="login" role="button" data-toggle="modal" data-target="#loginBox">
+                        <i class="fas fa-user-circle fa-lg mr-2"></i><span>登入</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border border-gray rounded" aria-labelledby="member">
+                        <li><a class="dropdown-item" href="registered.html">會員設定</a></li>
+                        <li><a class="dropdown-item" href="wanna-buy.html">追蹤清單</a></li>
+                        <li><a class="dropdown-item" href="order-search.html">訂單查詢</a></li>
+                        <li><a class="dropdown-item" href="question.html">常見問題</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">會員登出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="text-coffee" href="registered.html" id="signup">
+                        <i class="fas fa-sign-in-alt fa-lg mr-2"></i><span>註冊</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="box pb-3" style="min-height: 100%;"> -->
+        <div class="container mb-lg-5 pt-lg-3">
+            <!-- <form action=""> -->
+                <div class="writeHere w-50 text-center mx-auto ">
+                    <h5 class="d-inline-block border-bottom border-green-03 font-weight-bold pb-1">收到驗證碼了吧?</h5>
+                    <p class="sub text-center mt-3 mb-1">很棒！請在下方輸入驗證碼</p>
+                    <input type="text" class="rounded border-light">
+                    <button class="veri-btn btn btn-green btn-sm " role="button">GoGo</button>
+                </div>
+                <div class="reSend w-50 mt-lg-3 text-center mx-auto">
+                    <p class="mb-1">還未收到/輸入錯誤驗證碼請按下</p>
+                    <button class="btn btn-outline-gray resend">重新發送</button>
+                </div>
+            <!-- </form> -->
+        </div>
+    <!-- </div> -->
+        <div id="footer" class="bg-green-01 px-lg-5 px-3 w-100">
+            <div class="row d-flex justify-content-lg-between">
+                <div class="col-lg-2"></div>
+                <div id="aboutTKB" class="p-3">
+                    <img src="images/tkb_logo.png" alt="" class="mr-2">
+                    <img src="images/tkbqrcode_min.jpg" alt="">
+                    <div id="info" class="text-coffee mt-3">
+                        <p class="mb-0 mb-2">周一至周五 09:00-19:00</p>
+                        <p class="mb-0 mb-2">電話:(02)5580-5608 &nbsp;/&nbsp;0985-368-799</p>
+                        <p class="mb-0 mb-2">台北市中正區開封街一段32號11樓</p>
+                    </div>
+                </div>
+                <!-- <div class="wrap col-sm-12 col-lg-5 d-flex justify-content-between py-1 p-3"> -->
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            大碩社群
+                        </li>
+                        <li class="link my-2">
+                            <a href="#" class="text-coffee" style="font-size:16px">大碩教育不倒翁</a>
+                        </li>
+                        <li class="link my-2">
+                            <a href="#" class="text-coffee" style="font-size:16px">公職書苑</a>
+                        </li>
+                    </ul>
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            大碩部落格
+                        </li>
+                        <li class="link my-2">
+                            <a href="http://" class="text-coffee" style="font-size:16px">公職大補帖</a>
+                        </li>
+                    </ul>
+                    <ul id="taso" class="p-3" style="list-style:none;">
+                        <li class="lable text-coffee font-weight-bold" style="font-size:16.5px;">
+                            關於我們
+                        </li>
+                        <li class="link my-2">
+                            <a href="http://" class="text-coffee" style="font-size:16px">相關品牌</a>
+                        </li>
+                        <li class="link my-2">
+                            <a href="question.html" class="text-coffee" style="font-size:16px">常見問題</a>
+                        </li>
+                    </ul>
+                    
+                <!-- </div> -->
+                <div class="col-lg-2"></div>
+            </div>
+            <p class="text-center mb-0 text-coffee">Copyright © 大碩教育 All Rights Reserved.<br>客服專線：02-23814314</p>
+        </div>
+    <!-- </div> -->
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                var $li = $('ul .tab-btn li');
+                    $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+                
+                    $li.mouseenter(function(){
+                        $($(this).find('a'). attr ('href')).show().siblings('.tab-inner').hide();
+                        $(this).addClass('active'). siblings ('.active').removeClass('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
