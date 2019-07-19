@@ -21,6 +21,15 @@ export default class Resault extends Component {
                     <DatePick />
                     {/*<Calendar />*/}
                 </div>
+                <div className="condition_1">
+                    <DatePick />
+                    <div className="navCondition">
+                        <span className="spin">BC
+                        <FontAwesomeIcon icon={['fas','times']} style={{marginLeft: "8px",}}/>
+                        </span>
+                    </div>
+                    {/*<Calendar />*/}
+                </div>
             </React.Fragment>
         )
     }

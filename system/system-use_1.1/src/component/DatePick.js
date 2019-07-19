@@ -1,40 +1,42 @@
 import React, { Component } from 'react'
 import { DateRangePicker } from 'rsuite'
-import 'rsuite/styles/less/index.less'
-import 'rsuite/styles/less/main.less'
-// import {RangeDatePicker} from "@y0c/react-datepicker"
-// import '../css/calendar.scss'
-// import moment from 'moment'
+import 'rsuite/styles/less/rsuite.less'
+import 'rsuite/styles/date-picker.less'
+// import 'rsuite/dist/styles/rsuite.min.css'
 
-let dateFns = new Date();
+// import {RangeDatePicker} from "@y0c/react-datepicker"
+import moment from 'moment'
+
+
 
 export default class DatePick extends Component {
-    
+    // constructor(props){
+    //   super(props);
+    //   let now = new Date();
+    //   let start = moment(new Date(now.getFullYear(), now.getMonth(),now.getDate()));
+    //   let end = moment(start).add(1, "days").subtract(1, "seconds");
+    //   this.state = {
+    //     start: start,
+    //     end: end
+    //   }
+      constructor(props) {
+        super(props);
+        this.state = {
+          value: [moment(),moment()]
+        };
+  }
     render() {
-        const DateRangePickerCustomToolbar = props => (
-            <div className="field">
-              <DateRangePicker
-                ranges={[{
-                  label: '昨天',
-                  value: [dateFns.addDays(new Date(), -1), dateFns.addDays(new Date(), -1)]
-                }, {
-                  label: '今天',
-                  value: [new Date(), new Date()]
-                }, {
-                  label: '明天',
-                  value: [dateFns.addDays(new Date(), 1), dateFns.addDays(new Date(), 1)]
-                }, {
-                  label: '最近 7 天',
-                  value: [dateFns.subDays(new Date(), 6), new Date()]
-                }]}
-              />
-            </div>
-          );
+      //let now = new Date();
+      
         return (
-            <React.Fragment>
-                <DateRangePicker style={{DateRangePickerCustomToolbar}}
-                />
-            </React.Fragment>
+          <div>
+            <DateRangePicker
+              value={this.state.value}
+              onChange={ value => { this.setState({ value });
+                console.log(value);
+              }}
+            />
+          </div>
         )
     }
 }

@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 75% 25%;
 }
+.condition_1 {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
 .navCondition {
     border: .8px solid #555;
     border-radius: 15px;
