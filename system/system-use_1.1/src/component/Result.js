@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import DatePick from './DatePick'
-// import Calendar from './Calendar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../css/subnav.css'
+// import Calendar from './Calendar'
+// import 'rsuite/dist/styles/rsuite.min.css'
+// import 'rsuite/styles/data-range-picker.less'
+// import '../css/re-2.css'
 
 export default class Resault extends Component {
     // consrtuctor(props){

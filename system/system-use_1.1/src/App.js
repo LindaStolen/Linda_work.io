@@ -4,6 +4,10 @@ import Content from './component/Content'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
+import 'rsuite/dist/styles/rsuite.min.css'
+// import 'rsuite/styles/index.less'
+// import { Button } from 'rsuite'
+
 import './App.css';
 
 library.add(fas, far)

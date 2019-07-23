@@ -1,108 +1,122 @@
 import React, { Component } from 'react'
-import Resault from './Resault'
+import Result from './Result'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../css/content.css'
 
 
 export default class Content extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            
+            opened: true,
         }
+        this.handleToggle = this.handleToggle.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     }
-    handleOpen(e) {
-        console.log("open")
+    handleToggle() {
+        console.log("open");
+        this.setState({
+            opened: !this.state.opened
+        })
     }
-    handleClose(){
+    handleSelect(eventKey) {
+        this.setState({
+            activeKey: eventKey
+        });
+    }
+    handleClose() {
         console.log("close")
     }
     render() {
+        const { opened } = this.state;
         return (
             <div className="bodyWrap">
                 <ul className="navSide">
-                    <li onClick={this.handleOpen}>
-                        <span>
-                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{marginRight: "5px",}}/>事業群
-                        </span>
+                    <li>
+                        <div className="main" onClick={this.handleOpen}>
+                            <FontAwesomeIcon
+                                icon={['fas', 'bookmark']}
+                                color="#FF5E5B"
+                                style={{ marginRight: "5px", }} />事業群
+                        </div>
                         <ul className="subUl">
                             <li>
-                                <input type="checkbox"/>BC
+                                <input type="checkbox" />BC
                             </li>
                             <li>
-                                <input type="checkbox"/>學習顧問
+                                <input type="checkbox" />學習顧問
                             </li>
                             <li>
-                                <input type="checkbox"/>千碩
+                                <input type="checkbox" />千碩
                             </li>
                             <li>
-                                <input type="checkbox"/>EC
+                                <input type="checkbox" />EC
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <span>
-                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{marginRight: "5px",}} />官網平台
-                        </span>
+                        <div className="main">
+                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{ marginRight: "5px", }} />官網平台
+                        </div>
                         <ul className="subUl">
                             <li>
-                                <input type="checkbox"/>大碩
+                                <input type="checkbox" />大碩
                             </li>
                             <li>
-                                <input type="checkbox"/>百官
+                                <input type="checkbox" />百官
                             </li>
                             <li>
-                                <input type="checkbox"/>學堂
+                                <input type="checkbox" />學堂
                             </li>
                             <li>
-                                <input type="checkbox"/>龍門
+                                <input type="checkbox" />龍門
                             </li>
                             <li>
-                                <input type="checkbox"/>課程總覽
+                                <input type="checkbox" />課程總覽
                             </li>
                             <li>
-                                <input type="checkbox"/>WIP
+                                <input type="checkbox" />WIP
                             </li>
                             <li>
-                                <input type="checkbox"/>精選文章
+                                <input type="checkbox" />精選文章
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <span>
-                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{marginRight: "5px",}} />平台功能
-                        </span>
+                        <div className="main">
+                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{ marginRight: "5px", }} />平台功能
+                        </div>
                         <ul className="subUl">
                             <li>
-                                <input type="checkbox"/>BC
+                                <input type="checkbox" />BC
                             </li>
                             <li>
-                                <input type="checkbox"/>學習顧問
+                                <input type="checkbox" />學習顧問
                             </li>
                             <li>
-                                <input type="checkbox"/>千碩
+                                <input type="checkbox" />千碩
                             </li>
                             <li>
-                                <input type="checkbox"/>EC
+                                <input type="checkbox" />EC
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <span>
-                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{marginRight: "5px",}} />前後台
-                        </span>
-                        <div style={{paddingLeft: "20px",backgroundColor: "#D8D8E8",}}>
+                        <div>
+                            <FontAwesomeIcon icon={['fas', 'bookmark']} color="#FF5E5B" style={{ marginRight: "5px", }} />前後台
+                        </div>
+                        <dt style={{ padding: "8px 0 8px 20px", backgroundColor: "#D8D8E8", }}>
                             <select>
                                 <option>前後台</option>
                                 <option>後台</option>
                                 <option>後台</option>
                             </select>
-                        </div>
+                        </dt>
                     </li>
                 </ul>
                 <section className="outPut">
-                    <Resault />
+                    <Result />
                     {/*<DatePick />*/}
                 </section>
             </div>

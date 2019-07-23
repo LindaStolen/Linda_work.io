@@ -12,7 +12,10 @@
     line-height: 40px;
     border-bottom: 1.5px solid #FFDD00;
 }
-span {
+/* span {
+    margin: 0 10px;
+} */
+li > div {
     margin: 0 10px;
 }
 .subUl {
