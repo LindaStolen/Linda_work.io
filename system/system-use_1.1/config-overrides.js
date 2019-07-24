@@ -5,5 +5,6 @@ module.exports = override(
     modifyVars: { 
       '@calendar-header-width': '550px',
      }
-  })
+  });
+  return config;
 );

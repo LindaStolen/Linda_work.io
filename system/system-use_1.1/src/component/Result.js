@@ -15,15 +15,15 @@ export default class Resault extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="condition">
+                {/*<div className="condition">
                     <div className="navCondition">
                         <span className="spin">BC
                         <FontAwesomeIcon icon={['fas','times']} style={{marginLeft: "8px",}}/>
                         </span>
                     </div>
                     <DatePick />
-                    {/*<Calendar />*/}
-                </div>
+                    <Calendar />
+                </div>*/}
                 <div className="condition_1">
                     <DatePick />
                     <div className="navCondition">
