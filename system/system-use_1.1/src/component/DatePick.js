@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { DateRangePicker } from 'rsuite'
 // import {RangeDatePicker} from "@y0c/react-datepicker"
 // import moment from 'moment'
-
+import 'rsuite/styles/less/index.less'
+// import '../css/custom-theme.less'
 
 
 export default class DatePick extends Component {
@@ -24,7 +25,7 @@ export default class DatePick extends Component {
       
         return (
           <div>
-            <DateRangePicker style={{width: '100%',border: 'none',}}
+            <DateRangePicker 
             />
           </div>
         )
