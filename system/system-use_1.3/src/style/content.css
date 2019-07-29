@@ -1,0 +1,10 @@
+.contentWrap {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.leftWrap, .rightWrap {
+    display: grid;
+}
+.leftWrap {
+    background-color: #FFED66;
+}

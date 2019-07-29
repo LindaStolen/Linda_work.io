@@ -1,0 +1,12 @@
+.conditionWrap {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 20px;
+    margin: 2px 3px;
+    max-height: 50px;
+}
+.spin {
+    padding: 3px 15px;
+    border-radius: 45px;
+    background-color: #ddd;
+}
