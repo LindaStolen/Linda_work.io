@@ -1,9 +1,12 @@
 .conditionWrap {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
     padding: 20px;
+}
+.condition {
     margin: 2px 3px;
-    max-height: 50px;
+    padding: 10px 5px;
+    max-height: 45px;
 }
 .spin {
     padding: 3px 15px;

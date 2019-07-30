@@ -5,7 +5,7 @@ export default class ChooseDate extends Component {
     render() {
         return (
             <React.Fragment>
-                <DateRangePicker/>
+                <DateRangePicker placement="autoVerticalRight"/>
             </React.Fragment>
         )
     }

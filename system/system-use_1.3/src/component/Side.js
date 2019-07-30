@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Sidenav, Dropdown, Checkbox, Nav } from 'rsuite';
+import { Sidenav, Dropdown, Checkbox, Nav, CheckboxGroup, Button, ButtonToolbar } from 'rsuite';
 
 let sidewrap = {
     backgroundColor: '#FFED66',
     height: '100vh',
-    textAlign: 'left',
     marginRight: 10,
+    textAlign: 'left',
 }
 export default class Side extends Component {
     render() {
@@ -14,69 +14,45 @@ export default class Side extends Component {
                 <Sidenav>
                     <Sidenav.Body style={sidewrap}>
                         <Nav>
-                            <Dropdown eventKey="1" title="事業群" style={{textAlign: 'center',}}>
-                                <Dropdown.Item> 
+                            <Dropdown eventKey="1" title="事業群" style={{textAlign: 'center',color: '#000000',}}>
+                                <CheckboxGroup style={{marginLeft: '45px',}}> 
                                     <Checkbox>BC</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item> 
                                     <Checkbox>學習顧問</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item> 
                                     <Checkbox>千碩</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item> 
                                     <Checkbox>EC</Checkbox>
-                                </Dropdown.Item>
+                                </CheckboxGroup>
                             </Dropdown>
                             <Dropdown eventKey="2" title="官網平台">
-                                <Dropdown.Item>
+                                <CheckboxGroup style={{marginLeft: '45px',}}> 
                                     <Checkbox>大碩</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>百官</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>學堂</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>龍門</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>課程總覽</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>WIP</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>精選文章</Checkbox>
-                                </Dropdown.Item>
+                                </CheckboxGroup>
                             </Dropdown>
                             <Dropdown eventKey="3" title="平台功能">
-                                <Dropdown.Item>
+                                <CheckboxGroup style={{marginLeft: '45px',}}> 
                                     <Checkbox>BC</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>學習顧問</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>千碩</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>EC</Checkbox>
-                                </Dropdown.Item>
+                                </CheckboxGroup>
                             </Dropdown>
                             <Dropdown eventKey="4" title="前後台">
-                                <Dropdown.Item>
-                                    <Checkbox>前後台</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
+                                <CheckboxGroup style={{marginLeft: '45px',}}> 
+                                    <Checkbox>前/後台</Checkbox>
                                     <Checkbox>前台</Checkbox>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
                                     <Checkbox>後台</Checkbox>
-                                </Dropdown.Item>
+                                </CheckboxGroup>
                             </Dropdown>
                         </Nav>
+                        <ButtonToolbar style={{textAlign:'right',paddingRight: '10px',}}>
+                            <Button>清除</Button>
+                            <Button>送出</Button>
+                        </ButtonToolbar>
                     </Sidenav.Body>
                 </Sidenav>
             </React.Fragment>

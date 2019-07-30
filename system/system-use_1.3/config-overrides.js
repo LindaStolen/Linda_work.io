@@ -5,7 +5,8 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: { 
       '@base-color': '#8FC0A9',
-      '@dropdown-link-hover-color': '#FFF39B'
+      // '@dropdown-link-hover-color': '#FFF39B',
+      '@nav-item-font-default-color': '#000000',
      }
   })
 );

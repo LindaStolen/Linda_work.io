@@ -8,3 +8,6 @@
 .leftWrap {
     background-color: #FFED66;
 }
+.rightWrap {
+    grid-template-rows: 10% 90%;
+}
