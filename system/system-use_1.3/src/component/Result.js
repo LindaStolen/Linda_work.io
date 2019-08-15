@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DatePicker from './ChooseDate'
+import Table from './Export'
 
 import '../style/result.css'
 
@@ -15,6 +16,9 @@ export default class Result extends Component {
                         </span>
                     </div>
                     <DatePicker/>
+                </div>
+                <div className="export">
+                    <Table/>
                 </div>
             </React.Fragment>
         )

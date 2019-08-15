@@ -6,7 +6,8 @@
     display: grid;
 }
 .leftWrap {
-    background-color: #FFED66;
+    background-color: #FFEB99;
+    height: 100vh;
 }
 .rightWrap {
     grid-template-rows: 10% 90%;
