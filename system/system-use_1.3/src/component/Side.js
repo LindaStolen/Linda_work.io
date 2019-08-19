@@ -23,24 +23,25 @@ export default class Side extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected : "",
+            select : "",
         }
-        this.onClick = this.onClick.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        
+        this.onChange = this.onChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);        
     }
-    onClick(changeEvent) {
+    onChange(e) {
         this.setState({
-            selected: changeEvent.target.value,
+            select: e.target.value
         })
-        console.log(this.state.selected)
+        // defaultChecked()
+        console.log(e.target.value)
     }
     handleSubmit(event){
         event.preventDefault();
         alert('送出');
-        console.log('You have selected:', this.state.selected);
+        console.log('You have checked:', this.state.checked);
     }
     render() {
+        const {selected} = this.state
         return (
             <React.Fragment>
                 <form  onSubmit={this.handleSubmit}>
@@ -50,16 +51,20 @@ export default class Side extends Component {
                                 <span style={conditionName}>
                                     前 / 後台
                                 </span>
-                                <RadioGroup name="radioList"> 
+                                {/*<RadioGroup name="radioList" > 
                                     <Radio type="radio" 
                                     value="front"
-                                    checked={this.state.selected === "front"}
-                                    onClick={this.onClick}>前台</Radio>
+                                    checked={this.state.value === "front"}
+                                    onChange={this.onChange}>前台</Radio>
                                     <Radio type="radio" 
                                     value="stage"
-                                    checked={this.state.selected === "stage"}
-                                    onClick={this.onClick}>後台</Radio>
-                                </RadioGroup>
+                                    checked={this.state.value === "stage"}
+                                    onChange={this.onChange}>後台</Radio>
+        </RadioGroup>*/}
+                            </div>
+                            <div>
+                                <input type="radio" value="FFFFF" name="position" checked={selected === "FFFFF"} onChange = {this.onChange} defaultChecked/> <label>front</label>
+                                <input type="radio" value="SSSSS" name="position" checked={selected === "SSSSS"} onChange = {this.onChange}/> <label>stage</label>
                             </div>
                             <Nav>
                                 <Dropdown eventKey="2" title="事業群" disabled>

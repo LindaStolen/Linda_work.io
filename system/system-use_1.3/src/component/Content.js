@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Sider from './Side'
+import Sider from './Side_'
 import Result from './Result'
 import '../style/content.css'
 

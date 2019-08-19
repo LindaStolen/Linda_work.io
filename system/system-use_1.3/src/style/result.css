@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 75% 25%;
     padding: 20px;
+    max-height: 80px;
 }
 .condition {
     margin: 2px 3px;

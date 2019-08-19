@@ -1,0 +1,15 @@
+ul {
+    list-style: none;
+    padding-left: 0;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000;
+}
+
+li {
+    padding: 5px 0;
+}
+
+label {
+    padding: 0 5px;
+}

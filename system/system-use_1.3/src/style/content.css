@@ -9,6 +9,3 @@
     background-color: #FFEB99;
     height: 100vh;
 }
-.rightWrap {
-    grid-template-rows: 10% 90%;
-}

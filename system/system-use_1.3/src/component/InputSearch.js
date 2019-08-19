@@ -3,7 +3,7 @@ import {Icon} from 'rsuite'
 
 
 let search = {
-    width: '65%',
+    width: '70%',
     margin: '5px auto',
 }
 let inputStyle = {
@@ -34,7 +34,7 @@ export default class InputSearch extends Component {
     onClick = () => {
         // const {value} = this.state;
         console.log(this.state.value);
-        alert(this.state.value);
+        // alert(this.state.value);
     }
     render() {
         return (
