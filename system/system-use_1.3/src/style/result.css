@@ -18,3 +18,20 @@
 .export {
     padding: 20px;
 }
+
+table {
+    min-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+th {
+    border: 1px solid #555;
+}
+
+.platFuc {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: #d8d8d8;
+    /* background-color: #FFFFEA; */
+}

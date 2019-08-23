@@ -1,0 +1,37 @@
+.sidewrap {
+    background-color: #FFEB99;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.navOption {
+    padding: 5px 0 10px 55px;
+    color: #000;
+}
+
+.conditionName {
+    padding: 5px 0 0 55px;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 0 5px 0 0;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+.search {
+    width: 70%;
+    margin: 5px auto;
+}
+.inputStyle {
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+    padding-left: 10px;
+    width: 175px;
+}
+.buttonStyle {
+    background-color: transparent;
+}

@@ -23,7 +23,7 @@ export default class InputSearch extends Component {
             value : "",
         }
         this.onChange = this.onChange.bind(this);
-        this.onClick = this.onClick.bind(this);     
+        // this.onClick = this.onClick.bind(this);     
     }
     onChange(e){
         this.setState({
@@ -31,11 +31,11 @@ export default class InputSearch extends Component {
         })
         console.log()
     }
-    onClick = () => {
-        // const {value} = this.state;
-        console.log(this.state.value);
-        // alert(this.state.value);
-    }
+    // onClick = () => {
+    //     // const {value} = this.state;
+    //     console.log(this.state.value);
+    //     // alert(this.state.value);
+    // }
     render() {
         return (
             <React.Fragment>
@@ -46,7 +46,7 @@ export default class InputSearch extends Component {
                         onChange={this.onChange}
                         placeholder="輸入員工姓名或編號"
                     />
-                    <button style={buttonStyle} onClick={this.onClick}>
+                    <button style={buttonStyle}>
                         <Icon icon="search"/>
                     </button>
                 </div>

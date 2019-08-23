@@ -46,25 +46,25 @@ export default class Accordion extends Component {
                 <div style={conditionName} >平台官網
                     <ul>
                         <li>
-                            <input type="checkbox" value="DASO" onChange={this.onChange}/> <label>大碩</label>
+                            <input type="radio" name="platform" value="DASO" onChange={this.onChange}/> <label>大碩</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="BYONE" onChange={this.onChange}/> <label>百官</label>
+                            <input type="radio" name="platform" value="BYONE" onChange={this.onChange}/> <label>百官</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="學堂" onChange={this.onChange}/> <label>學堂</label>
+                            <input type="radio" name="platform" value="學堂" onChange={this.onChange}/> <label>學堂</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="龍門" onChange={this.onChange}/> <label>龍門</label>
+                            <input type="radio" name="platform" value="龍門" onChange={this.onChange}/> <label>龍門</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="課程總覽" onChange={this.onChange}/> <label>課程總覽</label>
+                            <input type="radio" name="platform" value="課程總覽" onChange={this.onChange}/> <label>課程總覽</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="WIP" onChange={this.onChange}/> <label>WIP</label>
+                            <input type="radio" name="platform" value="WIP" onChange={this.onChange}/> <label>WIP</label>
                         </li>
                         <li>
-                            <input type="checkbox" value="精選文章" onChange={this.onChange}/> <label>精選文章</label>
+                            <input type="radio" name="platform" value="精選文章" onChange={this.onChange}/> <label>精選文章</label>
                         </li>
                     </ul>
                 </div>

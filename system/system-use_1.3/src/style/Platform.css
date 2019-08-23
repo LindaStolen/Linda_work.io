@@ -1,0 +1,42 @@
+.descript {
+    font-size: 15px;
+    color: #222;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.btns {
+    margin: 5px 0;
+}
+.btns .chek {
+    /* background-color: #fff; */
+    background-color: #1f2c64;
+    padding: 2px 12px;
+    margin: 0px 5px 0 0;
+    border-radius: 50px;
+    /* color: #00177e; */
+    color: #fff;
+    font-weight: 500;
+    /* box-shadow: 3px 3px 6px #aaa; */
+}
+.btns .chek:hover {
+    background-color: #33438b;
+}
+
+.chek {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 0 5px 0 0;
+    background-color: #FFFFEA;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 3px 3px 6px #aaa;
+}
+
+.chek:hover {
+    background-color: #ffff83;
+}
+
+/* .chek input:checked {
+    background-color: #335500;
+} */
