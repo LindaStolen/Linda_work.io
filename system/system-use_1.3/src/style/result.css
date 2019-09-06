@@ -1,6 +1,6 @@
 .conditionWrap {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 30% 70%;
     padding: 20px;
     max-height: 80px;
 }
@@ -35,3 +35,4 @@ th {
     background-color: #d8d8d8;
     /* background-color: #FFFFEA; */
 }
+

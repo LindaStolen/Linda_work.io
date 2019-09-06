@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-// import { Table } from 'rsuite';
+import moment from 'moment'
+import Api from '../api.json'
 import Axios from 'axios'
 
 let tableStyle = {
@@ -20,8 +21,22 @@ export default class Export extends Component {
 		};
 		// console.log(this.state.data[0])
 	}
-	componentDidMount() { //當元件第一次渲染完成時
-		Axios.get('http://172.16.131.23:8096/api/LogData/testList')
+	componentWillReceiveProps(nextProps) { //當元件第一次渲染完成時
+		let funCodeProps = nextProps.passFunCondition
+		let platfCodeProps = nextProps.platFormCondition
+		let start = moment().add(-32,'days').format('YYYY-MM-DD')
+		let end = moment().add(-32,'days').format('YYYY-MM-DD')
+		// console.log("new props :" + funCodeProps)
+		let config = {headers: {Authorization: Api.token}}
+        let key = {
+            params: {
+				platform_code: platfCodeProps,
+				function_code: funCodeProps,
+				start_date: start,
+				end_date: end,
+            }
+        }
+		Axios.get(`${Api.url}api/LogData/editLogList`, key, config)
 			.then(res => {
 				this.setState({ data: res.data })
 				// console.log(res.data)
@@ -36,10 +51,11 @@ export default class Export extends Component {
 				<tr key={i}>
 					<td style={tableborder}>{i + 1}</td>
 					<td style={tableborder}>{item.title}</td>
-					<td style={tableborder}>{item.function}</td>
-					<td style={tableborder}>{item.action_type}</td>
-					<td style={tableborder}>{item.create_by}</td>
-					<td style={tableborder}>{item.create_date}</td>
+					<td style={tableborder}>{item.PLATFORM_CODE}</td>
+					<td style={tableborder}>{item.FUNCTION_CODE}</td>
+					<td style={tableborder}>{item.ACTION_TYPE}</td>
+					<td style={tableborder}>{item.CREATE_BY}</td>
+					<td style={tableborder}>{item.CREATE_DATE}</td>
 				</tr>)
 		})
 		return (
@@ -49,7 +65,8 @@ export default class Export extends Component {
 						<tr>
 							<th style={tableborder} className="id">項次</th>
 							<th style={tableborder} className="title_">標題</th>
-							<th style={tableborder} className="function">功能</th>
+							<th style={tableborder} className="platform">平台名稱</th>
+							<th style={tableborder} className="function">功能名稱</th>
 							<th style={tableborder} className="action_type">執行動作</th>
 							<th style={tableborder} className="create_by">使用者</th>
 							<th style={tableborder} className="create_date">建立時間</th>

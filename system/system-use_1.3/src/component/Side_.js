@@ -3,87 +3,106 @@ import { Icon } from 'rsuite';
 import '../style/accordion.css'
 import '../style/side.css'
 import Axios from 'axios'
-
-// import InputSearch from './InputSearch'
-// import Accordion from './Accordion';
-// import FrontBackend from './FrontBackend';
+import Api from '../api.json'
 
 
-export default class Side extends Component {
+
+export default class Side extends Component {  
   constructor(props) {
     super(props);
     this.state = {
-      // select_position: "",
-      // select_plat: "",
-      // select_type: "",
-      // select_member: "",
+      data:[],
       position: "",
       action: "",
       platform: "",
       member: ""
     }
-    this.baseState = this.state
-    this.handleChange = this.handleChange.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+    // this.baseState = this.props
+    // this.handleReset = this.handleReset.bind(this);
+    this.handleFontBackChange = this.handleFontBackChange.bind(this);
+    this.handlePlatChange = this.handlePlatChange.bind(this);
+    this.handleTypeChange = this.handleTypeChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(e) {
+  handleFontBackChange(e) {
     this.setState({
-      [e.target.name]: e.target.value,
-      [e.target.name.checked]: e.target.checked,
+      position: e.target.value,
     })
-    console.log(e.target.name + ":" + e.target.value)
-    // console.log(e.target.name + ":" + e.target.checked)
+    console.log("position:" + e.target.value)
   }
 
-  handleReset() {
-    this.refs.form.reset();
-    // this.setState(this.baseState)
-    // console.log(this.baseState)
-    // this.setState({
-    //   checked:false
-    // })
-    console.log(this.state)
+  handlePlatChange(e) {
+    this.setState({
+      platform: e.target.value,
+    })
+    console.log("platform:" + e.target.value)
+  }
+  handleTypeChange(e) {
+    this.setState({
+      action: e.target.value,
+    })
+    console.log("action:" + e.target.value)
+  }
+
+  // handleReset() {
+  //   this.refs.form.reset();
+  //   this.setState(this.baseState)
+  //   console.log(this.baseState)
+  //   this.setState({
+  //     checked:false
+  //   })
+  //   console.log(this.props)
+  // }
+
+  componentDidMount(){
+    let config = {headers: {Authorization: Api.token}}
+    Axios.get(`${Api.url}api/Filter/platformList` ,config
+    )
+    .then(res => {
+      this.setState({data: res.data})
+      // console.log(res.data)
+    })
+    .catch(err => {
+      console.log(err);
+    })
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.state)
-    // const position = this.state.position
-    // const action = this.state.action
-    // const platform = this.state.platform
-    // alert('Send: ' + position + "/" + action + "/"+ platform);
-    Axios.get('http://172.16.131.23:8096/api/Filter/functionList', {
-      params: {
+    const { position, platform, action }=this.state
+    let params = {
+        params: {
         platform_code: this.state.platform
       }
+    }
+    let config = {headers: {Authorization: Api.token}}
+    Axios.get(`${Api.url}api/Filter/functionList` ,params, config
+    )
+    .then(res => {
+      this.props.passData({ position, platform, action }) //在平台清單選到的value，從這回傳到content
+      console.log({ position, platform, action })
+      // this.props.passData(this.state.data) 
     })
-      .then(res => {
-        this.setState({
-          data:res.data
-        })
-        console.log(res.data)
-      })
-      .catch(err => {
-        console.log(err);
-      })
+    .catch(err => {
+      console.log(err);
+    })
+    
   }
 
   render() {
-    // const {select} = this.state
+    // const {position, action, platform, member} = this.props
+    const platformList =this.state.data //這是平台清單變數
     return (
       <React.Fragment>
         <div className="sidewrap">
-          <form onSubmit={this.handleSubmit} ref="form">
-            <p className="conditionName">wtheaef tuck</p>
+          <form onSubmit={this.handleSubmit} ref="form" >
+            <p className="conditionName">系統平台</p>
             <div className="navOption">
-              <input type="radio" value="front" name="position" onChange={this.handleChange} /> <label>前台</label>
-              <input type="radio" value="backend" name="position" onChange={this.handleChange} /> <label>後台</label>
+              <input type="radio" value="front" name="position" onChange={this.handleFontBackChange} /><label>前台</label>
+              <input type="radio" value="backend" name="position" onChange={this.handleFontBackChange}/> <label>後台</label>
             </div>
-            {/*<FrontBackend />*/}
-            {/*<Accordion/>*/}
             <section>
-              <div className="conditionName" >事業群
+              {/*<div className="conditionName" >事業群
                 <ul>
                   <li>new car</li>
                   <li>spicy cookies</li>
@@ -91,37 +110,28 @@ export default class Side extends Component {
                   <li>dishes dinner diving</li>
                   <li>blender bottle white</li>
                 </ul>
-              </div>
-              <div className="conditionName" >平台官網
-                <ul>
-                  <li>
-                    <input type="radio" name="platform" value="DASO" onChange={this.handleChange} /> <label>大碩</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="BYONE" onChange={this.handleChange} /> <label>百官</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="學堂" onChange={this.handleChange} /> <label>學堂</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="龍門" onChange={this.handleChange} /> <label>龍門</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="課程總覽" onChange={this.handleChange} /> <label>課程總覽</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="WIP" onChange={this.handleChange} /> <label>WIP</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="platform" value="精選文章" onChange={this.handleChange} /> <label>精選文章</label>
-                  </li>
+              </div>*/}
+              <div>
+              <p className="conditionName">平台官網</p>
+                <ul  className="navOption">
+                {
+                  platformList.map((item,i) => {
+                    return(
+                      <li key={i}>
+                        <input type="radio" name="platform" value={item.PLATFORM_CODE} onChange={this.handlePlatChange}/>
+                        <label>{item.PLATFORM_NAME}</label>
+                        {/*<input type="text" name="platform_chiness" value={item.PLATFORM_NAME} />*/}
+                      </li>
+                    )
+                  })
+                }
                 </ul>
               </div>
             </section>
             <p className="conditionName">日誌類型</p>
             <div className="navOption">
-              <input type="radio" className="buttons" value="登入" name="action" onChange={this.handleChange} /> <label>登入</label>
-              <input type="radio" className="buttons" value="操作" name="action" onChange={this.handleChange} /> <label>操作</label>
+              <input type="radio" value="登入" name="action" onChange={this.handleTypeChange} /> <label>登入</label>
+              <input type="radio" value="操作" name="action" onChange={this.handleTypeChange} /> <label>操作</label>
             </div>
             <div> {/* 搜尋框框 */}
               {/*<InputSearch value/>*/}
@@ -132,6 +142,7 @@ export default class Side extends Component {
                   name="member"
                   onChange={this.handleChange}
                   placeholder="輸入員工姓名或編號"
+                  autoComplete="off"
                 />
                 <button className="buttonStyle">
                   <Icon icon="search" />
@@ -139,7 +150,7 @@ export default class Side extends Component {
               </div>
             </div>
             <div style={{ textAlign: 'right', marginTop: '15px' }}>
-              <input type="button" className="buttons" value="取消" onClick={this.handleReset} />
+              <input type="reset" className="buttons" value="取消" />
               <input type="submit" className="buttons" value="送出" onClick={this.handleSubmit} />
             </div>
           </form>

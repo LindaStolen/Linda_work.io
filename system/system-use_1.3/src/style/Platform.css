@@ -37,6 +37,18 @@
     background-color: #ffff83;
 }
 
+.btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.btn:focus {
+    background-color: rgb(228, 159, 68);
+    outline: none;
+    border:0px;
+}
+
 /* .chek input:checked {
     background-color: #335500;
 } */

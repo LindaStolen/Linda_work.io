@@ -1,0 +1,42 @@
+.selDateRange {
+    padding: 10px 0;
+    text-align: right;
+}
+.together {
+    display: flex;
+    justify-content: space-between;
+}
+.selDateRange form >input {
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: 0;
+}
+.selDateRange form > button {
+    border-radius: 55px;
+    font-size: 12px;
+    margin-left: 5px;
+    outline: none;
+    border: 0;
+}
+.selDateRange form > button:active {
+    background-color: #80734b;
+    color: #fff;
+}
+
+.quickRange {
+    margin-top: 5px;
+}
+.quickRange button {
+    outline: 0;
+    border-radius: 50px;
+    padding: 3px 12px;
+    margin: 0px 5px;
+    background-color: #d8d8d8;
+}
+.quickRange button:focus {
+    background-color: #747474;
+    /* border: 2px solid #bbb; */
+    box-shadow: 2px 2px 4px #555;
+    color: #fff;
+    font-weight: 600;
+}
